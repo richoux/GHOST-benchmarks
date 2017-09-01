@@ -85,11 +85,11 @@ int main(int argc, char **argv)
     auto variables_t = make_terran( 380 );    
     
     // Define constraints 
-    Stock mineral_t( &variables_t, 20000, ResourceType::Mineral );
-    Stock gas_t( &variables_t, 14000, ResourceType::Gas );
-    Stock supply_t( &variables_t, 380, ResourceType::Supply );
+    shared_ptr<Stock> mineral_t = make_shared<Stock>( &variables_t, 20000, ResourceType::Mineral );
+    shared_ptr<Stock> gas_t = make_shared<Stock>( &variables_t, 14000, ResourceType::Gas );
+    shared_ptr<Stock> supply_t = make_shared<Stock>( &variables_t, 380, ResourceType::Supply );
     
-    vector< Stock > constraints_t { mineral_t, gas_t, supply_t };
+    vector< shared_ptr<Stock> > constraints_t { mineral_t, gas_t, supply_t };
     
     // Define solver
     Solver<Unit, Stock> solver_t( variables_t,
@@ -137,11 +137,11 @@ int main(int argc, char **argv)
     auto variables_p = make_protoss( 380 );    
 
     // Define constraints 
-    Stock mineral_p( &variables_p, 20000, ResourceType::Mineral );
-    Stock gas_p( &variables_p, 14000, ResourceType::Gas );
-    Stock supply_p( &variables_p, 380, ResourceType::Supply );
+    shared_ptr<Stock> mineral_p = make_shared<Stock>( &variables_p, 20000, ResourceType::Mineral );
+    shared_ptr<Stock> gas_p = make_shared<Stock>( &variables_p, 14000, ResourceType::Gas );
+    shared_ptr<Stock> supply_p = make_shared<Stock>( &variables_p, 380, ResourceType::Supply );
   
-    vector< Stock > constraints_p { mineral_p, gas_p, supply_p };
+    vector< shared_ptr<Stock> > constraints_p { mineral_p, gas_p, supply_p };
 
     // Define solver
     Solver<Unit, Stock> solver_p( variables_p,
@@ -188,11 +188,11 @@ int main(int argc, char **argv)
     auto variables_z = make_zerg( 380 );    
 
     // Define constraints 
-    Stock mineral_z( &variables_z, 20000, ResourceType::Mineral );
-    Stock gas_z( &variables_z, 14000, ResourceType::Gas );
-    Stock supply_z( &variables_z, 380, ResourceType::Supply );
+    shared_ptr<Stock> mineral_z = make_shared<Stock>( &variables_z, 20000, ResourceType::Mineral );
+    shared_ptr<Stock> gas_z = make_shared<Stock>( &variables_z, 14000, ResourceType::Gas );
+    shared_ptr<Stock> supply_z = make_shared<Stock>( &variables_z, 380, ResourceType::Supply );
   
-    vector< Stock > constraints_z { mineral_z, gas_z, supply_z };
+    vector< shared_ptr<Stock> > constraints_z { mineral_z, gas_z, supply_z };
 
     // Define solver
     Solver<Unit, Stock> solver_z( variables_z,
