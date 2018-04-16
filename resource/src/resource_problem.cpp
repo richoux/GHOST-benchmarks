@@ -194,19 +194,19 @@ int main(int argc, char **argv)
 
     // process_mem_usage(vm, rss);
   
-    cout << "*** Protoss ***\n"
-         << "Success rate: " << count << "%\n"
-         << "Mean score: " << total/count << "\n";
-      //<< "Memory usage: " << rss << "/" << vm << "\n\n";
+    // cout << "*** Protoss ***\n"
+    //      << "Success rate: " << count << "%\n"
+    //      << "Mean score: " << total/count << "\n";
+    //   //<< "Memory usage: " << rss << "/" << vm << "\n\n";
 
-    cout << "var-------\n";
-    for( auto& v : variables_p )
-      cout << v.get_name() << ":" << v.get_value() << "\n";
-    cout << "sol-------\n";
-    for( auto& v : variables_p )
-        cout << v.get_name() << ":" << solution_p[ v.get_id() ] << "\n";
+    // cout << "var-------\n";
+    // for( auto& v : variables_p )
+    //   cout << v.get_name() << ":" << v.get_value() << "\n";
+    // cout << "sol-------\n";
+    // for( auto& v : variables_p )
+    //     cout << v.get_name() << ":" << solution_p[ v.get_id() ] << "\n";
 
-    cout << "\n\n";
+    // cout << "\n\n";
   }
   
   //////////
