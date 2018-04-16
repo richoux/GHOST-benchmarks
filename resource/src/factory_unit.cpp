@@ -96,9 +96,6 @@ void make_protoss( int supplyAvailable, vector<Variable>& vec_var, vector<UnitDa
   vec_data.push_back( ud );
   vec_var.push_back( make_unit( UnitType::Scout, supplyAvailable / 3, ud ) );
   vec_data.push_back( ud );
-
-  cout << "var id protoss: " << vec_var[0].get_id() << "\n"
-       << "vec var size: " << vec_var.size() << "\n";
 }
 
 void make_terran( int supplyAvailable, vector<Variable>& vec_var, vector<UnitData>& vec_data )
@@ -125,9 +122,6 @@ void make_terran( int supplyAvailable, vector<Variable>& vec_var, vector<UnitDat
   vec_data.push_back( ud );
   vec_var.push_back( make_unit( UnitType::BattleCruiser, supplyAvailable / 6, ud ) );
   vec_data.push_back( ud );
-
-  cout << "var id terran: " << vec_var[0].get_id() << "\n"
-       << "vec var size: " << vec_var.size() << "\n";
 }
 
 void make_zerg( int supplyAvailable, vector<Variable>& vec_var, vector<UnitData>& vec_data )
@@ -148,7 +142,4 @@ void make_zerg( int supplyAvailable, vector<Variable>& vec_var, vector<UnitData>
   vec_data.push_back( ud );
   vec_var.push_back( make_unit( UnitType::Guardian, supplyAvailable / 2, ud ) );
   vec_data.push_back( ud );
-
-  cout << "var id zerg: " << vec_var[0].get_id() << "\n"
-       << "vec var size: " << vec_var.size() << "\n";
 }
