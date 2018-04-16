@@ -12,6 +12,8 @@ class UnitData
   double	_dps;
 
 public:
+  UnitData() = default;
+  
   UnitData( int m,
 	    int g,
 	    double s,

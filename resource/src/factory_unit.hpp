@@ -31,7 +31,7 @@ enum UnitType{ Zealot,
 	       Mutalisk,
 	       Guardian };
 
-void make_unit( const UnitType&, int, Variable&, UnitData& );
+Variable make_unit( const UnitType&, int, UnitData& );
 
 void make_protoss( int, vector<Variable>&, vector<UnitData>& );
 void make_terran( int, vector<Variable>&, vector<UnitData>& );

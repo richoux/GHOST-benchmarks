@@ -25,50 +25,50 @@ using namespace std;
 //
 // On failure, returns 0.0, 0.0
 
-// void process_mem_usage(double& vm_usage, double& resident_set)
-// {
-//    using std::ios_base;
-//    using std::ifstream;
-//    using std::string;
+void process_mem_usage(double& vm_usage, double& resident_set)
+{
+   using std::ios_base;
+   using std::ifstream;
+   using std::string;
 
-//    vm_usage     = 0.0;
-//    resident_set = 0.0;
+   vm_usage     = 0.0;
+   resident_set = 0.0;
 
-//    // 'file' stat seems to give the most reliable results
-//    //
-//    ifstream stat_stream("/proc/self/stat",ios_base::in);
+   // 'file' stat seems to give the most reliable results
+   //
+   ifstream stat_stream("/proc/self/stat",ios_base::in);
 
-//    // dummy vars for leading entries in stat that we don't care about
-//    //
-//    string pid, comm, state, ppid, pgrp, session, tty_nr;
-//    string tpgid, flags, minflt, cminflt, majflt, cmajflt;
-//    string utime, stime, cutime, cstime, priority, nice;
-//    string O, itrealvalue, starttime;
+   // dummy vars for leading entries in stat that we don't care about
+   //
+   string pid, comm, state, ppid, pgrp, session, tty_nr;
+   string tpgid, flags, minflt, cminflt, majflt, cmajflt;
+   string utime, stime, cutime, cstime, priority, nice;
+   string O, itrealvalue, starttime;
 
-//    // the two fields we want
-//    //
-//    unsigned long vsize;
-//    long rss;
+   // the two fields we want
+   //
+   unsigned long vsize;
+   long rss;
 
-//    stat_stream >> pid >> comm >> state >> ppid >> pgrp >> session >> tty_nr
-//                >> tpgid >> flags >> minflt >> cminflt >> majflt >> cmajflt
-//                >> utime >> stime >> cutime >> cstime >> priority >> nice
-//                >> O >> itrealvalue >> starttime >> vsize >> rss; // don't care about the rest
+   stat_stream >> pid >> comm >> state >> ppid >> pgrp >> session >> tty_nr
+               >> tpgid >> flags >> minflt >> cminflt >> majflt >> cmajflt
+               >> utime >> stime >> cutime >> cstime >> priority >> nice
+               >> O >> itrealvalue >> starttime >> vsize >> rss; // don't care about the rest
 
-//    stat_stream.close();
+   stat_stream.close();
 
-//    long page_size_kb = sysconf(_SC_PAGE_SIZE) / 1024; // in case x86-64 is configured to use 2MB pages
-//    vm_usage     = vsize / 1024.0;
-//    resident_set = rss * page_size_kb;
-// }
+   long page_size_kb = sysconf(_SC_PAGE_SIZE) / 1024; // in case x86-64 is configured to use 2MB pages
+   vm_usage     = vsize / 1024.0;
+   resident_set = rss * page_size_kb;
+}
 
 
 int main(int argc, char **argv)
 {
 
-  // double vm, rss;
-  // process_mem_usage(vm, rss);
-  // cout << "Memory usage: " << rss << "/" << vm << "\n\n";
+  double vm, rss;
+  process_mem_usage(vm, rss);
+  cout << "Memory usage: " << rss << "/" << vm << "\n\n";
 
   string race = (string)argv[1];
   int runs = 100;
@@ -151,7 +151,7 @@ int main(int argc, char **argv)
     vector< Variable > variables_p;
     vector< UnitData > unit_data_p;
     make_protoss( 380, variables_p, unit_data_p );    
-
+    
     // Define constraints 
     shared_ptr<Constraint> mineral_p = make_shared<Stock>( &variables_p,
 						      20000,
@@ -183,29 +183,34 @@ int main(int argc, char **argv)
   
     int count = 0;
     double total = 0.;
-  
+
+    cout << "*** var vec size: " << variables_p.size() << "\n";
+	
     for(int i = 0 ; i < runs ; ++i )
+      //if( solver_p.solve( cost_p, solution_p, 20, 5000 ) )
       if( solver_p.solve( cost_p, solution_p, 2, 130 ) )
       {
   	++count;
   	total += cost_p;
       }
 
-    // process_mem_usage(vm, rss);
+    cout << "*** after solve ***\n";
+
+    process_mem_usage(vm, rss);
   
-    // cout << "*** Protoss ***\n"
-    //      << "Success rate: " << count << "%\n"
-    //      << "Mean score: " << total/count << "\n";
-    //<< "Memory usage: " << rss << "/" << vm << "\n\n";
+    cout << "*** Protoss ***\n"
+         << "Success rate: " << count << "%\n"
+         << "Mean score: " << total/count << "\n"
+	 << "Memory usage: " << rss << "/" << vm << "\n\n";
 
-    // cout << "var-------\n";
-    // for( auto& v : variables_p )
-    //   cout << v.get_name() << ":" << v.get_value() << "\n";
-    // cout << "sol-------\n";
-    // for( auto& v : variables_p )
-    //     cout << v.get_name() << ":" << solution_p[ v.get_id() ] << "\n";
+    cout << "var-------\n";
+    for( auto& v : variables_p )
+      cout << v.get_name() << ":" << v.get_value() << "\n";
+    cout << "sol-------\n";
+    for( auto& v : variables_p )
+        cout << v.get_name() << ":" << solution_p[ v.get_id() ] << "\n";
 
-    // cout << "\n\n";
+    cout << "\n\n";
   }
   
   //////////
@@ -252,6 +257,7 @@ int main(int argc, char **argv)
     double total = 0.;
   
     for(int i = 0 ; i < runs ; ++i )
+      //if( solver_t.solve( cost_z, solution_z, 20, 5000 ) )
       if( solver_z.solve( cost_z, solution_z, 2, 130 ) )
       {
   	++count;
