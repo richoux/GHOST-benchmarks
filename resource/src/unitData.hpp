@@ -1,12 +1,10 @@
 #pragma once
 
 #include <string>
-#include <ghost/variable.hpp>
 
 using namespace std;
-using namespace ghost;
 
-class Unit : public Variable
+class UnitData
 {
   int		_mineral;
   int		_gas;
@@ -14,13 +12,10 @@ class Unit : public Variable
   double	_dps;
 
 public:
-  Unit( const string& name,
-	const string& shortName,
-	int supplyAvailable,
-	int m,
-	int g,
-	double s,
-	double dps);
+  UnitData( int m,
+	    int g,
+	    double s,
+	    double dps );
 
   inline int	get_mineral()	const { return _mineral; }
   inline int	get_gas()	const { return _gas; }

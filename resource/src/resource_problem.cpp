@@ -7,8 +7,9 @@
 #include <vector>
 
 #include <ghost/solver.hpp>
+#include <ghost/variable.hpp>
 
-#include "var_unit.hpp"
+#include "unitData.hpp"
 #include "ctr_stock.hpp"
 #include "obj_maxgrounddps.hpp"
 #include "factory_unit.hpp"
@@ -69,9 +70,6 @@ int main(int argc, char **argv)
   // process_mem_usage(vm, rss);
   // cout << "Memory usage: " << rss << "/" << vm << "\n\n";
 
-  // Define objective
-  shared_ptr<MaxGroundDPS> objective = make_shared<MaxGroundDPS>();
-
   string race = (string)argv[1];
   int runs = 100;
   sscanf( argv[2], "%i", &runs );
@@ -82,19 +80,35 @@ int main(int argc, char **argv)
   if( race == "terran" )
   {
     // Create variables
-    auto variables_t = make_terran( 380 );    
+    vector< Variable > variables_t;
+    vector< UnitData > unit_data_t;
+    make_terran( 380, variables_t, unit_data_t );    
     
     // Define constraints 
-    shared_ptr<Stock> mineral_t = make_shared<Stock>( &variables_t, 20000, ResourceType::Mineral );
-    shared_ptr<Stock> gas_t = make_shared<Stock>( &variables_t, 14000, ResourceType::Gas );
-    shared_ptr<Stock> supply_t = make_shared<Stock>( &variables_t, 380, ResourceType::Supply );
+    shared_ptr<Constraint> mineral_t = make_shared<Stock>( &variables_t,
+						      20000,
+						      ResourceType::Mineral,
+						      unit_data_t );
+
+    shared_ptr<Constraint> gas_t = make_shared<Stock>( &variables_t,
+						  14000,
+						  ResourceType::Gas,
+						  unit_data_t );
     
-    vector< shared_ptr<Stock> > constraints_t { mineral_t, gas_t, supply_t };
+    shared_ptr<Constraint> supply_t = make_shared<Stock>( &variables_t,
+						     380,
+						     ResourceType::Supply,
+						     unit_data_t );
     
+    vector< shared_ptr<Constraint> > constraints_t { mineral_t, gas_t, supply_t };
+
+    // Define objective
+    shared_ptr<Objective> objective = make_shared<MaxGroundDPS>( unit_data_t );
+
     // Define solver
-    Solver<Unit, Stock> solver_t( variables_t,
-				  constraints_t,
-				  objective );
+    Solver solver_t( variables_t,
+		     constraints_t,
+		     objective );
     
     double cost_t = 0.;
     vector<int> solution_t( variables_t.size(), 0 );
@@ -134,19 +148,35 @@ int main(int argc, char **argv)
   if( race == "protoss" )
   {
     // Create variables
-    auto variables_p = make_protoss( 380 );    
+    vector< Variable > variables_p;
+    vector< UnitData > unit_data_p;
+    make_protoss( 380, variables_p, unit_data_p );    
 
     // Define constraints 
-    shared_ptr<Stock> mineral_p = make_shared<Stock>( &variables_p, 20000, ResourceType::Mineral );
-    shared_ptr<Stock> gas_p = make_shared<Stock>( &variables_p, 14000, ResourceType::Gas );
-    shared_ptr<Stock> supply_p = make_shared<Stock>( &variables_p, 380, ResourceType::Supply );
+    shared_ptr<Constraint> mineral_p = make_shared<Stock>( &variables_p,
+						      20000,
+						      ResourceType::Mineral,
+						      unit_data_p );
+
+    shared_ptr<Constraint> gas_p = make_shared<Stock>( &variables_p,
+						  14000,
+						  ResourceType::Gas,
+						  unit_data_p );
+    
+    shared_ptr<Constraint> supply_p = make_shared<Stock>( &variables_p,
+						     380,
+						     ResourceType::Supply,
+						     unit_data_p );
   
-    vector< shared_ptr<Stock> > constraints_p { mineral_p, gas_p, supply_p };
+    vector< shared_ptr<Constraint> > constraints_p { mineral_p, gas_p, supply_p };
+
+    // Define objective
+    shared_ptr<Objective> objective = make_shared<MaxGroundDPS>( unit_data_p );
 
     // Define solver
-    Solver<Unit, Stock> solver_p( variables_p,
-  				  constraints_p,
-  				  objective );
+    Solver solver_p( variables_p,
+		     constraints_p,
+		     objective );
 
     double cost_p = 0.;
     vector<int> solution_p( variables_p.size(), 0 );
@@ -185,19 +215,35 @@ int main(int argc, char **argv)
   if( race == "zerg" )
   {
     // Create variables
-    auto variables_z = make_zerg( 380 );    
+    vector< Variable > variables_z;
+    vector< UnitData > unit_data_z;
+    make_zerg( 380, variables_z, unit_data_z );    
 
     // Define constraints 
-    shared_ptr<Stock> mineral_z = make_shared<Stock>( &variables_z, 20000, ResourceType::Mineral );
-    shared_ptr<Stock> gas_z = make_shared<Stock>( &variables_z, 14000, ResourceType::Gas );
-    shared_ptr<Stock> supply_z = make_shared<Stock>( &variables_z, 380, ResourceType::Supply );
+    shared_ptr<Constraint> mineral_z = make_shared<Stock>( &variables_z,
+						      20000,
+						      ResourceType::Mineral,
+						      unit_data_z );
+
+    shared_ptr<Constraint> gas_z = make_shared<Stock>( &variables_z,
+						  14000,
+						  ResourceType::Gas,
+						  unit_data_z );
+    
+    shared_ptr<Constraint> supply_z = make_shared<Stock>( &variables_z,
+						     380,
+						     ResourceType::Supply,
+						     unit_data_z );
   
-    vector< shared_ptr<Stock> > constraints_z { mineral_z, gas_z, supply_z };
+    vector< shared_ptr<Constraint> > constraints_z { mineral_z, gas_z, supply_z };
+
+    // Define objective
+    shared_ptr<Objective> objective = make_shared<MaxGroundDPS>( unit_data_z );
 
     // Define solver
-    Solver<Unit, Stock> solver_z( variables_z,
-  				  constraints_z,
-  				  objective );
+    Solver solver_z( variables_z,
+		     constraints_z,
+		     objective );
 
     double cost_z = 0.;
     vector<int> solution_z( variables_z.size(), 0 );

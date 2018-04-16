@@ -6,10 +6,14 @@
 using namespace std;
 using namespace ghost;
 
-Stock::Stock( vector< Unit > *variables, int quantity, ResourceType type )
-  : Constraint<Unit>	( variables ),
-    _quantity		( quantity ),
-    _type		( type )
+Stock::Stock( vector< Variable > *variables,
+	      int quantity,
+	      ResourceType type,
+	      const vector< UnitData >& unit_data )
+  : Constraint	( variables ),
+    _quantity	( quantity ),
+    _type	( type ),
+    _unit_data	( unit_data )
 { }
 
 double Stock::required_cost() const 
@@ -17,24 +21,24 @@ double Stock::required_cost() const
   double sum = 0.;
   double costValue;
 
-  for( auto& v : *variables )
+  for( int i = 0 ; i < _unit_data.size() ; ++i )
   {
     switch( _type )
     {
     case Mineral:
-      costValue = v.get_mineral();
+      costValue = _unit_data[i].get_mineral();
       break;
     case Gas:
-      costValue = v.get_gas();
+      costValue = _unit_data[i].get_gas();
       break;
     case Supply:
-      costValue = v.get_supply();
+      costValue = _unit_data[i].get_supply();
       break;
     default:
       throw 0;
     }
     
-    sum += ( v.get_value() * costValue );
+    sum += ( (*variables)[i].get_value() * costValue );
   }
 
   return std::max( 0., sum - _quantity );

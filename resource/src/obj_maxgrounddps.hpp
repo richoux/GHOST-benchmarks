@@ -6,15 +6,17 @@
 #include <ghost/objective.hpp>
 #include <ghost/variable.hpp>
 
-#include "var_unit.hpp"
+#include "unitData.hpp"
 
 using namespace std;
 using namespace ghost;
 
-class MaxGroundDPS : public Objective<Unit>
+class MaxGroundDPS : public Objective
 {
-  double required_cost( vector< Unit > *vecVariables ) const override;
+  vector< UnitData > _unit_data;
+  
+  double required_cost( vector< Variable > *vecVariables ) const override;
 
 public:
-  MaxGroundDPS();
+  MaxGroundDPS( const vector< UnitData >& unit_data );
 };

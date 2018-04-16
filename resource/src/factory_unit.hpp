@@ -5,9 +5,10 @@
 
 #include <ghost/variable.hpp>
 
-#include "var_unit.hpp"
+#include "unitData.hpp"
 
 using namespace std; 
+using namespace ghost; 
 
 enum UnitType{ Zealot,
 	       Dragoon,
@@ -30,8 +31,8 @@ enum UnitType{ Zealot,
 	       Mutalisk,
 	       Guardian };
 
-Unit make_unit( const UnitType& type, int );
+void make_unit( const UnitType&, int, Variable&, UnitData& );
 
-vector< Unit > make_protoss( int );
-vector< Unit > make_terran( int );
-vector< Unit > make_zerg( int );
+void make_protoss( int, vector<Variable>&, vector<UnitData>& );
+void make_terran( int, vector<Variable>&, vector<UnitData>& );
+void make_zerg( int, vector<Variable>&, vector<UnitData>& );

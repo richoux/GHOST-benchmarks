@@ -5,16 +5,17 @@
 
 using namespace std;
 
-MaxGroundDPS::MaxGroundDPS()
-  : Objective( "Max Ground DPS" )
+MaxGroundDPS::MaxGroundDPS( const vector< UnitData >& unit_data )
+  : Objective( "Max Ground DPS" ),
+    _unit_data	( unit_data )
 { }
 
-double MaxGroundDPS::required_cost( vector< Unit > *vecVariables ) const 
+double MaxGroundDPS::required_cost( vector< Variable > *vecVariables ) const 
 {
   double total = 0.;
-  
-  for( auto& v : *vecVariables )
-    total += ( v.get_value() * v.get_dps() );
+
+  for( int i = 0 ; i < _unit_data.size() ; ++i )
+    total += ( (*vecVariables)[i].get_value() * _unit_data[i].get_dps() );
   
   return -total;
 
