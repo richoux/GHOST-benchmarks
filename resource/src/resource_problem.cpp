@@ -86,19 +86,19 @@ int main(int argc, char **argv)
     
     // Define constraints 
     shared_ptr<Constraint> mineral_t = make_shared<Stock>( &variables_t,
-						      20000,
-						      ResourceType::Mineral,
-						      unit_data_t );
-
+							   20000,
+							   ResourceType::Mineral,
+							   unit_data_t );
+    
     shared_ptr<Constraint> gas_t = make_shared<Stock>( &variables_t,
-						  14000,
-						  ResourceType::Gas,
-						  unit_data_t );
+						       14000,
+						       ResourceType::Gas,
+						       unit_data_t );
     
     shared_ptr<Constraint> supply_t = make_shared<Stock>( &variables_t,
-						     380,
-						     ResourceType::Supply,
-						     unit_data_t );
+							  380,
+							  ResourceType::Supply,
+							  unit_data_t );
     
     vector< shared_ptr<Constraint> > constraints_t { mineral_t, gas_t, supply_t };
 
