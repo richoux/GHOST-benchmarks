@@ -1,0 +1,1082 @@
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.005
+Satisfaction cost: 0
+Number of optization loops: 69
+Number of satisfaction loops: 11193
+Optimization cost: 3002.47
+Opt Cost BEFORE post-processing: 3002.47
+Satisfaction post-processing time: 5.7e-05
+Optimization post-processing time: 5.4e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130
+Satisfaction cost: 0
+Number of optization loops: 67
+Number of satisfaction loops: 14847
+Optimization cost: 3650.62
+Opt Cost BEFORE post-processing: 3650.62
+Satisfaction post-processing time: 5.2e-05
+Optimization post-processing time: 4.5e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.005
+Satisfaction cost: 0
+Number of optization loops: 69
+Number of satisfaction loops: 14872
+Optimization cost: 3067.49
+Opt Cost BEFORE post-processing: 3067.49
+Satisfaction post-processing time: 4.2e-05
+Optimization post-processing time: 9.7e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.006
+Satisfaction cost: 0
+Number of optization loops: 70
+Number of satisfaction loops: 14946
+Optimization cost: 3492.36
+Opt Cost BEFORE post-processing: 3492.36
+Satisfaction post-processing time: 4.1e-05
+Optimization post-processing time: 4.3e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.009
+Satisfaction cost: 0
+Number of optization loops: 66
+Number of satisfaction loops: 14883
+Optimization cost: 2329.02
+Opt Cost BEFORE post-processing: 2329.02
+Satisfaction post-processing time: 4.1e-05
+Optimization post-processing time: 7.7e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.009
+Satisfaction cost: 0
+Number of optization loops: 67
+Number of satisfaction loops: 14702
+Optimization cost: 3247.13
+Opt Cost BEFORE post-processing: 3247.13
+Satisfaction post-processing time: 5.4e-05
+Optimization post-processing time: 4.7e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.009
+Satisfaction cost: 0
+Number of optization loops: 67
+Number of satisfaction loops: 14975
+Optimization cost: 3051.93
+Opt Cost BEFORE post-processing: 3051.93
+Satisfaction post-processing time: 5.3e-05
+Optimization post-processing time: 6.7e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.007
+Satisfaction cost: 0
+Number of optization loops: 67
+Number of satisfaction loops: 15112
+Optimization cost: 3351.13
+Opt Cost BEFORE post-processing: 3351.13
+Satisfaction post-processing time: 5.3e-05
+Optimization post-processing time: 4.7e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.004
+Satisfaction cost: 0
+Number of optization loops: 67
+Number of satisfaction loops: 14793
+Optimization cost: 3835.2
+Opt Cost BEFORE post-processing: 3835.2
+Satisfaction post-processing time: 4.2e-05
+Optimization post-processing time: 6.8e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.002
+Satisfaction cost: 0
+Number of optization loops: 66
+Number of satisfaction loops: 14854
+Optimization cost: 2783.56
+Opt Cost BEFORE post-processing: 2783.56
+Satisfaction post-processing time: 5.4e-05
+Optimization post-processing time: 6.8e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.006
+Satisfaction cost: 1575
+Number of optization loops: 65
+Number of satisfaction loops: 15029
+Optimization cost: 1.79769e+308
+Opt Cost BEFORE post-processing: 1.79769e+308
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.006
+Satisfaction cost: 275
+Number of optization loops: 65
+Number of satisfaction loops: 14986
+Optimization cost: 1.79769e+308
+Opt Cost BEFORE post-processing: 1.79769e+308
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.001
+Satisfaction cost: 0
+Number of optization loops: 69
+Number of satisfaction loops: 15103
+Optimization cost: 2435.93
+Opt Cost BEFORE post-processing: 2435.93
+Satisfaction post-processing time: 5.1e-05
+Optimization post-processing time: 6.8e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.01
+Satisfaction cost: 0
+Number of optization loops: 68
+Number of satisfaction loops: 14977
+Optimization cost: 3755.78
+Opt Cost BEFORE post-processing: 3755.78
+Satisfaction post-processing time: 4.3e-05
+Optimization post-processing time: 4.3e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.006
+Satisfaction cost: 0
+Number of optization loops: 66
+Number of satisfaction loops: 14915
+Optimization cost: 2132.07
+Opt Cost BEFORE post-processing: 2132.07
+Satisfaction post-processing time: 4.2e-05
+Optimization post-processing time: 8.2e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.002
+Satisfaction cost: 0
+Number of optization loops: 66
+Number of satisfaction loops: 15052
+Optimization cost: 2402.33
+Opt Cost BEFORE post-processing: 2402.33
+Satisfaction post-processing time: 3.4e-05
+Optimization post-processing time: 4.4e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.008
+Satisfaction cost: 0
+Number of optization loops: 66
+Number of satisfaction loops: 14610
+Optimization cost: 2305.45
+Opt Cost BEFORE post-processing: 2305.45
+Satisfaction post-processing time: 5e-05
+Optimization post-processing time: 0.000101
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.002
+Satisfaction cost: 0
+Number of optization loops: 67
+Number of satisfaction loops: 14880
+Optimization cost: 3454.4
+Opt Cost BEFORE post-processing: 3454.4
+Satisfaction post-processing time: 5.5e-05
+Optimization post-processing time: 5.5e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.01
+Satisfaction cost: 0
+Number of optization loops: 66
+Number of satisfaction loops: 12794
+Optimization cost: 2007.71
+Opt Cost BEFORE post-processing: 2007.71
+Satisfaction post-processing time: 0.000114
+Optimization post-processing time: 0.000157
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.019
+Satisfaction cost: 0
+Number of optization loops: 68
+Number of satisfaction loops: 12160
+Optimization cost: 3468.51
+Opt Cost BEFORE post-processing: 3468.51
+Satisfaction post-processing time: 0.000121
+Optimization post-processing time: 0.000105
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.006
+Satisfaction cost: 0
+Number of optization loops: 67
+Number of satisfaction loops: 13579
+Optimization cost: 2812.36
+Opt Cost BEFORE post-processing: 2812.36
+Satisfaction post-processing time: 0.000107
+Optimization post-processing time: 0.000106
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.003
+Satisfaction cost: 0
+Number of optization loops: 71
+Number of satisfaction loops: 14800
+Optimization cost: 3562.33
+Opt Cost BEFORE post-processing: 3562.33
+Satisfaction post-processing time: 5.6e-05
+Optimization post-processing time: 6.2e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.005
+Satisfaction cost: 0
+Number of optization loops: 67
+Number of satisfaction loops: 15052
+Optimization cost: 3180.65
+Opt Cost BEFORE post-processing: 3180.65
+Satisfaction post-processing time: 3.3e-05
+Optimization post-processing time: 5.4e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.008
+Satisfaction cost: 0
+Number of optization loops: 67
+Number of satisfaction loops: 13631
+Optimization cost: 3905.45
+Opt Cost BEFORE post-processing: 3905.45
+Satisfaction post-processing time: 4.3e-05
+Optimization post-processing time: 8e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.007
+Satisfaction cost: 0
+Number of optization loops: 68
+Number of satisfaction loops: 14673
+Optimization cost: 3221.67
+Opt Cost BEFORE post-processing: 3221.67
+Satisfaction post-processing time: 2.2e-05
+Optimization post-processing time: 7.9e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.005
+Satisfaction cost: 0
+Number of optization loops: 71
+Number of satisfaction loops: 14790
+Optimization cost: 2606.25
+Opt Cost BEFORE post-processing: 2606.25
+Satisfaction post-processing time: 3.4e-05
+Optimization post-processing time: 8.6e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.009
+Satisfaction cost: 2279
+Number of optization loops: 65
+Number of satisfaction loops: 12906
+Optimization cost: 1.79769e+308
+Opt Cost BEFORE post-processing: 1.79769e+308
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.004
+Satisfaction cost: 1125
+Number of optization loops: 65
+Number of satisfaction loops: 14812
+Optimization cost: 1.79769e+308
+Opt Cost BEFORE post-processing: 1.79769e+308
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.005
+Satisfaction cost: 0
+Number of optization loops: 67
+Number of satisfaction loops: 14877
+Optimization cost: 2841.45
+Opt Cost BEFORE post-processing: 2841.45
+Satisfaction post-processing time: 5.6e-05
+Optimization post-processing time: 5.1e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.007
+Satisfaction cost: 0
+Number of optization loops: 70
+Number of satisfaction loops: 15014
+Optimization cost: 3657.89
+Opt Cost BEFORE post-processing: 3657.89
+Satisfaction post-processing time: 4.1e-05
+Optimization post-processing time: 5.1e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.001
+Satisfaction cost: 0
+Number of optization loops: 66
+Number of satisfaction loops: 15046
+Optimization cost: 3452.65
+Opt Cost BEFORE post-processing: 3452.65
+Satisfaction post-processing time: 3.7e-05
+Optimization post-processing time: 4.4e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.007
+Satisfaction cost: 0
+Number of optization loops: 67
+Number of satisfaction loops: 14636
+Optimization cost: 2950.4
+Opt Cost BEFORE post-processing: 2950.4
+Satisfaction post-processing time: 5.2e-05
+Optimization post-processing time: 4.8e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.008
+Satisfaction cost: 0
+Number of optization loops: 68
+Number of satisfaction loops: 14326
+Optimization cost: 3113.6
+Opt Cost BEFORE post-processing: 3113.6
+Satisfaction post-processing time: 4.9e-05
+Optimization post-processing time: 4.2e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.007
+Satisfaction cost: 0
+Number of optization loops: 70
+Number of satisfaction loops: 14606
+Optimization cost: 3305.31
+Opt Cost BEFORE post-processing: 3305.31
+Satisfaction post-processing time: 5.3e-05
+Optimization post-processing time: 0.000102
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.008
+Satisfaction cost: 0
+Number of optization loops: 66
+Number of satisfaction loops: 14444
+Optimization cost: 1989.38
+Opt Cost BEFORE post-processing: 1989.38
+Satisfaction post-processing time: 5.5e-05
+Optimization post-processing time: 4.4e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.013
+Satisfaction cost: 0
+Number of optization loops: 68
+Number of satisfaction loops: 13920
+Optimization cost: 3612.36
+Opt Cost BEFORE post-processing: 3612.36
+Satisfaction post-processing time: 0.000108
+Optimization post-processing time: 4.6e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.013
+Satisfaction cost: 0
+Number of optization loops: 67
+Number of satisfaction loops: 13490
+Optimization cost: 3080.15
+Opt Cost BEFORE post-processing: 3080.15
+Satisfaction post-processing time: 4.4e-05
+Optimization post-processing time: 0.000131
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.007
+Satisfaction cost: 1625
+Number of optization loops: 65
+Number of satisfaction loops: 14129
+Optimization cost: 1.79769e+308
+Opt Cost BEFORE post-processing: 1.79769e+308
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.007
+Satisfaction cost: 0
+Number of optization loops: 68
+Number of satisfaction loops: 14974
+Optimization cost: 3675.35
+Opt Cost BEFORE post-processing: 3675.35
+Satisfaction post-processing time: 5.5e-05
+Optimization post-processing time: 4.3e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.006
+Satisfaction cost: 0
+Number of optization loops: 67
+Number of satisfaction loops: 14833
+Optimization cost: 3558.84
+Opt Cost BEFORE post-processing: 3558.84
+Satisfaction post-processing time: 3.6e-05
+Optimization post-processing time: 4.3e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.005
+Satisfaction cost: 0
+Number of optization loops: 66
+Number of satisfaction loops: 14878
+Optimization cost: 2250.76
+Opt Cost BEFORE post-processing: 2250.76
+Satisfaction post-processing time: 5.4e-05
+Optimization post-processing time: 5.3e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.003
+Satisfaction cost: 0
+Number of optization loops: 72
+Number of satisfaction loops: 14551
+Optimization cost: 3306.04
+Opt Cost BEFORE post-processing: 3306.04
+Satisfaction post-processing time: 5.4e-05
+Optimization post-processing time: 4.6e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.008
+Satisfaction cost: 4286
+Number of optization loops: 65
+Number of satisfaction loops: 14535
+Optimization cost: 1.79769e+308
+Opt Cost BEFORE post-processing: 1.79769e+308
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.008
+Satisfaction cost: 0
+Number of optization loops: 70
+Number of satisfaction loops: 13971
+Optimization cost: 3383.56
+Opt Cost BEFORE post-processing: 3383.56
+Satisfaction post-processing time: 5.5e-05
+Optimization post-processing time: 0.000113
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.006
+Satisfaction cost: 0
+Number of optization loops: 67
+Number of satisfaction loops: 14042
+Optimization cost: 3896.44
+Opt Cost BEFORE post-processing: 3896.44
+Satisfaction post-processing time: 4.9e-05
+Optimization post-processing time: 4.4e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.007
+Satisfaction cost: 0
+Number of optization loops: 67
+Number of satisfaction loops: 14730
+Optimization cost: 2171.2
+Opt Cost BEFORE post-processing: 2171.2
+Satisfaction post-processing time: 4.3e-05
+Optimization post-processing time: 4.7e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.002
+Satisfaction cost: 0
+Number of optization loops: 69
+Number of satisfaction loops: 14466
+Optimization cost: 3639.27
+Opt Cost BEFORE post-processing: 3639.27
+Satisfaction post-processing time: 3.8e-05
+Optimization post-processing time: 4.3e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.004
+Satisfaction cost: 0
+Number of optization loops: 68
+Number of satisfaction loops: 14660
+Optimization cost: 3061.67
+Opt Cost BEFORE post-processing: 3061.67
+Satisfaction post-processing time: 5.3e-05
+Optimization post-processing time: 5.6e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.008
+Satisfaction cost: 0
+Number of optization loops: 68
+Number of satisfaction loops: 14583
+Optimization cost: 3423.42
+Opt Cost BEFORE post-processing: 3423.42
+Satisfaction post-processing time: 4.5e-05
+Optimization post-processing time: 6e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.008
+Satisfaction cost: 0
+Number of optization loops: 68
+Number of satisfaction loops: 14783
+Optimization cost: 3114.62
+Opt Cost BEFORE post-processing: 3114.62
+Satisfaction post-processing time: 4.1e-05
+Optimization post-processing time: 4.7e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.005
+Satisfaction cost: 0
+Number of optization loops: 69
+Number of satisfaction loops: 13427
+Optimization cost: 4089.6
+Opt Cost BEFORE post-processing: 4089.6
+Satisfaction post-processing time: 5.7e-05
+Optimization post-processing time: 5.4e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.007
+Satisfaction cost: 0
+Number of optization loops: 68
+Number of satisfaction loops: 14678
+Optimization cost: 2880.58
+Opt Cost BEFORE post-processing: 2880.58
+Satisfaction post-processing time: 4.2e-05
+Optimization post-processing time: 4.7e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.002
+Satisfaction cost: 0
+Number of optization loops: 69
+Number of satisfaction loops: 14505
+Optimization cost: 4233.75
+Opt Cost BEFORE post-processing: 4233.75
+Satisfaction post-processing time: 5.9e-05
+Optimization post-processing time: 5.3e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.002
+Satisfaction cost: 0
+Number of optization loops: 69
+Number of satisfaction loops: 14748
+Optimization cost: 4069.67
+Opt Cost BEFORE post-processing: 4069.67
+Satisfaction post-processing time: 5.4e-05
+Optimization post-processing time: 4.6e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.005
+Satisfaction cost: 0
+Number of optization loops: 70
+Number of satisfaction loops: 14646
+Optimization cost: 3226.91
+Opt Cost BEFORE post-processing: 3226.91
+Satisfaction post-processing time: 4.4e-05
+Optimization post-processing time: 5.4e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.001
+Satisfaction cost: 0
+Number of optization loops: 66
+Number of satisfaction loops: 14425
+Optimization cost: 3259.05
+Opt Cost BEFORE post-processing: 3259.05
+Satisfaction post-processing time: 6e-05
+Optimization post-processing time: 4.4e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.01
+Satisfaction cost: 0
+Number of optization loops: 67
+Number of satisfaction loops: 15055
+Optimization cost: 4275.78
+Opt Cost BEFORE post-processing: 4275.78
+Satisfaction post-processing time: 4.8e-05
+Optimization post-processing time: 4.1e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.008
+Satisfaction cost: 0
+Number of optization loops: 68
+Number of satisfaction loops: 15025
+Optimization cost: 2849.02
+Opt Cost BEFORE post-processing: 2849.02
+Satisfaction post-processing time: 3.7e-05
+Optimization post-processing time: 4.3e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.001
+Satisfaction cost: 0
+Number of optization loops: 70
+Number of satisfaction loops: 14467
+Optimization cost: 3645.96
+Opt Cost BEFORE post-processing: 3645.96
+Satisfaction post-processing time: 6.2e-05
+Optimization post-processing time: 5.3e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.003
+Satisfaction cost: 0
+Number of optization loops: 68
+Number of satisfaction loops: 14850
+Optimization cost: 2836.95
+Opt Cost BEFORE post-processing: 2836.95
+Satisfaction post-processing time: 4.6e-05
+Optimization post-processing time: 5.6e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.006
+Satisfaction cost: 0
+Number of optization loops: 68
+Number of satisfaction loops: 14735
+Optimization cost: 3116.36
+Opt Cost BEFORE post-processing: 3116.36
+Satisfaction post-processing time: 4.1e-05
+Optimization post-processing time: 4e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.004
+Satisfaction cost: 0
+Number of optization loops: 67
+Number of satisfaction loops: 14681
+Optimization cost: 1907.05
+Opt Cost BEFORE post-processing: 1907.05
+Satisfaction post-processing time: 2.1e-05
+Optimization post-processing time: 4.4e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.009
+Satisfaction cost: 0
+Number of optization loops: 67
+Number of satisfaction loops: 14892
+Optimization cost: 3140.22
+Opt Cost BEFORE post-processing: 3140.22
+Satisfaction post-processing time: 5.4e-05
+Optimization post-processing time: 6.4e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130
+Satisfaction cost: 0
+Number of optization loops: 70
+Number of satisfaction loops: 15068
+Optimization cost: 3368.58
+Opt Cost BEFORE post-processing: 3368.58
+Satisfaction post-processing time: 4.2e-05
+Optimization post-processing time: 4.2e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.004
+Satisfaction cost: 0
+Number of optization loops: 68
+Number of satisfaction loops: 15120
+Optimization cost: 2890.62
+Opt Cost BEFORE post-processing: 2890.62
+Satisfaction post-processing time: 4.6e-05
+Optimization post-processing time: 5.8e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.009
+Satisfaction cost: 0
+Number of optization loops: 70
+Number of satisfaction loops: 14711
+Optimization cost: 4020.95
+Opt Cost BEFORE post-processing: 4020.95
+Satisfaction post-processing time: 3.6e-05
+Optimization post-processing time: 4.6e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.006
+Satisfaction cost: 0
+Number of optization loops: 67
+Number of satisfaction loops: 14959
+Optimization cost: 2629.53
+Opt Cost BEFORE post-processing: 2629.53
+Satisfaction post-processing time: 5.2e-05
+Optimization post-processing time: 4.5e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.004
+Satisfaction cost: 0
+Number of optization loops: 68
+Number of satisfaction loops: 14852
+Optimization cost: 3185.16
+Opt Cost BEFORE post-processing: 3185.16
+Satisfaction post-processing time: 4.4e-05
+Optimization post-processing time: 0.000135
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.004
+Satisfaction cost: 0
+Number of optization loops: 67
+Number of satisfaction loops: 15031
+Optimization cost: 1812.8
+Opt Cost BEFORE post-processing: 1812.8
+Satisfaction post-processing time: 4.1e-05
+Optimization post-processing time: 5.3e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.002
+Satisfaction cost: 0
+Number of optization loops: 67
+Number of satisfaction loops: 14849
+Optimization cost: 3549.53
+Opt Cost BEFORE post-processing: 3549.53
+Satisfaction post-processing time: 4.4e-05
+Optimization post-processing time: 5.7e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.003
+Satisfaction cost: 0
+Number of optization loops: 70
+Number of satisfaction loops: 15057
+Optimization cost: 3447.71
+Opt Cost BEFORE post-processing: 3447.71
+Satisfaction post-processing time: 4.4e-05
+Optimization post-processing time: 4e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.01
+Satisfaction cost: 0
+Number of optization loops: 66
+Number of satisfaction loops: 14791
+Optimization cost: 3068.8
+Opt Cost BEFORE post-processing: 3068.8
+Satisfaction post-processing time: 4.5e-05
+Optimization post-processing time: 4.1e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.001
+Satisfaction cost: 0
+Number of optization loops: 67
+Number of satisfaction loops: 14752
+Optimization cost: 3456.58
+Opt Cost BEFORE post-processing: 3456.58
+Satisfaction post-processing time: 6.9e-05
+Optimization post-processing time: 4.3e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.006
+Satisfaction cost: 0
+Number of optization loops: 69
+Number of satisfaction loops: 14792
+Optimization cost: 2518.84
+Opt Cost BEFORE post-processing: 2518.84
+Satisfaction post-processing time: 4.3e-05
+Optimization post-processing time: 4.1e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.01
+Satisfaction cost: 0
+Number of optization loops: 70
+Number of satisfaction loops: 14859
+Optimization cost: 3235.2
+Opt Cost BEFORE post-processing: 3235.2
+Satisfaction post-processing time: 2.5e-05
+Optimization post-processing time: 4.6e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.008
+Satisfaction cost: 0
+Number of optization loops: 67
+Number of satisfaction loops: 14957
+Optimization cost: 2732.51
+Opt Cost BEFORE post-processing: 2732.51
+Satisfaction post-processing time: 3.5e-05
+Optimization post-processing time: 4.4e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.001
+Satisfaction cost: 0
+Number of optization loops: 68
+Number of satisfaction loops: 14892
+Optimization cost: 3023.13
+Opt Cost BEFORE post-processing: 3023.13
+Satisfaction post-processing time: 5.8e-05
+Optimization post-processing time: 4.3e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.007
+Satisfaction cost: 0
+Number of optization loops: 70
+Number of satisfaction loops: 14965
+Optimization cost: 3738.18
+Opt Cost BEFORE post-processing: 3738.18
+Satisfaction post-processing time: 5.4e-05
+Optimization post-processing time: 4.2e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.001
+Satisfaction cost: 0
+Number of optization loops: 66
+Number of satisfaction loops: 14925
+Optimization cost: 3155.64
+Opt Cost BEFORE post-processing: 3155.64
+Satisfaction post-processing time: 4.2e-05
+Optimization post-processing time: 5.4e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.005
+Satisfaction cost: 0
+Number of optization loops: 67
+Number of satisfaction loops: 14913
+Optimization cost: 2737.6
+Opt Cost BEFORE post-processing: 2737.6
+Satisfaction post-processing time: 5.7e-05
+Optimization post-processing time: 6.7e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.008
+Satisfaction cost: 0
+Number of optization loops: 69
+Number of satisfaction loops: 14955
+Optimization cost: 3461.53
+Opt Cost BEFORE post-processing: 3461.53
+Satisfaction post-processing time: 5.5e-05
+Optimization post-processing time: 5.3e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.001
+Satisfaction cost: 0
+Number of optization loops: 71
+Number of satisfaction loops: 14526
+Optimization cost: 4119.85
+Opt Cost BEFORE post-processing: 4119.85
+Satisfaction post-processing time: 4.4e-05
+Optimization post-processing time: 4.5e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.008
+Satisfaction cost: 0
+Number of optization loops: 70
+Number of satisfaction loops: 13724
+Optimization cost: 3117.38
+Opt Cost BEFORE post-processing: 3117.38
+Satisfaction post-processing time: 5.4e-05
+Optimization post-processing time: 4.8e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.008
+Satisfaction cost: 0
+Number of optization loops: 67
+Number of satisfaction loops: 14675
+Optimization cost: 2558.84
+Opt Cost BEFORE post-processing: 2558.84
+Satisfaction post-processing time: 5.4e-05
+Optimization post-processing time: 5.4e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.001
+Satisfaction cost: 0
+Number of optization loops: 67
+Number of satisfaction loops: 15046
+Optimization cost: 2088
+Opt Cost BEFORE post-processing: 2088
+Satisfaction post-processing time: 5.4e-05
+Optimization post-processing time: 4e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.003
+Satisfaction cost: 0
+Number of optization loops: 66
+Number of satisfaction loops: 14798
+Optimization cost: 2091.78
+Opt Cost BEFORE post-processing: 2091.78
+Satisfaction post-processing time: 5.5e-05
+Optimization post-processing time: 4.6e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.005
+Satisfaction cost: 0
+Number of optization loops: 69
+Number of satisfaction loops: 14119
+Optimization cost: 3309.67
+Opt Cost BEFORE post-processing: 3309.67
+Satisfaction post-processing time: 6e-05
+Optimization post-processing time: 5.1e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.003
+Satisfaction cost: 1100
+Number of optization loops: 65
+Number of satisfaction loops: 13368
+Optimization cost: 1.79769e+308
+Opt Cost BEFORE post-processing: 1.79769e+308
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.001
+Satisfaction cost: 0
+Number of optization loops: 66
+Number of satisfaction loops: 14025
+Optimization cost: 3105.31
+Opt Cost BEFORE post-processing: 3105.31
+Satisfaction post-processing time: 6.2e-05
+Optimization post-processing time: 4.5e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.008
+Satisfaction cost: 0
+Number of optization loops: 70
+Number of satisfaction loops: 14977
+Optimization cost: 3943.85
+Opt Cost BEFORE post-processing: 3943.85
+Satisfaction post-processing time: 4.3e-05
+Optimization post-processing time: 5.5e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.006
+Satisfaction cost: 0
+Number of optization loops: 67
+Number of satisfaction loops: 14688
+Optimization cost: 3477.82
+Opt Cost BEFORE post-processing: 3477.82
+Satisfaction post-processing time: 5.4e-05
+Optimization post-processing time: 5.7e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.006
+Satisfaction cost: 0
+Number of optization loops: 67
+Number of satisfaction loops: 14509
+Optimization cost: 4313.31
+Opt Cost BEFORE post-processing: 4313.31
+Satisfaction post-processing time: 4.1e-05
+Optimization post-processing time: 4.7e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.001
+Satisfaction cost: 975
+Number of optization loops: 65
+Number of satisfaction loops: 13475
+Optimization cost: 1.79769e+308
+Opt Cost BEFORE post-processing: 1.79769e+308
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.002
+Satisfaction cost: 0
+Number of optization loops: 67
+Number of satisfaction loops: 14907
+Optimization cost: 3208
+Opt Cost BEFORE post-processing: 3208
+Satisfaction post-processing time: 4.3e-05
+Optimization post-processing time: 4.3e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.01
+Satisfaction cost: 0
+Number of optization loops: 66
+Number of satisfaction loops: 14854
+Optimization cost: 2898.47
+Opt Cost BEFORE post-processing: 2898.47
+Satisfaction post-processing time: 4.6e-05
+Optimization post-processing time: 4.3e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.001
+Satisfaction cost: 1629
+Number of optization loops: 65
+Number of satisfaction loops: 14970
+Optimization cost: 1.79769e+308
+Opt Cost BEFORE post-processing: 1.79769e+308
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.005
+Satisfaction cost: 0
+Number of optization loops: 67
+Number of satisfaction loops: 15007
+Optimization cost: 3546.33
+Opt Cost BEFORE post-processing: 3546.33
+Satisfaction post-processing time: 4.3e-05
+Optimization post-processing time: 4.1e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.009
+Satisfaction cost: 0
+Number of optization loops: 69
+Number of satisfaction loops: 14798
+Optimization cost: 3343.27
+Opt Cost BEFORE post-processing: 3343.27
+Satisfaction post-processing time: 4.4e-05
+Optimization post-processing time: 5.3e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.007
+Satisfaction cost: 0
+Number of optization loops: 67
+Number of satisfaction loops: 14945
+Optimization cost: 3467.35
+Opt Cost BEFORE post-processing: 3467.35
+Satisfaction post-processing time: 4.3e-05
+Optimization post-processing time: 4.4e-05
+
+############
+OPTIMIZATION run with objective Max Ground DPS
+Elapsed time: 130.007
+Satisfaction cost: 0
+Number of optization loops: 67
+Number of satisfaction loops: 14846
+Optimization cost: 2442.62
+Opt Cost BEFORE post-processing: 2442.62
+Satisfaction post-processing time: 4.5e-05
+Optimization post-processing time: 5.3e-05
+
