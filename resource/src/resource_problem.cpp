@@ -117,8 +117,8 @@ int main(int argc, char **argv)
     double total = 0.;
     
     for(int i = 0 ; i < runs ; ++i )
-      //if( solver_t.solve( cost_t, solution_t, 20, 5000 ) )
-      if( solver_t.solve( cost_t, solution_t, 2, 130 ) )
+      if( solver_t.solve( cost_t, solution_t, 200, 500000 ) )
+      //if( solver_t.solve( cost_t, solution_t, 2, 130 ) )
       {
 	++count;
 	total += cost_t;
@@ -185,8 +185,8 @@ int main(int argc, char **argv)
     double total = 0.;
 
     for(int i = 0 ; i < runs ; ++i )
-      //if( solver_p.solve( cost_p, solution_p, 20, 5000 ) )
-      if( solver_p.solve( cost_p, solution_p, 2, 130 ) )
+      if( solver_p.solve( cost_p, solution_p, 2000, 130000 ) )
+	//if( solver_p.solve( cost_p, solution_p, 2, 130 ) )
       {
   	++count;
   	total += cost_p;
@@ -253,8 +253,8 @@ int main(int argc, char **argv)
     double total = 0.;
   
     for(int i = 0 ; i < runs ; ++i )
-      //if( solver_t.solve( cost_z, solution_z, 20, 5000 ) )
-      if( solver_z.solve( cost_z, solution_z, 2, 130 ) )
+      if( solver_z.solve( cost_z, solution_z, 1000, 200000 ) )
+      //if( solver_z.solve( cost_z, solution_z, 2, 130 ) )
       {
   	++count;
   	total += cost_z;
