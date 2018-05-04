@@ -38,8 +38,7 @@ Variable make_unit( const UnitType& type, int supplyAvailable, UnitData& data )
   case UnitType::Vulture:
     data = UnitData( 75, 0, 2., (20.0/30)*24 );
     return Variable( "Vulture", "t_v", 0, supplyAvailable + 1 );
-  case UnitType::SiegeTankTankMode:
-    
+  case UnitType::SiegeTankTankMode:    
     data = UnitData( 150, 100, 2., (30.0/37)*24 );
     return Variable( "SiegeTankTankMode", "t_tm", 0, supplyAvailable + 1 );
   case UnitType::SiegeTankSiegeMode:

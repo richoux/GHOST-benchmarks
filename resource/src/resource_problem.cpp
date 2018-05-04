@@ -74,73 +74,6 @@ int main(int argc, char **argv)
   int runs = 100;
   sscanf( argv[2], "%i", &runs );
   
-  ////////////
-  // Terran //
-  ////////////
-  if( race == "terran" )
-  {
-    // Create variables
-    vector< Variable > variables_t;
-    vector< UnitData > unit_data_t;
-    make_terran( 380, variables_t, unit_data_t );    
-    
-    // Define constraints 
-    shared_ptr<Constraint> mineral_t = make_shared<Stock>( &variables_t,
-							   20000,
-							   ResourceType::Mineral,
-							   unit_data_t );
-    
-    shared_ptr<Constraint> gas_t = make_shared<Stock>( &variables_t,
-						       14000,
-						       ResourceType::Gas,
-						       unit_data_t );
-    
-    shared_ptr<Constraint> supply_t = make_shared<Stock>( &variables_t,
-							  380,
-							  ResourceType::Supply,
-							  unit_data_t );
-    
-    vector< shared_ptr<Constraint> > constraints_t { mineral_t, gas_t, supply_t };
-
-    // Define objective
-    shared_ptr<Objective> objective = make_shared<MaxGroundDPS>( unit_data_t );
-
-    // Define solver
-    Solver solver_t( variables_t,
-		     constraints_t,
-		     objective );
-    
-    double cost_t = 0.;
-    vector<int> solution_t( variables_t.size(), 0 );
-    
-    int count = 0;
-    double total = 0.;
-    
-    for(int i = 0 ; i < runs ; ++i )
-      if( solver_t.solve( cost_t, solution_t, 200, 500000 ) )
-      //if( solver_t.solve( cost_t, solution_t, 2, 130 ) )
-      {
-	++count;
-	total += cost_t;
-      }
-    
-    // process_mem_usage(vm, rss);
-    
-    // cout << "*** Terran ***\n"
-    //      << "Success rate: " << count << "%\n"
-    //      << "Mean score: " << total/count << "\n";
-    //<< "Memory usage: " << rss << "/" << vm << "\n\n";
-    
-    // cout << "var-------\n";
-    // for( auto& v : variables_t )
-    //   cout << v.get_name() << ":" << v.get_value() << "\n";
-    // cout << "sol-------\n";
-    // for( auto& v : variables_t )
-    //   cout << v.get_name() << ":" << solution_t[ v.get_id() ] << "\n";
-    
-    // cout << "\n\n";
-  }
-  
   /////////////
   // Protoss //
   /////////////
@@ -185,7 +118,7 @@ int main(int argc, char **argv)
     double total = 0.;
 
     for(int i = 0 ; i < runs ; ++i )
-      if( solver_p.solve( cost_p, solution_p, 2000, 130000 ) )
+      if( solver_p.solve( cost_p, solution_p, 200, 130000 ) )
 	//if( solver_p.solve( cost_p, solution_p, 2, 130 ) )
       {
   	++count;
@@ -206,6 +139,73 @@ int main(int argc, char **argv)
     // for( auto& v : variables_p )
     //     cout << v.get_name() << ":" << solution_p[ v.get_id() ] << "\n";
 
+    // cout << "\n\n";
+  }
+  
+  ////////////
+  // Terran //
+  ////////////
+  if( race == "terran" )
+  {
+    // Create variables
+    vector< Variable > variables_t;
+    vector< UnitData > unit_data_t;
+    make_terran( 380, variables_t, unit_data_t );    
+    
+    // Define constraints 
+    shared_ptr<Constraint> mineral_t = make_shared<Stock>( &variables_t,
+							   20000,
+							   ResourceType::Mineral,
+							   unit_data_t );
+    
+    shared_ptr<Constraint> gas_t = make_shared<Stock>( &variables_t,
+						       14000,
+						       ResourceType::Gas,
+						       unit_data_t );
+    
+    shared_ptr<Constraint> supply_t = make_shared<Stock>( &variables_t,
+							  380,
+							  ResourceType::Supply,
+							  unit_data_t );
+    
+    vector< shared_ptr<Constraint> > constraints_t { mineral_t, gas_t, supply_t };
+
+    // Define objective
+    shared_ptr<Objective> objective = make_shared<MaxGroundDPS>( unit_data_t );
+
+    // Define solver
+    Solver solver_t( variables_t,
+		     constraints_t,
+		     objective );
+    
+    double cost_t = 0.;
+    vector<int> solution_t( variables_t.size(), 0 );
+    
+    int count = 0;
+    double total = 0.;
+    
+    for(int i = 0 ; i < runs ; ++i )
+      if( solver_t.solve( cost_t, solution_t, 200, 1000000 ) )
+      //if( solver_t.solve( cost_t, solution_t, 2, 130 ) )
+      {
+	++count;
+	total += cost_t;
+      }
+    
+    // process_mem_usage(vm, rss);
+    
+    // cout << "*** Terran ***\n"
+    //      << "Success rate: " << count << "%\n"
+    //      << "Mean score: " << total/count << "\n";
+    //<< "Memory usage: " << rss << "/" << vm << "\n\n";
+    
+    // cout << "var-------\n";
+    // for( auto& v : variables_t )
+    //   cout << v.get_name() << ":" << v.get_value() << "\n";
+    // cout << "sol-------\n";
+    // for( auto& v : variables_t )
+    //   cout << v.get_name() << ":" << solution_t[ v.get_id() ] << "\n";
+    
     // cout << "\n\n";
   }
   
@@ -253,7 +253,7 @@ int main(int argc, char **argv)
     double total = 0.;
   
     for(int i = 0 ; i < runs ; ++i )
-      if( solver_z.solve( cost_z, solution_z, 1000, 200000 ) )
+      if( solver_z.solve( cost_z, solution_z, 250, 300000 ) )
       //if( solver_z.solve( cost_z, solution_z, 2, 130 ) )
       {
   	++count;
