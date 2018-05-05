@@ -6,7 +6,7 @@
 using namespace std;
 using namespace ghost;
 
-Stock::Stock( vector< Variable > *variables,
+Stock::Stock( const vector< Variable > &variables,
 	      int quantity,
 	      ResourceType type,
 	      const vector< UnitData >& unit_data )
@@ -38,7 +38,7 @@ double Stock::required_cost() const
       throw 0;
     }
     
-    sum += ( (*variables)[i].get_value() * costValue );
+    sum += ( variables[i].get_value() * costValue );
   }
 
   return std::max( 0., sum - _quantity );

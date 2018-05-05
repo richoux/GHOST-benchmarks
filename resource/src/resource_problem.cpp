@@ -86,20 +86,20 @@ int main(int argc, char **argv)
     make_protoss( 380, variables_p, unit_data_p );    
     
     // Define constraints 
-    shared_ptr<Constraint> mineral_p = make_shared<Stock>( &variables_p,
-						      20000,
-						      ResourceType::Mineral,
-						      unit_data_p );
+    shared_ptr<Constraint> mineral_p = make_shared<Stock>( variables_p,
+							   20000,
+							   ResourceType::Mineral,
+							   unit_data_p );
 
-    shared_ptr<Constraint> gas_p = make_shared<Stock>( &variables_p,
-						  14000,
-						  ResourceType::Gas,
-						  unit_data_p );
+    shared_ptr<Constraint> gas_p = make_shared<Stock>( variables_p,
+						       14000,
+						       ResourceType::Gas,
+						       unit_data_p );
     
-    shared_ptr<Constraint> supply_p = make_shared<Stock>( &variables_p,
-						     380,
-						     ResourceType::Supply,
-						     unit_data_p );
+    shared_ptr<Constraint> supply_p = make_shared<Stock>( variables_p,
+							  380,
+							  ResourceType::Supply,
+							  unit_data_p );
   
     vector< shared_ptr<Constraint> > constraints_p { mineral_p, gas_p, supply_p };
 
@@ -153,17 +153,17 @@ int main(int argc, char **argv)
     make_terran( 380, variables_t, unit_data_t );    
     
     // Define constraints 
-    shared_ptr<Constraint> mineral_t = make_shared<Stock>( &variables_t,
+    shared_ptr<Constraint> mineral_t = make_shared<Stock>( variables_t,
 							   20000,
 							   ResourceType::Mineral,
 							   unit_data_t );
     
-    shared_ptr<Constraint> gas_t = make_shared<Stock>( &variables_t,
+    shared_ptr<Constraint> gas_t = make_shared<Stock>( variables_t,
 						       14000,
 						       ResourceType::Gas,
 						       unit_data_t );
     
-    shared_ptr<Constraint> supply_t = make_shared<Stock>( &variables_t,
+    shared_ptr<Constraint> supply_t = make_shared<Stock>( variables_t,
 							  380,
 							  ResourceType::Supply,
 							  unit_data_t );
@@ -221,20 +221,20 @@ int main(int argc, char **argv)
     make_zerg( 380, variables_z, unit_data_z );    
 
     // Define constraints 
-    shared_ptr<Constraint> mineral_z = make_shared<Stock>( &variables_z,
-						      20000,
-						      ResourceType::Mineral,
-						      unit_data_z );
+    shared_ptr<Constraint> mineral_z = make_shared<Stock>( variables_z,
+							   20000,
+							   ResourceType::Mineral,
+							   unit_data_z );
 
-    shared_ptr<Constraint> gas_z = make_shared<Stock>( &variables_z,
-						  14000,
-						  ResourceType::Gas,
-						  unit_data_z );
+    shared_ptr<Constraint> gas_z = make_shared<Stock>( variables_z,
+						       14000,
+						       ResourceType::Gas,
+						       unit_data_z );
     
-    shared_ptr<Constraint> supply_z = make_shared<Stock>( &variables_z,
-						     380,
-						     ResourceType::Supply,
-						     unit_data_z );
+    shared_ptr<Constraint> supply_z = make_shared<Stock>( variables_z,
+							  380,
+							  ResourceType::Supply,
+							  unit_data_z );
   
     vector< shared_ptr<Constraint> > constraints_z { mineral_z, gas_z, supply_z };
 
