@@ -6,7 +6,7 @@
 using namespace std;
 using namespace ghost;
 
-Stock::Stock( const vector< Variable > &variables,
+Stock::Stock( const vector< Variable >& variables,
 	      int quantity,
 	      ResourceType type,
 	      const vector< UnitData >& unit_data )

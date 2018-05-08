@@ -10,7 +10,7 @@ MaxGroundDPS::MaxGroundDPS( const vector< UnitData >& unit_data )
     _unit_data	( unit_data )
 { }
 
-double MaxGroundDPS::required_cost( const vector< Variable > &vecVariables ) const 
+double MaxGroundDPS::required_cost( const vector< Variable >& vecVariables ) const 
 {
   double total = 0.;
 

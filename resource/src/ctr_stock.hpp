@@ -21,7 +21,7 @@ class Stock : public Constraint
   double required_cost() const override;
 
 public:
-  Stock( const vector< Variable > &variables,
+  Stock( const vector< Variable >& variables,
 	 int quantity,
 	 ResourceType type,
 	 const vector< UnitData >& unit_data );
