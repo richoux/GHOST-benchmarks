@@ -1,0 +1,22 @@
+#pragma once
+
+enum UnitType{ Zealot,
+	       Dragoon,
+	       DarkTemplar,
+	       Reaver,
+	       Scout,
+	       Marine,
+	       Firebat,
+	       Ghost,
+	       Vulture,
+	       SiegeTankTankMode,
+	       SiegeTankSiegeMode,
+	       Goliath,
+	       Wraith,
+	       BattleCruiser,
+	       Zergling,
+	       Hydralisk,
+	       Lurker,
+	       Ultralisk,
+	       Mutalisk,
+	       Guardian };
