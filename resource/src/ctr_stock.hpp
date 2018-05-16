@@ -1,7 +1,7 @@
 #pragma once
 
 #include <vector>
-#include <functional>
+// #include <functional>
 
 #include <ghost/constraint.hpp>
 #include <ghost/variable.hpp>
@@ -22,10 +22,14 @@ class Stock : public Constraint
   double required_cost() const override;
 
 public:
-  Stock( const vector< reference_wrapper<Variable> >& variables,
+  Stock( const vector< Variable* >& variables,
 	 int quantity,
 	 ResourceType type,
 	 const vector< UnitData >& unit_data );
+  // Stock( const vector< reference_wrapper<Variable> >& variables,
+  // 	 int quantity,
+  // 	 ResourceType type,
+  // 	 const vector< UnitData >& unit_data );
 
   inline int get_resource() { return _quantity; }
 };

@@ -5,7 +5,7 @@
 #include <string>
 
 #include <vector>
-#include <functional>
+// #include <functional>
 
 #include <ghost/solver.hpp>
 #include <ghost/variable.hpp>
@@ -86,7 +86,10 @@ int main(int argc, char **argv)
     vector< UnitData > unit_data_p;
     make_protoss( 380, variables_p, unit_data_p );    
 
-    vector< reference_wrapper<Variable> > variables_ref_p( variables_p.begin(), variables_p.end() );
+    vector< Variable* > variables_ref_p;
+    for( auto& v : variables_p )
+      variables_ref_p.push_back( &v );
+    // vector< reference_wrapper<Variable> > variables_ref_p( variables_p.begin(), variables_p.end() );
 
     // Define constraints 
     shared_ptr<Constraint> mineral_p = make_shared<Stock>( variables_ref_p,
@@ -155,7 +158,10 @@ int main(int argc, char **argv)
     vector< UnitData > unit_data_t;
     make_terran( 380, variables_t, unit_data_t );    
 
-    vector< reference_wrapper<Variable> > variables_ref_t( variables_t.begin(), variables_t.end() );
+    vector< Variable* > variables_ref_t;
+    for( auto& v : variables_t )
+      variables_ref_t.push_back( &v );
+    //vector< reference_wrapper<Variable> > variables_ref_t( variables_t.begin(), variables_t.end() );
 
     // Define constraints 
     shared_ptr<Constraint> mineral_t = make_shared<Stock>( variables_ref_t,
@@ -225,7 +231,10 @@ int main(int argc, char **argv)
     vector< UnitData > unit_data_z;
     make_zerg( 380, variables_z, unit_data_z );    
 
-    vector< reference_wrapper<Variable> > variables_ref_z( variables_z.begin(), variables_z.end() );
+    vector< Variable* > variables_ref_z;
+    for( auto& v : variables_z )
+      variables_ref_z.push_back( &v );
+    //vector< reference_wrapper<Variable> > variables_ref_z( variables_z.begin(), variables_z.end() );
 
     // Define constraints 
     shared_ptr<Constraint> mineral_z = make_shared<Stock>( variables_ref_z,
