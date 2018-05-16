@@ -5,6 +5,7 @@
 #include <string>
 
 #include <vector>
+#include <functional>
 
 #include <ghost/solver.hpp>
 #include <ghost/variable.hpp>
@@ -84,19 +85,21 @@ int main(int argc, char **argv)
     vector< Variable > variables_p;
     vector< UnitData > unit_data_p;
     make_protoss( 380, variables_p, unit_data_p );    
-    
+
+    vector< reference_wrapper<Variable> > variables_ref_p( variables_p.begin(), variables_p.end() );
+
     // Define constraints 
-    shared_ptr<Constraint> mineral_p = make_shared<Stock>( variables_p,
+    shared_ptr<Constraint> mineral_p = make_shared<Stock>( variables_ref_p,
 							   20000,
 							   ResourceType::Mineral,
 							   unit_data_p );
 
-    shared_ptr<Constraint> gas_p = make_shared<Stock>( variables_p,
+    shared_ptr<Constraint> gas_p = make_shared<Stock>( variables_ref_p,
 						       14000,
 						       ResourceType::Gas,
 						       unit_data_p );
     
-    shared_ptr<Constraint> supply_p = make_shared<Stock>( variables_p,
+    shared_ptr<Constraint> supply_p = make_shared<Stock>( variables_ref_p,
 							  380,
 							  ResourceType::Supply,
 							  unit_data_p );
@@ -151,19 +154,21 @@ int main(int argc, char **argv)
     vector< Variable > variables_t;
     vector< UnitData > unit_data_t;
     make_terran( 380, variables_t, unit_data_t );    
-    
+
+    vector< reference_wrapper<Variable> > variables_ref_t( variables_t.begin(), variables_t.end() );
+
     // Define constraints 
-    shared_ptr<Constraint> mineral_t = make_shared<Stock>( variables_t,
+    shared_ptr<Constraint> mineral_t = make_shared<Stock>( variables_ref_t,
 							   20000,
 							   ResourceType::Mineral,
 							   unit_data_t );
     
-    shared_ptr<Constraint> gas_t = make_shared<Stock>( variables_t,
+    shared_ptr<Constraint> gas_t = make_shared<Stock>( variables_ref_t,
 						       14000,
 						       ResourceType::Gas,
 						       unit_data_t );
     
-    shared_ptr<Constraint> supply_t = make_shared<Stock>( variables_t,
+    shared_ptr<Constraint> supply_t = make_shared<Stock>( variables_ref_t,
 							  380,
 							  ResourceType::Supply,
 							  unit_data_t );
@@ -220,18 +225,20 @@ int main(int argc, char **argv)
     vector< UnitData > unit_data_z;
     make_zerg( 380, variables_z, unit_data_z );    
 
+    vector< reference_wrapper<Variable> > variables_ref_z( variables_z.begin(), variables_z.end() );
+
     // Define constraints 
-    shared_ptr<Constraint> mineral_z = make_shared<Stock>( variables_z,
+    shared_ptr<Constraint> mineral_z = make_shared<Stock>( variables_ref_z,
 							   20000,
 							   ResourceType::Mineral,
 							   unit_data_z );
 
-    shared_ptr<Constraint> gas_z = make_shared<Stock>( variables_z,
+    shared_ptr<Constraint> gas_z = make_shared<Stock>( variables_ref_z,
 						       14000,
 						       ResourceType::Gas,
 						       unit_data_z );
     
-    shared_ptr<Constraint> supply_z = make_shared<Stock>( variables_z,
+    shared_ptr<Constraint> supply_z = make_shared<Stock>( variables_ref_z,
 							  380,
 							  ResourceType::Supply,
 							  unit_data_z );
