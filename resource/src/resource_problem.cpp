@@ -13,7 +13,7 @@
 #include "unitData.hpp"
 #include "ctr_stock.hpp"
 #include "obj_maxgrounddps.hpp"
-#include "factory_unit.hpp"
+#include "factory_variable_resource.hpp"
 
 using namespace ghost;
 using namespace std;

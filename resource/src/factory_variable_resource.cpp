@@ -1,6 +1,6 @@
 #include <exception>
 
-#include "factory_unit.hpp"
+#include "factory_variable_resource.hpp"
 
 using namespace std; 
 
