@@ -72,18 +72,17 @@ void UnitData::swap( UnitData &other )
   std::swap(this->do_linear_splash, other.do_linear_splash);
 }
 
-ostream& operator<<( ostream &os, const UnitData &u )
-{
-  os
-    << "Name: " << u.name << "\n"
-    << "Coordinates: (" << u.coord.x << ", " << u.coord.y << ")\n"
-    << "Can shoot in: " << u.can_shoot_in << " frames" << "\n"
-    << "Cooldown: " <<  u.cooldown << "\n"
-    << "HP: " <<  u.hp << "\n"
-    << "Inital HP: " <<  u.hp << "\n"
-    << "Damage: " <<  u.damage << "\n"
-    << "Armor: " <<  u.armor << "\n";
-  // << "-------" << "\n";
+// ostream& operator<<( ostream &os, const UnitData &u )
+// {
+//   os << "Name: " << u.name << "\n"
+//     << "Coordinates: (" << u.coord.x << ", " << u.coord.y << ")\n"
+//     << "Can shoot in: " << u.can_shoot_in << " frames" << "\n"
+//     << "Cooldown: " <<  u.cooldown << "\n"
+//     << "HP: " <<  u.hp << "\n"
+//     << "Inital HP: " <<  u.hp << "\n"
+//     << "Damage: " <<  u.damage << "\n"
+//     << "Armor: " <<  u.armor << "\n";
+//   // << "-------" << "\n";
     
-  return os;
-}
+//   return os;
+// }

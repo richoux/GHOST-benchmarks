@@ -1,11 +1,11 @@
 #include <algorithm>
 
-#include "contraint_shootable.hpp"
+#include "constraint_shootable.hpp"
 
-Shootable::Shootable( const vector< Variable >& variables,
+Shootable::Shootable( const vector< reference_wrapper<Variable> >& variables,
 		      const vector< UnitData >& my_army,
 		      const vector< UnitData >& enemy_army )
-  : variables(variables),
+  : Constraint(variables),
     _my_army(my_army),
     _enemy_army(enemy_army)
 { }
@@ -22,19 +22,20 @@ double Shootable::required_cost() const
     // If the unit is in cooldown, there is nothing to check
     if( my_unit.can_shoot() )
     {
+      int variable_value = variables[ i ].get().get_value();
       // No target assigned
-      if( variables[ i ] == -1 )
+      if( variable_value == -1 )
       {
 	// if some enemies are alive and within range while having no target assigned,
 	// increase the cost by the number of such enemies.
 	int count = std::count_if( _enemy_army.begin(),
 				   _enemy_army.end(),
-				   [&](auto& enemy){ my_unit.is_in_range_and_alive( enemy ) } );
+				   [&](auto& enemy){ return my_unit.is_in_range_and_alive( enemy ); } );
 	cost += count;
       }
       else
       {
-	auto& target = _enemy_army[ variables[ i ] ];
+	auto& target = _enemy_army[ variable_value ];
 	
 	// If our target is dead or not in range, increment the cost;
 	if( !my_unit.is_in_range_and_alive( target ) )

@@ -8,7 +8,8 @@
 ///////////////
 MaxDamage::MaxDamage( const vector< UnitData >& my_army,
 		      const vector< UnitData >& enemy_army )
-  : _my_army(my_army),
+  : Objective( "MaxDamage" ),
+    _my_army(my_army),
     _enemy_army(enemy_army)
 { }
 
@@ -18,7 +19,7 @@ double MaxDamage::required_cost( const vector< Variable >& vec_variables ) const
 
   for( int i = 0; i < vec_variables.size(); ++i )
   {
-    auto& vec_costs = compute_my_shoot_damage( i, vec_variables );
+    auto vec_costs = compute_damage( _my_army[ i ], vec_variables[ i ].get_value(), _enemy_army ); //compute_my_shoot_damage( i, vec_variables );
     for( auto& c : vec_costs )
       cost += c;
   }
@@ -31,7 +32,8 @@ double MaxDamage::required_cost( const vector< Variable >& vec_variables ) const
 /////////////
 MaxKill::MaxKill( const vector< UnitData >& my_army,
 		  const vector< UnitData >& enemy_army )
-  : _my_army(my_army),
+  : Objective( "MaxKill" ),
+    _my_army(my_army),
     _enemy_army(enemy_army)
 { }
 
@@ -41,7 +43,7 @@ double MaxKill::required_cost( const vector< Variable >& vec_variables ) const
   
   for( int i = 0; i < vec_variables.size(); ++i )
   {
-    auto& vec_costs = compute_my_shoot_damage( i, vec_variables );
+    auto vec_costs = compute_damage( _my_army[ i ], vec_variables[ i ].get_value(), _enemy_army ); //compute_my_shoot_damage( i, vec_variables );
     for( int i = 0; i < vec_costs.size(); ++i )
       total_damage[ i ] += vec_costs[ i ];
   }
@@ -61,7 +63,8 @@ double MaxKill::required_cost( const vector< Variable >& vec_variables ) const
 /////////////////
 MinOverkill::MinOverkill( const vector< UnitData >& my_army,
 			  const vector< UnitData >& enemy_army )
-  : _my_army(my_army),
+  : Objective( "MinOverkill" ),
+    _my_army(my_army),
     _enemy_army(enemy_army)
 { }
 
@@ -73,7 +76,7 @@ double MinOverkill::required_cost( const vector< Variable >& vec_variables ) con
   
   for( int i = 0; i < vec_variables.size(); ++i )
   {
-    auto& vec_costs = compute_my_shoot_damage( i, vec_variables );
+    auto vec_costs = compute_damage( _my_army[ i ], vec_variables[ i ].get_value(), _enemy_army ); //compute_my_shoot_damage( i, vec_variables );
     for( int i = 0; i < vec_costs.size(); ++i )
       total_damage[ i ] += vec_costs[ i ];
   }
@@ -84,7 +87,7 @@ double MinOverkill::required_cost( const vector< Variable >& vec_variables ) con
     if( total_damage[ i ] >= _enemy_army[ i ].hp )
       ++count;
 
-    cost += ( total_damage[ i ] - ( std::max( 0, total_damage[ i ] - _enemy_army[ i ].hp ) ) );
+    cost += ( total_damage[ i ] - ( std::max( 0., total_damage[ i ] - _enemy_army[ i ].hp ) ) );
   }
 
   // (MaxDamage without overkill) * (number of kills + 1)

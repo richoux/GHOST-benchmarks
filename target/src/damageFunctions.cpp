@@ -1,3 +1,6 @@
+#include <functional>
+#include <algorithm>
+
 #include "damageFunctions.hpp"
 
 double coeff_damage_type( DamageType dt, Size s )
@@ -20,7 +23,7 @@ double coeff_damage_type( DamageType dt, Size s )
   }
 }
 
-vector<double> compute_damage( UnitData& shooter, int target_index, vector< UnitData >& units )
+vector<double> compute_damage( const UnitData& shooter, int target_index, const vector< UnitData >& units )
 {
   vector<double> hits( units.size(), 0. );
 
@@ -46,7 +49,7 @@ vector<double> compute_damage( UnitData& shooter, int target_index, vector< Unit
 	    hit = ( shooter.damage - target.armor ) * coeff_damage_type( shooter.damage_type, target.size );
 	    hits[ target_index ] = std::max( hit, 0.5 );
 	  }
-	  else if( units[ i ].isAlive() )
+	  else if( units[ i ].is_alive() )
 	  {
 	    double dist = target.distance_from( units[ i ] );
 	    if( dist <= shooter.splash_radius.ray1 )
@@ -73,13 +76,13 @@ vector<double> compute_damage( UnitData& shooter, int target_index, vector< Unit
   return hits;
 }
 
-vector<double> compute_my_shoot_damage( int shooter_index, const vector< ghost::Variable >& vec_variables )
-{
-  return compute_damage( _my_army[ shooter_index ], vec_variables[ shooter_index ], _enemy_army ); 
-}
+// vector<double> compute_my_shoot_damage( int shooter_index, const vector< reference_wrapper<ghost::Variable> >& vec_variables )
+// {
+//   return compute_damage( _my_army[ shooter_index ], vec_variables[ shooter_index ].get().get_value(), _enemy_army ); 
+// }
 
-vector<double> compute_enemy_shoot_damage( int shooter_index, int target_index )
-{
-  return compute_damage( _enemy_army[ shooter_index ], target_index, _my_army ); 
-}
+// vector<double> compute_enemy_shoot_damage( int shooter_index, int target_index )
+// {
+//   return compute_damage( _enemy_army[ shooter_index ], target_index, _my_army ); 
+// }
 

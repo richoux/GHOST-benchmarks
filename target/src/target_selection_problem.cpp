@@ -6,19 +6,20 @@
 #include <type_traits>
 #include <string>
 #include <limits>
+#include <functional>
 
-#include <ghost/misc/random>
-#include <ghost/variable>
-#include <ghost/constraint>
-#include <ghost/objective>
-#include <ghost/solver>
+#include <ghost/misc/random.hpp>
+#include <ghost/variable.hpp>
+#include <ghost/constraint.hpp>
+#include <ghost/objective.hpp>
+#include <ghost/solver.hpp>
 
 #include "constraint_shootable.hpp"
 #include "objectives_target.hpp"
 #include "unitData.hpp"
 #include "unitType.hpp"
 #include "damageFunctions.hpp"
-#include "factoryUnitData.hpp"
+#include "factory_variable_target.hpp"
 
 using namespace ghost;
 using namespace std;
@@ -91,8 +92,8 @@ int main(int argc, char **argv)
   // string action;
   // int time;
 
-  int sat = 20;
-  int opt = 30;
+  int sat = 20000;
+  int opt = 30000;
   if( argc > 1 )
     sat = stoi(argv[1]);
   if( argc > 2 )
@@ -127,106 +128,110 @@ int main(int argc, char **argv)
   // Define objective
   // nil
 
-  // Define our army data
-  vector< UnitData > my_army
-  {
-    factory_unitData( UnitType::Marine, {30, 30} ), // 0
-      factory_unitData( UnitType::Marine, {50, 30} ), // 1
-      factory_unitData( UnitType::Marine, {70, 30} ), // 2
-      factory_unitData( UnitType::Marine, {90, 30} ), // 3
-      factory_unitData( UnitType::Marine, {110, 30} ), // 4
-      
-      factory_unitData( UnitType::Goliath, {10, 65} ), // 5
-      factory_unitData( UnitType::Vulture, {50, 65} ), // 6
-      factory_unitData( UnitType::Vulture, {90, 65} ), // 7
-      factory_unitData( UnitType::Goliath, {130, 65} ), // 8
-
-      factory_unitData( UnitType::SiegeTankTankMode, {10, 102} ), // 9
-      factory_unitData( UnitType::Ghost, {65, 102} ), // 10
-      factory_unitData( UnitType::Ghost, {75, 102} ), // 11
-      factory_unitData( UnitType::SiegeTankTankMode, {130, 102} ), // 12
-
-      factory_unitData( UnitType::SiegeTankSiegeMode, {70, 139} ), // 13
-  };
-
+  // Define our army variables and data
+  vector< Variable > variables;
+  vector< UnitData > my_army;
+  make_my_terran( variables, my_army );
+  
   // Define enemies, mirror to our units
   vector< UnitData > enemies;
-  for( int i = 0; i < my_army.size(); ++i )
-  {
-    enemies.push_back( my_army[ i ] );
-    enemies[ i ].coord.y *= -1;
-  }
-
-  
-  
+  make_enemy_terran( enemies );
+ 
   // Define constraints
-  vector< shared_ptr<TargetSelectionConstraint> > vecConstraints { make_shared<TargetSelectionConstraint>( &vec, &domain ) };
+  vector< reference_wrapper<Variable> > variables_ref( variables.begin(), variables.end() );
+  vector< shared_ptr<Constraint> > constraints { make_shared<Shootable>( variables_ref, my_army, enemies ) };
 
   // Define objective
-  shared_ptr<TargetSelectionObjective> objective = make_shared<MaxDamage>();
-  
-  Solver<Unit, TargetSelectionDomain, TargetSelectionConstraint> solver( &vec, &domain, vecConstraints, objective );
-  // Solver<Unit, TargetSelectionDomain, TargetSelectionConstraint> solver( &vec, &domain, vecConstraints );
+  shared_ptr<Objective> objective = make_shared<MaxDamage>( my_army, enemies );
+
+  // Define solver
+  Solver solver( variables, constraints, objective );
 
   Random random;
-  vector<int> inRange;
+  vector<int> in_range;
 
-  int numUnits = vec.size();
-  int numEnemy = enemies.size();
+  int num_units = my_army.size();
+  int num_enemy = enemies.size();
 
-  vector<int> aimedUnits( numUnits, -1 );
+  vector<int> aimed_units( num_units, -1 );
 
-  int deadUnits;
-  int deadEnemy;
+  int dead_units = 0;
+  int dead_enemy = 0;
 
-  double totalDamages;
-  double totalDamagesEnemy;
+  double total_damages;
+  double total_damages_enemy;
 
+#ifndef NDEBUG
   int tour = 1;
+#endif
 
-  vector< UnitEnemy > copyEnemies( enemies );
+  vector< UnitData > copy_enemies( enemies );
+
+  double cost = 0.;
+  vector<int> solution( variables.size(), 0 );
 
   do
   {
-    if( none_of( begin(vec), end(vec), [&](Unit &u){return !u.isDead() && u.canShoot() && !domain.get_living_enemies_in_range( u ).empty(); } ) 
+    // If no one can shoot, is alive or has enemy in range, go next step
+    if( all_of( begin( my_army ), end( my_army ), [&](UnitData& u){return ( !u.can_shoot() || u.is_dead() || get_living_enemies_in_range( u, enemies ).empty() );} ) 
 	&&
-	none_of( begin(enemies), end(enemies), [&](UnitEnemy &u){return !u.isDead() && u.canShoot() && !get_living_enemies_in_range( u, vec ).empty(); } ) )
+	all_of( begin( enemies ), end( enemies ), [&](UnitData& u){return ( !u.can_shoot() || u.is_dead() || get_living_enemies_in_range( u, my_army ).empty() );} ) )
     {
-      for_each( begin(vec), end(vec), [](Unit &u){u.oneStep();} );
-      for_each( begin(enemies), end(enemies), [](UnitEnemy &u){u.oneStep();} );
+      for_each( begin( my_army ), end( my_army ), [](UnitData& u){ u.one_step(); } );
+      for_each( begin( enemies ), end( enemies ), [](UnitData& u){ u.one_step(); } );
       continue;
     }
 
-    solver.solve( sat, opt );
+    solver.solve( cost, solution, sat, opt );
 
-    totalDamages = 0.;
-    totalDamagesEnemy = 0.;
+    total_damages = 0.;
+    total_damages_enemy = 0.;
 
 #ifndef NDEBUG
-    cout << "Tour " << tour++ << endl;
+    cout << "Tour " << tour++ << "\n";
 
     // My units attack
-    cout << ":::: My turn ::::" << endl;
+    cout << ":::: My turn ::::" << "\n";
 #endif
 
-    for( int i = 0 ; i < enemies.size() ; ++i )
-      copyEnemies[i].data.hp = enemies[i].data.hp;
+    for( int i = 0 ; i < num_enemy ; ++i )
+      copy_enemies[ i ].hp = enemies[ i ].hp;
     
-    for( auto &v : vec )
-      if( !v.isDead() )
-	if( v.canShoot() && v.getValue() != -1 )
-	  totalDamages += v.doDamage( copyEnemies );
+    for( int i = 0; i < num_units; ++i )
+    {
+      auto& var_data = my_army[ i ];
+      if( var_data.is_alive() )
+      {
+	auto& var = variables[ i ];
+	if( var_data.can_shoot() && var.get_value() != -1 )
+	{
+	  auto vec_damages = compute_damage( var_data, var.get_value(), copy_enemies ); //compute_my_shoot_damage( i, variables );
+
+	  double hit = 0.;
+	  for( auto& value: vec_damages )
+	    hit += value;
+
+	  total_damages += hit;
+	  copy_enemies[ var.get_value() ].hp -= hit;
+
+	  var_data.just_shot();
+	}
 	else
 	{
 #ifndef NDEBUG
-	  cout << v.getFullName() << ":" << v.getId() << " HP=" << v.getHP() << ", wait=" << v.canShootIn() << " (value="<< v.getValue() <<")" << endl;
+	  cout << var_data.name << ":" << var.get_id()
+	       << " HP=" << var_data.hp
+	       << ", wait=" << var_data.can_shoot_in
+	       << " (value="<< var.get_value() <<")" << "\n";
 #endif
-	  if( !v.canShoot() )
-	    v.oneStep();
+	  if( !var_data.can_shoot() )
+	    var_data.one_step();
 	}
+      }
+    }
     
 #ifndef NDEBUG
-    // cout << endl << endl << "Simulation" << endl;
+    // cout << "\n" << "\n" << "Simulation" << "\n";
     // for( auto &v : vec )
     // {
     //   if( !v.isDead() && v.canShootIn() == v.getCooldown() )
@@ -238,30 +243,30 @@ int main(int argc, char **argv)
     // 	  v.setValue( j );
     // 	  auto hits = v.computeDamage( &copyEnemies );
     // 	  if( hits.at( j ) != 0. )
-    // 	    cout << v.getFullName() << ":" << v.getId() << " can hit " << copyEnemies.at(j).data.name << "@" << j << " with " << hits.at( j ) << " (dist=" << v.distanceFrom(copyEnemies.at(j)) << ")" << endl;
+    // 	    cout << v.getFullName() << ":" << v.getId() << " can hit " << copyEnemies.at(j).data.name << "@" << j << " with " << hits.at( j ) << " (dist=" << v.distanceFrom(copyEnemies.at(j)) << ")" << "\n";
     // 	}
 	
     // 	v.setValue( backup );
     //   }
     // }
-    // cout << endl << endl;
+    // cout << "\n" << "\n";
 #endif
 	
 
 
     // The enemy attacks
 #ifndef NDEBUG
-    cout << "@@@@ Enemy's turn @@@@" << endl;
+    cout << "@@@@ Enemy's turn @@@@" << "\n";
 #endif
-    std::fill( aimedUnits.begin(), aimedUnits.end(), -1 );
+    std::fill( aimed_units.begin(), aimed_units.end(), -1 );
 
     // choosing a target for each enemy unit
-    for( int i = 0 ; i < enemies.size() ; ++i )
-      if( !enemies[i].isDead() && enemies[i].canShoot() )
+    for( int i = 0; i < num_enemy; ++i )
+      if( enemies[ i ].is_alive() && enemies[ i ].can_shoot() )
       {
-	inRange = get_living_enemies_in_range( enemies[i], vec );
+	in_range = get_living_enemies_in_range( enemies[ i ], my_army );
 	
-	if( !inRange.empty() )
+	if( !in_range.empty() )
 	  // RANDOM SHOT
 	  // aimedUnits[ i ] = inRange[ random.getRandNum( inRange.size() ) ];
 	  
@@ -269,86 +274,96 @@ int main(int argc, char **argv)
 	  // aimedUnits[ i ] = inRange[ getLowestHPUnit( inRange, vec, random ) ];
 
       	  // LOW-HP RATIO SHOT
-	  aimedUnits[ i ] = inRange[ getLowestHPRatioUnit( inRange, vec, random ) ];
+	  aimed_units[ i ] = in_range[ get_lowest_HP_ratio_unit( in_range, my_army, random ) ];
 }
 
     // print stuff AND decrement cooldown (yes, it's bad to do it within the same loop, but whatever) 
-    for( int i = 0 ; i < enemies.size() ; ++i )
+    for( int i = 0; i < num_enemy; ++i )
     {
-      if( !enemies[i].isDead() )
+      if( enemies[ i ].is_alive() )
       {
-	if( enemies[i].canShoot() )
-	  if( aimedUnits[ i ] != -1 )
-	    totalDamagesEnemy += enemies[i].doDamageAgainst( aimedUnits[ i ], vec, i );
+	auto& var_data = enemies[ i ];
+	if( var_data.can_shoot() )
+	{
+	  if( aimed_units[ i ] != -1 )
+	  {
+	    auto vec_damages = compute_damage( var_data, aimed_units[ i ], my_army ); //compute_enemy_shoot_damage( i, aimed_units[ i ] );
+
+	    double hit = 0.;
+	    for( auto value: vec_damages )
+	      hit += value;
+	    
+	    total_damages_enemy += hit;
+	    my_army[ aimed_units[ i ] ].hp -= hit;
+
+	    var_data.just_shot();
+	  }
 #ifndef NDEBUG
 	  else
-	    cout << enemies[i].data.name << "@" << i << " HP=" << enemies[i].data.hp << ", wait=" << enemies[i].data.canShootIn << endl;	    
+	    cout << var_data.name << "@" << i << " HP=" << var_data.hp << ", wait=" << var_data.can_shoot_in << "\n";	    
 #endif
+	}
 	else
 	{
 #ifndef NDEBUG
-	  cout << enemies[i].data.name << "@" << i << " HP=" << enemies[i].data.hp << ", wait=" << enemies[i].data.canShootIn << endl;
+	  cout << var_data.name << "@" << i << " HP=" << var_data.hp << ", wait=" << var_data.can_shoot_in << "\n";
 #endif
 	  // decrement cooldown
-	  if( !enemies[i].canShoot() )
-	    enemies[i].oneStep();
+	  if( !var_data.can_shoot() )
+	    var_data.one_step();
 	}
       }
     }
 
-    for( int i = 0 ; i < enemies.size() ; ++i )
-      enemies[i].data.hp = copyEnemies[i].data.hp;
+    for( int i = 0; i < num_enemy; ++i )
+      enemies[ i ].hp = copy_enemies[ i ].hp;
     
-    deadUnits = count_if( begin(vec), end(vec), [](Unit &u){ return u.isDead(); } );
-    deadEnemy = count_if( begin(enemies), end(enemies), [](UnitEnemy &u){ return u.isDead(); } );
+    dead_units = count_if( begin(my_army), end(my_army), [](UnitData &u){ return u.is_dead(); } );
+    dead_enemy = count_if( begin(enemies), end(enemies), [](UnitData &u){ return u.is_dead(); } );
 #ifndef NDEBUG
-    cout << "XXXX Turns over XXXX" << endl
-    	 << "Total damages from you: " << totalDamages << endl 
-    	 << "Total damages from the enemy: " << totalDamagesEnemy << endl
-    	 << "Number of dead units: " << deadUnits << endl 
-    	 << "Number of dead enemies: " << deadEnemy << endl;
+    cout << "XXXX Turns over XXXX" << "\n"
+    	 << "Total damages from you: " << total_damages << "\n" 
+    	 << "Total damages from the enemy: " << total_damages_enemy << "\n"
+    	 << "Number of dead units: " << dead_units << "\n" 
+    	 << "Number of dead enemies: " << dead_enemy << "\n";
 #endif
 
-  } while( deadUnits < numUnits && deadEnemy < numEnemy );
+  } while( dead_units < num_units && dead_enemy < num_enemy );
 
   double total_hp = 0.;
   
-  if( count_if( begin(enemies), end(enemies), [&](UnitEnemy &u){ return u.isDead(); } ) == numEnemy
-      &&
-      count_if( begin(vec), end(vec), [&](Unit &u){ return u.isDead(); } ) < numUnits)
+  if( dead_units < num_units )
   {
-    for( const auto &v : vec )
-      if( !v.isDead() )
-	total_hp += v.getHP();
+    for( const auto &v : my_army )
+      if( v.is_alive() )
+	total_hp += v.hp;
     
-    cout << "Winner: You!" << endl
-	 << "Diff: " << deadEnemy - deadUnits << endl
-	 << "HP: " << total_hp << endl;
+    cout << "Winner: You!" << "\n"
+	 << "Diff: " << dead_enemy - dead_units << "\n"
+	 << "HP: " << total_hp << "\n";
     
 #ifndef NDEBUG
-    for( const auto &v : vec )
-      cout << v.getFullName() << ":" << v.getId() << " " << v.getHP() << " HP left" << endl;
+    for( int i = 0; i < num_units; ++i )
+      cout << my_army[ i ].name << ":" << variables[ i ].get_id() << " " << my_army[ i ].hp << " HP left" << "\n";
 #endif
   }
-  else if( count_if( begin(enemies), end(enemies), [&](UnitEnemy &u){ return u.isDead(); } ) < numEnemy
-	   &&
-	   count_if( begin(vec), end(vec), [&](Unit &u){ return u.isDead(); } ) == numUnits)
+  else if( dead_enemy < num_enemy )
   {
     for( const auto &e : enemies )
-      if( !e.isDead() )
-	total_hp += e.data.hp;
+      if( e.is_alive() )
+	total_hp += e.hp;
 
-    cout << "Winner: The enemy..." << endl
-      	 << "Diff: " << deadEnemy - deadUnits << endl
-      	 << "HP: " << total_hp << endl;
+    cout << "Winner: The enemy..." << "\n"
+      	 << "Diff: " << dead_enemy - dead_units << "\n"
+      	 << "HP: " << total_hp << "\n";
     
 #ifndef NDEBUG
-    for( int i = 0 ; i < enemies.size() ; ++i )
-      cout << enemies[i].data.name << "@" << i << " " << enemies[i].data.hp << " HP left" << endl;
+    for( int i = 0; i < num_enemy; ++i )
+      cout << enemies[ i ].name << "@" << i << " " << enemies[ i ].hp << " HP left" << "\n";
 #endif
   }
   else
   {
-    cout << "Draw!" << endl;
+    cout << "Draw!" << "\n";
   }
 }

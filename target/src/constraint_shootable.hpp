@@ -1,6 +1,7 @@
 #pragma once
 
 #include <vector>
+#include <functional>
 
 #include <ghost/constraint.hpp>
 #include <ghost/variable.hpp>
@@ -18,7 +19,7 @@ class Shootable : public Constraint
   double required_cost() const override;
   
 public:
-  Shootable( const vector< Variable >& variables,
+  Shootable( const vector< reference_wrapper<Variable> >& variables,
 	     const vector< UnitData >& my_army,
 	     const vector< UnitData >& enemy_army );
 };
