@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FILE=max_damage_ratio
+FILE=max_damage_max_kill_ratio
 MINUTE=$(date +%H_%M)
 
 HOST=$(hostname -fs)

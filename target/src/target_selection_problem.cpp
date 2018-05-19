@@ -182,7 +182,10 @@ int main(int argc, char **argv)
   vector< shared_ptr<Constraint> > constraints { make_shared<Shootable>( variables_ref, my_army, enemies ) };
 
   // Define objective
-  shared_ptr<Objective> objective = make_shared<MaxDamage>( my_army, enemies );
+  // shared_ptr<Objective> objective = make_shared<MaxDamage>( my_army, enemies );
+  shared_ptr<Objective> objective = make_shared<MaxDamageMaxKill>( my_army, enemies );
+  // shared_ptr<Objective> objective = make_shared<MaxKill>( my_army, enemies );
+  // shared_ptr<Objective> objective = make_shared<MinOverkill>( my_army, enemies );
 
   // Define solver
   Solver solver( variables, constraints, objective );
