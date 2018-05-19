@@ -15,8 +15,8 @@ using namespace ghost;
 ///////////////
 class MaxDamage : public Objective
 {
-  vector< UnitData > _my_army;
-  vector< UnitData > _enemy_army;
+  const vector< UnitData >& _my_army;
+  const vector< UnitData >& _enemy_army;
   
   double required_cost( const vector< Variable >& vec_variables ) const override;
   
@@ -30,8 +30,8 @@ public:
 /////////////
 class MaxKill : public Objective
 {
-  vector< UnitData > _my_army;
-  vector< UnitData > _enemy_army;
+  const vector< UnitData >& _my_army;
+  const vector< UnitData >& _enemy_army;
   
   double required_cost( const vector< Variable >& vec_variables ) const override;
   
@@ -45,8 +45,8 @@ public:
 /////////////////
 class MinOverkill : public Objective
 {
-  vector< UnitData > _my_army;
-  vector< UnitData > _enemy_army;
+  const vector< UnitData >& _my_army;
+  const vector< UnitData >& _enemy_army;
   
   double required_cost( const vector< Variable >& vec_variables ) const override;
   

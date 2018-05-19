@@ -29,7 +29,7 @@ vector<double> compute_damage( const UnitData& shooter, int target_index, const 
 
   auto& target = units[ target_index ];
           
-  if( target_index != -1 && shooter.can_shoot() )
+  if( target_index != -1 && shooter.is_alive() && shooter.can_shoot() )
   {
     if( shooter.distance_from( target ) >= shooter.range.min && shooter.distance_from( target ) <= shooter.range.max )
     {
@@ -57,12 +57,12 @@ vector<double> compute_damage( const UnitData& shooter, int target_index, const 
 	      hit = ( shooter.damage - units[ i ].armor ) * coeff_damage_type( shooter.damage_type, units[ i ].size );
 	      hits[ i ] = std::max( hit, 0.5 );	    
 	    }
-	    else if( dist > shooter.splash_radius.ray1 && dist <= shooter.splash_radius.ray2 )
+	    else if( dist <= shooter.splash_radius.ray2 )
 	    {
 	      hit = ( ( shooter.damage * 0.5 ) - units[ i ].armor ) * coeff_damage_type( shooter.damage_type, units[ i ].size );
 	      hits[ i ] = std::max( hit, 0.5 );	    
 	    }
-	    else if( dist > shooter.splash_radius.ray2 && dist <= shooter.splash_radius.ray3 )
+	    else if( dist <= shooter.splash_radius.ray3 )
 	    {
 	      hit = ( ( shooter.damage * 0.25 ) - units[ i ].armor ) * coeff_damage_type( shooter.damage_type, units[ i ].size );
 	      hits[ i ] = std::max( hit, 0.5 );	    

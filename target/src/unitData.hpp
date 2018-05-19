@@ -67,7 +67,7 @@ struct UnitData
   inline bool is_alive()			const	{ return hp > 0.; }
   inline bool can_shoot()			const	{ return can_shoot_in == 0; }
   inline void just_shot()				{ can_shoot_in = cooldown; }
-  inline void one_step()				{ --can_shoot_in; }
+  inline void one_step()				{ if( !can_shoot() ) --can_shoot_in; }
 
   inline double distance_from( const UnitData& u ) const
   { return sqrt( pow( u.coord.x - coord.x, 2 ) + pow( u.coord.y - coord.y, 2 ) ); }

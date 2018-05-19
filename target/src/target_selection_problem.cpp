@@ -28,9 +28,9 @@ vector<int> get_living_enemies_in_range( const UnitData& u, const vector< UnitDa
 {
   vector<int> in_range;
 
-  for( int j = 0 ; j < vec.size() ; ++j )
-    if( u.is_in_range_and_alive( vec[ j ] ) )
-      in_range.push_back( j );
+  for( int i = 0 ; i < vec.size() ; ++i )
+    if( u.is_in_range_and_alive( vec[ i ] ) )
+      in_range.push_back( i );
       
   return in_range;
 }
@@ -77,6 +77,46 @@ int get_lowest_HP_ratio_unit( const vector<int>& in_range, const vector< UnitDat
   return unit_index;
 }
 
+void print_setup( const vector<UnitData>& my_army, const vector<Variable>& variables, const vector<UnitData>& enemies )
+{
+  cout << "My units:\n";
+  for( int i= 0; i < variables.size(); ++i )
+  {
+    auto var_data = my_army[ i ];
+    auto var = variables[ i ];
+    
+    cout << var_data.name << ":" << var.get_id() << "\n"
+	 << "Coordinates: (" << var_data.coord.x << ", " << var_data.coord.y << ")\n"
+	 << "Can shoot in: " << var_data.can_shoot_in << " frames" << "\n"
+	 << "Cooldown: " <<  var_data.cooldown << "\n"
+	 << "HP: " <<  var_data.hp << "\n"
+	 << "Inital HP: " <<  var_data.initial_HP << "\n"
+      	 << "Size: " <<  var_data.get_size_string() << "\n"
+	 << "Damage: " <<  var_data.damage << "\n"
+	 << "Damage Type: " <<  var_data.get_damage_type_string() << "\n"
+	 << "Armor: " <<  var_data.armor << "\n"
+	 << "Target: " << var.get_value() << "\n"
+	 << "-------" << "\n\n";
+  }
+
+  cout << "===============\nEnemies:\n";
+  for( int i= 0; i < enemies.size(); ++i )
+  {
+    auto var_data = enemies[ i ];
+    
+    cout << var_data.name << ":" << i << "\n" 
+	 << "Coordinates: (" << var_data.coord.x << ", " << var_data.coord.y << ")\n"
+	 << "Can shoot in: " << var_data.can_shoot_in << " frames" << "\n"
+	 << "Cooldown: " <<  var_data.cooldown << "\n"
+	 << "HP: " <<  var_data.hp << "\n"
+	 << "Inital HP: " <<  var_data.initial_HP << "\n"
+      	 << "Size: " <<  var_data.get_size_string() << "\n"
+	 << "Damage: " <<  var_data.damage << "\n"
+	 << "Damage Type: " <<  var_data.get_damage_type_string() << "\n"
+	 << "Armor: " <<  var_data.armor << "\n"
+	 << "-------" << "\n";
+  }  
+}
 
 int main(int argc, char **argv)
 {
@@ -92,7 +132,7 @@ int main(int argc, char **argv)
   // string action;
   // int time;
 
-  int sat = 20000;
+  int sat = 5000;
   int opt = 30000;
   if( argc > 1 )
     sat = stoi(argv[1]);
@@ -163,12 +203,13 @@ int main(int argc, char **argv)
 
 #ifndef NDEBUG
   int tour = 1;
+  // print_setup( my_army, variables, enemies );
 #endif
 
   vector< UnitData > copy_enemies( enemies );
 
-  double cost = 0.;
-  vector<int> solution( variables.size(), 0 );
+  double cost;
+  vector<int> solution( variables.size(), -1 );
 
   do
   {
@@ -182,6 +223,9 @@ int main(int argc, char **argv)
       continue;
     }
 
+    cost = 0.;
+    std::fill( solution.begin(), solution.end(), -1 );
+
     solver.solve( cost, solution, sat, opt );
 
     total_damages = 0.;
@@ -192,16 +236,23 @@ int main(int argc, char **argv)
 
     // My units attack
     cout << ":::: My turn ::::" << "\n";
-#endif
 
+    // if( tour == 2 )
+    //   print_setup( my_army, variables, enemies );
+#endif
+    
     for( int i = 0 ; i < num_enemy ; ++i )
       copy_enemies[ i ].hp = enemies[ i ].hp;
     
     for( int i = 0; i < num_units; ++i )
     {
       auto& var_data = my_army[ i ];
+
       if( var_data.is_alive() )
       {
+#ifndef NDEBUG
+	int cooldown = var_data.can_shoot_in;
+#endif
 	auto& var = variables[ i ];
 	if( var_data.can_shoot() && var.get_value() != -1 )
 	{
@@ -217,16 +268,21 @@ int main(int argc, char **argv)
 	  var_data.just_shot();
 	}
 	else
-	{
-#ifndef NDEBUG
-	  cout << var_data.name << ":" << var.get_id()
-	       << " HP=" << var_data.hp
-	       << ", wait=" << var_data.can_shoot_in
-	       << " (value="<< var.get_value() <<")" << "\n";
-#endif
 	  if( !var_data.can_shoot() )
 	    var_data.one_step();
-	}
+#ifndef NDEBUG
+	string dead_or_alive = var_data.is_alive() ? "alive" : "DEAD";
+	cout << var_data.name << ":" << var.get_id()
+	     << " HP=" << var_data.hp
+	     << ", status=" << dead_or_alive
+	     << ", wait=" << cooldown
+	     << " value="<< var.get_value() << "(" << copy_enemies[ var.get_value() ].hp << " HP left)\n";
+
+	// if( var.get_value() == -1 && cooldown == 0 )
+	//   for( int j = 0; j < copy_enemies.size(); ++j )
+	//     if( var_data.is_in_range_and_alive( copy_enemies[ j ] ) ) 
+	//       cout << "==> " << var_data.name << ":" << var.get_id() << " could shoot " << copy_enemies[ j ].name << "@" << j << "\n";
+#endif
       }
     }
     
@@ -280,38 +336,40 @@ int main(int argc, char **argv)
     // print stuff AND decrement cooldown (yes, it's bad to do it within the same loop, but whatever) 
     for( int i = 0; i < num_enemy; ++i )
     {
-      if( enemies[ i ].is_alive() )
+      auto& var_data = enemies[ i ];
+
+      if( var_data.is_alive() )
       {
-	auto& var_data = enemies[ i ];
-	if( var_data.can_shoot() )
-	{
-	  if( aimed_units[ i ] != -1 )
-	  {
-	    auto vec_damages = compute_damage( var_data, aimed_units[ i ], my_army ); //compute_enemy_shoot_damage( i, aimed_units[ i ] );
-
-	    double hit = 0.;
-	    for( auto value: vec_damages )
-	      hit += value;
-	    
-	    total_damages_enemy += hit;
-	    my_army[ aimed_units[ i ] ].hp -= hit;
-
-	    var_data.just_shot();
-	  }
 #ifndef NDEBUG
-	  else
-	    cout << var_data.name << "@" << i << " HP=" << var_data.hp << ", wait=" << var_data.can_shoot_in << "\n";	    
+	int cooldown = var_data.can_shoot_in;
 #endif
+	if( var_data.can_shoot() && aimed_units[ i ] != -1 )
+	{
+	  auto vec_damages = compute_damage( var_data, aimed_units[ i ], my_army ); //compute_enemy_shoot_damage( i, aimed_units[ i ] );
+	  
+	  double hit = 0.;
+	  for( auto value: vec_damages )
+	    hit += value;
+	  
+	  total_damages_enemy += hit;
+	  my_army[ aimed_units[ i ] ].hp -= hit;
+	  
+	  var_data.just_shot();
 	}
 	else
 	{
-#ifndef NDEBUG
-	  cout << var_data.name << "@" << i << " HP=" << var_data.hp << ", wait=" << var_data.can_shoot_in << "\n";
-#endif
 	  // decrement cooldown
 	  if( !var_data.can_shoot() )
 	    var_data.one_step();
 	}
+#ifndef NDEBUG
+	string dead_or_alive = var_data.is_alive() ? "alive" : "DEAD";
+	cout << var_data.name << "@" << i
+	     << " HP=" << var_data.hp
+	     << ", status=" << dead_or_alive
+	     << ", wait=" << cooldown
+	     << ", target="<< aimed_units[ i ] << "(" << my_army[ aimed_units[ i ] ].hp << " HP left)\n";
+#endif
       }
     }
 
@@ -321,6 +379,9 @@ int main(int argc, char **argv)
     dead_units = count_if( begin(my_army), end(my_army), [](UnitData &u){ return u.is_dead(); } );
     dead_enemy = count_if( begin(enemies), end(enemies), [](UnitData &u){ return u.is_dead(); } );
 #ifndef NDEBUG
+    // if( tour == 2 )
+    //   print_setup( my_army, variables, enemies );
+
     cout << "XXXX Turns over XXXX" << "\n"
     	 << "Total damages from you: " << total_damages << "\n" 
     	 << "Total damages from the enemy: " << total_damages_enemy << "\n"

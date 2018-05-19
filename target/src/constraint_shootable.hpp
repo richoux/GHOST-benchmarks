@@ -13,8 +13,8 @@ using namespace ghost;
 
 class Shootable : public Constraint
 {
-  vector< UnitData > _my_army;
-  vector< UnitData > _enemy_army;
+  const vector< UnitData >& _my_army;
+  const vector< UnitData >& _enemy_army;
   
   double required_cost() const override;
   

@@ -53,46 +53,46 @@ void make_my_terran( vector<Variable>& vec_var, vector<UnitData>& vec_data )
   vec_var.clear();
   vec_data.clear();
   
-  vec_var.push_back( make_unit( UnitType::Marine, 14 ) ); // 0
+  vec_var.push_back( make_unit( UnitType::Marine, 15 ) ); // 0
   vec_data.push_back( make_data( UnitType::Marine, {30, 30} ) );
   
-  vec_var.push_back( make_unit( UnitType::Marine, 14 ) ); // 1
+  vec_var.push_back( make_unit( UnitType::Marine, 15 ) ); // 1
   vec_data.push_back( make_data( UnitType::Marine, {50, 30} ) );
 
-  vec_var.push_back( make_unit( UnitType::Marine, 14 ) ); // 2
+  vec_var.push_back( make_unit( UnitType::Marine, 15 ) ); // 2
   vec_data.push_back( make_data( UnitType::Marine, {70, 30} ) );
 
-  vec_var.push_back( make_unit( UnitType::Marine, 14 ) ); // 3
+  vec_var.push_back( make_unit( UnitType::Marine, 15 ) ); // 3
   vec_data.push_back( make_data( UnitType::Marine, {90, 30} ) );
 
-  vec_var.push_back( make_unit( UnitType::Marine, 14 ) ); // 4
+  vec_var.push_back( make_unit( UnitType::Marine, 15 ) ); // 4
   vec_data.push_back( make_data( UnitType::Marine, {110, 30} ) );
     
-  vec_var.push_back( make_unit( UnitType::Goliath, 14 ) ); // 5
+  vec_var.push_back( make_unit( UnitType::Goliath, 15 ) ); // 5
   vec_data.push_back( make_data( UnitType::Goliath, {10, 65} ) );
 
-  vec_var.push_back( make_unit( UnitType::Vulture, 14 ) ); // 6
+  vec_var.push_back( make_unit( UnitType::Vulture, 15 ) ); // 6
   vec_data.push_back( make_data( UnitType::Vulture, {50, 65} ) );
 
-  vec_var.push_back( make_unit( UnitType::Vulture, 14 ) ); // 7
+  vec_var.push_back( make_unit( UnitType::Vulture, 15 ) ); // 7
   vec_data.push_back( make_data( UnitType::Vulture, {90, 65} ) );
 
-  vec_var.push_back( make_unit( UnitType::Goliath, 14 ) ); // 8
+  vec_var.push_back( make_unit( UnitType::Goliath, 15 ) ); // 8
   vec_data.push_back( make_data( UnitType::Goliath, {130, 65} ) );
 
-  vec_var.push_back( make_unit( UnitType::SiegeTankTankMode, 14 ) ); // 9
+  vec_var.push_back( make_unit( UnitType::SiegeTankTankMode, 15 ) ); // 9
   vec_data.push_back( make_data( UnitType::SiegeTankTankMode, {10, 102} ) );
 
-  vec_var.push_back( make_unit( UnitType::Ghost, 14 ) ); // 10
+  vec_var.push_back( make_unit( UnitType::Ghost, 15 ) ); // 10
   vec_data.push_back( make_data( UnitType::Ghost, {65, 102} ) );
 
-  vec_var.push_back( make_unit( UnitType::Ghost, 14 ) ); // 11
-  vec_data.push_back( make_data(  UnitType::Ghost, {75, 102} ) );
+  vec_var.push_back( make_unit( UnitType::Ghost, 15 ) ); // 11
+  vec_data.push_back( make_data( UnitType::Ghost, {75, 102} ) );
 
-  vec_var.push_back( make_unit( UnitType::SiegeTankTankMode, 14 ) ); // 12
+  vec_var.push_back( make_unit( UnitType::SiegeTankTankMode, 15 ) ); // 12
   vec_data.push_back( make_data( UnitType::SiegeTankTankMode, {130, 102} ) );
 
-  vec_var.push_back( make_unit( UnitType::SiegeTankSiegeMode, 14 ) ); // 13
+  vec_var.push_back( make_unit( UnitType::SiegeTankSiegeMode, 15 ) ); // 13
   vec_data.push_back( make_data( UnitType::SiegeTankSiegeMode, {70, 139} ) );
 }
 
@@ -111,7 +111,7 @@ void make_enemy_terran( vector<UnitData>& vec_data )
   vec_data.push_back( make_data( UnitType::Goliath, {130, -65} ) );
   vec_data.push_back( make_data( UnitType::SiegeTankTankMode, {10, -102} ) );
   vec_data.push_back( make_data( UnitType::Ghost, {65, -102} ) );
-  vec_data.push_back( make_data(  UnitType::Ghost, {75, -102} ) );
+  vec_data.push_back( make_data( UnitType::Ghost, {75, -102} ) );
   vec_data.push_back( make_data( UnitType::SiegeTankTankMode, {130, -102} ) );
   vec_data.push_back( make_data( UnitType::SiegeTankSiegeMode, {70, -139} ) );
 }

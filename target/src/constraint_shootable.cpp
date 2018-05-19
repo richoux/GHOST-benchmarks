@@ -19,8 +19,8 @@ double Shootable::required_cost() const
   {
     auto& my_unit = _my_army[ i ];
 
-    // If the unit is in cooldown, there is nothing to check
-    if( my_unit.can_shoot() )
+    // If the unit is alive and in cooldown, there is nothing to check
+    if( my_unit.can_shoot() && my_unit.is_alive() )
     {
       int variable_value = variables[ i ].get().get_value();
       // No target assigned
@@ -28,10 +28,18 @@ double Shootable::required_cost() const
       {
 	// if some enemies are alive and within range while having no target assigned,
 	// increase the cost by the number of such enemies.
-	int count = std::count_if( _enemy_army.begin(),
-				   _enemy_army.end(),
+	int count = std::count_if( _enemy_army.cbegin(),
+				   _enemy_army.cend(),
 				   [&](auto& enemy){ return my_unit.is_in_range_and_alive( enemy ); } );
 	cost += count;
+
+	// if( i == 13 )
+	// {
+	//   for( int j = 0; j < _enemy_army.size(); ++j )
+	//     if( my_unit.is_in_range_and_alive( _enemy_army[ j ] ) ) 
+	//       cout << "==> " << my_unit.name << ":" << variables[ i ].get().get_id() << " could shoot " << _enemy_army[ j ].name << "@" << j << "\n";
+	//   cout << "count=" << count << ", cost=" << cost << "\n";
+	// }
       }
       else
       {
