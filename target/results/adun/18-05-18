@@ -1,0 +1,842 @@
+Tour 1
+:::: My turn ::::
+@@@@ Enemy's turn @@@@
+XXXX Turns over XXXX
+Total damages from you: 271.625
+Total damages from the enemy: 238.125
+Number of dead units: 1
+Number of dead enemies: 1
+Tour 2
+:::: My turn ::::
+Terran_Goliath:5 HP=115, wait=7 (value=6)
+Terran_Vulture:6 HP=80, wait=15 (value=4)
+Terran_Vulture:7 HP=51.5, wait=15 (value=2)
+Terran_Siege_Tank_Tank_Mode:9 HP=150, wait=22 (value=8)
+Terran_Ghost:10 HP=45, wait=7 (value=11)
+Terran_Ghost:11 HP=45, wait=7 (value=10)
+Terran_Siege_Tank_Tank_Mode:12 HP=136.75, wait=22 (value=8)
+Terran_Siege_Tank_Siege_Mode:13 HP=150, wait=60 (value=11)
+@@@@ Enemy's turn @@@@
+Terran_Goliath@5 HP=125, wait=7
+Terran_Vulture@6 HP=80, wait=15
+Terran_Goliath@8 HP=125, wait=7
+Terran_Siege_Tank_Tank_Mode@9 HP=121, wait=22
+Terran_Ghost@10 HP=45, wait=7
+Terran_Ghost@11 HP=23, wait=7
+Terran_Siege_Tank_Tank_Mode@12 HP=121, wait=22
+Terran_Siege_Tank_Siege_Mode@13 HP=150, wait=60
+XXXX Turns over XXXX
+Total damages from you: 30
+Total damages from the enemy: 30
+Number of dead units: 2
+Number of dead enemies: 1
+Tour 3
+:::: My turn ::::
+Terran_Marine:0 HP=30, wait=9 (value=4)
+Terran_Marine:2 HP=40, wait=9 (value=2)
+Terran_Marine:3 HP=40, wait=9 (value=2)
+Terran_Marine:4 HP=22, wait=9 (value=6)
+Terran_Vulture:6 HP=80, wait=8 (value=0)
+Terran_Vulture:7 HP=51.5, wait=8 (value=4)
+Terran_Siege_Tank_Tank_Mode:9 HP=150, wait=15 (value=8)
+Terran_Siege_Tank_Tank_Mode:12 HP=136.75, wait=15 (value=5)
+Terran_Siege_Tank_Siege_Mode:13 HP=150, wait=53 (value=7)
+@@@@ Enemy's turn @@@@
+Terran_Marine@0 HP=8, wait=9
+Terran_Marine@1 HP=30, wait=9
+Terran_Marine@2 HP=20, wait=9
+Terran_Marine@3 HP=28, wait=9
+Terran_Marine@4 HP=34, wait=9
+Terran_Vulture@6 HP=74, wait=8
+Terran_Siege_Tank_Tank_Mode@9 HP=121, wait=15
+Terran_Siege_Tank_Tank_Mode@12 HP=121, wait=15
+Terran_Siege_Tank_Siege_Mode@13 HP=150, wait=53
+XXXX Turns over XXXX
+Total damages from you: 32
+Total damages from the enemy: 44
+Number of dead units: 3
+Number of dead enemies: 1
+Tour 4
+:::: My turn ::::
+Terran_Marine:0 HP=30, wait=1 (value=0)
+Terran_Marine:3 HP=40, wait=1 (value=4)
+Terran_Marine:4 HP=22, wait=1 (value=0)
+Terran_Goliath:5 HP=115, wait=15 (value=3)
+Terran_Siege_Tank_Tank_Mode:9 HP=150, wait=7 (value=5)
+Terran_Ghost:10 HP=45, wait=15 (value=11)
+Terran_Ghost:11 HP=45, wait=15 (value=0)
+Terran_Siege_Tank_Tank_Mode:12 HP=136.75, wait=7 (value=5)
+Terran_Siege_Tank_Siege_Mode:13 HP=150, wait=45 (value=10)
+@@@@ Enemy's turn @@@@
+Terran_Marine@0 HP=8, wait=1
+Terran_Marine@1 HP=20, wait=1
+Terran_Marine@2 HP=8, wait=1
+Terran_Marine@3 HP=28, wait=1
+Terran_Marine@4 HP=34, wait=1
+Terran_Goliath@5 HP=125, wait=15
+Terran_Goliath@8 HP=125, wait=15
+Terran_Siege_Tank_Tank_Mode@9 HP=121, wait=7
+Terran_Ghost@10 HP=35, wait=15
+Terran_Ghost@11 HP=23, wait=15
+Terran_Siege_Tank_Tank_Mode@12 HP=121, wait=7
+Terran_Siege_Tank_Siege_Mode@13 HP=150, wait=45
+XXXX Turns over XXXX
+Total damages from you: 40
+Total damages from the enemy: 20
+Number of dead units: 3
+Number of dead enemies: 2
+Tour 5
+:::: My turn ::::
+Terran_Goliath:5 HP=115, wait=14 (value=7)
+Terran_Vulture:6 HP=80, wait=30 (value=0)
+Terran_Vulture:7 HP=51.5, wait=30 (value=4)
+Terran_Siege_Tank_Tank_Mode:9 HP=150, wait=6 (value=8)
+Terran_Ghost:10 HP=45, wait=14 (value=1)
+Terran_Ghost:11 HP=45, wait=14 (value=4)
+Terran_Siege_Tank_Tank_Mode:12 HP=136.75, wait=6 (value=8)
+Terran_Siege_Tank_Siege_Mode:13 HP=150, wait=44 (value=11)
+@@@@ Enemy's turn @@@@
+Terran_Goliath@5 HP=125, wait=14
+Terran_Vulture@6 HP=74, wait=30
+Terran_Goliath@8 HP=125, wait=14
+Terran_Siege_Tank_Tank_Mode@9 HP=121, wait=6
+Terran_Ghost@10 HP=35, wait=14
+Terran_Ghost@11 HP=23, wait=14
+Terran_Siege_Tank_Tank_Mode@12 HP=121, wait=6
+Terran_Siege_Tank_Siege_Mode@13 HP=150, wait=44
+XXXX Turns over XXXX
+Total damages from you: 18
+Total damages from the enemy: 24
+Number of dead units: 4
+Number of dead enemies: 2
+Tour 6
+:::: My turn ::::
+Terran_Marine:0 HP=30, wait=10 (value=7)
+Terran_Marine:4 HP=22, wait=10 (value=6)
+Terran_Goliath:5 HP=115, wait=8 (value=1)
+Terran_Vulture:6 HP=80, wait=24 (value=0)
+Terran_Vulture:7 HP=51.5, wait=24 (value=0)
+Terran_Ghost:10 HP=45, wait=8 (value=2)
+Terran_Ghost:11 HP=45, wait=8 (value=4)
+Terran_Siege_Tank_Siege_Mode:13 HP=150, wait=38 (value=10)
+@@@@ Enemy's turn @@@@
+Terran_Marine@1 HP=20, wait=10
+Terran_Marine@2 HP=8, wait=10
+Terran_Marine@3 HP=28, wait=10
+Terran_Marine@4 HP=2, wait=10
+Terran_Goliath@5 HP=125, wait=8
+Terran_Vulture@6 HP=68, wait=24
+Terran_Goliath@8 HP=125, wait=8
+Terran_Ghost@10 HP=35, wait=8
+Terran_Ghost@11 HP=23, wait=8
+Terran_Siege_Tank_Siege_Mode@13 HP=150, wait=38
+XXXX Turns over XXXX
+Total damages from you: 58
+Total damages from the enemy: 30
+Number of dead units: 5
+Number of dead enemies: 2
+Tour 7
+:::: My turn ::::
+Terran_Marine:0 HP=30, wait=2 (value=2)
+Terran_Vulture:6 HP=80, wait=16 (value=3)
+Terran_Vulture:7 HP=51.5, wait=16 (value=3)
+Terran_Siege_Tank_Tank_Mode:9 HP=150, wait=30 (value=8)
+Terran_Siege_Tank_Tank_Mode:12 HP=136.75, wait=30 (value=5)
+Terran_Siege_Tank_Siege_Mode:13 HP=150, wait=30 (value=7)
+@@@@ Enemy's turn @@@@
+Terran_Marine@1 HP=20, wait=2
+Terran_Marine@2 HP=8, wait=2
+Terran_Marine@3 HP=28, wait=2
+Terran_Marine@4 HP=2, wait=2
+Terran_Vulture@6 HP=68, wait=16
+Terran_Siege_Tank_Tank_Mode@9 HP=121, wait=30
+Terran_Siege_Tank_Tank_Mode@12 HP=121, wait=30
+Terran_Siege_Tank_Siege_Mode@13 HP=150, wait=30
+XXXX Turns over XXXX
+Total damages from you: 32
+Total damages from the enemy: 26.5
+Number of dead units: 5
+Number of dead enemies: 3
+Tour 8
+:::: My turn ::::
+Terran_Goliath:5 HP=88.5, wait=21 (value=2)
+Terran_Vulture:6 HP=80, wait=14 (value=2)
+Terran_Vulture:7 HP=51.5, wait=14 (value=0)
+Terran_Siege_Tank_Tank_Mode:9 HP=150, wait=28 (value=8)
+Terran_Ghost:10 HP=45, wait=21 (value=1)
+Terran_Ghost:11 HP=45, wait=21 (value=4)
+Terran_Siege_Tank_Tank_Mode:12 HP=136.75, wait=28 (value=5)
+Terran_Siege_Tank_Siege_Mode:13 HP=150, wait=28 (value=10)
+@@@@ Enemy's turn @@@@
+Terran_Goliath@5 HP=125, wait=21
+Terran_Vulture@6 HP=68, wait=14
+Terran_Goliath@8 HP=67, wait=21
+Terran_Siege_Tank_Tank_Mode@9 HP=121, wait=28
+Terran_Ghost@10 HP=35, wait=21
+Terran_Ghost@11 HP=23, wait=21
+Terran_Siege_Tank_Tank_Mode@12 HP=121, wait=28
+Terran_Siege_Tank_Siege_Mode@13 HP=150, wait=28
+XXXX Turns over XXXX
+Total damages from you: 6
+Total damages from the enemy: 15
+Number of dead units: 5
+Number of dead enemies: 3
+Tour 9
+:::: My turn ::::
+Terran_Marine:0 HP=30, wait=2 (value=4)
+Terran_Goliath:5 HP=73.5, wait=7 (value=4)
+Terran_Siege_Tank_Tank_Mode:9 HP=150, wait=14 (value=5)
+Terran_Ghost:10 HP=45, wait=7 (value=11)
+Terran_Ghost:11 HP=45, wait=7 (value=0)
+Terran_Siege_Tank_Tank_Mode:12 HP=136.75, wait=14 (value=5)
+Terran_Siege_Tank_Siege_Mode:13 HP=150, wait=14 (value=6)
+@@@@ Enemy's turn @@@@
+Terran_Marine@1 HP=20, wait=2
+Terran_Marine@2 HP=8, wait=2
+Terran_Marine@3 HP=16, wait=2
+Terran_Goliath@5 HP=125, wait=7
+Terran_Goliath@8 HP=67, wait=7
+Terran_Siege_Tank_Tank_Mode@9 HP=121, wait=14
+Terran_Ghost@10 HP=35, wait=7
+Terran_Ghost@11 HP=23, wait=7
+Terran_Siege_Tank_Tank_Mode@12 HP=121, wait=14
+Terran_Siege_Tank_Siege_Mode@13 HP=150, wait=14
+XXXX Turns over XXXX
+Total damages from you: 40
+Total damages from the enemy: 4.75
+Number of dead units: 5
+Number of dead enemies: 4
+Tour 10
+:::: My turn ::::
+Terran_Goliath:5 HP=68.75, wait=5 (value=10)
+Terran_Vulture:6 HP=80, wait=29 (value=2)
+Terran_Vulture:7 HP=51.5, wait=29 (value=2)
+Terran_Siege_Tank_Tank_Mode:9 HP=150, wait=12 (value=8)
+Terran_Ghost:10 HP=45, wait=5 (value=3)
+Terran_Ghost:11 HP=45, wait=5 (value=3)
+Terran_Siege_Tank_Tank_Mode:12 HP=136.75, wait=12 (value=8)
+Terran_Siege_Tank_Siege_Mode:13 HP=150, wait=12 (value=6)
+@@@@ Enemy's turn @@@@
+Terran_Goliath@5 HP=125, wait=5
+Terran_Vulture@6 HP=68, wait=29
+Terran_Goliath@8 HP=67, wait=5
+Terran_Siege_Tank_Tank_Mode@9 HP=121, wait=12
+Terran_Ghost@10 HP=35, wait=5
+Terran_Ghost@11 HP=23, wait=5
+Terran_Siege_Tank_Tank_Mode@12 HP=121, wait=12
+Terran_Siege_Tank_Siege_Mode@13 HP=150, wait=12
+XXXX Turns over XXXX
+Total damages from you: 6
+Total damages from the enemy: 10
+Number of dead units: 5
+Number of dead enemies: 4
+Tour 11
+:::: My turn ::::
+Terran_Marine:0 HP=30, wait=11 (value=3)
+Terran_Vulture:6 HP=80, wait=24 (value=0)
+Terran_Vulture:7 HP=51.5, wait=24 (value=3)
+Terran_Siege_Tank_Tank_Mode:9 HP=150, wait=7 (value=5)
+Terran_Siege_Tank_Tank_Mode:12 HP=136.75, wait=7 (value=5)
+Terran_Siege_Tank_Siege_Mode:13 HP=150, wait=7 (value=11)
+@@@@ Enemy's turn @@@@
+Terran_Marine@2 HP=8, wait=11
+Terran_Marine@3 HP=16, wait=11
+Terran_Vulture@6 HP=68, wait=24
+Terran_Siege_Tank_Tank_Mode@9 HP=121, wait=7
+Terran_Siege_Tank_Tank_Mode@12 HP=121, wait=7
+Terran_Siege_Tank_Siege_Mode@13 HP=150, wait=7
+XXXX Turns over XXXX
+Total damages from you: 32
+Total damages from the enemy: 26.5
+Number of dead units: 5
+Number of dead enemies: 4
+Tour 12
+:::: My turn ::::
+Terran_Marine:0 HP=30, wait=4 (value=4)
+Terran_Goliath:5 HP=32.25, wait=16 (value=0)
+Terran_Vulture:6 HP=80, wait=17 (value=0)
+Terran_Vulture:7 HP=51.5, wait=17 (value=2)
+Terran_Ghost:10 HP=45, wait=16 (value=10)
+Terran_Ghost:11 HP=45, wait=16 (value=0)
+@@@@ Enemy's turn @@@@
+Terran_Marine@2 HP=8, wait=4
+Terran_Marine@3 HP=16, wait=4
+Terran_Goliath@5 HP=125, wait=16
+Terran_Vulture@6 HP=68, wait=17
+Terran_Goliath@8 HP=67, wait=16
+Terran_Ghost@10 HP=35, wait=16
+Terran_Ghost@11 HP=3, wait=16
+XXXX Turns over XXXX
+Total damages from you: 157.625
+Total damages from the enemy: 156.625
+Number of dead units: 6
+Number of dead enemies: 5
+Tour 13
+:::: My turn ::::
+Terran_Vulture:6 HP=80, wait=13 (value=4)
+Terran_Vulture:7 HP=51.5, wait=13 (value=3)
+Terran_Siege_Tank_Tank_Mode:9 HP=150, wait=34 (value=5)
+Terran_Ghost:10 HP=45, wait=12 (value=4)
+Terran_Ghost:11 HP=45, wait=12 (value=1)
+Terran_Siege_Tank_Tank_Mode:12 HP=136.75, wait=34 (value=8)
+Terran_Siege_Tank_Siege_Mode:13 HP=150, wait=72 (value=7)
+@@@@ Enemy's turn @@@@
+Terran_Goliath@5 HP=96, wait=12
+Terran_Vulture@6 HP=68, wait=13
+Terran_Goliath@8 HP=67, wait=12
+Terran_Siege_Tank_Tank_Mode@9 HP=121, wait=34
+Terran_Ghost@11 HP=3, wait=12
+Terran_Siege_Tank_Tank_Mode@12 HP=92, wait=34
+Terran_Siege_Tank_Siege_Mode@13 HP=150, wait=72
+XXXX Turns over XXXX
+Total damages from you: 6
+Total damages from the enemy: 12
+Number of dead units: 6
+Number of dead enemies: 5
+Tour 14
+:::: My turn ::::
+Terran_Marine:0 HP=30, wait=4 (value=1)
+Terran_Vulture:6 HP=68, wait=1 (value=1)
+Terran_Vulture:7 HP=51.5, wait=1 (value=2)
+Terran_Siege_Tank_Tank_Mode:9 HP=150, wait=22 (value=8)
+Terran_Siege_Tank_Tank_Mode:12 HP=136.75, wait=22 (value=5)
+Terran_Siege_Tank_Siege_Mode:13 HP=150, wait=60 (value=6)
+@@@@ Enemy's turn @@@@
+Terran_Marine@2 HP=8, wait=4
+Terran_Marine@3 HP=10, wait=4
+Terran_Vulture@6 HP=68, wait=1
+Terran_Siege_Tank_Tank_Mode@9 HP=121, wait=22
+Terran_Siege_Tank_Tank_Mode@12 HP=92, wait=22
+Terran_Siege_Tank_Siege_Mode@13 HP=150, wait=60
+XXXX Turns over XXXX
+Total damages from you: 20
+Total damages from the enemy: 33
+Number of dead units: 6
+Number of dead enemies: 5
+Tour 15
+:::: My turn ::::
+Terran_Marine:0 HP=30, wait=3 (value=1)
+Terran_Siege_Tank_Tank_Mode:9 HP=150, wait=21 (value=9)
+Terran_Ghost:10 HP=45, wait=22 (value=1)
+Terran_Ghost:11 HP=23, wait=22 (value=2)
+Terran_Siege_Tank_Tank_Mode:12 HP=125.75, wait=21 (value=8)
+Terran_Siege_Tank_Siege_Mode:13 HP=150, wait=59 (value=11)
+@@@@ Enemy's turn @@@@
+Terran_Marine@2 HP=8, wait=3
+Terran_Marine@3 HP=10, wait=3
+Terran_Goliath@5 HP=96, wait=22
+Terran_Goliath@8 HP=67, wait=22
+Terran_Siege_Tank_Tank_Mode@9 HP=121, wait=21
+Terran_Ghost@11 HP=3, wait=22
+Terran_Siege_Tank_Tank_Mode@12 HP=92, wait=21
+Terran_Siege_Tank_Siege_Mode@13 HP=150, wait=59
+XXXX Turns over XXXX
+Total damages from you: 40
+Total damages from the enemy: 10
+Number of dead units: 6
+Number of dead enemies: 6
+Tour 16
+:::: My turn ::::
+Terran_Vulture:6 HP=58, wait=28 (value=1)
+Terran_Vulture:7 HP=51.5, wait=28 (value=2)
+Terran_Siege_Tank_Tank_Mode:9 HP=150, wait=18 (value=8)
+Terran_Ghost:10 HP=45, wait=19 (value=2)
+Terran_Ghost:11 HP=23, wait=19 (value=3)
+Terran_Siege_Tank_Tank_Mode:12 HP=125.75, wait=18 (value=8)
+Terran_Siege_Tank_Siege_Mode:13 HP=150, wait=56 (value=10)
+@@@@ Enemy's turn @@@@
+Terran_Goliath@5 HP=96, wait=19
+Terran_Vulture@6 HP=68, wait=28
+Terran_Goliath@8 HP=67, wait=19
+Terran_Siege_Tank_Tank_Mode@9 HP=121, wait=18
+Terran_Ghost@11 HP=3, wait=19
+Terran_Siege_Tank_Tank_Mode@12 HP=92, wait=18
+Terran_Siege_Tank_Siege_Mode@13 HP=150, wait=56
+XXXX Turns over XXXX
+Total damages from you: 6
+Total damages from the enemy: 6
+Number of dead units: 6
+Number of dead enemies: 6
+Tour 17
+:::: My turn ::::
+Terran_Vulture:6 HP=52, wait=12 (value=3)
+Terran_Vulture:7 HP=51.5, wait=12 (value=1)
+Terran_Siege_Tank_Tank_Mode:9 HP=150, wait=2 (value=5)
+Terran_Ghost:10 HP=45, wait=3 (value=4)
+Terran_Ghost:11 HP=23, wait=3 (value=3)
+Terran_Siege_Tank_Tank_Mode:12 HP=125.75, wait=2 (value=12)
+Terran_Siege_Tank_Siege_Mode:13 HP=150, wait=40 (value=11)
+@@@@ Enemy's turn @@@@
+Terran_Goliath@5 HP=96, wait=3
+Terran_Vulture@6 HP=68, wait=12
+Terran_Goliath@8 HP=67, wait=3
+Terran_Siege_Tank_Tank_Mode@9 HP=121, wait=2
+Terran_Ghost@11 HP=3, wait=3
+Terran_Siege_Tank_Tank_Mode@12 HP=92, wait=2
+Terran_Siege_Tank_Siege_Mode@13 HP=150, wait=40
+XXXX Turns over XXXX
+Total damages from you: 6
+Total damages from the enemy: 6
+Number of dead units: 6
+Number of dead enemies: 6
+Tour 18
+:::: My turn ::::
+Terran_Marine:0 HP=30, wait=14 (value=2)
+Terran_Vulture:6 HP=46, wait=10 (value=1)
+Terran_Vulture:7 HP=51.5, wait=10 (value=0)
+Terran_Ghost:10 HP=45, wait=1 (value=4)
+Terran_Ghost:11 HP=23, wait=1 (value=10)
+Terran_Siege_Tank_Siege_Mode:13 HP=150, wait=38 (value=10)
+@@@@ Enemy's turn @@@@
+Terran_Marine@2 HP=8, wait=14
+Terran_Goliath@5 HP=96, wait=1
+Terran_Vulture@6 HP=62, wait=10
+Terran_Goliath@8 HP=67, wait=1
+Terran_Ghost@11 HP=3, wait=1
+Terran_Siege_Tank_Siege_Mode@13 HP=150, wait=38
+XXXX Turns over XXXX
+Total damages from you: 58
+Total damages from the enemy: 44
+Number of dead units: 6
+Number of dead enemies: 6
+Tour 19
+:::: My turn ::::
+Terran_Marine:0 HP=30, wait=13 (value=3)
+Terran_Vulture:6 HP=46, wait=9 (value=1)
+Terran_Vulture:7 HP=51.5, wait=9 (value=0)
+Terran_Siege_Tank_Tank_Mode:9 HP=150, wait=37 (value=9)
+Terran_Siege_Tank_Tank_Mode:12 HP=96.75, wait=37 (value=8)
+Terran_Siege_Tank_Siege_Mode:13 HP=150, wait=37 (value=7)
+@@@@ Enemy's turn @@@@
+Terran_Marine@2 HP=8, wait=13
+Terran_Vulture@6 HP=62, wait=9
+Terran_Siege_Tank_Tank_Mode@9 HP=121, wait=37
+Terran_Siege_Tank_Tank_Mode@12 HP=63, wait=37
+Terran_Siege_Tank_Siege_Mode@13 HP=150, wait=37
+XXXX Turns over XXXX
+Total damages from you: 20
+Total damages from the enemy: 33
+Number of dead units: 7
+Number of dead enemies: 8
+Tour 20
+:::: My turn ::::
+Terran_Marine:0 HP=30, wait=4 (value=0)
+Terran_Siege_Tank_Tank_Mode:9 HP=150, wait=28 (value=9)
+Terran_Ghost:10 HP=45, wait=14 (value=4)
+Terran_Siege_Tank_Tank_Mode:12 HP=85.75, wait=28 (value=8)
+Terran_Siege_Tank_Siege_Mode:13 HP=150, wait=28 (value=7)
+@@@@ Enemy's turn @@@@
+Terran_Goliath@5 HP=67, wait=14
+Terran_Goliath@8 HP=67, wait=14
+Terran_Siege_Tank_Tank_Mode@9 HP=121, wait=28
+Terran_Siege_Tank_Tank_Mode@12 HP=63, wait=28
+Terran_Siege_Tank_Siege_Mode@13 HP=150, wait=28
+XXXX Turns over XXXX
+Total damages from you: 40
+Total damages from the enemy: 10
+Number of dead units: 7
+Number of dead enemies: 8
+Tour 21
+:::: My turn ::::
+Terran_Vulture:6 HP=36, wait=27 (value=0)
+Terran_Vulture:7 HP=51.5, wait=27 (value=3)
+Terran_Siege_Tank_Tank_Mode:9 HP=150, wait=24 (value=8)
+Terran_Ghost:10 HP=45, wait=10 (value=0)
+Terran_Siege_Tank_Tank_Mode:12 HP=85.75, wait=24 (value=5)
+Terran_Siege_Tank_Siege_Mode:13 HP=150, wait=24 (value=7)
+@@@@ Enemy's turn @@@@
+Terran_Goliath@5 HP=67, wait=10
+Terran_Vulture@6 HP=62, wait=27
+Terran_Goliath@8 HP=67, wait=10
+Terran_Siege_Tank_Tank_Mode@9 HP=121, wait=24
+Terran_Siege_Tank_Tank_Mode@12 HP=63, wait=24
+Terran_Siege_Tank_Siege_Mode@13 HP=150, wait=24
+XXXX Turns over XXXX
+Total damages from you: 6
+Total damages from the enemy: 0
+Number of dead units: 7
+Number of dead enemies: 8
+Tour 22
+:::: My turn ::::
+Terran_Marine:0 HP=30, wait=6 (value=4)
+Terran_Vulture:6 HP=36, wait=17 (value=1)
+Terran_Vulture:7 HP=51.5, wait=17 (value=4)
+Terran_Siege_Tank_Tank_Mode:9 HP=150, wait=14 (value=5)
+Terran_Siege_Tank_Tank_Mode:12 HP=85.75, wait=14 (value=5)
+Terran_Siege_Tank_Siege_Mode:13 HP=150, wait=14 (value=11)
+@@@@ Enemy's turn @@@@
+Terran_Vulture@6 HP=62, wait=17
+Terran_Siege_Tank_Tank_Mode@9 HP=121, wait=14
+Terran_Siege_Tank_Tank_Mode@12 HP=63, wait=14
+Terran_Siege_Tank_Siege_Mode@13 HP=150, wait=14
+XXXX Turns over XXXX
+Total damages from you: 10
+Total damages from the enemy: 24
+Number of dead units: 7
+Number of dead enemies: 8
+Tour 23
+:::: My turn ::::
+Terran_Vulture:6 HP=12, wait=11 (value=0)
+Terran_Vulture:7 HP=51.5, wait=11 (value=1)
+Terran_Siege_Tank_Tank_Mode:9 HP=150, wait=8 (value=8)
+Terran_Ghost:10 HP=45, wait=17 (value=4)
+Terran_Siege_Tank_Tank_Mode:12 HP=85.75, wait=8 (value=12)
+Terran_Siege_Tank_Siege_Mode:13 HP=150, wait=8 (value=6)
+@@@@ Enemy's turn @@@@
+Terran_Goliath@5 HP=67, wait=17
+Terran_Vulture@6 HP=62, wait=11
+Terran_Goliath@8 HP=67, wait=17
+Terran_Siege_Tank_Tank_Mode@9 HP=121, wait=8
+Terran_Siege_Tank_Tank_Mode@12 HP=63, wait=8
+Terran_Siege_Tank_Siege_Mode@13 HP=150, wait=8
+XXXX Turns over XXXX
+Total damages from you: 6
+Total damages from the enemy: 0
+Number of dead units: 7
+Number of dead enemies: 8
+Tour 24
+:::: My turn ::::
+Terran_Marine:0 HP=30, wait=8 (value=0)
+Terran_Vulture:6 HP=12, wait=3 (value=2)
+Terran_Vulture:7 HP=51.5, wait=3 (value=1)
+Terran_Ghost:10 HP=45, wait=9 (value=4)
+@@@@ Enemy's turn @@@@
+Terran_Goliath@5 HP=67, wait=9
+Terran_Vulture@6 HP=62, wait=3
+Terran_Goliath@8 HP=67, wait=9
+XXXX Turns over XXXX
+Total damages from you: 109.5
+Total damages from the enemy: 114
+Number of dead units: 8
+Number of dead enemies: 8
+Tour 25
+:::: My turn ::::
+Terran_Marine:0 HP=30, wait=5 (value=4)
+Terran_Siege_Tank_Tank_Mode:9 HP=150, wait=35 (value=5)
+Terran_Ghost:10 HP=45, wait=6 (value=10)
+Terran_Siege_Tank_Tank_Mode:12 HP=16.75, wait=35 (value=5)
+Terran_Siege_Tank_Siege_Mode:13 HP=150, wait=73 (value=10)
+@@@@ Enemy's turn @@@@
+Terran_Goliath@5 HP=67, wait=6
+Terran_Goliath@8 HP=38, wait=6
+Terran_Siege_Tank_Tank_Mode@9 HP=92, wait=35
+Terran_Siege_Tank_Tank_Mode@12 HP=63, wait=35
+Terran_Siege_Tank_Siege_Mode@13 HP=150, wait=73
+XXXX Turns over XXXX
+Total damages from you: 20
+Total damages from the enemy: 10
+Number of dead units: 8
+Number of dead enemies: 8
+Tour 26
+:::: My turn ::::
+Terran_Vulture:7 HP=41.5, wait=26 (value=2)
+Terran_Siege_Tank_Tank_Mode:9 HP=150, wait=30 (value=8)
+Terran_Ghost:10 HP=45, wait=1 (value=1)
+Terran_Siege_Tank_Tank_Mode:12 HP=16.75, wait=30 (value=8)
+Terran_Siege_Tank_Siege_Mode:13 HP=150, wait=68 (value=7)
+@@@@ Enemy's turn @@@@
+Terran_Goliath@5 HP=67, wait=1
+Terran_Vulture@6 HP=62, wait=26
+Terran_Goliath@8 HP=38, wait=1
+Terran_Siege_Tank_Tank_Mode@9 HP=92, wait=30
+Terran_Siege_Tank_Tank_Mode@12 HP=63, wait=30
+Terran_Siege_Tank_Siege_Mode@13 HP=150, wait=68
+XXXX Turns over XXXX
+Total damages from you: 6
+Total damages from the enemy: 0
+Number of dead units: 8
+Number of dead enemies: 8
+Tour 27
+:::: My turn ::::
+Terran_Marine:0 HP=30, wait=15 (value=6)
+Terran_Vulture:7 HP=41.5, wait=25 (value=4)
+Terran_Siege_Tank_Tank_Mode:9 HP=150, wait=29 (value=5)
+Terran_Siege_Tank_Tank_Mode:12 HP=16.75, wait=29 (value=12)
+Terran_Siege_Tank_Siege_Mode:13 HP=150, wait=67 (value=7)
+@@@@ Enemy's turn @@@@
+Terran_Vulture@6 HP=62, wait=25
+Terran_Siege_Tank_Tank_Mode@9 HP=92, wait=29
+Terran_Siege_Tank_Tank_Mode@12 HP=63, wait=29
+Terran_Siege_Tank_Siege_Mode@13 HP=150, wait=67
+XXXX Turns over XXXX
+Total damages from you: 10
+Total damages from the enemy: 24
+Number of dead units: 8
+Number of dead enemies: 8
+Tour 28
+:::: My turn ::::
+Terran_Vulture:7 HP=17.5, wait=10 (value=4)
+Terran_Siege_Tank_Tank_Mode:9 HP=150, wait=14 (value=8)
+Terran_Ghost:10 HP=45, wait=8 (value=4)
+Terran_Siege_Tank_Tank_Mode:12 HP=16.75, wait=14 (value=5)
+Terran_Siege_Tank_Siege_Mode:13 HP=150, wait=52 (value=10)
+@@@@ Enemy's turn @@@@
+Terran_Goliath@5 HP=67, wait=8
+Terran_Vulture@6 HP=62, wait=10
+Terran_Goliath@8 HP=38, wait=8
+Terran_Siege_Tank_Tank_Mode@9 HP=92, wait=14
+Terran_Siege_Tank_Tank_Mode@12 HP=63, wait=14
+Terran_Siege_Tank_Siege_Mode@13 HP=150, wait=52
+XXXX Turns over XXXX
+Total damages from you: 6
+Total damages from the enemy: 0
+Number of dead units: 8
+Number of dead enemies: 8
+Tour 29
+:::: My turn ::::
+Terran_Marine:0 HP=30, wait=8 (value=4)
+Terran_Vulture:7 HP=17.5, wait=2 (value=3)
+Terran_Siege_Tank_Tank_Mode:9 HP=150, wait=6 (value=5)
+Terran_Siege_Tank_Tank_Mode:12 HP=16.75, wait=6 (value=8)
+Terran_Siege_Tank_Siege_Mode:13 HP=150, wait=44 (value=10)
+@@@@ Enemy's turn @@@@
+Terran_Vulture@6 HP=62, wait=2
+Terran_Siege_Tank_Tank_Mode@9 HP=92, wait=6
+Terran_Siege_Tank_Tank_Mode@12 HP=63, wait=6
+Terran_Siege_Tank_Siege_Mode@13 HP=150, wait=44
+XXXX Turns over XXXX
+Total damages from you: 10
+Total damages from the enemy: 24
+Number of dead units: 9
+Number of dead enemies: 8
+Tour 30
+:::: My turn ::::
+Terran_Marine:0 HP=30, wait=6 (value=3)
+Terran_Siege_Tank_Tank_Mode:9 HP=150, wait=4 (value=9)
+Terran_Ghost:10 HP=45, wait=21 (value=4)
+Terran_Siege_Tank_Tank_Mode:12 HP=16.75, wait=4 (value=5)
+Terran_Siege_Tank_Siege_Mode:13 HP=150, wait=42 (value=6)
+@@@@ Enemy's turn @@@@
+Terran_Goliath@5 HP=67, wait=21
+Terran_Goliath@8 HP=38, wait=21
+Terran_Siege_Tank_Tank_Mode@9 HP=92, wait=4
+Terran_Siege_Tank_Tank_Mode@12 HP=63, wait=4
+Terran_Siege_Tank_Siege_Mode@13 HP=150, wait=42
+XXXX Turns over XXXX
+Total damages from you: 0
+Total damages from the enemy: 20
+Number of dead units: 9
+Number of dead enemies: 8
+Tour 31
+:::: My turn ::::
+Terran_Marine:0 HP=10, wait=2 (value=7)
+Terran_Ghost:10 HP=45, wait=17 (value=4)
+Terran_Siege_Tank_Siege_Mode:13 HP=150, wait=38 (value=7)
+@@@@ Enemy's turn @@@@
+Terran_Goliath@5 HP=67, wait=17
+Terran_Vulture@6 HP=62, wait=27
+Terran_Goliath@8 HP=38, wait=17
+Terran_Siege_Tank_Siege_Mode@13 HP=150, wait=38
+XXXX Turns over XXXX
+Total damages from you: 58
+Total damages from the enemy: 44
+Number of dead units: 9
+Number of dead enemies: 8
+Tour 32
+:::: My turn ::::
+Terran_Siege_Tank_Tank_Mode:9 HP=121, wait=36 (value=5)
+Terran_Ghost:10 HP=30, wait=15 (value=4)
+Terran_Siege_Tank_Tank_Mode:12 HP=16.75, wait=36 (value=5)
+Terran_Siege_Tank_Siege_Mode:13 HP=150, wait=36 (value=6)
+@@@@ Enemy's turn @@@@
+Terran_Goliath@5 HP=38, wait=15
+Terran_Vulture@6 HP=62, wait=25
+Terran_Goliath@8 HP=9, wait=15
+Terran_Siege_Tank_Tank_Mode@9 HP=92, wait=36
+Terran_Siege_Tank_Tank_Mode@12 HP=63, wait=36
+Terran_Siege_Tank_Siege_Mode@13 HP=150, wait=36
+XXXX Turns over XXXX
+Total damages from you: 6
+Total damages from the enemy: 0
+Number of dead units: 9
+Number of dead enemies: 8
+Tour 33
+:::: My turn ::::
+Terran_Marine:0 HP=10, wait=1 (value=4)
+Terran_Siege_Tank_Tank_Mode:9 HP=121, wait=21 (value=5)
+Terran_Siege_Tank_Tank_Mode:12 HP=16.75, wait=21 (value=8)
+Terran_Siege_Tank_Siege_Mode:13 HP=150, wait=21 (value=6)
+@@@@ Enemy's turn @@@@
+Terran_Vulture@6 HP=62, wait=10
+Terran_Siege_Tank_Tank_Mode@9 HP=92, wait=21
+Terran_Siege_Tank_Tank_Mode@12 HP=63, wait=21
+Terran_Siege_Tank_Siege_Mode@13 HP=150, wait=21
+XXXX Turns over XXXX
+Total damages from you: 10
+Total damages from the enemy: 23
+Number of dead units: 9
+Number of dead enemies: 8
+Tour 34
+:::: My turn ::::
+Terran_Siege_Tank_Tank_Mode:9 HP=110, wait=20 (value=8)
+Terran_Ghost:10 HP=18, wait=22 (value=10)
+Terran_Siege_Tank_Tank_Mode:12 HP=16.75, wait=20 (value=5)
+Terran_Siege_Tank_Siege_Mode:13 HP=150, wait=20 (value=10)
+@@@@ Enemy's turn @@@@
+Terran_Goliath@5 HP=38, wait=22
+Terran_Vulture@6 HP=62, wait=9
+Terran_Goliath@8 HP=9, wait=22
+Terran_Siege_Tank_Tank_Mode@9 HP=92, wait=20
+Terran_Siege_Tank_Tank_Mode@12 HP=63, wait=20
+Terran_Siege_Tank_Siege_Mode@13 HP=150, wait=20
+XXXX Turns over XXXX
+Total damages from you: 6
+Total damages from the enemy: 0
+Number of dead units: 9
+Number of dead enemies: 8
+Tour 35
+:::: My turn ::::
+Terran_Marine:0 HP=10, wait=7 (value=7)
+Terran_Siege_Tank_Tank_Mode:9 HP=110, wait=11 (value=5)
+Terran_Ghost:10 HP=18, wait=13 (value=10)
+Terran_Siege_Tank_Tank_Mode:12 HP=16.75, wait=11 (value=5)
+Terran_Siege_Tank_Siege_Mode:13 HP=150, wait=11 (value=7)
+@@@@ Enemy's turn @@@@
+Terran_Goliath@5 HP=38, wait=13
+Terran_Goliath@8 HP=9, wait=13
+Terran_Siege_Tank_Tank_Mode@9 HP=92, wait=11
+Terran_Siege_Tank_Tank_Mode@12 HP=63, wait=11
+Terran_Siege_Tank_Siege_Mode@13 HP=150, wait=11
+XXXX Turns over XXXX
+Total damages from you: 0
+Total damages from the enemy: 20
+Number of dead units: 10
+Number of dead enemies: 8
+Tour 36
+:::: My turn ::::
+Terran_Ghost:10 HP=18, wait=2 (value=0)
+@@@@ Enemy's turn @@@@
+Terran_Goliath@5 HP=38, wait=2
+Terran_Vulture@6 HP=62, wait=20
+Terran_Goliath@8 HP=9, wait=2
+XXXX Turns over XXXX
+Total damages from you: 127
+Total damages from the enemy: 95.5
+Number of dead units: 12
+Number of dead enemies: 10
+Tour 37
+:::: My turn ::::
+Terran_Siege_Tank_Tank_Mode:9 HP=110, wait=36 (value=5)
+Terran_Siege_Tank_Siege_Mode:13 HP=150, wait=74 (value=6)
+@@@@ Enemy's turn @@@@
+Terran_Siege_Tank_Tank_Mode@9 HP=92, wait=36
+Terran_Siege_Tank_Tank_Mode@12 HP=34, wait=36
+Terran_Siege_Tank_Siege_Mode@13 HP=150, wait=74
+XXXX Turns over XXXX
+Total damages from you: 0
+Total damages from the enemy: 11
+Number of dead units: 12
+Number of dead enemies: 10
+Tour 38
+:::: My turn ::::
+Terran_Siege_Tank_Tank_Mode:9 HP=99, wait=13 (value=8)
+Terran_Siege_Tank_Siege_Mode:13 HP=150, wait=51 (value=10)
+@@@@ Enemy's turn @@@@
+Terran_Siege_Tank_Tank_Mode@9 HP=92, wait=13
+Terran_Siege_Tank_Tank_Mode@12 HP=34, wait=13
+Terran_Siege_Tank_Siege_Mode@13 HP=150, wait=51
+XXXX Turns over XXXX
+Total damages from you: 0
+Total damages from the enemy: 11
+Number of dead units: 12
+Number of dead enemies: 10
+Tour 39
+:::: My turn ::::
+Terran_Siege_Tank_Siege_Mode:13 HP=150, wait=38 (value=6)
+@@@@ Enemy's turn @@@@
+Terran_Goliath@5 HP=38, wait=10
+Terran_Siege_Tank_Tank_Mode@12 HP=34, wait=0
+Terran_Siege_Tank_Siege_Mode@13 HP=150, wait=38
+XXXX Turns over XXXX
+Total damages from you: 29
+Total damages from the enemy: 29
+Number of dead units: 12
+Number of dead enemies: 10
+Tour 40
+:::: My turn ::::
+Terran_Siege_Tank_Tank_Mode:9 HP=59, wait=28 (value=9)
+Terran_Siege_Tank_Siege_Mode:13 HP=150, wait=28 (value=11)
+@@@@ Enemy's turn @@@@
+Terran_Siege_Tank_Tank_Mode@9 HP=92, wait=28
+Terran_Siege_Tank_Tank_Mode@12 HP=34, wait=-9
+Terran_Siege_Tank_Siege_Mode@13 HP=150, wait=28
+XXXX Turns over XXXX
+Total damages from you: 0
+Total damages from the enemy: 11
+Number of dead units: 12
+Number of dead enemies: 10
+Tour 41
+:::: My turn ::::
+Terran_Siege_Tank_Tank_Mode:9 HP=48, wait=5 (value=8)
+Terran_Siege_Tank_Siege_Mode:13 HP=150, wait=5 (value=6)
+@@@@ Enemy's turn @@@@
+Terran_Siege_Tank_Tank_Mode@9 HP=92, wait=5
+Terran_Siege_Tank_Tank_Mode@12 HP=34, wait=-32
+Terran_Siege_Tank_Siege_Mode@13 HP=150, wait=5
+XXXX Turns over XXXX
+Total damages from you: 0
+Total damages from the enemy: 11
+Number of dead units: 12
+Number of dead enemies: 10
+Tour 42
+:::: My turn ::::
+@@@@ Enemy's turn @@@@
+Terran_Goliath@5 HP=9, wait=18
+Terran_Siege_Tank_Tank_Mode@12 HP=34, wait=-37
+XXXX Turns over XXXX
+Total damages from you: 80.5
+Total damages from the enemy: 98
+Number of dead units: 12
+Number of dead enemies: 10
+Tour 43
+:::: My turn ::::
+Terran_Siege_Tank_Tank_Mode:9 HP=8, wait=20 (value=8)
+Terran_Siege_Tank_Siege_Mode:13 HP=81, wait=58 (value=11)
+@@@@ Enemy's turn @@@@
+Terran_Siege_Tank_Tank_Mode@9 HP=92, wait=20
+Terran_Siege_Tank_Tank_Mode@12 HP=34, wait=-55
+Terran_Siege_Tank_Siege_Mode@13 HP=150, wait=58
+XXXX Turns over XXXX
+Total damages from you: 0
+Total damages from the enemy: 11
+Number of dead units: 13
+Number of dead enemies: 10
+Tour 44
+:::: My turn ::::
+@@@@ Enemy's turn @@@@
+Terran_Goliath@5 HP=9, wait=-35
+Terran_Siege_Tank_Tank_Mode@9 HP=92, wait=-38
+Terran_Siege_Tank_Tank_Mode@12 HP=34, wait=-113
+XXXX Turns over XXXX
+Total damages from you: 51.5
+Total damages from the enemy: 69
+Number of dead units: 13
+Number of dead enemies: 10
+Tour 45
+:::: My turn ::::
+@@@@ Enemy's turn @@@@
+Terran_Goliath@5 HP=9, wait=-111
+Terran_Siege_Tank_Tank_Mode@9 HP=92, wait=-114
+Terran_Siege_Tank_Tank_Mode@12 HP=34, wait=-189
+XXXX Turns over XXXX
+Total damages from you: 69
+Total damages from the enemy: 69
+Number of dead units: 14
+Number of dead enemies: 10
+Winner: The enemy...
+Diff: -4
+HP: 285
+Terran_Marine@0 -98 HP left
+Terran_Marine@1 -20 HP left
+Terran_Marine@2 -24 HP left
+Terran_Marine@3 -42 HP left
+Terran_Marine@4 -58 HP left
+Terran_Goliath@5 9 HP left
+Terran_Vulture@6 -76 HP left
+Terran_Vulture@7 -61.625 HP left
+Terran_Goliath@8 -49 HP left
+Terran_Siege_Tank_Tank_Mode@9 92 HP left
+Terran_Ghost@10 -126.125 HP left
+Terran_Ghost@11 -120 HP left
+Terran_Siege_Tank_Tank_Mode@12 34 HP left
+Terran_Siege_Tank_Siege_Mode@13 150 HP left
