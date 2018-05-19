@@ -15,6 +15,8 @@ file = File.open(ARGV[0])
 total = 0
 wins = 0
 draws = 0
+sat = 0
+sat_total = 0
 live = 0
 live_e = 0
 hp = 0
@@ -25,6 +27,14 @@ me = false
 file.each do |line|
   if line.include? "#"
     next
+  end
+
+  if line.include? "Satisfaction cost"
+    sat_total += 1
+    words = line.split(': ')
+    if words[1].to_i == 0
+      sat += 1
+    end
   end
 
   if line.include? "Draw"
@@ -62,9 +72,11 @@ mean_live = (live.to_f / wins).round(1)
 mean_hp = (hp / wins).round(1)
 mean_live_e = (-live_e.to_f / ( total - wins - draws ) ).round(1)
 mean_hp_e = (hp_e / ( total - wins - draws ) ).round(1)
+percent_sat = (100 * sat.to_f / sat_total).round(2)
 percent = (100 * wins.to_f / total).round(1)
 
 puts "#{ARGV[0]}:\n   #{percent}\% of wins (#{wins}/#{total}, #{draws} draws)"
+puts "   Satisfaction rate: #{percent_sat}\% (#{sat}/#{sat_total})"
 puts "   Average number of GHOST living units = #{mean_live}"
 puts "   Average number of enemy living units = #{mean_live_e}"
 puts "   Average GHOST HP = #{mean_hp}"

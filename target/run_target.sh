@@ -15,13 +15,13 @@ if [ $# -eq 3 ]; then
     ITER=$3
 fi
 
-for i in {1..$ITER}
+for ((i = 1; i <= ITER; i++))
 do
     if [ $# -gt 1 ]; then
-	bin/target $1 $2 >> results/$HOST/"$DATE"_$FILE-$1-$2.txt
+	bin/target $1 $2 >> results/$HOST/"$DATE"_"$FILE"_$1-$2-$ITER.txt
     else
-	echo "################" >> results/$HOST/"$DATE"_$FILE.txt
-	./bin/target >> results/$HOST/"$DATE"_$FILE.txt
+	echo "################" >> results/$HOST/"$DATE"_"$FILE"_$ITER.txt
+	./bin/target >> results/$HOST/"$DATE"_"$FILE"_$ITER.txt
 	#echo >> results/$FILE
     fi
 done
