@@ -59,15 +59,15 @@ struct State
   {
     seconds		= 0;
     stock_mineral	= 0.;
-    stock_gas	= 0.;
+    stock_gas		= 0.;
     minerals_booked	= 0;
-    gas_booked	= 0;
+    gas_booked		= 0;
     mineral_workers	= 0;
-    gas_workers	= 0;
-    supply_used	= 5;
+    gas_workers		= 0;
+    supply_used		= 5;
     supply_capacity	= 9;
     number_bases	= 1;
-    number_refineries = 0;
+    number_refineries	= 0;
     number_pylons	= 0;
     resources.clear();
     resources["Protoss_Nexus"].first = 1;

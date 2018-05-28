@@ -9,13 +9,6 @@ using namespace std;
 
 struct ActionData
 {
-  ActionData();
-  ActionData(int, int, int, int, ActionType, vector<string>, string, Race, string );
-  ActionData(const ActionData&);
-  ActionData& operator=(ActionData);
-
-  inline int decreaseSeconds() { return --seconds_required; }
-
   int			seconds_required;
   int			cost_mineral;
   int			cost_gas;
@@ -25,6 +18,11 @@ struct ActionData
   string		creator; 
   Race			race;
   string		name;
+
+  ActionData();
+  ActionData( int, int, int, int, ActionType, vector<string>, string, Race, string );
+  ActionData( const ActionData& );
+  ActionData& operator=( ActionData );
 
   inline string get_type_string() const	
   { 
@@ -48,9 +46,10 @@ struct ActionData
     default: return "Unknown";
     }
   }
-  
-  friend ostream& operator<<( ostream&, const ActionData& );
 
-private:
-  void swap(ActionData&);
+  inline int decreaseSeconds() { return --seconds_required; }
+
+  void swap( ActionData& );
+
+  friend ostream& operator<<( ostream&, const ActionData& );
 };

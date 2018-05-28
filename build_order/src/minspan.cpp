@@ -12,36 +12,40 @@ MinSpan::MinSpan( const vector< ActionData >& actions )
   : Objective( "MinSpan" ),
     current_state( State() ),
     goals( map<string, pair<int, int> >() ),
-    bo( vector<BO>() )
+    bo( vector<BO>() ),
+    actions(actions)
 {
-  for( const auto &i : input)
-    makeVecVariables( i, variables, goals );
+  // for( const auto &i : input)
+  //   makeVecVariables( i, variables, goals );
 }
 
 void MinSpan::printBO() const
 {
-  cout << endl << endl;
+  cout << "\n\n";
   for( const auto &b : bestBO )
   {
-    if( b.fullName.compare("Protoss_Probe") != 0 && b.fullName.compare("Protoss_Pylon") != 0 )
-      cout << b.fullName
-	   << ": start at " << b.startTime
-	   << ", finish at " << b.completedTime << endl;
+    if( b.full_name.compare("Protoss_Probe") != 0 && b.full_name.compare("Protoss_Pylon") != 0 )
+      cout << b.full_name
+	   << ": start at " << b.start_time
+	   << ", finish at " << b.completed_time << "\n";
   }
-  cout << endl;
+  cout << "\n";
 }
   
-double MinSpan::v_cost( vector< Action > *vecVariables, BuildOrderDomain *domain ) const
+double MinSpan::required_cost( const vector< Variable >& vecVariables ) const
 {
   currentState.reset();
   bo.clear();
   for( auto &g : goals)
     g.second.second = 0;
 
-  auto actionToDo = vecVariables->begin();
+  // auto action_to_do = actions.begin();
     
-  while( actionToDo != vecVariables->end() || !currentState.busy.empty() )
+  // while( action_to_do != action.end() || !current_state.busy.empty() )
+  int i = 0;
+  while( i < actions.size() || !current_state.busy.empty() )
   {
+    auto& action_to_do = actions[i];
     // cout << "vec size: " << vecVariables->size()
     // 	   << ", iter: " << std::distance( actionToDo, vecVariables->end() )
     // 	   << ", busy: " << currentState.busy.size() << endl;
@@ -53,103 +57,108 @@ double MinSpan::v_cost( vector< Action > *vecVariables, BuildOrderDomain *domain
     // 	cout << endl;	
     // }
       
-    ++currentState.seconds;
+    ++current_state.seconds;
 
     // update mineral / gas stocks
-    currentState.stockMineral += currentState.mineralWorkers * minRate; // minRate mineral per worker per second in average
-    currentState.stockGas += currentState.gasWorkers * gasRate; // gasRate gas per worker per second in average
+    current_state.stock_mineral += current_state.mineral_workers * min_rate; // minRate mineral per worker per second in average
+    current_state.stock_gas += current_state.gas_workers * gas_rate; // gasRate gas per worker per second in average
 
     // update busy list
-    updateBusy();
+    update_busy();
 
-    // update inMove list
-    updateInMove();
+    // update in_move list
+    update_in_move();
 
-    if( actionToDo != vecVariables->end() )
+    // if( action_to_do != vecVariables->end() )
+    if( i < actions.size() )
     {
-      dealWithWorkers();
+      deal_with_workers();
 	
       // build a pylon if I must, ie:
       // 1. if I am not currently making pylons
       // 2. if my supply cap cannot manage the next global unit production
-      if( !makingPylons() || currentState.numberPylons != 0 )
-	youMustConstructAdditionalPylons();
+      if( !making_pylons() || current_state.number_pylons != 0 )
+	you_must_construct_additional_pylons();
 
       // can I produce units?
-      if( actionToDo->getType() != ActionType::unit )
-	produceUnitsFirst( actionToDo, vecVariables );
+      if( action_to_do.actionType != ActionType::unit )
+	produce_units_first( action_to_do, vecVariables );
 	
       // can I handle the current action?
-      if( handleActionToDo( *actionToDo ) )
-	++actionToDo;
+      if( handle_action_to_do( action_to_do ) )
+	++i;
       else // can I handle the next action?
       {
-	auto nextAction = actionToDo + 1;
-	if( nextAction != vecVariables->end() )
+	// if( nextAction != vecVariables->end() )
+	if( i < actions.size() -1 )
 	{
+	  auto& next_action = actions[i + 1];
+
 	  // book resources for the current action
-	  int mineralCost = actionToDo->getCostMineral();
-	  int gasCost = actionToDo->getCostGas();
+	  int mineral_cost = action_to_do.cost_mineral;
+	  int gas_cost = action_to_do.cost_gas;
 	    
-	  currentState.mineralsBooked += mineralCost;
-	  currentState.gasBooked += gasCost;
-	  if ( canHandleBuilding( *nextAction ) || canHandleNotBuilding( *nextAction ) )
+	  current_state.minerals_booked += mineral_cost;
+	  current_state.gas_booked += gas_cost;
+	  if( can_handle_building( next_action ) || can_handle_not_building( next_action ) )
 	  {
 	    // cout << "Swap " << actionToDo->getFullName() << ":" << actionToDo->getValue()
 	    // 	   << " with " << nextAction->getFullName() << ":" << nextAction->getValue() << endl;
 
-	    std::swap( *actionToDo, *nextAction );
-	    actionToDo->swapValue( *nextAction );
-	    currentState.mineralsBooked -= mineralCost;
-	    currentState.gasBooked -= gasCost;
-	    if( handleActionToDo( *actionToDo ) )
-	      ++actionToDo;
+	    // std::swap( action_to_do, next_action );
+	    action_to_do.swap( next_action );
+	    current_state.minerals_booked -= mineral_cost;
+	    current_state.gas_booked -= gas_cost;
+	    if( handle_action_to_do( action_to_do ) )
+	      ++i;
 	    else
 	    {
-	      cout << "This should never append." << endl;
-	      exit(0);
+	      cout << "This should never append.\n";
+	      exit( 0 );
 	    }	      
 	  }
 	  else
 	  {
-	    currentState.mineralsBooked -= mineralCost;
-	    currentState.gasBooked -= gasCost;
+	    current_state.minerals_booked -= mineral_cost;
+	    current_state.gas_booked -= gas_cost;
 	  }
 	}
       }
     }
   }
-  return static_cast<double>( currentState.seconds );
+  return static_cast<double>( current_state.seconds );
 }
 
-double MinSpan::costOpti( vector< Action > *vecVariables ) const
+double MinSpan::cost_optimization( const vector< Variable >& vecVariables ) const
 {
-  currentState.reset();
+  current_state.reset();
   bo.clear();
   for( auto &g : goals)
     g.second.second = 0;
 
-  vector< Action > copyVec = *vecVariables;
+  vector< Variable > copyVec = vecVariables;
     
-  auto actionToDo = copyVec.begin();
-
-  while( actionToDo != copyVec.end() || !currentState.busy.empty() )
+  // auto actionToDo = copyVec.begin();
+  int i = 0;
+  // while( actionToDo != copyVec.end() || !currentState.busy.empty() )
+  while( i < copyVec.size() || !current_state.busy.empty() )
   {
-    ++currentState.seconds;
+    ++current_state.seconds;
 
     // update mineral / gas stocks
-    currentState.stockMineral += currentState.mineralWorkers * minRate;
-    currentState.stockGas += currentState.gasWorkers * gasRate;
+    current_state.stock_mineral += current_state.mineral_workers * min_rate;
+    current_state.stock_gas += current_state.gas_workers * gas_rate;
 
     // update busy list
-    updateBusy();
+    update_busy();
 
     // update inMove list
-    updateInMove();
+    update_in_move();
 
-    if( actionToDo != copyVec.end() )
+    // if( action_to_do != copyVec.end() )
+    if( i < copyVec.size() )
     {
-      dealWithWorkers();
+      deal_with_workers();
 	
       // only used by postprocessingOptimization, to see if we can
       // shorten the makespan by making more production buildings,
@@ -161,36 +170,42 @@ double MinSpan::costOpti( vector< Action > *vecVariables ) const
 	  
       int to_produce;
       int creator_in_production;
-      int totalNumber;
+      int total_number;
       for( const auto &g : goals )
       {
-	action = actionOf[g.first];
+	action = action_of[ g.first ];
 	if( action.actionType == ActionType::building )
 	  continue;
 
 	if( action.name.compare("Protoss_Archon") == 0 || action.name.compare("Protoss_Dark_Archon") == 0 )
 	  continue;
 	    
-	creator = actionOf[ action.creator ];
+	creator = action_of[ action.creator ];
 
 	creator_in_production =
-	  count_if( begin(currentState.inMove),
-		    end(currentState.inMove),
-		    [&creator](ActionPrep &t){return t.action.name.compare( creator.name ) == 0;})
-	  + count_if( begin(currentState.busy),
-		      end(currentState.busy),
-		      [&creator](ActionData &a){return a.name.compare( creator.name ) == 0;});
+	  count_if( begin(current_state.in_move),
+		    end(current_state.in_move),
+		    [&creator](ActionPrep& t){return t.action.name.compare( creator.name ) == 0;})
+	  + count_if( begin(current_state.busy),
+		      end(current_state.busy),
+		      [&creator](ActionData& a){return a.name.compare( creator.name ) == 0;});
 
-	totalNumber = currentState.resources[creator.name].first + creator_in_production;
+	total_number = current_state.resources[creator.name].first + creator_in_production;
 	    
-	if( totalNumber == 0 )
+	if( total_number == 0 )
 	  continue;
 
+	////////////////////////////////////
+	////////////////////////////////////
+	////////////////////////////////////
+	////////////////////////////////////
+	////////////////////////////////////
+	
 	// test is we are faster after making an additional production building
 	to_produce = g.second.first - g.second.second;
 	real_time = 0.;
 	    
-	for( const auto &t : currentState.busy )
+	for( const auto &t : current_state.busy )
 	  if( t.name.compare( action.name ) == 0 )
 	  {
 	    --to_produce;

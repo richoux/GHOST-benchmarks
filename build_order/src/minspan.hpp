@@ -27,17 +27,18 @@ constexpr double gas_rate		= 1.15; //1.66
 class MinSpan : public Objective
 {
   double required_cost( const vector< Variable >& vecVariables ) const override;
-  void expert_postprocess_optimization( vector< Variable >* variables,
+  void expert_postprocess_optimization( vector< Variable >& variables,
 					double& bestCost,
 					vector<int>& solution )	const override;
   
   void update_busy() const;
   void update_in_move() const;
   void deal_with_workers() const;
-  bool can_handle_building( const Action& ) const;
-  bool can_handle_not_building( const Action& ) const;
-  bool handle_action_to_do( const Action& ) const;
-  void produce_units_first( vector<Action>::iterator&, vector<Action>* ) const;
+  bool can_handle_building( const ActionData& ) const;
+  bool can_handle_not_building( const ActionData& ) const;
+  double cost_optimization( const vector< Variable >& vecVariables ) const
+  bool handle_action_to_do( const ActionData& ) const;
+  void produce_units_first( const ActionData&, const vector<Variable>& ) const;
   bool making_pylons() const;
   void you_must_construct_additional_pylons() const;
   void push_in_busy( const string& ) const;
