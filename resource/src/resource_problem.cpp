@@ -11,8 +11,8 @@
 #include <ghost/variable.hpp>
 
 #include "unitData.hpp"
-#include "ctr_stock.hpp"
-#include "obj_maxgrounddps.hpp"
+#include "constraint_stock.hpp"
+#include "objective_maxgrounddps.hpp"
 #include "factory_variable_resource.hpp"
 
 using namespace ghost;

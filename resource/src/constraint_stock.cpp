@@ -1,7 +1,7 @@
 #include <algorithm>
 #include <exception>
 
-#include "ctr_stock.hpp"
+#include "constraint_stock.hpp"
 
 using namespace std;
 using namespace ghost;
