@@ -2,6 +2,25 @@
 
 struct State
 {
+  int		seconds;
+  double	stock_mineral;
+  double	stock_gas;
+  int		minerals_booked;
+  int		gas_booked;
+  int		mineral_workers;
+  int		gas_workers;
+  int		supply_used;
+  int		supply_capacity;
+  int		number_bases;
+  int		number_refineries;
+  int		number_pylons;
+
+  // <name, [total number, number available now]>
+  // <Gateway, [2,1]> means we have 2 finished Gateways but only one available to produce something right now.
+  map<string, pair<int, int> > resources;
+  vector< ActionData > busy;
+  vector< ActionPrep > in_move;      
+
   State()
     : seconds(0),
       stock_mineral(0.),
@@ -78,20 +97,4 @@ struct State
     for( int i = 0 ; i < 4 ; ++i )
       in_move.push_back( ActionPrep{ action_of["Protoss_Mineral"], from_base_to_minerals, i } );
   }
-
-  int		seconds;
-  double	stock_mineral;
-  double	stock_gas;
-  int		minerals_booked;
-  int		gas_booked;
-  int		mineral_workers;
-  int		gas_workers;
-  int		supply_used;
-  int		supply_capacity;
-  int		number_bases;
-  int		number_refineries;
-  int		number_pylons;
-  map<string, pair<int, int> > resources;
-  vector< ActionData > busy;
-  vector< ActionPrep > in_move;      
 };

@@ -16,6 +16,8 @@
 using namespace std;
 using namespace ghost;
 
+// Commented value are values used by Churchill et al. in "Build Order Optimization in StarCraft".
+// These values are too advantageous and then too far away from real values in StarCraft IMHO.
 constexpr int go_to_build		= 5; //5
 constexpr int return_to_minerals	= 4; //4
 constexpr int from_base_to_minerals	= 5; //2
@@ -53,7 +55,11 @@ class MinSpan : public Objective
   double sharp_gas_in( int duration, int in_seconds = 0 ) const;
 
   mutable State				current_state;
+
+  // <goal name, [number to produce, current number]>
+  // <Gateway, [2,1]> means we have currently one Gateway (possibly under construction) and we aim to have two of these.
   mutable map< string, pair<int, int> >	goals;
+  
   mutable vector<BO>			bo;
   mutable vector<BO>			bestBO;
   
