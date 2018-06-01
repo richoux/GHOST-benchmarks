@@ -1,6 +1,6 @@
 #include "actionMap.hpp"
 
-map<string, const ActionData> actionOf
+map<string, const ActionData> action_of
 {
   // special
   make_pair( "Protoss_Mineral",

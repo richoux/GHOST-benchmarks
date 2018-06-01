@@ -2,6 +2,6 @@
 
 #include <map>
 
-#include "action.hpp"
+#include "actionData.hpp"
 
-extern map<string, const ActionData> actionOf;
+extern map<string, const ActionData> action_of;

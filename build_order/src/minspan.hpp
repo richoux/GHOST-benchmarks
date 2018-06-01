@@ -23,7 +23,7 @@ constexpr int return_to_minerals	= 4; //4
 constexpr int from_base_to_minerals	= 5; //2
 constexpr int from_min_to_gas		= 5; //2
 
-constexpr double min_rate		= 0.68; //1.07
+constexpr double mineral_rate		= 0.68; //1.07
 constexpr double gas_rate		= 1.15; //1.66
     
 class MinSpan : public Objective
@@ -47,7 +47,7 @@ class MinSpan : public Objective
   bool dependencies_check( const string& ) const;
     
   // rough estimations
-  inline double minerals_in( int duration )	const { return current_state.mineral_workers * min_rate * duration; }
+  inline double minerals_in( int duration )	const { return current_state.mineral_workers * mineral_rate * duration; }
   inline double gas_in( int duration )		const { return current_state.gas_workers * gas_rate * duration; }
 
   // sharp estimations

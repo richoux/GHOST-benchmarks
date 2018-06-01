@@ -9,7 +9,7 @@ using namespace std;
 
 struct ActionData
 {
-  int			seconds_required;
+  int			seconds_required; // remaining seconds before completion
   int			cost_mineral;
   int			cost_gas;
   int			cost_supply;
@@ -47,7 +47,7 @@ struct ActionData
     }
   }
 
-  inline int decreaseSeconds() { return --seconds_required; }
+  inline int decrease_seconds() { return --seconds_required; }
 
   void swap( ActionData& );
 

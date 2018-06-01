@@ -1,5 +1,9 @@
 #pragma once
 
+#include "actionData.hpp"
+#include "actionPrep.hpp"
+#include "actionMap.hpp"
+
 struct State
 {
   int		seconds;
@@ -18,7 +22,13 @@ struct State
   // <name, [total number, number available now]>
   // <Gateway, [2,1]> means we have 2 finished Gateways but only one available to produce something right now.
   map<string, pair<int, int> > resources;
+
+  // vector of actions in progress
+  // for instance, a pylon is warping, so it is not available yet
   vector< ActionData > busy;
+
+  // vector of actions in preparation
+  // for instance, a worker is moving to warp a pylon somewhere, so warping didn't start yet.
   vector< ActionPrep > in_move;      
 
   State()
@@ -35,8 +45,8 @@ struct State
       number_refineries(0),
       number_pylons(0),
       resources(),
-      busy{action_of["Protoss_Probe"]},
-      in_move{ ActionPrep{ action_of["Protoss_Mineral"], from_base_to_minerals, 0 },
+      busy{action_of["Protoss_Probe"]}, // make a worker directly
+      in_move{ ActionPrep{ action_of["Protoss_Mineral"], from_base_to_minerals, 0 }, // all initial workers go mining
 	  ActionPrep{ action_of["Protoss_Mineral"], from_base_to_minerals, 1 },
 	    ActionPrep{ action_of["Protoss_Mineral"], from_base_to_minerals, 2 },
 	      ActionPrep{ action_of["Protoss_Mineral"], from_base_to_minerals, 3 } }
@@ -92,9 +102,9 @@ struct State
     resources["Protoss_Nexus"].first = 1;
     resources["Protoss_Nexus"].second = 0;	
     busy.clear();
-    busy.push_back( action_of["Protoss_Probe"] );
+    busy.push_back( action_of["Protoss_Probe"] ); // make a worker directly
     in_move.clear();
-    for( int i = 0 ; i < 4 ; ++i )
+    for( int i = 0 ; i < 4 ; ++i ) // all initial workers go mining
       in_move.push_back( ActionPrep{ action_of["Protoss_Mineral"], from_base_to_minerals, i } );
   }
 };
