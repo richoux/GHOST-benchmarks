@@ -221,8 +221,8 @@ double MinSpan::cost_optimization( const vector< Variable >& vecVariables ) cons
 	  continue;
 
 	// test is we have enough money for making an additional production building
-	simulated_mineral = ( current_state.resources[creator.name].first + creator_in_production + 1 ) * action.costMineral;
-	simulated_gas = ( current_state.resources[creator.name].first + creator_in_production + 1 ) * action.costGas;
+	simulated_mineral = ( total_number + 1 ) * action.cost_mineral;
+	simulated_gas = ( total_number + 1 ) * action.cost_gas;
 
 	future_mineral = sharp_minerals_in( action.seconds_required, creator.seconds_required );
 	future_gas = sharp_gas_in( action.seconds_required, creator.seconds_required );
@@ -365,7 +365,7 @@ void MinSpan::update_busy() const
 	  // if we have few workers mining, do not sent them to gas
 	  for( int i = 0; i < min( 3, current_state.mineral_workers - 3 ); ++i )
 	  {
-	    current_state.in_move.push_back( ActionPrep( action_of["Protoss_Gas"], from_min_to_gas, current_state.in_move.size() ) );
+	    current_state.in_move.push_back( ActionPrep( action_of["Protoss_Gas"], from_minerals_to_gas, current_state.in_move.size() ) );
 	    --current_state.mineral_workers;
 	  }
 	}
@@ -486,7 +486,7 @@ void MinSpan::deal_with_workers() const
     // if we have few workers mining, do not sent them to gas
     for( int i = 0 ; i < min( 3, current_state.mineral_workers - 3 ) ; ++i )
     {
-      current_state.in_move.push_back( ActionPrep( actionOf["Protoss_Gas"], from_min_to_gas, current_state.in_move.size() ) );
+      current_state.in_move.push_back( ActionPrep( actionOf["Protoss_Gas"], from_minerals_to_gas, current_state.in_move.size() ) );
       --current_state.mineral_workers;
     }
   }
@@ -525,36 +525,36 @@ void MinSpan::deal_with_workers() const
   }
 }
 
-void MinSpan::produce_units_first( vector<Action>::iterator &actionToDo, vector< Action > *vecVariables ) const
+void MinSpan::produce_units_first( vector<Action>::iterator& action_to_do, vector< Action >& vecVariables ) const
 {
-  if( actionToDo == vecVariables->end() || actionToDo == vecVariables->end() - 1 )
+  if( action_to_do == vecVariables.end() || action_to_do == vecVariables.end() - 1 )
     return;
     
-  for( auto it = actionToDo + 1 ; it != vecVariables->end() ; ++it )
+  for( auto it = action_to_do + 1; it != vecVariables.end(); ++it )
   {
-    if( it->getType() == ActionType::unit && canHandleNotBuilding( *it ) )
+    if( it->type == ActionType::unit && can_handle_not_building( *it ) )
     {
-      for( auto it_swap = it - 1 ; it_swap != vecVariables->begin() && it_swap != actionToDo - 1 ; --it_swap )
+      // do a kind of reverse bubble-sort from it until action_to_do 
+      for( auto it_swap = it - 1; it_swap != vecVariables.begin() && it_swap != action_to_do - 1; --it_swap )
       {
-	auto next = it_swap+1;
+	auto next = it_swap + 1;
 	std::swap( *it_swap, *next );
-	it_swap->swapValue( *next );
       }
 	
-      if( handleActionToDo( *actionToDo ) )
-	++actionToDo;
+      if( handle_action_to_do( *action_to_do ) )
+	++action_to_do;
       else
       {
 	cout << "This should never append too.\n";
-	exit(0);
+	exit( 0 );
       }	
     }
   }
 }
   
-bool MinSpan::can_handle_building( const Action &actionToDo ) const
+bool MinSpan::can_handle_building( const Action &action_to_do ) const
 {
-  if( actionToDo.getType() != ActionType::building )
+  if( action_to_do.actionType != ActionType::building )
     return false;
 
   // special case for the Assimilator
@@ -599,15 +599,15 @@ bool MinSpan::can_handle_building( const Action &actionToDo ) const
   // }
 
 
-  if( ( actionToDo.getCostMineral() == 0 || current_state.stockMineral >= actionToDo.getCostMineral() + current_state.mineralsBooked - mineralsIn(goToBuild) )
+  if( ( action_to_do.cost_mineral == 0 || current_state.stock_mineral >= action_to_do.cost_mineral + current_state.minerals_booked - minerals_in( go_to_build ) )
       &&
-      ( actionToDo.getCostGas() == 0 || current_state.stockGas >= actionToDo.getCostGas() + current_state.gasBooked - gasIn(goToBuild) ) 
+      ( action_to_do.cost_gas == 0 || current_state.stock_gas >= action_to_do.cost_gas + current_state.gas_booked - gas_in( go_to_build ) ) 
       &&
-      current_state.mineralWorkers + current_state.gasWorkers > 0
+      current_state.mineral_workers + current_state.gas_workers > 0
       &&
-      current_state.numberPylons > 0
+      current_state.number_pylons > 0
       &&
-      dependenciesCheck( actionToDo.getFullName() )
+      dependencies_check( action_to_do.full_name )
       )
   {
     return true;
@@ -617,22 +617,22 @@ bool MinSpan::can_handle_building( const Action &actionToDo ) const
   // }
 }
   
-bool MinSpan::can_handle_not_building( const Action &actionToDo ) const
+bool MinSpan::can_handle_not_building( const Action& action_to_do ) const
 {
-  if( actionToDo.getType() == ActionType::building )
+  if( action_to_do.actionType == ActionType::building )
     return false;
 
-  string creator = actionToDo.getCreator();
+  string creator = action_to_do.creator;
         
-  if( ( actionToDo.getCostMineral() == 0 || current_state.stockMineral >= actionToDo.getCostMineral() + current_state.mineralsBooked )
+  if( ( action_to_do.cost_mineral == 0 || current_state.stock_mineral >= action_to_do.cost_mineral + current_state.minerals_booked )
       &&
-      ( actionToDo.getCostGas() == 0 || current_state.stockGas >= actionToDo.getCostGas() + current_state.gasBooked )
+      ( action_to_do.cost_gas == 0 || current_state.stock_gas >= action_to_do.cost_gas + current_state.gas_booked )
       &&
-      current_state.supplyUsed + actionToDo.getCostSupply() <= current_state.supplyCapacity
+      current_state.supply_used + action_to_do.cost_supply <= current_state.supply_capacity
       &&
       ( creator.empty() || current_state.resources[ creator ].second > 0 )
       &&
-      dependenciesCheck( actionToDo.getFullName() )
+      dependencies_check( action_to_do.full_name )
       )
   {
     return true;
@@ -641,32 +641,32 @@ bool MinSpan::can_handle_not_building( const Action &actionToDo ) const
     return false;
 }
 
-bool MinSpan::handle_action_to_do( const Action &actionToDo ) const
+bool MinSpan::handle_action_to_do( const Action& action_to_do ) const
 {
   // if the next action is building a building
-  if( actionToDo.getType() == ActionType::building )
+  if( action_to_do.actionType == ActionType::building )
   {
-    if( canHandleBuilding( actionToDo ) )
+    if( can_handle_building( action_to_do ) )
     {
-      current_state.mineralsBooked += actionToDo.getCostMineral();
-      current_state.gasBooked += actionToDo.getCostGas();
+      current_state.minerals_booked += action_to_do.cost_mineral;
+      current_state.gas_booked += action_to_do.cost_gas;
 		
-      current_state.inMove.push_back( ActionPrep( actionToDo.getData(), goToBuild, current_state.inMove.size() ) );
-      if( current_state.mineralWorkers > 0 )
-	--current_state.mineralWorkers;
+      current_state.in_move.push_back( ActionPrep( action_to_do, go_to_build, current_state.in_move.size() ) );
+      if( current_state.mineral_workers > 0 )
+	--current_state.mineral_workers;
       else
-	--current_state.gasWorkers;
+	--current_state.gas_workers;
 
 #ifndef NDEBUG
-      string text = "Go for " + actionToDo.getFullName() + " at ";
+      string text = "Go for " + action_to_do.full_name + " at ";
       cout << std::left << setw(35) << text << setw(5) << current_state.seconds
-	   << "  m = " << setw(9) << current_state.stockMineral
-	   << "  g = " << setw(8) << current_state.stockGas
-	   << "  mb = " << setw(5) << current_state.mineralsBooked
-	   << "  gb = " << setw(4) << current_state.gasBooked
-	   << "  mw = " << setw(3) << current_state.mineralWorkers
-	   << "  gw = " << setw(3) << current_state.gasWorkers
-	   << "  s = " << current_state.supplyUsed << "/" << current_state.supplyCapacity << ")\n";
+	   << "  m = " << setw(9) << current_state.stock_mineral
+	   << "  g = " << setw(8) << current_state.stock_gas
+	   << "  mb = " << setw(5) << current_state.minerals_booked
+	   << "  gb = " << setw(4) << current_state.gas_booked
+	   << "  mw = " << setw(3) << current_state.mineral_workers
+	   << "  gw = " << setw(3) << current_state.gas_workers
+	   << "  s = " << current_state.supply_used << "/" << current_state.supply_capacity << ")\n";
 #endif
 	
       return true;
@@ -675,29 +675,29 @@ bool MinSpan::handle_action_to_do( const Action &actionToDo ) const
   // otherwise, it is a unit/research/upgrade
   else
   {
-    string creator = actionToDo.getCreator();
+    string creator = action_to_do.creator;
 
-    if( canHandleNotBuilding( actionToDo ) )
+    if( can_handle_not_building( action_to_do ) )
     {
-      current_state.supplyUsed += actionToDo.getCostSupply();
-      current_state.stockMineral -= actionToDo.getCostMineral();
-      current_state.stockGas -= actionToDo.getCostGas();
+      current_state.supply_used += action_to_do.cost_supply;
+      current_state.stock_mineral -= action_to_do.cost_mineral;
+      current_state.stock_gas -= action_to_do.cost_gas;
 	
       if( !creator.empty() && creator.compare("Protoss_Probe") != 0 )
 	--current_state.resources[ creator ].second;
 	
-      pushInBusy( actionToDo.getFullName() );
+      push_in_busy( action_to_do.full_name );
 	
 #ifndef NDEBUG
-      string text = "Start " + actionToDo.getFullName() + " at ";
+      string text = "Start " + action_to_do.full_name + " at ";
       cout << std::left << setw(35) << text << setw(5) << current_state.seconds
-	   << "  m = " << setw(9) << current_state.stockMineral
-	   << "  g = " << setw(8) << current_state.stockGas
-	   << "  mb = " << setw(5) << current_state.mineralsBooked
-	   << "  gb = " << setw(4) << current_state.gasBooked
-	   << "  mw = " << setw(3) << current_state.mineralWorkers
-	   << "  gw = " << setw(3) << current_state.gasWorkers
-	   << "  s = " << current_state.supplyUsed << "/" << current_state.supplyCapacity << ")\n";
+	   << "  m = " << setw(9) << current_state.stock_mineral
+	   << "  g = " << setw(8) << current_state.stock_gas
+	   << "  mb = " << setw(5) << current_state.minerals_booked
+	   << "  gb = " << setw(4) << current_state.gas_booked
+	   << "  mw = " << setw(3) << current_state.mineral_workers
+	   << "  gw = " << setw(3) << current_state.gas_workers
+	   << "  s = " << current_state.supply_used << "/" << current_state.supply_capacity << ")\n";
 #endif
 	
       return true;
@@ -743,7 +743,7 @@ void MinSpan::you_must_construct_additional_pylons() const
 	   << "  mb = " << setw(5) << current_state.minerals_booked
 	   << "  gb = " << setw(4) << current_state.gas_booked
 	   << "  mw = " << setw(3) << current_state.mineral_workers
-	   << "  gw = " << setw(3) << current_state.gas_workers
+-	   << "  gw = " << setw(3) << current_state.gas_workers
 	   << "  s = " << current_state.supply_used << "/" << current_state.supply_capacity << ")\n";
 #endif	
     }
@@ -767,13 +767,6 @@ void MinSpan::you_must_construct_additional_pylons() const
       + 8 * count_if( begin(current_state.in_move), end(current_state.in_move), [](ActionPrep &t){return t.action.name.compare("Protoss_Pylon") == 0;} )
       + 9 * count_if( begin(current_state.busy), end(current_state.busy), [](ActionData &a){return a.name.compare( "Protoss_Nexus" ) == 0;} )
       + 9 * count_if( begin(current_state.in_move), end(current_state.in_move), [](ActionPrep &t){return t.action.name.compare("Protoss_Nexus") == 0;} );
-
-    ///////////////////////////////
-    ///////////////////////////////
-    ///////////////////////////////
-    ///////////////////////////////
-    ///////////////////////////////
-
     
     if( planned_supply <= production_capacity + current_state.supply_used )
     {
@@ -784,7 +777,8 @@ void MinSpan::you_must_construct_additional_pylons() const
 	current_state.minerals_booked += 100;
 	++count_build;
       } while( planned_supply + ( 8 * count_build ) <= production_capacity + current_state.supply_used );
-		
+
+      // The same worker will build pylons. Several go_to_build/return_to_minerals seconds would be counted, but this is not a big deal.
       if( current_state.mineral_workers > 0 )
 	--current_state.mineral_workers;
       else
@@ -814,27 +808,30 @@ void MinSpan::push_in_busy( const string& name ) const
     ++goals.at( a.name ).second;
 }
 
-bool MinSpan::dependenciesCheck( const string &s ) const
+
+// TOCHECK: are upgrades like Protoss_Ground_Weapons_X written in state.resources or not?
+// If not, I don't see where do we check we got Protoss_Ground_Weapons_1 before accepting Protoss_Ground_Weapons_2
+bool MinSpan::dependencies_check( const string& s ) const
 {
-  ActionData data = actionOf[ s ]; 
-  if( data.costGas > 0 && current_state.numberRefineries == 0)
+  ActionData data = action_of[ s ]; 
+  if( data.cost_gas > 0 && current_state.number_refineries == 0 )
     return false;
 
   // Ok, this if statement is a bit tricky
   // return false if, for any dependency: 
-  if( any_of( begin(data.dependencies), end(data.dependencies),
+  if( any_of( begin( data.dependencies ), end( data.dependencies ),
 	      [&](const string &n)
 	      {
 		// 1. the dependency has not been created yet
 		return ( current_state.resources[ n ].first == 0
 			 &&
-			 // 2. and (it is not planned to get one before goToBuild seconds OR data not a building)
+			 // 2. and (it is not planned to get one before go_to_build seconds OR data not a building)
 			 ( data.actionType != ActionType::building
 			   ||
-			   none_of( begin(current_state.busy), end(current_state.busy),
+			   none_of( begin( current_state.busy ), end( current_state.busy ),
 				    [&n](ActionData &a)
 		    {
-		      return ( a.name.compare( n ) == 0 && a.secondsRequired <= goToBuild );
+		      return ( a.name.compare( n ) == 0 && a.seconds_required <= go_to_build );
 		    })
 			   ) 
 			 );
@@ -844,23 +841,28 @@ bool MinSpan::dependenciesCheck( const string &s ) const
   return true;
 }
 
-double MinSpan::sharpMineralsIn( int duration, int InSeconds ) const
+/////////////////////////
+/////////////////////////
+/////////////////////////
+/////////////////////////
+double MinSpan::sharp_minerals_in( int duration, int in_seconds ) const
 {
-  double futurProduction = 0.;
-  int workers = current_state.mineralWorkers;
+  double futur_production = 0.;
+  int workers = current_state.mineral_workers;
 
-  int min_time = std::min( InSeconds, 20 );
+  int min_time = std::min( in_seconds, 20 );
   vector<int> last_build;
 
-  // simulation time from now till InSeconds
+  // simulation time from now till in_seconds
   for( int i = 1 ; i <= min_time ; ++i )
   {
-    for( const auto &t : current_state.inMove )
+    // NB: costly. Can be improved by counting how much t occurs within min_time
+    for( const auto &t : current_state.in_move )
       if( t.action.creator.compare("Protoss_Probe") == 0
 	  &&
 	  t.action.name.compare("Mineral") == 0
 	  &&
-	  t.waitTime - i == 0 )
+	  t.wait_time - i == 0 )
       {
 	++workers;
       }
@@ -868,57 +870,57 @@ double MinSpan::sharpMineralsIn( int duration, int InSeconds ) const
     for( const auto &t : current_state.busy )
       if( t.name.compare("Protoss_Probe") == 0
 	  &&
-	  t.secondsRequired + 2 - i == 0 )
+	  t.seconds_required + 2 - i == 0 )
       {
 	++workers;
-	last_build.push_back(i);
+	last_build.push_back( i );
       }
   }
 
-  for( int i = min_time + 1 ; i <= InSeconds ; ++i )
+  for( int i = min_time + 1; i <= in_seconds; ++i )
   {
     for( const auto &l : last_build )
       if( ( i + 2 - l ) % 20 == 0 )
 	++workers;
   }
 
-  // start to count income from InSeconds till InSeconds + duration
-  for( int i = InSeconds + 1 ; i <= InSeconds + duration ; ++i )
+  // start to count income from in_seconds till in_seconds + duration
+  for( int i = in_seconds + 1; i <= in_seconds + duration; ++i )
   {
     for( const auto &l : last_build )
       if( ( i + 2 - l ) % 20 == 0 )
 	++workers;
       
-    futurProduction += workers * minRate;
+    futur_production += workers * min_rate;
   }
     
-  return futurProduction;
+  return futur_production;
 }
   
-double MinSpan::sharpGasIn( int duration, int InSeconds ) const
+double MinSpan::sharp_gas_in( int duration, int in_seconds ) const
 {
-  double futurProduction = 0.;
-  int workers = current_state.gasWorkers;
+  double futur_production = 0.;
+  int workers = current_state.gas_workers;
 
-  // simulation time from now till InSeconds
-  for( int i = 1 ; i <= InSeconds ; ++i )
+  // simulation time from now till in_seconds
+  for( int i = 1 ; i <= in_seconds ; ++i )
   {
-    for( const auto &t : current_state.inMove )
+    for( const auto &t : current_state.in_move )
       if( t.action.creator.compare("Protoss_Probe") == 0
 	  &&
 	  t.action.name.compare("Gas") == 0
 	  &&
-	  t.waitTime - i == 0 )
+	  t.wait_time - i == 0 )
       {
 	++workers;
       }
   }
 
-  // start to count income from InSeconds till InSeconds + duration
-  for( int i = InSeconds + 1 ; i <= InSeconds + duration ; ++i )
-    futurProduction += workers * minRate;
+  // start to count income from in_seconds till in_seconds + duration
+  for( int i = in_seconds + 1 ; i <= in_seconds + duration ; ++i )
+    futur_production += workers * min_rate;
 
-  return futurProduction;
+  return futur_production;
 }
 
 // double MinSpan::v_postprocessSatisfaction( vector< Action > *vecVariables,

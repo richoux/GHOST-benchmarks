@@ -21,7 +21,7 @@ using namespace ghost;
 constexpr int go_to_build		= 5; //5
 constexpr int return_to_minerals	= 4; //4
 constexpr int from_base_to_minerals	= 5; //2
-constexpr int from_min_to_gas		= 5; //2
+constexpr int from_minerals_to_gas	= 5; //2
 
 constexpr double mineral_rate		= 0.68; //1.07
 constexpr double gas_rate		= 1.15; //1.66
