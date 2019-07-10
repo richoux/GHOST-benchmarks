@@ -1,0 +1,1182 @@
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x000000000040a088 in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007fd4d810fdab in ghost::Domain::index_of(int) const () from /usr/local/lib/libghost.so
+#0  0x00007fd4d810fdab in ghost::Domain::index_of(int) const () from /usr/local/lib/libghost.so
+#1  0x000000000040841b in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007fd4d810f0e0 in operator delete(void*)@plt () from /usr/local/lib/libghost.so
+#0  0x00007fd4d810f0e0 in operator delete(void*)@plt () from /usr/local/lib/libghost.so
+#1  0x00007fd4d81112b8 in void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) () from /usr/local/lib/libghost.so
+#2  0x00007fd4d8110a17 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#3  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#4  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x000000000040a088 in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f243187bd40 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007f243187bd40 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#1  0x00007f243187c9fe in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#2  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#3  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f243187c9e9 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#0  0x00007f243187c9e9 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#1  0x00000000004083c4 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f52ebd339fe in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#0  0x00007f52ebd339fe in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#1  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#2  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007fcf3e0e7d40 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007fcf3e0e7d40 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#1  0x00007fcf3e0e89fe in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#2  0x00000000004083c4 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#3  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#3  0x00007fcf3e0e927e in void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) () from /usr/local/lib/libghost.so
+#4  0x00007fcf3e0e8a17 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#5  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#6  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#2  0x00007f2b3218527e in void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) () from /usr/local/lib/libghost.so
+#3  0x00007f2b32184a17 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#4  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#5  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f2b32183d5a in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007f2b32183d5a in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#2  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#3  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00000000004084c5 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#0  0x00000000004084c5 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#1  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00000000004084c5 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#0  0x00000000004084c5 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#1  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f750b0c2a0a in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#0  0x00007f750b0c2a0a in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#1  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#2  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00000000004084c5 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#0  0x00000000004084c5 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#1  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00000000004084ca in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#0  0x00000000004084ca in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#1  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#3  0x00007fbbf9acc27e in void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) () from /usr/local/lib/libghost.so
+#4  0x00007fbbf9acba17 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#5  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#6  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007fd61e559d48 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007fd61e559d48 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#1  0x00007fd61e55a9fe in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#2  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#3  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00000000004084c0 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#0  0x00000000004084c0 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#1  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007fd61e55a9ec in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#0  0x00007fd61e55a9ec in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#1  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#2  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f847ea93d4b in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007f847ea93d4b in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#2  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#3  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f847ea949f6 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#0  0x00007f847ea949f6 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#1  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#2  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f847ea930d0 in ghost::Domain::get_value(int) const@plt () from /usr/local/lib/libghost.so
+#0  0x00007f847ea930d0 in ghost::Domain::get_value(int) const@plt () from /usr/local/lib/libghost.so
+#1  0x00007f847ea949fe in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#2  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#3  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f847ea948ab in ghost::Variable::do_random_initialization() () from /usr/local/lib/libghost.so
+#0  0x00007f847ea948ab in ghost::Variable::do_random_initialization() () from /usr/local/lib/libghost.so
+#1  0x000000000040a050 in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f3984a01d40 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007f3984a01d40 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#2  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#3  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f3984a01d4b in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007f3984a01d4b in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#2  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#3  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x0000000000408408 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#0  0x0000000000408408 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#1  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x000000000040848a in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#0  0x000000000040848a in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#1  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x0000000000401760 in ghost::Domain::get_value(int) const@plt ()
+#0  0x0000000000401760 in ghost::Domain::get_value(int) const@plt ()
+#2  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#3  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f637590ad5a in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007f637590ad5a in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#2  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#3  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f0a95253d4b in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007f0a95253d4b in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#2  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#3  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f0a95253d4b in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007f0a95253d4b in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#1  0x00007f0a952549fe in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#2  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#3  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f0a952549fe in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#0  0x00007f0a952549fe in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#1  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#2  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x0000000000406cf0 in ghost::Objective<Unit>::expert_heuristic_value(std::vector<Unit, std::allocator<Unit> >*, Unit*, std::vector<int, std::allocator<int> > const&) const ()
+#0  0x0000000000406cf0 in ghost::Objective<Unit>::expert_heuristic_value(std::vector<Unit, std::allocator<Unit> >*, Unit*, std::vector<int, std::allocator<int> > const&) const ()
+#1  0x0000000000408547 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007fe132b422ce in void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) () from /usr/local/lib/libghost.so
+#0  0x00007fe132b422ce in void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) () from /usr/local/lib/libghost.so
+#1  0x00007fe132b41a17 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#2  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#3  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x000000000040a23d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#0  0x000000000040a23d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00000000004085c8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#0  0x00000000004085c8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#1  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f255a98d9fe in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#0  0x00007f255a98d9fe in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#1  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#2  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00000000004084c5 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#0  0x00000000004084c5 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#1  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x0000000000401760 in ghost::Domain::get_value(int) const@plt ()
+#0  0x0000000000401760 in ghost::Domain::get_value(int) const@plt ()
+#2  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#3  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f8e435a7d40 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007f8e435a7d40 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#1  0x00007f8e435a89fe in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#2  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#3  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f8e435a9240 in void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) () from /usr/local/lib/libghost.so
+#0  0x00007f8e435a9240 in void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) () from /usr/local/lib/libghost.so
+#1  0x00007f8e435a8a17 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#2  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#3  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f8e435a89d7 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#0  0x00007f8e435a89d7 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#1  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#2  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f8e435a7d4b in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007f8e435a7d4b in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#2  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#3  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00000000004084bb in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#0  0x00000000004084bb in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#1  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f41aa568d40 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007f41aa568d40 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#1  0x00007f41aa5699fe in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#2  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#3  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00000000004084dc in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#0  0x00000000004084dc in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#1  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f8d90ffba0a in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#0  0x00007f8d90ffba0a in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#1  0x00000000004083c4 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f8d90ffba0a in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#0  0x00007f8d90ffba0a in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#1  0x00000000004083c4 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007fb6f2f51d40 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007fb6f2f51d40 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#2  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#3  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#3  0x00007fb6f2f5327e in void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) () from /usr/local/lib/libghost.so
+#4  0x00007fb6f2f52a17 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#5  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#6  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#3  0x00007f1a2e97c27e in void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) () from /usr/local/lib/libghost.so
+#4  0x00007f1a2e97ba17 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#5  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#6  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#3  0x00007f1a2e97c27e in void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) () from /usr/local/lib/libghost.so
+#4  0x00007f1a2e97ba17 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#5  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#6  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#2  0x00007f1a2e97c27e in void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) () from /usr/local/lib/libghost.so
+#3  0x00007f1a2e97ba17 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#4  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#5  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00007fe90bcb52b8 in void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) () from /usr/local/lib/libghost.so
+#2  0x00007fe90bcb4a17 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#3  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#4  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007fe90bcb3d4b in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007fe90bcb3d4b in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#2  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#3  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x0000000000401760 in ghost::Domain::get_value(int) const@plt ()
+#0  0x0000000000401760 in ghost::Domain::get_value(int) const@plt ()
+#2  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#3  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x0000000000401850 in ghost::Domain::index_of(int) const@plt ()
+#0  0x0000000000401850 in ghost::Domain::index_of(int) const@plt ()
+#1  0x000000000040841b in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f4e20837d40 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007f4e20837d40 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#2  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#3  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f4e208389d7 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#0  0x00007f4e208389d7 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#1  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#2  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00000000004084c5 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#0  0x00000000004084c5 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#1  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f645be97a0a in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#0  0x00007f645be97a0a in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#1  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#2  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f645be96d60 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007f645be96d60 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#1  0x00007f645be979fe in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#2  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#3  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#3  0x00007fabdf22627e in void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) () from /usr/local/lib/libghost.so
+#4  0x00007fabdf225a17 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#5  0x00000000004083c4 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#6  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007fabdf224d60 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007fabdf224d60 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#1  0x00007fabdf2259fe in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#2  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#3  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007fabdf225a0a in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#0  0x00007fabdf225a0a in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#1  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#2  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x0000000000408437 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#0  0x0000000000408437 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#1  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007ff4978029f6 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#0  0x00007ff4978029f6 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#1  0x00000000004083c4 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00007ff4978032df in void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) () from /usr/local/lib/libghost.so
+#2  0x00007ff497802a17 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#3  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#4  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007ff4978029e9 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#0  0x00007ff4978029e9 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#1  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#2  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007ff4978029db in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#0  0x00007ff4978029db in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#1  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#2  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00007fe6b8eae2b8 in void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) () from /usr/local/lib/libghost.so
+#2  0x00007fe6b8eada17 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#3  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#4  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#3  0x00007fe6b8eae27e in void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) () from /usr/local/lib/libghost.so
+#4  0x00007fe6b8eada17 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#5  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#6  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x000000000040901a in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#0  0x000000000040901a in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#1  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f6b1ff2c8ca in ghost::Variable::do_random_initialization() () from /usr/local/lib/libghost.so
+#0  0x00007f6b1ff2c8ca in ghost::Variable::do_random_initialization() () from /usr/local/lib/libghost.so
+#1  0x000000000040a050 in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x0000000000408416 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#0  0x0000000000408416 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#1  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x000000000040901a in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#0  0x000000000040901a in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#1  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x0000000000408f91 in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#2  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#4  0x00007f6ff1c9d27e in void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) () from /usr/local/lib/libghost.so
+#5  0x00007f6ff1c9ca17 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#6  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#7  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f6ff1c9bd40 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007f6ff1c9bd40 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#2  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#3  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x0000000000401760 in ghost::Domain::get_value(int) const@plt ()
+#0  0x0000000000401760 in ghost::Domain::get_value(int) const@plt ()
+#2  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#3  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f8fc3b14dbc in ghost::Domain::index_of(int) const () from /usr/local/lib/libghost.so
+#0  0x00007f8fc3b14dbc in ghost::Domain::index_of(int) const () from /usr/local/lib/libghost.so
+#1  0x000000000040841b in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00000000004084ca in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#0  0x00000000004084ca in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#1  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x000000000040a1c8 in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f043b5bfd5a in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007f043b5bfd5a in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#2  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#3  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x0000000000406c78 in ghost::Objective<Unit>::expert_heuristic_value(std::vector<Unit, std::allocator<Unit> >*, Unit*, std::vector<int, std::allocator<int> > const&) const ()
+#0  0x0000000000406c78 in ghost::Objective<Unit>::expert_heuristic_value(std::vector<Unit, std::allocator<Unit> >*, Unit*, std::vector<int, std::allocator<int> > const&) const ()
+#1  0x0000000000408547 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f0d722dea0a in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#0  0x00007f0d722dea0a in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#1  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#2  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#4  0x00007f08f32eb27e in void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) () from /usr/local/lib/libghost.so
+#5  0x00007f08f32eaa17 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#6  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#7  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00000000004084ca in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#0  0x00000000004084ca in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#1  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f08f32e9d4b in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007f08f32e9d4b in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#2  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#3  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00000000004084cf in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#0  0x00000000004084cf in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#1  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00007f3b9f1912df in void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) () from /usr/local/lib/libghost.so
+#2  0x00007f3b9f190a17 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#3  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#4  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x000000000040a088 in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#4  0x00007f903f16527e in void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) () from /usr/local/lib/libghost.so
+#5  0x00007f903f164a17 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#6  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#7  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#4  0x00007f903f16527e in void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) () from /usr/local/lib/libghost.so
+#5  0x00007f903f164a17 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#6  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#7  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x000000000040845a in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#0  0x000000000040845a in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#1  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f903f1648ab in ghost::Variable::do_random_initialization() () from /usr/local/lib/libghost.so
+#0  0x00007f903f1648ab in ghost::Variable::do_random_initialization() () from /usr/local/lib/libghost.so
+#1  0x000000000040a050 in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00000000004084dc in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#0  0x00000000004084dc in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#1  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x0000000000401760 in ghost::Domain::get_value(int) const@plt ()
+#0  0x0000000000401760 in ghost::Domain::get_value(int) const@plt ()
+#2  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#3  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00007fdaadf752df in void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) () from /usr/local/lib/libghost.so
+#2  0x00007fdaadf74a17 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#3  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#4  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x000000000040a088 in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007fbaa732cd5a in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007fbaa732cd5a in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#2  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#3  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00000000004084dc in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#0  0x00000000004084dc in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#1  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x0000000000408440 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#0  0x0000000000408440 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#1  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f3fce216da0 in ghost::Domain::index_of(int) const () from /usr/local/lib/libghost.so
+#0  0x00007f3fce216da0 in ghost::Domain::index_of(int) const () from /usr/local/lib/libghost.so
+#1  0x000000000040841b in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f3fce2179db in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#0  0x00007f3fce2179db in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#1  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#2  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#3  0x00007f3fce21827e in void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) () from /usr/local/lib/libghost.so
+#4  0x00007f3fce217a17 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#5  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#6  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00007f18a64702b8 in void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) () from /usr/local/lib/libghost.so
+#2  0x00007f18a646fa17 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#3  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#4  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x000000000040843c in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#0  0x000000000040843c in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#1  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f18a646ed5a in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007f18a646ed5a in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#2  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#3  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f0eff3399e9 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#0  0x00007f0eff3399e9 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#1  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#2  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f0eff339a06 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#0  0x00007f0eff339a06 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#1  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#2  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f4d8c062a0a in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#0  0x00007f4d8c062a0a in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#1  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#2  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f4d8c062a0a in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#0  0x00007f4d8c062a0a in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#1  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#2  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f68ff1a9d40 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007f68ff1a9d40 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#2  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#3  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f68ff1a9dab in ghost::Domain::index_of(int) const () from /usr/local/lib/libghost.so
+#0  0x00007f68ff1a9dab in ghost::Domain::index_of(int) const () from /usr/local/lib/libghost.so
+#1  0x000000000040841b in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00000000004084c5 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#0  0x00000000004084c5 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#1  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f43ed482d4b in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007f43ed482d4b in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#2  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#3  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00007f9fd257e2b8 in void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) () from /usr/local/lib/libghost.so
+#2  0x00007f9fd257da17 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#3  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#4  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f9fd257d982 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#0  0x00007f9fd257d982 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#1  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#2  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x0000000000401760 in ghost::Domain::get_value(int) const@plt ()
+#0  0x0000000000401760 in ghost::Domain::get_value(int) const@plt ()
+#2  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#3  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007fca45cc2d5a in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007fca45cc2d5a in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#2  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#3  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007fca45cc2d40 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007fca45cc2d40 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#2  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#3  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f1b34fc0d5a in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007f1b34fc0d5a in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#2  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#3  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f1b34fc0d4b in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007f1b34fc0d4b in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#2  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#3  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f1b34fc0d40 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007f1b34fc0d40 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#1  0x00007f1b34fc19fe in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#2  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#3  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#2  0x00007f469bdc927e in void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) () from /usr/local/lib/libghost.so
+#3  0x00007f469bdc8a17 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#4  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#5  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f469bdc7d4b in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007f469bdc7d4b in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#2  0x0000000000408f91 in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#3  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f469bdc7d60 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007f469bdc7d60 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#2  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#3  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f08769fed5a in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007f08769fed5a in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#2  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#3  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f08769ffa0a in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#0  0x00007f08769ffa0a in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#1  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#2  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00000000004084f3 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#0  0x00000000004084f3 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#1  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007fceb909cd5a in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007fceb909cd5a in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#2  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#3  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#3  0x00007fceb909e27e in void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) () from /usr/local/lib/libghost.so
+#4  0x00007fceb909da17 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#5  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#6  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f57bfbbad4b in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007f57bfbbad4b in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#1  0x00007f57bfbbb9fe in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#2  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#3  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f57bfbbad40 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007f57bfbbad40 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#2  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#3  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00007f57bfbbc2df in void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) () from /usr/local/lib/libghost.so
+#2  0x00007f57bfbbba17 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#3  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#4  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x000000000040849d in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#0  0x000000000040849d in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#1  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f018d642d5a in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007f018d642d5a in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#2  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#3  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00000000004084c5 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#0  0x00000000004084c5 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#1  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f018d6439f9 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#0  0x00007f018d6439f9 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#1  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#2  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007fa3ca5f4a0a in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#0  0x00007fa3ca5f4a0a in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#1  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#2  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007fa3ca5f3d4b in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007fa3ca5f3d4b in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#1  0x00007fa3ca5f49fe in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#2  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#3  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007fc36eaf9a0a in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#0  0x00007fc36eaf9a0a in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#1  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#2  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x000000000040a2fa in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007fa446870a0a in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#0  0x00007fa446870a0a in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#1  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#2  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007fa4468712cc in void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) () from /usr/local/lib/libghost.so
+#0  0x00007fa4468712cc in void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) () from /usr/local/lib/libghost.so
+#1  0x00007fa446870a17 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#2  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#3  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f416d08f8bb in ghost::Variable::do_random_initialization() () from /usr/local/lib/libghost.so
+#0  0x00007f416d08f8bb in ghost::Variable::do_random_initialization() () from /usr/local/lib/libghost.so
+#1  0x000000000040a050 in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f416d08ed5a in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007f416d08ed5a in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#2  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#3  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#4  0x00007f416d09027e in void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) () from /usr/local/lib/libghost.so
+#5  0x00007f416d08fa17 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#6  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#7  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007faaea5838ca in ghost::Variable::do_random_initialization() () from /usr/local/lib/libghost.so
+#0  0x00007faaea5838ca in ghost::Variable::do_random_initialization() () from /usr/local/lib/libghost.so
+#1  0x000000000040a050 in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#3  0x00007faaea58427e in void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) () from /usr/local/lib/libghost.so
+#4  0x00007faaea583a17 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#5  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#6  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007faaea582d5a in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007faaea582d5a in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#2  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#3  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#2  0x00007f53f56e627e in void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) () from /usr/local/lib/libghost.so
+#3  0x00007f53f56e5a17 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#4  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#5  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#2  0x00007f53f56e627e in void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) () from /usr/local/lib/libghost.so
+#3  0x00007f53f56e5a17 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#4  0x00000000004083c4 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#5  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00007f981682c8c0 in ghost::Variable::do_random_initialization() () from /usr/local/lib/libghost.so
+#2  0x000000000040a050 in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f981682c9d7 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#0  0x00007f981682c9d7 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#1  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#2  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f7efdba5d5a in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007f7efdba5d5a in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#2  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#3  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#3  0x00007fd7c13a227e in void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) () from /usr/local/lib/libghost.so
+#4  0x00007fd7c13a1a17 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#5  0x00000000004083c4 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#6  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007fcaa31b2d48 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007fcaa31b2d48 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#1  0x00007fcaa31b39fe in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#2  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#3  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x0000000000408437 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#0  0x0000000000408437 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#1  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f6ee1d2ed5a in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007f6ee1d2ed5a in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#2  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#3  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00000000004084cf in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#0  0x00000000004084cf in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#1  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f9fbcb34d4b in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007f9fbcb34d4b in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#1  0x00007f9fbcb359fe in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#2  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#3  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x000000000040a088 in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007fded3a9ad4b in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007fded3a9ad4b in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#2  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#3  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007fc3eeee4d5a in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007fc3eeee4d5a in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#2  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#3  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007fc3eeee59db in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#0  0x00007fc3eeee59db in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#1  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#2  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f6eb4abad64 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007f6eb4abad64 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#1  0x00007f6eb4abb9fe in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#2  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#3  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f6eb4abadab in ghost::Domain::index_of(int) const () from /usr/local/lib/libghost.so
+#0  0x00007f6eb4abadab in ghost::Domain::index_of(int) const () from /usr/local/lib/libghost.so
+#1  0x000000000040841b in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f3c0cd0ad40 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007f3c0cd0ad40 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#2  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#3  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00007f3c0cd0c2df in void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) () from /usr/local/lib/libghost.so
+#2  0x00007f3c0cd0ba17 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#3  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#4  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00000000004084c5 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#0  0x00000000004084c5 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#1  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f1db821c247 in void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) () from /usr/local/lib/libghost.so
+#0  0x00007f1db821c247 in void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) () from /usr/local/lib/libghost.so
+#1  0x00007f1db821ba17 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#2  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#3  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007ff6b469dd44 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007ff6b469dd44 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#2  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#3  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007ff6b469e9d7 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#0  0x00007ff6b469e9d7 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#1  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#2  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007fc0477478ca in ghost::Variable::do_random_initialization() () from /usr/local/lib/libghost.so
+#0  0x00007fc0477478ca in ghost::Variable::do_random_initialization() () from /usr/local/lib/libghost.so
+#1  0x000000000040a050 in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007fc047747a0a in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#0  0x00007fc047747a0a in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#1  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#2  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x0000000000401760 in ghost::Domain::get_value(int) const@plt ()
+#0  0x0000000000401760 in ghost::Domain::get_value(int) const@plt ()
+#2  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#3  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007fc047746d4b in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007fc047746d4b in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#2  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#3  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f8a11e8ed60 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007f8a11e8ed60 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#1  0x00007f8a11e8f9fe in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#2  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#3  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f8a11e8f8e5 in ghost::Variable::do_random_initialization() () from /usr/local/lib/libghost.so
+#0  0x00007f8a11e8f8e5 in ghost::Variable::do_random_initialization() () from /usr/local/lib/libghost.so
+#1  0x000000000040a050 in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#3  0x00007efc57c7c27e in void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) () from /usr/local/lib/libghost.so
+#4  0x00007efc57c7ba17 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#5  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#6  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007efc57c7ad5a in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007efc57c7ad5a in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#2  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#3  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x000000000040a088 in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x0000000000406ccf in ghost::Objective<Unit>::expert_heuristic_value(std::vector<Unit, std::allocator<Unit> >*, Unit*, std::vector<int, std::allocator<int> > const&) const ()
+#0  0x0000000000406ccf in ghost::Objective<Unit>::expert_heuristic_value(std::vector<Unit, std::allocator<Unit> >*, Unit*, std::vector<int, std::allocator<int> > const&) const ()
+#1  0x0000000000408547 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x000000000040900b in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#0  0x000000000040900b in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#1  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007face07fdd4b in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007face07fdd4b in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#2  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#3  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007fa73189dda0 in ghost::Domain::index_of(int) const () from /usr/local/lib/libghost.so
+#0  0x00007fa73189dda0 in ghost::Domain::index_of(int) const () from /usr/local/lib/libghost.so
+#1  0x000000000040841b in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007fa73189ea0a in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#0  0x00007fa73189ea0a in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#1  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#2  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007fa73189ddbc in ghost::Domain::index_of(int) const () from /usr/local/lib/libghost.so
+#0  0x00007fa73189ddbc in ghost::Domain::index_of(int) const () from /usr/local/lib/libghost.so
+#1  0x00007fa73189e8ea in ghost::Variable::do_random_initialization() () from /usr/local/lib/libghost.so
+#2  0x000000000040a050 in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#3  0x00007f049b8e527e in void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) () from /usr/local/lib/libghost.so
+#4  0x00007f049b8e4a17 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#5  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#6  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f049b8e3d5a in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007f049b8e3d5a in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#2  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#3  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f049b8e4a06 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#0  0x00007f049b8e4a06 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#1  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#2  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x000000000040845a in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#0  0x000000000040845a in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#1  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x000000000040a088 in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#4  0x00007f8fce2e427e in void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) () from /usr/local/lib/libghost.so
+#5  0x00007f8fce2e3a17 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#6  0x00000000004083c4 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#7  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f5b0822fd40 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007f5b0822fd40 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#2  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#3  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00007f5b082308c0 in ghost::Variable::do_random_initialization() () from /usr/local/lib/libghost.so
+#2  0x000000000040a050 in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00007fcf405502b8 in void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) () from /usr/local/lib/libghost.so
+#2  0x00007fcf4054fa17 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#3  0x00000000004083c4 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#4  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x0000000000408451 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#0  0x0000000000408451 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#1  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00000000004084dc in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#0  0x00000000004084dc in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#1  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x0000000000408f91 in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#2  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f29feff1d5a in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007f29feff1d5a in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#2  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#3  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f54c2eacd40 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007f54c2eacd40 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#2  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#3  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f54c2ead9d7 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#0  0x00007f54c2ead9d7 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#1  0x00000000004083c4 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00000000004084cf in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#0  0x00000000004084cf in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#1  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007fabc365fd44 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007fabc365fd44 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#2  0x0000000000408f91 in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#3  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007fabc365fd64 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007fabc365fd64 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#1  0x00007fabc36609fe in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#2  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#3  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x0000000000409010 in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#2  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x000000000040a088 in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f1c2034ed40 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007f1c2034ed40 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#1  0x00007f1c2034f9fe in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#2  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#3  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x0000000000401760 in ghost::Domain::get_value(int) const@plt ()
+#0  0x0000000000401760 in ghost::Domain::get_value(int) const@plt ()
+#2  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#3  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f968b96f9fe in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#0  0x00007f968b96f9fe in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#1  0x00000000004083c4 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f968b96ed64 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#0  0x00007f968b96ed64 in ghost::Domain::get_value(int) const () from /usr/local/lib/libghost.so
+#1  0x00007f968b96f9fe in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#2  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#3  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00000000004084cf in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#0  0x00000000004084cf in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#1  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007fe413da40d0 in ghost::Domain::get_value(int) const@plt () from /usr/local/lib/libghost.so
+#0  0x00007fe413da40d0 in ghost::Domain::get_value(int) const@plt () from /usr/local/lib/libghost.so
+#1  0x00007fe413da59fe in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#2  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#3  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x0000000000401850 in ghost::Domain::index_of(int) const@plt ()
+#0  0x0000000000401850 in ghost::Domain::index_of(int) const@plt ()
+#1  0x000000000040841b in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007fe413da4db9 in ghost::Domain::index_of(int) const () from /usr/local/lib/libghost.so
+#0  0x00007fe413da4db9 in ghost::Domain::index_of(int) const () from /usr/local/lib/libghost.so
+#1  0x000000000040841b in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f904269d0d0 in ghost::Domain::get_value(int) const@plt () from /usr/local/lib/libghost.so
+#0  0x00007f904269d0d0 in ghost::Domain::get_value(int) const@plt () from /usr/local/lib/libghost.so
+#1  0x00007f904269e9fe in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#2  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#3  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f8d4a36b9df in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#0  0x00007f8d4a36b9df in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#1  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#2  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00000000004084c5 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#0  0x00000000004084c5 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#1  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+0x00007f7b09fbba06 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#0  0x00007f7b09fbba06 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#1  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#2  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x0000000000408f91 in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#2  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00000000004084a8 in ghost::Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&) ()
+#2  0x000000000040a64d in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()
+#1  0x00007fcbc57ab2b8 in void std::vector<int, std::allocator<int> >::_M_emplace_back_aux<int>(int&&) () from /usr/local/lib/libghost.so
+#2  0x00007fcbc57aaa17 in ghost::Variable::possible_values() const () from /usr/local/lib/libghost.so
+#3  0x0000000000408e3c in ghost::Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const ()
+#4  0x000000000040a21c in ghost::Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double) ()

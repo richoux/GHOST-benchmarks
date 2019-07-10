@@ -1,0 +1,11 @@
+  50.48%  resource                           [.] _ZNK5Stock13required_costEv
+  12.58%  libghost.so                        [.] _ZNK5ghost6Solver24simulate_local_move_costEPNS_8VariableEdRKSt6vectorI
+   5.64%  resource                           [.] _ZNK5ghost6Domain9get_valueEi@plt
+   5.61%  libghost.so                        [.] _ZNK5ghost6Domain9get_valueEi
+   3.21%  libghost.so                        [.] _ZNSt24uniform_int_distributionIiEclISt23mersenne_twister_engineImLm32E
+   2.85%  libghost.so                        [.] _ZN5ghost6Solver10local_moveEPNS_8VariableERSt6vectorIdSaIdEES6_S6_Rd
+   2.19%  libghost.so                        [.] _ZNSt23mersenne_twister_engineImLm32ELm624ELm397ELm31ELm2567483615ELm11
+   1.56%  libghost.so                        [.] _ZNK5ghost6Domain8index_ofEi
+   1.10%  libghost.so                        [.] _ZNK5ghost6Solver23compute_variables_costsERKSt6vectorIdSaIdEERS3_S6_d
+   1.08%  resource                           [.] _ZNK12MaxGroundDPS13required_costEPSt6vectorIN5ghost8VariableESaIS2_EE
+   1.03%  libghost.so                        [.] _ZN5ghost8Variable24do_random_initializationEv

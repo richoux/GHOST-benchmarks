@@ -1,0 +1,10 @@
+Solver<Unit, Stock>::solve(double&, std::vector<int, std::allocator<int> >&, double, double): 398
+Solver<Unit, Stock>::local_move(Unit*, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double&): 315
+Variable::possible_values() const: 137
+Domain::get_value(int) const: 122
+Solver<Unit, Stock>::compute_variables_costs(std::vector<double, std::allocator<double> > const&, std::vector<double, std::allocator<double> >&, std::vector<double, std::allocator<double> >&, double) const: 99
+Domain::get_value(int) const@plt: 22
+Variable::do_random_initialization(): 17
+Domain::index_of(int) const: 16
+Objective<Unit>::expert_heuristic_value(std::vector<Unit, std::allocator<Unit> >*, Unit*, std::vector<int, std::allocator<int> > const&) const: 6
+Domain::index_of(int) const@plt: 4

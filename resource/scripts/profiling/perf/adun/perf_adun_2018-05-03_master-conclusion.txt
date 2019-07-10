@@ -1,0 +1,2 @@
+Il semble que  Domain::get_value() soit souvent appelé  -> à améliorer
+en mettant en cache cette valeur dans Variable ?

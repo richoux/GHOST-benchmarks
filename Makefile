@@ -1,4 +1,8 @@
-all: build_order resource target wallin
+all:
+	$(MAKE) build_order
+	$(MAKE) resource
+	$(MAKE) target
+	$(MAKE) wallin
 
 build_order:
 	(cd build_order && $(MAKE))
@@ -12,3 +16,8 @@ target:
 wallin:
 	(cd wallin && $(MAKE))
 
+clean:
+	(cd build_order && $(MAKE) clean)
+	(cd resource && $(MAKE) clean)
+	(cd target && $(MAKE) clean)
+	(cd wallin && $(MAKE) clean)

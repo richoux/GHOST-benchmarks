@@ -1,16 +1,17 @@
-# Directories
+EXEC=resource
 
 #CXX=clang++
 CXX=g++
-EXEC=resource
+
+# Directories
 SRCDIR=src
 OBJDIR=obj
 BINDIR=bin
 
 
 # Compiler flags
-CXXFIRSTFLAGS= -Ofast -DNDEBUG -W -Wall -Wextra -pedantic -Wno-sign-compare -Wno-unused-parameter
-CXXFIRSTFLAGSDEBUG= -g -O0 -W -Wall -Wextra -pedantic -Wno-sign-compare -Wno-unused-parameter 
+CXXFIRSTFLAGS= -Ofast -DBENCH -W -Wall -Wextra -pedantic -Wno-sign-compare -Wno-unused-parameter
+CXXFIRSTFLAGSDEBUG= -g -O0 -DBENCH -W -Wall -Wextra -pedantic -Wno-sign-compare -Wno-unused-parameter 
 
 # Linker flags
 LDFLAGS=-pthread -lghost
