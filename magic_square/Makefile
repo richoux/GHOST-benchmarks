@@ -1,4 +1,4 @@
-EXEC=magic-square
+EXEC=magic-square_hamming magic-square_num
 
 # Compiler flags
 MYFLAGS=
@@ -34,6 +34,7 @@ OBJECTS=$(patsubst %.cpp, $(OBJDIR)/%.o, $(notdir $(SOURCES)))
 SOURCESTILDE=$(foreach sdir, $(SRCDIR), $(wildcard $(sdir)/*.cpp~))
 
 vpath %.cpp $(SRCDIR)
+vpath %.o $(OBJDIR)
 
 # Reminder, 'cause it is easy to forget makefile's fucked-up syntax...
 # $@ is what triggered the rule, ie the target before :
@@ -42,17 +43,38 @@ vpath %.cpp $(SRCDIR)
 
 # Rules
 
-all: $(BINDIR)/$(EXEC)
+all: $(BINDIR)/magic-square_hamming $(BINDIR)/magic-square_num
 
 debug: CXXFLAGS=$(CXXFLAGSDEBUG)
 debug: LDFLAGS=$(LDFLAGSDEBUG)
 debug: $(BINDIR)/$(EXEC)
 
-$(BINDIR)/$(EXEC): $(OBJECTS)
+$(BINDIR)/magic-square_hamming: $(OBJDIR)/magic-square_hamming.o $(OBJDIR)/print_ms.o $(OBJDIR)/linear-eq_hamming.o
+	$(CXX) -o $@ $^ $(LDFLAGS) -DHAMMING
+
+$(BINDIR)/magic-square_num: $(OBJDIR)/magic-square_num.o $(OBJDIR)/print_ms.o $(OBJDIR)/linear-eq_num.o
 	$(CXX) -o $@ $^ $(LDFLAGS)
 
-$(OBJDIR)/%.o: %.cpp
-	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -c $< -o $@
+$(OBJDIR)/magic-square_num.o: $(OBJDIR)/print_ms.o $(OBJDIR)/linear-eq_num.o
+	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -c $(SRCDIR)/magic_square.cpp -o $@
+
+$(OBJDIR)/magic-square_hamming.o: print_ms.o linear-eq_hamming.o
+	$(CXX) $(CXXFLAGS) -DHAMMING -I$(HPPDIR) -c $(SRCDIR)/magic_square.cpp -o $@
+
+$(OBJDIR)/print_ms.o:
+	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -c $(SRCDIR)/print_ms.cpp -o $@
+
+$(OBJDIR)/linear-eq_hamming.o:
+	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -c $(SRCDIR)/linear-eq_hamming.cpp -o $@
+
+$(OBJDIR)/linear-eq_num.o:
+	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -c $(SRCDIR)/linear-eq_num.cpp -o $@
+
+# %.o: %.cpp
+# 	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -c $< -o $@
+
+# $(OBJDIR)/%.o: %.cpp
+# 	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -c $< -o $@
 
 .PHONY: clean
 

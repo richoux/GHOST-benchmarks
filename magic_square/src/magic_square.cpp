@@ -9,7 +9,12 @@
 #include <ghost/solver.hpp>
 #include <ghost/variable.hpp>
 
-#include "linear-eq.hpp"
+#if defined HAMMING
+#include "linear-eq_hamming.hpp"
+#else
+#include "linear-eq_num.hpp"
+#endif
+
 #include "print_ms.hpp"
 
 using namespace ghost;

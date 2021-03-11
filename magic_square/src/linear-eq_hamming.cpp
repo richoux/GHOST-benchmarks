@@ -2,7 +2,7 @@
 #include <algorithm>
 #include <map>
 
-#include "linear-eq.hpp"
+#include "linear-eq_hamming.hpp"
 
 
 LinearEq::LinearEq( const vector<Variable>& variables, int rhs )
