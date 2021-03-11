@@ -10,44 +10,10 @@
 #include <ghost/variable.hpp>
 
 #include "all-diff.hpp"
+#include "print_sudoku.hpp"
 
 using namespace ghost;
 using namespace std;
-
-void print_solution( const vector<int>& solution )
-{
-	int nb_vars = solution.size();
-	int size_side = static_cast<int>( std::sqrt( nb_vars ) );
-	int size_side_small_square = static_cast<int>( std::sqrt( size_side ) );
-	
-	cout << "Solution:";
-	
-	for( int i = 0; i < nb_vars; ++i )
-	{
-		if( i%size_side == 0 )
-		{
-			cout << "\n";
-
-			if( ( i/size_side) % size_side_small_square == 0 )
-				for( int j = 0; j <= 2*size_side + size_side_small_square + 1; ++j )
-					cout << "-";
-
-			cout << "\n";
-		}
-
-		if( i%size_side_small_square == 0 && i%size_side != 0)
-			cout << "   " << solution[i];
-		else
-			cout << " " << solution[i];
-	}
-
-	cout << "\n";
-
-	for( int j = 0; j <= 2*size_side + size_side_small_square + 1; ++j )
-		cout << "-";
-	
-	cout << "\n";
-}
 
 bool alldiff_concept( const vector<int>& var )
 {
@@ -208,10 +174,12 @@ int main( int argc, char **argv )
              constraint_squares.end(),
              std::back_inserter( constraints ) );
 
+  unique_ptr<Print> printer = make_unique<PrintSudoku>();
+  
   //cout << "Constraint size: " << constraints.size() << "\n";
   
   // true means it is a permutation problem
-  Solver solver( variables, constraints, true );
+  Solver solver( variables, constraints, true, move( printer ) );
 
   double error = 0.0;
 	vector<int> solution( variables.size(), 0 );
@@ -229,7 +197,7 @@ int main( int argc, char **argv )
 	//solver.solve( error, solution, 500000 );
 
 	cout << "Error: " << error << "\n";
-	print_solution( solution );
+	//print_solution( solution );
 	check_solution( solution );
 	
   return EXIT_SUCCESS;

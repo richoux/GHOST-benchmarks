@@ -10,27 +10,10 @@
 #include <ghost/variable.hpp>
 
 #include "linear-eq.hpp"
+#include "print_ms.hpp"
 
 using namespace ghost;
 using namespace std;
-
-void print_solution( const vector<int>& solution )
-{
-	int nb_vars = (int)solution.size();
-	int order = static_cast<int>( std::sqrt( nb_vars ) );
-	
-	cout << "Solution:";
-	
-	for( int i = 0; i < nb_vars; ++i )
-	{
-		if( i%order == 0 )
-			cout << "\n";
-		
-		cout << solution[i] << " ";
-	}
-
-	cout << "\n";
-}
 
 void check_solution( const vector<int>& solution, int constant )
 {
@@ -173,11 +156,13 @@ int main( int argc, char **argv )
              constraint_diagonals.end(),
              std::back_inserter( constraints ) );
 
+  std::unique_ptr<Print> printer = std::make_unique<PrintMagicSquare>();
+  
   // cout << "Constraint size: " << constraints.size() << "\n"
   //      << "Magic Square constant: " << constant << "\n";
   
   // true means it is a permutation problem
-  Solver solver( variables, constraints, true );
+  Solver solver( variables, constraints, true, std::move( printer ) );
 
   double error = 0.0;
 	vector<int> solution( variables.size(), 0 );
@@ -195,7 +180,6 @@ int main( int argc, char **argv )
 	//solver.solve( error, solution, 500000 );
 
 	cout << "Error: " << error << "\n";
-	print_solution( solution );
 	check_solution( solution, constant );
 	
   return EXIT_SUCCESS;
