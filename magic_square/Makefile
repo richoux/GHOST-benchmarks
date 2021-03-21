@@ -3,21 +3,23 @@ EXEC=magic-square_hamming magic-square_num
 # Compiler flags
 MYFLAGS=
 CXXFIRSTFLAGS= -O3 -W -Wall -Wextra -Wno-sign-compare -Wno-unused-parameter
-CXXFIRSTFLAGSDEBUG= -g -O0 -DDEBUG -W -Wall -Wextra -Wno-sign-compare -Wno-unused-parameter -fsanitize=address
-LDFLAGSDEBUG=-pthread -lghostd -fsanitize=address
+#CXXFIRSTFLAGSDEBUG= -g -O0 -DDEBUG -W -Wall -Wextra -Wno-sign-compare -Wno-unused-parameter
+#LDFLAGSDEBUG=-pthread -lghostd
+CXXFIRSTFLAGSDEBUG= -g -O0 -DDEBUG -W -Wall -Wextra -Wno-sign-compare -Wno-unused-parameter -fsanitize=address,undefined,leak
+LDFLAGSDEBUG=-pthread -lghost_staticd -fsanitize=address,undefined,leak -static-libasan
 
 UNAME_S := $(shell uname -s)
 ifeq ($(UNAME_S),Linux)
 	CXX=g++
 	CXXFLAGS= -std=c++2a $(CXXFIRSTFLAGS) $(MYFLAGS)
 	CXXFLAGSDEBUG= -std=c++2a $(CXXFIRSTFLAGSDEBUG) $(MYFLAGS)
-	LDFLAGS=-lghost_static
+	LDFLAGS=-lghost_static -pthread
 endif
 ifeq ($(UNAME_S),Darwin)
 	CXX=clang++
 	CXXFLAGS= -std=c++2a  -stdlib=libc++ $(CXXFIRSTFLAGS) $(MYFLAGS)
 	CXXFLAGSDEBUG= -std=c++2a  -stdlib=libc++ $(CXXFIRSTFLAGSDEBUG) $(MYFLAGS)
-	LDFLAGS=-lghost_static -lc++ -lc++abi
+	LDFLAGS=-lghost_static -lc++ -lc++abi -pthread
 endif
 
 # Directories
@@ -47,7 +49,7 @@ all: $(BINDIR)/magic-square_hamming $(BINDIR)/magic-square_num
 
 debug: CXXFLAGS=$(CXXFLAGSDEBUG)
 debug: LDFLAGS=$(LDFLAGSDEBUG)
-debug: $(BINDIR)/$(EXEC)
+debug: $(BINDIR)/magic-square_hamming $(BINDIR)/magic-square_num
 
 $(BINDIR)/magic-square_hamming: $(OBJDIR)/magic-square_hamming.o $(OBJDIR)/print_ms.o $(OBJDIR)/linear-eq_hamming.o
 	$(CXX) -o $@ $^ $(LDFLAGS) -DHAMMING

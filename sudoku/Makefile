@@ -4,20 +4,23 @@ EXEC=sudoku
 MYFLAGS=
 CXXFIRSTFLAGS= -O3 -W -Wall -Wextra -Wno-sign-compare -Wno-unused-parameter
 CXXFIRSTFLAGSDEBUG= -g -O0 -DDEBUG -W -Wall -Wextra -Wno-sign-compare -Wno-unused-parameter -fsanitize=address
+CXXFIRSTFLAGSINFO= -g -O2 -W -Wall -Wextra -Wno-sign-compare -Wno-unused-parameter
 LDFLAGSDEBUG=-pthread -lghostd -fsanitize=address
+LDFLAGSINFO=-pthread -lghost
 
 UNAME_S := $(shell uname -s)
 ifeq ($(UNAME_S),Linux)
 	CXX=g++
 	CXXFLAGS= -std=c++2a $(CXXFIRSTFLAGS) $(MYFLAGS)
 	CXXFLAGSDEBUG= -std=c++2a $(CXXFIRSTFLAGSDEBUG) $(MYFLAGS)
-	LDFLAGS=-lghost_static
+	CXXFLAGSINFO= -std=c++2a $(CXXFIRSTFLAGSINFO) $(MYFLAGS)
+	LDFLAGS=-pthread -lghost_static
 endif
 ifeq ($(UNAME_S),Darwin)
 	CXX=clang++
 	CXXFLAGS= -std=c++2a  -stdlib=libc++ $(CXXFIRSTFLAGS) $(MYFLAGS)
 	CXXFLAGSDEBUG= -std=c++2a  -stdlib=libc++ $(CXXFIRSTFLAGSDEBUG) $(MYFLAGS)
-	LDFLAGS=-lghost_static -lc++ -lc++abi
+	LDFLAGS=-pthread -lghost_static -lc++ -lc++abi
 endif
 
 # Directories
@@ -47,6 +50,10 @@ all: $(BINDIR)/$(EXEC)
 debug: CXXFLAGS=$(CXXFLAGSDEBUG)
 debug: LDFLAGS=$(LDFLAGSDEBUG)
 debug: $(BINDIR)/$(EXEC)
+
+info: CXXFLAGS=$(CXXFLAGSINFO)
+info: LDFLAGS=$(LDFLAGSINFO)
+info: $(BINDIR)/$(EXEC)
 
 $(BINDIR)/$(EXEC): $(OBJECTS)
 	$(CXX) -o $@ $^ $(LDFLAGS)

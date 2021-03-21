@@ -29,21 +29,8 @@ double LinearEq::expert_delta_error( const vector<Variable>& variables,
 {
 	int diff = _current_diff;
 
-	//std::cout << "Current diff: " << diff << "\n";
-	
 	for( int i = 0 ; i < static_cast<int>( variable_indexes.size() ); ++i )
-	{
 		diff += ( candidate_values[ i ] - variables[ variable_indexes[i] ].get_value() );
-		//std::cout << "New diff: " << diff << "\n";
-	}
-
-	// int sum = 0;
-	// for( const Variable& var : variables )
-	// 	sum += var.get_value();
-	// for( int i = 0 ; i < static_cast<int>( variable_indexes.size() ); ++i )
-	// 	sum += ( candidate_values[ i ] - variables[ variable_indexes[i] ].get_value() );
-	// std::cout << "Diff should be: " << sum - _rhs << "\n\n";	
-
 	
 	return std::abs( diff ) - std::abs( _current_diff );
 } 

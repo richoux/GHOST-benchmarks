@@ -10,6 +10,7 @@
 #include <ghost/variable.hpp>
 
 #include "all-diff.hpp"
+#include "fix_value.hpp"
 #include "print_sudoku.hpp"
 
 using namespace ghost;
@@ -95,10 +96,27 @@ void check_solution( const vector<int>& solution )
 int main( int argc, char **argv )
 {
 	int size_side_small_square;
+	bool hard_instance = false;
+
+	bool parallel = false;
+	int cores = -1;
+	
 	if( argc == 1 )
 		size_side_small_square = 3;
 	else
+	{
 		size_side_small_square = std::stoi( argv[1] );
+		if( argc >= 3 )
+			parallel = ( std::stoi( argv[2] ) != 0 );
+		if( argc == 4 && parallel )
+			cores = std::stoi( argv[3] );
+	}
+
+	if( size_side_small_square < 3 )
+	{
+		size_side_small_square = 3;
+		hard_instance = true;
+	}
 	
 	int size_side = size_side_small_square * size_side_small_square;
 	int nb_vars = size_side * size_side;
@@ -108,8 +126,49 @@ int main( int argc, char **argv )
   for( int i = 0; i < nb_vars; ++i )
 		variables.emplace_back( std::string("v") + std::to_string(i), 1, size_side );
 
-  for( int i = 0; i < nb_vars; ++i )
-	  variables[i].set_value( ( i % size_side ) + 1 );
+  if( hard_instance )
+  {
+	  /*
+	    0 0 0  0 0 3  0 1 7 
+	    0 1 5  0 0 9  0 0 8 
+	    0 6 0  0 0 0  0 0 0 
+
+	    1 0 0  0 0 7  0 0 0 
+	    0 0 9  0 0 0  2 0 0 
+	    0 0 0  5 0 0  0 0 4 
+
+	    0 0 0  0 0 0  0 2 0 
+	    5 0 0  6 0 0  3 4 0 
+	    3 4 0  2 0 0  0 0 0
+	    *
+	    * Solution:
+	    2 9 4  8 6 3  5 1 7 
+	    7 1 5  4 2 9  6 3 8 
+	    8 6 3  7 5 1  4 9 2 
+
+	    1 5 2  9 4 7  8 6 3 
+	    4 7 9  3 8 6  2 5 1 
+	    6 3 8  5 1 2  9 7 4 
+
+	    9 8 6  1 3 4  7 2 5 
+	    5 2 1  6 7 8  3 4 9 
+	    3 4 7  2 9 5  1 8 6
+	   */
+	  int i = 0;
+	  variables[i++].set_value(2); variables[i++].set_value(4); variables[i++].set_value(5); variables[i++].set_value(6); variables[i++].set_value(8); variables[i++].set_value(3); variables[i++].set_value(9); variables[i++].set_value(1); variables[i++].set_value(7);
+	  variables[i++].set_value(2); variables[i++].set_value(1); variables[i++].set_value(5); variables[i++].set_value(3); variables[i++].set_value(4); variables[i++].set_value(9); variables[i++].set_value(6); variables[i++].set_value(7); variables[i++].set_value(8);
+	  variables[i++].set_value(1); variables[i++].set_value(6); variables[i++].set_value(2); variables[i++].set_value(3); variables[i++].set_value(4); variables[i++].set_value(5); variables[i++].set_value(7); variables[i++].set_value(8); variables[i++].set_value(9);
+	  variables[i++].set_value(1); variables[i++].set_value(2); variables[i++].set_value(3); variables[i++].set_value(4); variables[i++].set_value(5); variables[i++].set_value(7); variables[i++].set_value(6); variables[i++].set_value(8); variables[i++].set_value(9);
+	  variables[i++].set_value(1); variables[i++].set_value(3); variables[i++].set_value(9); variables[i++].set_value(4); variables[i++].set_value(5); variables[i++].set_value(6); variables[i++].set_value(2); variables[i++].set_value(7); variables[i++].set_value(8);
+	  variables[i++].set_value(1); variables[i++].set_value(2); variables[i++].set_value(3); variables[i++].set_value(5); variables[i++].set_value(6); variables[i++].set_value(7); variables[i++].set_value(8); variables[i++].set_value(9); variables[i++].set_value(4);
+	  variables[i++].set_value(1); variables[i++].set_value(3); variables[i++].set_value(4); variables[i++].set_value(5); variables[i++].set_value(6); variables[i++].set_value(7); variables[i++].set_value(8); variables[i++].set_value(2); variables[i++].set_value(9);
+	  variables[i++].set_value(5); variables[i++].set_value(1); variables[i++].set_value(2); variables[i++].set_value(6); variables[i++].set_value(7); variables[i++].set_value(8); variables[i++].set_value(3); variables[i++].set_value(4); variables[i++].set_value(9);
+	  variables[i++].set_value(3); variables[i++].set_value(4); variables[i++].set_value(1); variables[i++].set_value(2); variables[i++].set_value(5); variables[i++].set_value(6); variables[i++].set_value(7); variables[i++].set_value(8); variables[i++].set_value(9);
+  }
+  else
+	  for( int i = 0; i < nb_vars; ++i )
+		  variables[i].set_value( ( i % size_side ) + 1 );
+	  
 	  
   vector< vector< Variable > > rows( size_side );
   vector< vector< Variable > > columns( size_side );
@@ -142,25 +201,39 @@ int main( int argc, char **argv )
   
   for( int i = 0; i < size_side; ++i )
   {
-	  //cout << rows[i].size() << " " << columns[i].size() << " " << squares[i].size() << "\n";
-	  // for( auto& v : rows[i] )
-		//   cout << v.get().get_name() << " ";
-	  // cout << "\n";
-	  
-	  // for( auto& v : columns[i] )
-		//   cout << v.get().get_name() << " ";
-	  // cout << "\n";
-
-	  // for( auto& v : squares[i] )
-		//   cout << v.get().get_name() << " ";
-	  // cout << "\n";
-
 	  constraint_rows.emplace_back( rows[i] );
 	  constraint_columns.emplace_back( columns[i] );
 	  constraint_squares.emplace_back( squares[i] );
   }
+
+  vector<FixValue> constraint_fix_values;
+  if( hard_instance )
+  {
+	  constraint_fix_values.emplace_back( vector< Variable >{variables[5]}, 3 );
+	  constraint_fix_values.emplace_back( vector< Variable >{variables[7]}, 1 );
+	  constraint_fix_values.emplace_back( vector< Variable >{variables[8]}, 7 );
+	  constraint_fix_values.emplace_back( vector< Variable >{variables[10]}, 1 );
+	  constraint_fix_values.emplace_back( vector< Variable >{variables[11]}, 5 );
+	  constraint_fix_values.emplace_back( vector< Variable >{variables[14]}, 9 );
+	  constraint_fix_values.emplace_back( vector< Variable >{variables[17]}, 8 );
+	  constraint_fix_values.emplace_back( vector< Variable >{variables[19]}, 6 );
+	  constraint_fix_values.emplace_back( vector< Variable >{variables[27]}, 1 );
+	  constraint_fix_values.emplace_back( vector< Variable >{variables[32]}, 7 );
+	  constraint_fix_values.emplace_back( vector< Variable >{variables[38]}, 9 );
+	  constraint_fix_values.emplace_back( vector< Variable >{variables[42]}, 2 );
+	  constraint_fix_values.emplace_back( vector< Variable >{variables[48]}, 5 );
+	  constraint_fix_values.emplace_back( vector< Variable >{variables[53]}, 4 );
+	  constraint_fix_values.emplace_back( vector< Variable >{variables[61]}, 2 );
+	  constraint_fix_values.emplace_back( vector< Variable >{variables[63]}, 5 );
+	  constraint_fix_values.emplace_back( vector< Variable >{variables[66]}, 6 );
+	  constraint_fix_values.emplace_back( vector< Variable >{variables[69]}, 3 );
+	  constraint_fix_values.emplace_back( vector< Variable >{variables[70]}, 4 );
+	  constraint_fix_values.emplace_back( vector< Variable >{variables[72]}, 3 );
+	  constraint_fix_values.emplace_back( vector< Variable >{variables[73]}, 4 );
+	  constraint_fix_values.emplace_back( vector< Variable >{variables[75]}, 2 );
+  }
   
-  vector<variant<AllDiff>> constraints;
+  vector<variant<AllDiff,FixValue>> constraints;
 
   std::copy( constraint_rows.begin(),
              constraint_rows.end(),
@@ -174,27 +247,47 @@ int main( int argc, char **argv )
              constraint_squares.end(),
              std::back_inserter( constraints ) );
 
-  unique_ptr<Print> printer = make_unique<PrintSudoku>();
+  if( hard_instance )
+	  std::copy( constraint_fix_values.begin(),
+	             constraint_fix_values.end(),
+	             std::back_inserter( constraints ) );
+	  
+
+  shared_ptr<Print> printer = make_shared<PrintSudoku>();
   
   //cout << "Constraint size: " << constraints.size() << "\n";
   
   // true means it is a permutation problem
-  Solver solver( variables, constraints, true, move( printer ) );
+  Solver solver( variables, constraints, true );
 
   double error = 0.0;
 	vector<int> solution( variables.size(), 0 );
 
+	Options options;
+	options.print = printer;
+	if( hard_instance )
+		options.custom_starting_point = true;
+
+	if( parallel )
+		options.parallel_runs = true;
+	
+	if( cores != -1 )
+		options.number_threads = static_cast<unsigned int>( cores );
+	
+	// 10min
+	// solver.solve( error, solution, 600000000, options );
+	
 	// 2min
-	// solver.solve( error, solution, 120000000 );
+	// solver.solve( error, solution, 120000000, options );
 
 	// 30s
-	// solver.solve( error, solution, 30000000 );
+	// solver.solve( error, solution, 30000000, options );
 	
   // 5s
-	solver.solve( error, solution, 5000000 );
+  solver.solve( error, solution, 5000000, options );		
 
 	// 0.5s
-	//solver.solve( error, solution, 500000 );
+	//solver.solve( error, solution, 500000, options );
 
 	cout << "Error: " << error << "\n";
 	//print_solution( solution );
