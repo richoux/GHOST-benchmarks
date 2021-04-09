@@ -100,7 +100,10 @@ int main( int argc, char **argv )
 	int cores = -1;
 
 	if( argc == 1 )
-		order = 3;
+	{
+		std::cout << "Usage: " << argv[0] << " N [parallel=0/1] [number_threads]\n";
+		return EXIT_FAILURE;
+	}
 	else
 	{
 		order = std::stoi( argv[1] );
