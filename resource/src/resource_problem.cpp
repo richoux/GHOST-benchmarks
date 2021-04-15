@@ -14,6 +14,7 @@
 #include "constraint_stock.hpp"
 #include "objective_maxgrounddps.hpp"
 #include "factory_variable_resource.hpp"
+#include "print_resource.hpp"
 
 using namespace ghost;
 using namespace std;
@@ -71,10 +72,48 @@ int main(int argc, char **argv)
   // process_mem_usage(vm, rss);
   // cout << "Memory usage: " << rss << "/" << vm << "\n\n";
 
-  string race = (string)argv[1];
+	int timeout = 100;
+	bool parallel = false;
+	int cores = -1;
   int runs = 100;
-  sscanf( argv[2], "%i", &runs );
+  string race;
+	bool random = false;
   
+  
+	if( argc == 1 )
+	{
+		std::cout << "Usage: " << argv[0] << " protoss|terran|zerg [random=0/1; default is 0] [timeout=100ms] [#runs=100] [parallel=0/1; default is 0] [number_threads]\n";
+		return EXIT_FAILURE;
+	}
+	else
+	{
+		race = (string)argv[1];
+
+		if( argc >= 3 )
+			random = ( std::stoi( argv[2] ) != 0 );
+		if( argc >= 4 )
+			timeout = std::stoi( argv[3] );
+		if( argc >= 5 )
+			runs = std::stoi( argv[4] );
+		if( argc >= 6 )
+			parallel = ( std::stoi( argv[5] ) != 0 );
+		if( argc == 7 && parallel )
+			cores = std::stoi( argv[6] );
+	}
+
+  std::shared_ptr<Print> printer = std::make_shared<PrintResource>();
+  Options options;
+  options.print = printer;
+
+  if( parallel )
+		options.parallel_runs = true;
+	
+	if( cores != -1 )
+		options.number_threads = static_cast<unsigned int>( cores );
+
+	if( !random )
+		options.custom_starting_point = true;
+
   /////////////
   // Protoss //
   /////////////
@@ -86,36 +125,30 @@ int main(int argc, char **argv)
     vector< UnitData > unit_data_p;
     make_protoss( 380, variables_p, unit_data_p );    
 
-    // vector< Variable* > variables_ref_p;
-    // for( auto& v : variables_p )
-    //   variables_ref_p.push_back( &v );
-    vector< reference_wrapper<Variable> > variables_ref_p( variables_p.begin(), variables_p.end() );
-
     // Define constraints 
-    shared_ptr<Constraint> mineral_p = make_shared<Stock>( variables_ref_p,
-							   20000,
-							   ResourceType::Mineral,
-							   unit_data_p );
+    Stock mineral_p( variables_p,
+                     20000,
+                     ResourceType::Mineral,
+                     unit_data_p );
 
-    shared_ptr<Constraint> gas_p = make_shared<Stock>( variables_ref_p,
-						       14000,
-						       ResourceType::Gas,
-						       unit_data_p );
+    Stock gas_p( variables_p,
+                 14000,
+                 ResourceType::Gas,
+                 unit_data_p );
     
-    shared_ptr<Constraint> supply_p = make_shared<Stock>( variables_ref_p,
-							  380,
-							  ResourceType::Supply,
-							  unit_data_p );
+    Stock supply_p( variables_p,
+                    380,
+                    ResourceType::Supply,
+                    unit_data_p );
   
-    vector< shared_ptr<Constraint> > constraints_p { mineral_p, gas_p, supply_p };
+    vector< variant<Stock> > constraints_p { mineral_p, gas_p, supply_p };
 
     // Define objective
-    shared_ptr<Objective> objective = make_shared<MaxGroundDPS>( unit_data_p );
+    // shared_ptr<Objective> objective = make_shared<MaxGroundDPS>(  variables_p, unit_data_p );
+    MaxGroundDPS objective( variables_p, unit_data_p );
 
     // Define solver
-    Solver solver_p( variables_p,
-		     constraints_p,
-		     objective );
+    Solver<MaxGroundDPS,Stock> solver_p( variables_p, constraints_p, objective );
 
     double cost_p = 0.;
     vector<int> solution_p( variables_p.size(), 0 );
@@ -124,11 +157,10 @@ int main(int argc, char **argv)
     double total = 0.;
 
     for(int i = 0 ; i < runs ; ++i )
-      if( solver_p.solve( cost_p, solution_p, 200, 130000 ) )
-	//if( solver_p.solve( cost_p, solution_p, 2, 130 ) )
+	    if( solver_p.solve( cost_p, solution_p, timeout * 1000, options ) )
       {
-  	++count;
-  	total += cost_p;
+	      ++count;
+	      total += cost_p;
       }
 
     // process_mem_usage(vm, rss);
@@ -158,36 +190,29 @@ int main(int argc, char **argv)
     vector< UnitData > unit_data_t;
     make_terran( 380, variables_t, unit_data_t );    
 
-    // vector< Variable* > variables_ref_t;
-    // for( auto& v : variables_t )
-    //   variables_ref_t.push_back( &v );
-    vector< reference_wrapper<Variable> > variables_ref_t( variables_t.begin(), variables_t.end() );
-
     // Define constraints 
-    shared_ptr<Constraint> mineral_t = make_shared<Stock>( variables_ref_t,
-							   20000,
-							   ResourceType::Mineral,
-							   unit_data_t );
+    Stock mineral_t( variables_t,
+                     20000,
+                     ResourceType::Mineral,
+                     unit_data_t );
     
-    shared_ptr<Constraint> gas_t = make_shared<Stock>( variables_ref_t,
-						       14000,
-						       ResourceType::Gas,
-						       unit_data_t );
+    Stock gas_t( variables_t,
+                 14000,
+                 ResourceType::Gas,
+                 unit_data_t );
     
-    shared_ptr<Constraint> supply_t = make_shared<Stock>( variables_ref_t,
-							  380,
-							  ResourceType::Supply,
-							  unit_data_t );
+    Stock supply_t( variables_t,
+                    380,
+                    ResourceType::Supply,
+                    unit_data_t );
     
-    vector< shared_ptr<Constraint> > constraints_t { mineral_t, gas_t, supply_t };
+    vector< variant<Stock> > constraints_t { mineral_t, gas_t, supply_t };
 
     // Define objective
-    shared_ptr<Objective> objective = make_shared<MaxGroundDPS>( unit_data_t );
+    MaxGroundDPS objective( variables_t, unit_data_t );
 
     // Define solver
-    Solver solver_t( variables_t,
-		     constraints_t,
-		     objective );
+    Solver<MaxGroundDPS,Stock> solver_t( variables_t, constraints_t, objective );
     
     double cost_t = 0.;
     vector<int> solution_t( variables_t.size(), 0 );
@@ -196,11 +221,10 @@ int main(int argc, char **argv)
     double total = 0.;
     
     for(int i = 0 ; i < runs ; ++i )
-      if( solver_t.solve( cost_t, solution_t, 200, 1000000 ) )
-      //if( solver_t.solve( cost_t, solution_t, 2, 130 ) )
+      if( solver_t.solve( cost_t, solution_t, timeout * 1000, options ) )
       {
-	++count;
-	total += cost_t;
+	      ++count;
+	      total += cost_t;
       }
     
     // process_mem_usage(vm, rss);
@@ -231,36 +255,29 @@ int main(int argc, char **argv)
     vector< UnitData > unit_data_z;
     make_zerg( 380, variables_z, unit_data_z );    
 
-    // vector< Variable* > variables_ref_z;
-    // for( auto& v : variables_z )
-    //   variables_ref_z.push_back( &v );
-    vector< reference_wrapper<Variable> > variables_ref_z( variables_z.begin(), variables_z.end() );
-
     // Define constraints 
-    shared_ptr<Constraint> mineral_z = make_shared<Stock>( variables_ref_z,
-							   20000,
-							   ResourceType::Mineral,
-							   unit_data_z );
+    Stock mineral_z( variables_z,
+                     20000,
+                     ResourceType::Mineral,
+                     unit_data_z );
 
-    shared_ptr<Constraint> gas_z = make_shared<Stock>( variables_ref_z,
-						       14000,
-						       ResourceType::Gas,
-						       unit_data_z );
+    Stock gas_z( variables_z,
+                 14000,
+                 ResourceType::Gas,
+                 unit_data_z );
     
-    shared_ptr<Constraint> supply_z = make_shared<Stock>( variables_ref_z,
-							  380,
-							  ResourceType::Supply,
-							  unit_data_z );
+    Stock supply_z( variables_z,
+                    380,
+                    ResourceType::Supply,
+                    unit_data_z );
   
-    vector< shared_ptr<Constraint> > constraints_z { mineral_z, gas_z, supply_z };
+    vector< variant<Stock> > constraints_z { mineral_z, gas_z, supply_z };
 
     // Define objective
-    shared_ptr<Objective> objective = make_shared<MaxGroundDPS>( unit_data_z );
+    MaxGroundDPS objective( variables_z, unit_data_z );
 
     // Define solver
-    Solver solver_z( variables_z,
-		     constraints_z,
-		     objective );
+    Solver<MaxGroundDPS,Stock> solver_z( variables_z, constraints_z, objective );
 
     double cost_z = 0.;
     vector<int> solution_z( variables_z.size(), 0 );
@@ -269,11 +286,10 @@ int main(int argc, char **argv)
     double total = 0.;
   
     for(int i = 0 ; i < runs ; ++i )
-      if( solver_z.solve( cost_z, solution_z, 250, 300000 ) )
-      //if( solver_z.solve( cost_z, solution_z, 2, 130 ) )
+      if( solver_z.solve( cost_z, solution_z, timeout * 1000, options ) )
       {
-  	++count;
-  	total += cost_z;
+	      ++count;
+	      total += cost_z;
       }
 
     // process_mem_usage(vm, rss);
@@ -292,4 +308,6 @@ int main(int argc, char **argv)
 
     // cout << "\n\n";
   }
+
+  return EXIT_SUCCESS;
 }

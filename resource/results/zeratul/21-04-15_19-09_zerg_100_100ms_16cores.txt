@@ -1,0 +1,4100 @@
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 694
+Hydralisk: 31
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 1
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 121.82ms
+Wall-clock time (full program): 121.957ms
+Satisfaction error: 0
+Number of search iterations: 350
+Number of local moves: 52 (including on plateau: 0)
+Number of local minimum: 94 (including on plateau: 0)
+Number of resets: 15
+Number of restarts: 2
+Total number of search iterations: 5807
+Total number of local moves: 807 (including on plateau: 0)
+Total number of local minimum: 1515 (including on plateau: 0)
+Total number of resets: 248
+Total number of restarts: 33
+
+Optimization cost: 10922
+Opt Cost BEFORE post-processing: 10922
+Optimization post-processing time: 0.001044
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 694
+Hydralisk: 1
+Lurker: 15
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 1
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 118.389ms
+Wall-clock time (full program): 118.611ms
+Satisfaction error: 0
+Number of search iterations: 377
+Number of local moves: 47 (including on plateau: 0)
+Number of local minimum: 96 (including on plateau: 0)
+Number of resets: 16
+Number of restarts: 2
+Total number of search iterations: 11710
+Total number of local moves: 1619 (including on plateau: 0)
+Total number of local minimum: 3030 (including on plateau: 0)
+Total number of resets: 495
+Total number of restarts: 64
+
+Optimization cost: 10636.6
+Opt Cost BEFORE post-processing: 10636.6
+Optimization post-processing time: 0.000127
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 578
+Hydralisk: 74
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.419ms
+Wall-clock time (full program): 115.659ms
+Satisfaction error: 0
+Number of search iterations: 358
+Number of local moves: 49 (including on plateau: 0)
+Number of local minimum: 96 (including on plateau: 0)
+Number of resets: 16
+Number of restarts: 2
+Total number of search iterations: 17565
+Total number of local moves: 2458 (including on plateau: 0)
+Total number of local minimum: 4530 (including on plateau: 0)
+Total number of resets: 740
+Total number of restarts: 97
+
+Optimization cost: 9854
+Opt Cost BEFORE post-processing: 9854
+Optimization post-processing time: 6.9e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 694
+Hydralisk: 33
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 113.466ms
+Wall-clock time (full program): 113.667ms
+Satisfaction error: 0
+Number of search iterations: 356
+Number of local moves: 44 (including on plateau: 0)
+Number of local minimum: 90 (including on plateau: 0)
+Number of resets: 15
+Number of restarts: 2
+Total number of search iterations: 23416
+Total number of local moves: 3260 (including on plateau: 0)
+Total number of local minimum: 6034 (including on plateau: 0)
+Total number of resets: 986
+Total number of restarts: 131
+
+Optimization cost: 10938
+Opt Cost BEFORE post-processing: 10938
+Optimization post-processing time: 7.1e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 632
+Hydralisk: 0
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 32
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.809ms
+Wall-clock time (full program): 116.005ms
+Satisfaction error: 0
+Number of search iterations: 377
+Number of local moves: 48 (including on plateau: 0)
+Number of local minimum: 97 (including on plateau: 0)
+Number of resets: 16
+Number of restarts: 2
+Total number of search iterations: 29412
+Total number of local moves: 4079 (including on plateau: 0)
+Total number of local minimum: 7569 (including on plateau: 0)
+Total number of resets: 1238
+Total number of restarts: 163
+
+Optimization cost: 9992
+Opt Cost BEFORE post-processing: 9992
+Optimization post-processing time: 7e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 694
+Hydralisk: 33
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 111.909ms
+Wall-clock time (full program): 112.106ms
+Satisfaction error: 0
+Number of search iterations: 382
+Number of local moves: 52 (including on plateau: 0)
+Number of local minimum: 95 (including on plateau: 0)
+Number of resets: 15
+Number of restarts: 2
+Total number of search iterations: 35181
+Total number of local moves: 4879 (including on plateau: 0)
+Total number of local minimum: 9035 (including on plateau: 0)
+Total number of resets: 1476
+Total number of restarts: 194
+
+Optimization cost: 10938
+Opt Cost BEFORE post-processing: 10938
+Optimization post-processing time: 7.6e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 650
+Hydralisk: 50
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 117.536ms
+Wall-clock time (full program): 117.835ms
+Satisfaction error: 0
+Number of search iterations: 389
+Number of local moves: 43 (including on plateau: 0)
+Number of local minimum: 103 (including on plateau: 0)
+Number of resets: 17
+Number of restarts: 2
+Total number of search iterations: 40982
+Total number of local moves: 5682 (including on plateau: 0)
+Total number of local minimum: 10540 (including on plateau: 0)
+Total number of resets: 1723
+Total number of restarts: 226
+
+Optimization cost: 10550
+Opt Cost BEFORE post-processing: 10550
+Optimization post-processing time: 0.000183
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 696
+Hydralisk: 0
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 16
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 121.739ms
+Wall-clock time (full program): 121.999ms
+Satisfaction error: 0
+Number of search iterations: 380
+Number of local moves: 55 (including on plateau: 0)
+Number of local minimum: 96 (including on plateau: 0)
+Number of resets: 16
+Number of restarts: 2
+Total number of search iterations: 45931
+Total number of local moves: 6390 (including on plateau: 0)
+Total number of local minimum: 11827 (including on plateau: 0)
+Total number of resets: 1933
+Total number of restarts: 253
+
+Optimization cost: 10696
+Opt Cost BEFORE post-processing: 10696
+Optimization post-processing time: 7.2e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 696
+Hydralisk: 0
+Lurker: 0
+Ultralisk: 8
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 116.507ms
+Wall-clock time (full program): 116.775ms
+Satisfaction error: 0
+Number of search iterations: 369
+Number of local moves: 48 (including on plateau: 0)
+Number of local minimum: 90 (including on plateau: 0)
+Number of resets: 15
+Number of restarts: 2
+Total number of search iterations: 51704
+Total number of local moves: 7199 (including on plateau: 0)
+Total number of local minimum: 13333 (including on plateau: 0)
+Total number of resets: 2179
+Total number of restarts: 285
+
+Optimization cost: 10696
+Opt Cost BEFORE post-processing: 10696
+Optimization post-processing time: 7.1e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 652
+Hydralisk: 0
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 27
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 114.996ms
+Wall-clock time (full program): 115.213ms
+Satisfaction error: 0
+Number of search iterations: 380
+Number of local moves: 63 (including on plateau: 0)
+Number of local minimum: 100 (including on plateau: 0)
+Number of resets: 16
+Number of restarts: 2
+Total number of search iterations: 57604
+Total number of local moves: 8043 (including on plateau: 0)
+Total number of local minimum: 14860 (including on plateau: 0)
+Total number of resets: 2429
+Total number of restarts: 316
+
+Optimization cost: 10212
+Opt Cost BEFORE post-processing: 10212
+Optimization post-processing time: 7.7e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 684
+Hydralisk: 38
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.876ms
+Wall-clock time (full program): 116.07ms
+Satisfaction error: 0
+Number of search iterations: 382
+Number of local moves: 46 (including on plateau: 0)
+Number of local minimum: 96 (including on plateau: 0)
+Number of resets: 16
+Number of restarts: 2
+Total number of search iterations: 63522
+Total number of local moves: 8858 (including on plateau: 0)
+Total number of local minimum: 16398 (including on plateau: 0)
+Total number of resets: 2680
+Total number of restarts: 349
+
+Optimization cost: 10868
+Opt Cost BEFORE post-processing: 10868
+Optimization post-processing time: 8.2e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 694
+Hydralisk: 29
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 1
+Guardian: 1
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.707ms
+Wall-clock time (full program): 115.904ms
+Satisfaction error: 0
+Number of search iterations: 370
+Number of local moves: 54 (including on plateau: 0)
+Number of local minimum: 90 (including on plateau: 0)
+Number of resets: 15
+Number of restarts: 2
+Total number of search iterations: 69477
+Total number of local moves: 9669 (including on plateau: 0)
+Total number of local minimum: 17944 (including on plateau: 0)
+Total number of resets: 2933
+Total number of restarts: 381
+
+Optimization cost: 10897.2
+Opt Cost BEFORE post-processing: 10897.2
+Optimization post-processing time: 7.9e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 696
+Hydralisk: 0
+Lurker: 14
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 2
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 113.622ms
+Wall-clock time (full program): 113.824ms
+Satisfaction error: 0
+Number of search iterations: 340
+Number of local moves: 57 (including on plateau: 0)
+Number of local minimum: 90 (including on plateau: 0)
+Number of resets: 15
+Number of restarts: 2
+Total number of search iterations: 75231
+Total number of local moves: 10501 (including on plateau: 0)
+Total number of local minimum: 19409 (including on plateau: 0)
+Total number of resets: 3170
+Total number of restarts: 412
+
+Optimization cost: 10653.6
+Opt Cost BEFORE post-processing: 10653.6
+Optimization post-processing time: 7.6e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 680
+Hydralisk: 0
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 20
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 105.935ms
+Wall-clock time (full program): 106.134ms
+Satisfaction error: 0
+Number of search iterations: 384
+Number of local moves: 56 (including on plateau: 0)
+Number of local minimum: 93 (including on plateau: 0)
+Number of resets: 15
+Number of restarts: 2
+Total number of search iterations: 80944
+Total number of local moves: 11264 (including on plateau: 0)
+Total number of local minimum: 20883 (including on plateau: 0)
+Total number of resets: 3410
+Total number of restarts: 442
+
+Optimization cost: 10520
+Opt Cost BEFORE post-processing: 10520
+Optimization post-processing time: 7.2e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 684
+Hydralisk: 38
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 116.919ms
+Wall-clock time (full program): 117.12ms
+Satisfaction error: 0
+Number of search iterations: 363
+Number of local moves: 54 (including on plateau: 0)
+Number of local minimum: 91 (including on plateau: 0)
+Number of resets: 15
+Number of restarts: 2
+Total number of search iterations: 86504
+Total number of local moves: 12042 (including on plateau: 0)
+Total number of local minimum: 22300 (including on plateau: 0)
+Total number of resets: 3643
+Total number of restarts: 473
+
+Optimization cost: 10868
+Opt Cost BEFORE post-processing: 10868
+Optimization post-processing time: 8.9e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 650
+Hydralisk: 9
+Lurker: 15
+Ultralisk: 4
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 116.546ms
+Wall-clock time (full program): 116.918ms
+Satisfaction error: 0
+Number of search iterations: 346
+Number of local moves: 46 (including on plateau: 0)
+Number of local minimum: 90 (including on plateau: 0)
+Number of resets: 15
+Number of restarts: 2
+Total number of search iterations: 91952
+Total number of local moves: 12808 (including on plateau: 0)
+Total number of local minimum: 23692 (including on plateau: 0)
+Total number of resets: 3871
+Total number of restarts: 504
+
+Optimization cost: 10216.6
+Opt Cost BEFORE post-processing: 10216.6
+Optimization post-processing time: 0.000661
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 650
+Hydralisk: 5
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 25
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 121.124ms
+Wall-clock time (full program): 121.377ms
+Satisfaction error: 0
+Number of search iterations: 382
+Number of local moves: 56 (including on plateau: 0)
+Number of local minimum: 106 (including on plateau: 0)
+Number of resets: 17
+Number of restarts: 2
+Total number of search iterations: 97113
+Total number of local moves: 13514 (including on plateau: 0)
+Total number of local minimum: 25030 (including on plateau: 0)
+Total number of resets: 4090
+Total number of restarts: 532
+
+Optimization cost: 10230
+Opt Cost BEFORE post-processing: 10230
+Optimization post-processing time: 7.7e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 684
+Hydralisk: 38
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.053ms
+Wall-clock time (full program): 115.259ms
+Satisfaction error: 0
+Number of search iterations: 387
+Number of local moves: 45 (including on plateau: 0)
+Number of local minimum: 102 (including on plateau: 0)
+Number of resets: 16
+Number of restarts: 2
+Total number of search iterations: 102951
+Total number of local moves: 14319 (including on plateau: 0)
+Total number of local minimum: 26553 (including on plateau: 0)
+Total number of resets: 4340
+Total number of restarts: 565
+
+Optimization cost: 10868
+Opt Cost BEFORE post-processing: 10868
+Optimization post-processing time: 0.000131
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 696
+Hydralisk: 0
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 16
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.449ms
+Wall-clock time (full program): 115.663ms
+Satisfaction error: 0
+Number of search iterations: 373
+Number of local moves: 49 (including on plateau: 0)
+Number of local minimum: 102 (including on plateau: 0)
+Number of resets: 17
+Number of restarts: 2
+Total number of search iterations: 108680
+Total number of local moves: 15096 (including on plateau: 0)
+Total number of local minimum: 28027 (including on plateau: 0)
+Total number of resets: 4580
+Total number of restarts: 595
+
+Optimization cost: 10696
+Opt Cost BEFORE post-processing: 10696
+Optimization post-processing time: 7.6e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 694
+Hydralisk: 1
+Lurker: 14
+Ultralisk: 0
+Mutalisk: 2
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.506ms
+Wall-clock time (full program): 115.712ms
+Satisfaction error: 0
+Number of search iterations: 374
+Number of local moves: 58 (including on plateau: 0)
+Number of local minimum: 96 (including on plateau: 0)
+Number of resets: 16
+Number of restarts: 2
+Total number of search iterations: 114343
+Total number of local moves: 15904 (including on plateau: 0)
+Total number of local minimum: 29466 (including on plateau: 0)
+Total number of resets: 4816
+Total number of restarts: 625
+
+Optimization cost: 10622
+Opt Cost BEFORE post-processing: 10622
+Optimization post-processing time: 6.9e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 752
+Hydralisk: 0
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 2
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 119.734ms
+Wall-clock time (full program): 119.991ms
+Satisfaction error: 0
+Number of search iterations: 356
+Number of local moves: 51 (including on plateau: 0)
+Number of local minimum: 87 (including on plateau: 0)
+Number of resets: 14
+Number of restarts: 2
+Total number of search iterations: 120102
+Total number of local moves: 16702 (including on plateau: 0)
+Total number of local minimum: 30947 (including on plateau: 0)
+Total number of resets: 5058
+Total number of restarts: 656
+
+Optimization cost: 11294.4
+Opt Cost BEFORE post-processing: 11294.4
+Optimization post-processing time: 0.000129
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 652
+Hydralisk: 0
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 7
+Guardian: 20
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 113.564ms
+Wall-clock time (full program): 113.776ms
+Satisfaction error: 0
+Number of search iterations: 420
+Number of local moves: 55 (including on plateau: 0)
+Number of local minimum: 102 (including on plateau: 0)
+Number of resets: 17
+Number of restarts: 2
+Total number of search iterations: 125851
+Total number of local moves: 17511 (including on plateau: 0)
+Total number of local minimum: 32392 (including on plateau: 0)
+Total number of resets: 5295
+Total number of restarts: 687
+
+Optimization cost: 10150.4
+Opt Cost BEFORE post-processing: 10150.4
+Optimization post-processing time: 7.1e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 694
+Hydralisk: 33
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.694ms
+Wall-clock time (full program): 115.898ms
+Satisfaction error: 0
+Number of search iterations: 384
+Number of local moves: 49 (including on plateau: 0)
+Number of local minimum: 102 (including on plateau: 0)
+Number of resets: 17
+Number of restarts: 2
+Total number of search iterations: 131478
+Total number of local moves: 18277 (including on plateau: 0)
+Total number of local minimum: 33828 (including on plateau: 0)
+Total number of resets: 5530
+Total number of restarts: 717
+
+Optimization cost: 10938
+Opt Cost BEFORE post-processing: 10938
+Optimization post-processing time: 8.1e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 694
+Hydralisk: 1
+Lurker: 0
+Ultralisk: 8
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.662ms
+Wall-clock time (full program): 115.865ms
+Satisfaction error: 0
+Number of search iterations: 400
+Number of local moves: 52 (including on plateau: 0)
+Number of local minimum: 103 (including on plateau: 0)
+Number of resets: 17
+Number of restarts: 2
+Total number of search iterations: 137220
+Total number of local moves: 19080 (including on plateau: 0)
+Total number of local minimum: 35262 (including on plateau: 0)
+Total number of resets: 5763
+Total number of restarts: 748
+
+Optimization cost: 10682
+Opt Cost BEFORE post-processing: 10682
+Optimization post-processing time: 7.2e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 694
+Hydralisk: 1
+Lurker: 0
+Ultralisk: 8
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 127.803ms
+Wall-clock time (full program): 128.133ms
+Satisfaction error: 0
+Number of search iterations: 379
+Number of local moves: 51 (including on plateau: 0)
+Number of local minimum: 87 (including on plateau: 0)
+Number of resets: 14
+Number of restarts: 2
+Total number of search iterations: 142805
+Total number of local moves: 19847 (including on plateau: 0)
+Total number of local minimum: 36686 (including on plateau: 0)
+Total number of resets: 5997
+Total number of restarts: 779
+
+Optimization cost: 10682
+Opt Cost BEFORE post-processing: 10682
+Optimization post-processing time: 0.000146
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 694
+Hydralisk: 33
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 119.857ms
+Wall-clock time (full program): 120.063ms
+Satisfaction error: 0
+Number of search iterations: 362
+Number of local moves: 51 (including on plateau: 0)
+Number of local minimum: 91 (including on plateau: 0)
+Number of resets: 15
+Number of restarts: 2
+Total number of search iterations: 148270
+Total number of local moves: 20633 (including on plateau: 0)
+Total number of local minimum: 38109 (including on plateau: 0)
+Total number of resets: 6230
+Total number of restarts: 810
+
+Optimization cost: 10938
+Opt Cost BEFORE post-processing: 10938
+Optimization post-processing time: 8.4e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 640
+Hydralisk: 0
+Lurker: 0
+Ultralisk: 6
+Mutalisk: 0
+Guardian: 18
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.504ms
+Wall-clock time (full program): 115.7ms
+Satisfaction error: 0
+Number of search iterations: 354
+Number of local moves: 49 (including on plateau: 0)
+Number of local minimum: 90 (including on plateau: 0)
+Number of resets: 15
+Number of restarts: 2
+Total number of search iterations: 153894
+Total number of local moves: 21416 (including on plateau: 0)
+Total number of local minimum: 39534 (including on plateau: 0)
+Total number of resets: 6463
+Total number of restarts: 841
+
+Optimization cost: 10080
+Opt Cost BEFORE post-processing: 10080
+Optimization post-processing time: 7.7e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 694
+Hydralisk: 29
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 2
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.855ms
+Wall-clock time (full program): 116.053ms
+Satisfaction error: 0
+Number of search iterations: 345
+Number of local moves: 50 (including on plateau: 0)
+Number of local minimum: 88 (including on plateau: 0)
+Number of resets: 14
+Number of restarts: 2
+Total number of search iterations: 159649
+Total number of local moves: 22232 (including on plateau: 0)
+Total number of local minimum: 41019 (including on plateau: 0)
+Total number of resets: 6706
+Total number of restarts: 872
+
+Optimization cost: 10888.4
+Opt Cost BEFORE post-processing: 10888.4
+Optimization post-processing time: 0.000123
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 694
+Hydralisk: 1
+Lurker: 0
+Ultralisk: 8
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.656ms
+Wall-clock time (full program): 115.849ms
+Satisfaction error: 0
+Number of search iterations: 382
+Number of local moves: 51 (including on plateau: 0)
+Number of local minimum: 97 (including on plateau: 0)
+Number of resets: 16
+Number of restarts: 2
+Total number of search iterations: 165328
+Total number of local moves: 23017 (including on plateau: 0)
+Total number of local minimum: 42504 (including on plateau: 0)
+Total number of resets: 6949
+Total number of restarts: 903
+
+Optimization cost: 10682
+Opt Cost BEFORE post-processing: 10682
+Optimization post-processing time: 7.5e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 696
+Hydralisk: 0
+Lurker: 1
+Ultralisk: 7
+Mutalisk: 0
+Guardian: 1
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.797ms
+Wall-clock time (full program): 116.038ms
+Satisfaction error: 0
+Number of search iterations: 386
+Number of local moves: 60 (including on plateau: 0)
+Number of local minimum: 103 (including on plateau: 0)
+Number of resets: 17
+Number of restarts: 2
+Total number of search iterations: 170854
+Total number of local moves: 23798 (including on plateau: 0)
+Total number of local minimum: 43919 (including on plateau: 0)
+Total number of resets: 7181
+Total number of restarts: 934
+
+Optimization cost: 10693
+Opt Cost BEFORE post-processing: 10693
+Optimization post-processing time: 7.2e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 694
+Hydralisk: 1
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 16
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.756ms
+Wall-clock time (full program): 115.948ms
+Satisfaction error: 0
+Number of search iterations: 369
+Number of local moves: 50 (including on plateau: 0)
+Number of local minimum: 94 (including on plateau: 0)
+Number of resets: 15
+Number of restarts: 2
+Total number of search iterations: 176587
+Total number of local moves: 24597 (including on plateau: 0)
+Total number of local minimum: 45405 (including on plateau: 0)
+Total number of resets: 7426
+Total number of restarts: 966
+
+Optimization cost: 10682
+Opt Cost BEFORE post-processing: 10682
+Optimization post-processing time: 7.1e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 694
+Hydralisk: 33
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.914ms
+Wall-clock time (full program): 116.139ms
+Satisfaction error: 0
+Number of search iterations: 362
+Number of local moves: 47 (including on plateau: 0)
+Number of local minimum: 97 (including on plateau: 0)
+Number of resets: 16
+Number of restarts: 2
+Total number of search iterations: 182342
+Total number of local moves: 25413 (including on plateau: 0)
+Total number of local minimum: 46911 (including on plateau: 0)
+Total number of resets: 7673
+Total number of restarts: 998
+
+Optimization cost: 10938
+Opt Cost BEFORE post-processing: 10938
+Optimization post-processing time: 7.5e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 684
+Hydralisk: 38
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.699ms
+Wall-clock time (full program): 115.98ms
+Satisfaction error: 0
+Number of search iterations: 335
+Number of local moves: 48 (including on plateau: 0)
+Number of local minimum: 84 (including on plateau: 0)
+Number of resets: 14
+Number of restarts: 2
+Total number of search iterations: 187986
+Total number of local moves: 26203 (including on plateau: 0)
+Total number of local minimum: 48357 (including on plateau: 0)
+Total number of resets: 7910
+Total number of restarts: 1030
+
+Optimization cost: 10868
+Opt Cost BEFORE post-processing: 10868
+Optimization post-processing time: 0.000134
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 682
+Hydralisk: 39
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 127.678ms
+Wall-clock time (full program): 127.956ms
+Satisfaction error: 0
+Number of search iterations: 322
+Number of local moves: 47 (including on plateau: 0)
+Number of local minimum: 85 (including on plateau: 0)
+Number of resets: 14
+Number of restarts: 2
+Total number of search iterations: 193177
+Total number of local moves: 26908 (including on plateau: 0)
+Total number of local minimum: 49699 (including on plateau: 0)
+Total number of resets: 8131
+Total number of restarts: 1060
+
+Optimization cost: 10854
+Opt Cost BEFORE post-processing: 10854
+Optimization post-processing time: 0.000179
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 694
+Hydralisk: 33
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 116.511ms
+Wall-clock time (full program): 116.731ms
+Satisfaction error: 0
+Number of search iterations: 400
+Number of local moves: 63 (including on plateau: 0)
+Number of local minimum: 109 (including on plateau: 0)
+Number of resets: 18
+Number of restarts: 3
+Total number of search iterations: 198911
+Total number of local moves: 27717 (including on plateau: 0)
+Total number of local minimum: 51143 (including on plateau: 0)
+Total number of resets: 8368
+Total number of restarts: 1091
+
+Optimization cost: 10938
+Opt Cost BEFORE post-processing: 10938
+Optimization post-processing time: 8.6e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 694
+Hydralisk: 1
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 16
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 114.944ms
+Wall-clock time (full program): 115.139ms
+Satisfaction error: 0
+Number of search iterations: 375
+Number of local moves: 58 (including on plateau: 0)
+Number of local minimum: 97 (including on plateau: 0)
+Number of resets: 16
+Number of restarts: 2
+Total number of search iterations: 204686
+Total number of local moves: 28488 (including on plateau: 0)
+Total number of local minimum: 52613 (including on plateau: 0)
+Total number of resets: 8608
+Total number of restarts: 1122
+
+Optimization cost: 10682
+Opt Cost BEFORE post-processing: 10682
+Optimization post-processing time: 9.2e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 694
+Hydralisk: 21
+Lurker: 0
+Ultralisk: 3
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 113.991ms
+Wall-clock time (full program): 114.217ms
+Satisfaction error: 0
+Number of search iterations: 362
+Number of local moves: 48 (including on plateau: 0)
+Number of local minimum: 91 (including on plateau: 0)
+Number of resets: 15
+Number of restarts: 2
+Total number of search iterations: 210565
+Total number of local moves: 29324 (including on plateau: 0)
+Total number of local minimum: 54127 (including on plateau: 0)
+Total number of resets: 8855
+Total number of restarts: 1153
+
+Optimization cost: 10842
+Opt Cost BEFORE post-processing: 10842
+Optimization post-processing time: 7.8e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 694
+Hydralisk: 33
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 113.595ms
+Wall-clock time (full program): 113.827ms
+Satisfaction error: 0
+Number of search iterations: 380
+Number of local moves: 56 (including on plateau: 0)
+Number of local minimum: 106 (including on plateau: 0)
+Number of resets: 17
+Number of restarts: 2
+Total number of search iterations: 216529
+Total number of local moves: 30147 (including on plateau: 0)
+Total number of local minimum: 55697 (including on plateau: 0)
+Total number of resets: 9113
+Total number of restarts: 1188
+
+Optimization cost: 10938
+Opt Cost BEFORE post-processing: 10938
+Optimization post-processing time: 0.000128
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 694
+Hydralisk: 1
+Lurker: 2
+Ultralisk: 0
+Mutalisk: 14
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.254ms
+Wall-clock time (full program): 115.459ms
+Satisfaction error: 0
+Number of search iterations: 379
+Number of local moves: 52 (including on plateau: 0)
+Number of local minimum: 96 (including on plateau: 0)
+Number of resets: 16
+Number of restarts: 2
+Total number of search iterations: 222361
+Total number of local moves: 30947 (including on plateau: 0)
+Total number of local minimum: 57207 (including on plateau: 0)
+Total number of resets: 9359
+Total number of restarts: 1219
+
+Optimization cost: 10552.7
+Opt Cost BEFORE post-processing: 10552.7
+Optimization post-processing time: 9.1e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 696
+Hydralisk: 32
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 114.937ms
+Wall-clock time (full program): 115.129ms
+Satisfaction error: 0
+Number of search iterations: 393
+Number of local moves: 45 (including on plateau: 0)
+Number of local minimum: 105 (including on plateau: 0)
+Number of resets: 17
+Number of restarts: 2
+Total number of search iterations: 228332
+Total number of local moves: 31736 (including on plateau: 0)
+Total number of local minimum: 58763 (including on plateau: 0)
+Total number of resets: 9613
+Total number of restarts: 1251
+
+Optimization cost: 10952
+Opt Cost BEFORE post-processing: 10952
+Optimization post-processing time: 8.2e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 684
+Hydralisk: 38
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.622ms
+Wall-clock time (full program): 115.818ms
+Satisfaction error: 0
+Number of search iterations: 374
+Number of local moves: 52 (including on plateau: 0)
+Number of local minimum: 90 (including on plateau: 0)
+Number of resets: 15
+Number of restarts: 2
+Total number of search iterations: 234248
+Total number of local moves: 32586 (including on plateau: 0)
+Total number of local minimum: 60285 (including on plateau: 0)
+Total number of resets: 9863
+Total number of restarts: 1282
+
+Optimization cost: 10868
+Opt Cost BEFORE post-processing: 10868
+Optimization post-processing time: 7.9e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 682
+Hydralisk: 39
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 117.069ms
+Wall-clock time (full program): 117.368ms
+Satisfaction error: 0
+Number of search iterations: 328
+Number of local moves: 42 (including on plateau: 0)
+Number of local minimum: 84 (including on plateau: 0)
+Number of resets: 14
+Number of restarts: 2
+Total number of search iterations: 239820
+Total number of local moves: 33364 (including on plateau: 0)
+Total number of local minimum: 61673 (including on plateau: 0)
+Total number of resets: 10093
+Total number of restarts: 1313
+
+Optimization cost: 10854
+Opt Cost BEFORE post-processing: 10854
+Optimization post-processing time: 0.00014
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 696
+Hydralisk: 32
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 119.884ms
+Wall-clock time (full program): 120.142ms
+Satisfaction error: 0
+Number of search iterations: 385
+Number of local moves: 54 (including on plateau: 0)
+Number of local minimum: 102 (including on plateau: 0)
+Number of resets: 16
+Number of restarts: 2
+Total number of search iterations: 245245
+Total number of local moves: 34133 (including on plateau: 0)
+Total number of local minimum: 63085 (including on plateau: 0)
+Total number of resets: 10322
+Total number of restarts: 1344
+
+Optimization cost: 10952
+Opt Cost BEFORE post-processing: 10952
+Optimization post-processing time: 7.7e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 712
+Hydralisk: 0
+Lurker: 0
+Ultralisk: 6
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.76ms
+Wall-clock time (full program): 115.96ms
+Satisfaction error: 0
+Number of search iterations: 285
+Number of local moves: 38 (including on plateau: 0)
+Number of local minimum: 72 (including on plateau: 0)
+Number of resets: 12
+Number of restarts: 2
+Total number of search iterations: 250896
+Total number of local moves: 34939 (including on plateau: 0)
+Total number of local minimum: 64533 (including on plateau: 0)
+Total number of resets: 10559
+Total number of restarts: 1375
+
+Optimization cost: 10872
+Opt Cost BEFORE post-processing: 10872
+Optimization post-processing time: 8.2e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 682
+Hydralisk: 39
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.837ms
+Wall-clock time (full program): 116.024ms
+Satisfaction error: 0
+Number of search iterations: 388
+Number of local moves: 53 (including on plateau: 0)
+Number of local minimum: 104 (including on plateau: 0)
+Number of resets: 17
+Number of restarts: 2
+Total number of search iterations: 256636
+Total number of local moves: 35749 (including on plateau: 0)
+Total number of local minimum: 66011 (including on plateau: 0)
+Total number of resets: 10798
+Total number of restarts: 1406
+
+Optimization cost: 10854
+Opt Cost BEFORE post-processing: 10854
+Optimization post-processing time: 6.5e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 694
+Hydralisk: 33
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.51ms
+Wall-clock time (full program): 115.704ms
+Satisfaction error: 0
+Number of search iterations: 382
+Number of local moves: 52 (including on plateau: 0)
+Number of local minimum: 96 (including on plateau: 0)
+Number of resets: 16
+Number of restarts: 2
+Total number of search iterations: 262367
+Total number of local moves: 36537 (including on plateau: 0)
+Total number of local minimum: 67491 (including on plateau: 0)
+Total number of resets: 11040
+Total number of restarts: 1437
+
+Optimization cost: 10938
+Opt Cost BEFORE post-processing: 10938
+Optimization post-processing time: 7e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 696
+Hydralisk: 0
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 16
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 119.91ms
+Wall-clock time (full program): 120.14ms
+Satisfaction error: 0
+Number of search iterations: 376
+Number of local moves: 48 (including on plateau: 0)
+Number of local minimum: 90 (including on plateau: 0)
+Number of resets: 15
+Number of restarts: 2
+Total number of search iterations: 268190
+Total number of local moves: 37344 (including on plateau: 0)
+Total number of local minimum: 68938 (including on plateau: 0)
+Total number of resets: 11279
+Total number of restarts: 1468
+
+Optimization cost: 10696
+Opt Cost BEFORE post-processing: 10696
+Optimization post-processing time: 7.1e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 656
+Hydralisk: 0
+Lurker: 0
+Ultralisk: 13
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.573ms
+Wall-clock time (full program): 115.811ms
+Satisfaction error: 0
+Number of search iterations: 333
+Number of local moves: 43 (including on plateau: 0)
+Number of local minimum: 91 (including on plateau: 0)
+Number of resets: 15
+Number of restarts: 2
+Total number of search iterations: 273944
+Total number of local moves: 38123 (including on plateau: 0)
+Total number of local minimum: 70415 (including on plateau: 0)
+Total number of resets: 11522
+Total number of restarts: 1500
+
+Optimization cost: 10256
+Opt Cost BEFORE post-processing: 10256
+Optimization post-processing time: 7.5e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 694
+Hydralisk: 33
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.799ms
+Wall-clock time (full program): 116.09ms
+Satisfaction error: 0
+Number of search iterations: 391
+Number of local moves: 58 (including on plateau: 0)
+Number of local minimum: 108 (including on plateau: 0)
+Number of resets: 18
+Number of restarts: 3
+Total number of search iterations: 279642
+Total number of local moves: 38958 (including on plateau: 0)
+Total number of local minimum: 71907 (including on plateau: 0)
+Total number of resets: 11766
+Total number of restarts: 1531
+
+Optimization cost: 10938
+Opt Cost BEFORE post-processing: 10938
+Optimization post-processing time: 0.000179
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 682
+Hydralisk: 1
+Lurker: 19
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 119.627ms
+Wall-clock time (full program): 119.884ms
+Satisfaction error: 0
+Number of search iterations: 220
+Number of local moves: 34 (including on plateau: 0)
+Number of local minimum: 55 (including on plateau: 0)
+Number of resets: 9
+Number of restarts: 1
+Total number of search iterations: 285057
+Total number of local moves: 39725 (including on plateau: 0)
+Total number of local minimum: 73283 (including on plateau: 0)
+Total number of resets: 11990
+Total number of restarts: 1561
+
+Optimization cost: 10492.5
+Opt Cost BEFORE post-processing: 10492.5
+Optimization post-processing time: 0.000114
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 682
+Hydralisk: 1
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 19
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 117.526ms
+Wall-clock time (full program): 117.886ms
+Satisfaction error: 0
+Number of search iterations: 339
+Number of local moves: 54 (including on plateau: 0)
+Number of local minimum: 87 (including on plateau: 0)
+Number of resets: 14
+Number of restarts: 2
+Total number of search iterations: 290535
+Total number of local moves: 40495 (including on plateau: 0)
+Total number of local minimum: 74683 (including on plateau: 0)
+Total number of resets: 12219
+Total number of restarts: 1591
+
+Optimization cost: 10382.8
+Opt Cost BEFORE post-processing: 10382.8
+Optimization post-processing time: 0.00017
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 684
+Hydralisk: 34
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 2
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 129.989ms
+Wall-clock time (full program): 130.238ms
+Satisfaction error: 0
+Number of search iterations: 355
+Number of local moves: 49 (including on plateau: 0)
+Number of local minimum: 84 (including on plateau: 0)
+Number of resets: 14
+Number of restarts: 2
+Total number of search iterations: 296022
+Total number of local moves: 41283 (including on plateau: 0)
+Total number of local minimum: 76082 (including on plateau: 0)
+Total number of resets: 12445
+Total number of restarts: 1621
+
+Optimization cost: 10836
+Opt Cost BEFORE post-processing: 10836
+Optimization post-processing time: 0.000614
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 704
+Hydralisk: 0
+Lurker: 14
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.745ms
+Wall-clock time (full program): 115.948ms
+Satisfaction error: 0
+Number of search iterations: 375
+Number of local moves: 50 (including on plateau: 0)
+Number of local minimum: 104 (including on plateau: 0)
+Number of resets: 17
+Number of restarts: 2
+Total number of search iterations: 301961
+Total number of local moves: 42111 (including on plateau: 0)
+Total number of local minimum: 77592 (including on plateau: 0)
+Total number of resets: 12692
+Total number of restarts: 1654
+
+Optimization cost: 10741.6
+Opt Cost BEFORE post-processing: 10741.6
+Optimization post-processing time: 6.5e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 696
+Hydralisk: 0
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 16
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.585ms
+Wall-clock time (full program): 115.851ms
+Satisfaction error: 0
+Number of search iterations: 378
+Number of local moves: 51 (including on plateau: 0)
+Number of local minimum: 99 (including on plateau: 0)
+Number of resets: 16
+Number of restarts: 2
+Total number of search iterations: 307794
+Total number of local moves: 42962 (including on plateau: 0)
+Total number of local minimum: 79078 (including on plateau: 0)
+Total number of resets: 12936
+Total number of restarts: 1685
+
+Optimization cost: 10696
+Opt Cost BEFORE post-processing: 10696
+Optimization post-processing time: 0.000172
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 694
+Hydralisk: 33
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 116.05ms
+Wall-clock time (full program): 116.298ms
+Satisfaction error: 0
+Number of search iterations: 368
+Number of local moves: 46 (including on plateau: 0)
+Number of local minimum: 99 (including on plateau: 0)
+Number of resets: 16
+Number of restarts: 2
+Total number of search iterations: 313569
+Total number of local moves: 43769 (including on plateau: 0)
+Total number of local minimum: 80560 (including on plateau: 0)
+Total number of resets: 13180
+Total number of restarts: 1716
+
+Optimization cost: 10938
+Opt Cost BEFORE post-processing: 10938
+Optimization post-processing time: 0.000136
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 696
+Hydralisk: 0
+Lurker: 14
+Ultralisk: 1
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.438ms
+Wall-clock time (full program): 115.625ms
+Satisfaction error: 0
+Number of search iterations: 384
+Number of local moves: 51 (including on plateau: 0)
+Number of local minimum: 106 (including on plateau: 0)
+Number of resets: 17
+Number of restarts: 2
+Total number of search iterations: 319454
+Total number of local moves: 44587 (including on plateau: 0)
+Total number of local minimum: 82073 (including on plateau: 0)
+Total number of resets: 13428
+Total number of restarts: 1749
+
+Optimization cost: 10653.6
+Opt Cost BEFORE post-processing: 10653.6
+Optimization post-processing time: 4.5e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 696
+Hydralisk: 0
+Lurker: 0
+Ultralisk: 8
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.685ms
+Wall-clock time (full program): 115.896ms
+Satisfaction error: 0
+Number of search iterations: 353
+Number of local moves: 46 (including on plateau: 0)
+Number of local minimum: 84 (including on plateau: 0)
+Number of resets: 14
+Number of restarts: 2
+Total number of search iterations: 325156
+Total number of local moves: 45388 (including on plateau: 0)
+Total number of local minimum: 83537 (including on plateau: 0)
+Total number of resets: 13668
+Total number of restarts: 1780
+
+Optimization cost: 10696
+Opt Cost BEFORE post-processing: 10696
+Optimization post-processing time: 7.9e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 660
+Hydralisk: 32
+Lurker: 9
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 120.24ms
+Wall-clock time (full program): 120.453ms
+Satisfaction error: 0
+Number of search iterations: 243
+Number of local moves: 30 (including on plateau: 0)
+Number of local minimum: 58 (including on plateau: 0)
+Number of resets: 9
+Number of restarts: 1
+Total number of search iterations: 330815
+Total number of local moves: 46171 (including on plateau: 0)
+Total number of local minimum: 84980 (including on plateau: 0)
+Total number of resets: 13903
+Total number of restarts: 1810
+
+Optimization cost: 10528.8
+Opt Cost BEFORE post-processing: 10528.8
+Optimization post-processing time: 7e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 650
+Hydralisk: 11
+Lurker: 0
+Ultralisk: 1
+Mutalisk: 0
+Guardian: 20
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 123.568ms
+Wall-clock time (full program): 124.081ms
+Satisfaction error: 0
+Number of search iterations: 356
+Number of local moves: 43 (including on plateau: 0)
+Number of local minimum: 90 (including on plateau: 0)
+Number of resets: 15
+Number of restarts: 2
+Total number of search iterations: 336140
+Total number of local moves: 46936 (including on plateau: 0)
+Total number of local minimum: 86350 (including on plateau: 0)
+Total number of resets: 14128
+Total number of restarts: 1839
+
+Optimization cost: 10278
+Opt Cost BEFORE post-processing: 10278
+Optimization post-processing time: 0.000518
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 682
+Hydralisk: 29
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 5
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 127.097ms
+Wall-clock time (full program): 127.349ms
+Satisfaction error: 0
+Number of search iterations: 351
+Number of local moves: 39 (including on plateau: 0)
+Number of local minimum: 87 (including on plateau: 0)
+Number of resets: 14
+Number of restarts: 2
+Total number of search iterations: 341839
+Total number of local moves: 47721 (including on plateau: 0)
+Total number of local minimum: 87776 (including on plateau: 0)
+Total number of resets: 14362
+Total number of restarts: 1872
+
+Optimization cost: 10774
+Opt Cost BEFORE post-processing: 10774
+Optimization post-processing time: 7.4e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 696
+Hydralisk: 0
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 16
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 119.704ms
+Wall-clock time (full program): 119.936ms
+Satisfaction error: 0
+Number of search iterations: 350
+Number of local moves: 56 (including on plateau: 0)
+Number of local minimum: 85 (including on plateau: 0)
+Number of resets: 14
+Number of restarts: 2
+Total number of search iterations: 347686
+Total number of local moves: 48535 (including on plateau: 0)
+Total number of local minimum: 89259 (including on plateau: 0)
+Total number of resets: 14605
+Total number of restarts: 1904
+
+Optimization cost: 10555.2
+Opt Cost BEFORE post-processing: 10555.2
+Optimization post-processing time: 0.000141
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 682
+Hydralisk: 1
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 19
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 117.273ms
+Wall-clock time (full program): 117.475ms
+Satisfaction error: 0
+Number of search iterations: 363
+Number of local moves: 54 (including on plateau: 0)
+Number of local minimum: 90 (including on plateau: 0)
+Number of resets: 15
+Number of restarts: 2
+Total number of search iterations: 353669
+Total number of local moves: 49418 (including on plateau: 0)
+Total number of local minimum: 90792 (including on plateau: 0)
+Total number of resets: 14858
+Total number of restarts: 1938
+
+Optimization cost: 10550
+Opt Cost BEFORE post-processing: 10550
+Optimization post-processing time: 7.1e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 647
+Hydralisk: 51
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 117.346ms
+Wall-clock time (full program): 117.619ms
+Satisfaction error: 0
+Number of search iterations: 396
+Number of local moves: 55 (including on plateau: 0)
+Number of local minimum: 104 (including on plateau: 0)
+Number of resets: 17
+Number of restarts: 2
+Total number of search iterations: 359657
+Total number of local moves: 50261 (including on plateau: 0)
+Total number of local minimum: 92316 (including on plateau: 0)
+Total number of resets: 15108
+Total number of restarts: 1970
+
+Optimization cost: 10521
+Opt Cost BEFORE post-processing: 10521
+Optimization post-processing time: 0.000135
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 694
+Hydralisk: 27
+Lurker: 3
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 116.596ms
+Wall-clock time (full program): 116.846ms
+Satisfaction error: 0
+Number of search iterations: 374
+Number of local moves: 47 (including on plateau: 0)
+Number of local minimum: 96 (including on plateau: 0)
+Number of resets: 16
+Number of restarts: 2
+Total number of search iterations: 365182
+Total number of local moves: 51053 (including on plateau: 0)
+Total number of local minimum: 93728 (including on plateau: 0)
+Total number of resets: 15339
+Total number of restarts: 2000
+
+Optimization cost: 10880.9
+Opt Cost BEFORE post-processing: 10880.9
+Optimization post-processing time: 0.000583
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 684
+Hydralisk: 38
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.747ms
+Wall-clock time (full program): 116.007ms
+Satisfaction error: 0
+Number of search iterations: 377
+Number of local moves: 56 (including on plateau: 0)
+Number of local minimum: 96 (including on plateau: 0)
+Number of resets: 16
+Number of restarts: 2
+Total number of search iterations: 370875
+Total number of local moves: 51852 (including on plateau: 0)
+Total number of local minimum: 95187 (including on plateau: 0)
+Total number of resets: 15577
+Total number of restarts: 2031
+
+Optimization cost: 10868
+Opt Cost BEFORE post-processing: 10868
+Optimization post-processing time: 6.7e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 650
+Hydralisk: 1
+Lurker: 27
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.993ms
+Wall-clock time (full program): 116.324ms
+Satisfaction error: 0
+Number of search iterations: 386
+Number of local moves: 55 (including on plateau: 0)
+Number of local minimum: 98 (including on plateau: 0)
+Number of resets: 16
+Number of restarts: 2
+Total number of search iterations: 376857
+Total number of local moves: 52698 (including on plateau: 0)
+Total number of local minimum: 96724 (including on plateau: 0)
+Total number of resets: 15829
+Total number of restarts: 2063
+
+Optimization cost: 10116.3
+Opt Cost BEFORE post-processing: 10116.3
+Optimization post-processing time: 0.000142
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 650
+Hydralisk: 39
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 8
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.517ms
+Wall-clock time (full program): 115.888ms
+Satisfaction error: 0
+Number of search iterations: 377
+Number of local moves: 48 (including on plateau: 0)
+Number of local minimum: 97 (including on plateau: 0)
+Number of resets: 16
+Number of restarts: 2
+Total number of search iterations: 382327
+Total number of local moves: 53460 (including on plateau: 0)
+Total number of local minimum: 98107 (including on plateau: 0)
+Total number of resets: 16054
+Total number of restarts: 2094
+
+Optimization cost: 10431.6
+Opt Cost BEFORE post-processing: 10431.6
+Optimization post-processing time: 0.000141
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 694
+Hydralisk: 33
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 123.56ms
+Wall-clock time (full program): 123.795ms
+Satisfaction error: 0
+Number of search iterations: 387
+Number of local moves: 55 (including on plateau: 0)
+Number of local minimum: 98 (including on plateau: 0)
+Number of resets: 16
+Number of restarts: 2
+Total number of search iterations: 387504
+Total number of local moves: 54178 (including on plateau: 0)
+Total number of local minimum: 99424 (including on plateau: 0)
+Total number of resets: 16268
+Total number of restarts: 2122
+
+Optimization cost: 10938
+Opt Cost BEFORE post-processing: 10938
+Optimization post-processing time: 6.6e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 694
+Hydralisk: 33
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.717ms
+Wall-clock time (full program): 115.934ms
+Satisfaction error: 0
+Number of search iterations: 373
+Number of local moves: 43 (including on plateau: 0)
+Number of local minimum: 91 (including on plateau: 0)
+Number of resets: 15
+Number of restarts: 2
+Total number of search iterations: 393391
+Total number of local moves: 54995 (including on plateau: 0)
+Total number of local minimum: 100913 (including on plateau: 0)
+Total number of resets: 16512
+Total number of restarts: 2155
+
+Optimization cost: 10938
+Opt Cost BEFORE post-processing: 10938
+Optimization post-processing time: 8.6e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 694
+Hydralisk: 33
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.633ms
+Wall-clock time (full program): 115.832ms
+Satisfaction error: 0
+Number of search iterations: 357
+Number of local moves: 57 (including on plateau: 0)
+Number of local minimum: 96 (including on plateau: 0)
+Number of resets: 16
+Number of restarts: 2
+Total number of search iterations: 399340
+Total number of local moves: 55845 (including on plateau: 0)
+Total number of local minimum: 102438 (including on plateau: 0)
+Total number of resets: 16764
+Total number of restarts: 2188
+
+Optimization cost: 10938
+Opt Cost BEFORE post-processing: 10938
+Optimization post-processing time: 6.7e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 740
+Hydralisk: 0
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 5
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.884ms
+Wall-clock time (full program): 116.066ms
+Satisfaction error: 0
+Number of search iterations: 375
+Number of local moves: 51 (including on plateau: 0)
+Number of local minimum: 102 (including on plateau: 0)
+Number of resets: 17
+Number of restarts: 2
+Total number of search iterations: 405269
+Total number of local moves: 56688 (including on plateau: 0)
+Total number of local minimum: 103938 (including on plateau: 0)
+Total number of resets: 17010
+Total number of restarts: 2219
+
+Optimization cost: 11180
+Opt Cost BEFORE post-processing: 11180
+Optimization post-processing time: 6.7e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 694
+Hydralisk: 33
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.676ms
+Wall-clock time (full program): 115.861ms
+Satisfaction error: 0
+Number of search iterations: 377
+Number of local moves: 52 (including on plateau: 0)
+Number of local minimum: 106 (including on plateau: 0)
+Number of resets: 17
+Number of restarts: 2
+Total number of search iterations: 411112
+Total number of local moves: 57477 (including on plateau: 0)
+Total number of local minimum: 105467 (including on plateau: 0)
+Total number of resets: 17260
+Total number of restarts: 2251
+
+Optimization cost: 10938
+Opt Cost BEFORE post-processing: 10938
+Optimization post-processing time: 6.3e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 694
+Hydralisk: 1
+Lurker: 16
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.913ms
+Wall-clock time (full program): 116.163ms
+Satisfaction error: 0
+Number of search iterations: 397
+Number of local moves: 54 (including on plateau: 0)
+Number of local minimum: 102 (including on plateau: 0)
+Number of resets: 17
+Number of restarts: 2
+Total number of search iterations: 416755
+Total number of local moves: 58250 (including on plateau: 0)
+Total number of local minimum: 106954 (including on plateau: 0)
+Total number of resets: 17502
+Total number of restarts: 2283
+
+Optimization cost: 10633.6
+Opt Cost BEFORE post-processing: 10633.6
+Optimization post-processing time: 0.000146
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 694
+Hydralisk: 1
+Lurker: 0
+Ultralisk: 8
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.666ms
+Wall-clock time (full program): 115.87ms
+Satisfaction error: 0
+Number of search iterations: 409
+Number of local moves: 59 (including on plateau: 0)
+Number of local minimum: 96 (including on plateau: 0)
+Number of resets: 16
+Number of restarts: 2
+Total number of search iterations: 422486
+Total number of local moves: 59075 (including on plateau: 0)
+Total number of local minimum: 108416 (including on plateau: 0)
+Total number of resets: 17743
+Total number of restarts: 2313
+
+Optimization cost: 10682
+Opt Cost BEFORE post-processing: 10682
+Optimization post-processing time: 7.5e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 682
+Hydralisk: 39
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.724ms
+Wall-clock time (full program): 115.928ms
+Satisfaction error: 0
+Number of search iterations: 386
+Number of local moves: 51 (including on plateau: 0)
+Number of local minimum: 96 (including on plateau: 0)
+Number of resets: 16
+Number of restarts: 2
+Total number of search iterations: 428289
+Total number of local moves: 59866 (including on plateau: 0)
+Total number of local minimum: 109897 (including on plateau: 0)
+Total number of resets: 17984
+Total number of restarts: 2344
+
+Optimization cost: 10854
+Opt Cost BEFORE post-processing: 10854
+Optimization post-processing time: 7.2e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 694
+Hydralisk: 1
+Lurker: 16
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.766ms
+Wall-clock time (full program): 116.07ms
+Satisfaction error: 0
+Number of search iterations: 390
+Number of local moves: 48 (including on plateau: 0)
+Number of local minimum: 100 (including on plateau: 0)
+Number of resets: 16
+Number of restarts: 2
+Total number of search iterations: 433617
+Total number of local moves: 60582 (including on plateau: 0)
+Total number of local minimum: 111255 (including on plateau: 0)
+Total number of resets: 18204
+Total number of restarts: 2373
+
+Optimization cost: 10633.6
+Opt Cost BEFORE post-processing: 10633.6
+Optimization post-processing time: 0.000144
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 694
+Hydralisk: 9
+Lurker: 12
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 119.72ms
+Wall-clock time (full program): 119.972ms
+Satisfaction error: 0
+Number of search iterations: 338
+Number of local moves: 44 (including on plateau: 0)
+Number of local minimum: 86 (including on plateau: 0)
+Number of resets: 14
+Number of restarts: 2
+Total number of search iterations: 438914
+Total number of local moves: 61309 (including on plateau: 0)
+Total number of local minimum: 112629 (including on plateau: 0)
+Total number of resets: 18429
+Total number of restarts: 2404
+
+Optimization cost: 10709.7
+Opt Cost BEFORE post-processing: 10709.7
+Optimization post-processing time: 7.8e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 696
+Hydralisk: 0
+Lurker: 16
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 113.895ms
+Wall-clock time (full program): 114.093ms
+Satisfaction error: 0
+Number of search iterations: 399
+Number of local moves: 53 (including on plateau: 0)
+Number of local minimum: 108 (including on plateau: 0)
+Number of resets: 18
+Number of restarts: 3
+Total number of search iterations: 444662
+Total number of local moves: 62101 (including on plateau: 0)
+Total number of local minimum: 114103 (including on plateau: 0)
+Total number of resets: 18667
+Total number of restarts: 2436
+
+Optimization cost: 10647.6
+Opt Cost BEFORE post-processing: 10647.6
+Optimization post-processing time: 6.9e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 684
+Hydralisk: 38
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.162ms
+Wall-clock time (full program): 115.38ms
+Satisfaction error: 0
+Number of search iterations: 368
+Number of local moves: 48 (including on plateau: 0)
+Number of local minimum: 92 (including on plateau: 0)
+Number of resets: 15
+Number of restarts: 2
+Total number of search iterations: 450378
+Total number of local moves: 62879 (including on plateau: 0)
+Total number of local minimum: 115567 (including on plateau: 0)
+Total number of resets: 18906
+Total number of restarts: 2467
+
+Optimization cost: 10868
+Opt Cost BEFORE post-processing: 10868
+Optimization post-processing time: 7.4e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 696
+Hydralisk: 0
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 16
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 114.198ms
+Wall-clock time (full program): 114.401ms
+Satisfaction error: 0
+Number of search iterations: 377
+Number of local moves: 52 (including on plateau: 0)
+Number of local minimum: 102 (including on plateau: 0)
+Number of resets: 17
+Number of restarts: 2
+Total number of search iterations: 456111
+Total number of local moves: 63678 (including on plateau: 0)
+Total number of local minimum: 117013 (including on plateau: 0)
+Total number of resets: 19142
+Total number of restarts: 2497
+
+Optimization cost: 10696
+Opt Cost BEFORE post-processing: 10696
+Optimization post-processing time: 6.9e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 694
+Hydralisk: 9
+Lurker: 12
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 116.185ms
+Wall-clock time (full program): 116.39ms
+Satisfaction error: 0
+Number of search iterations: 391
+Number of local moves: 45 (including on plateau: 0)
+Number of local minimum: 103 (including on plateau: 0)
+Number of resets: 17
+Number of restarts: 2
+Total number of search iterations: 461733
+Total number of local moves: 64446 (including on plateau: 0)
+Total number of local minimum: 118455 (including on plateau: 0)
+Total number of resets: 19377
+Total number of restarts: 2528
+
+Optimization cost: 10709.7
+Opt Cost BEFORE post-processing: 10709.7
+Optimization post-processing time: 8.5e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 696
+Hydralisk: 32
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.122ms
+Wall-clock time (full program): 115.329ms
+Satisfaction error: 0
+Number of search iterations: 394
+Number of local moves: 55 (including on plateau: 0)
+Number of local minimum: 102 (including on plateau: 0)
+Number of resets: 17
+Number of restarts: 2
+Total number of search iterations: 467560
+Total number of local moves: 65257 (including on plateau: 0)
+Total number of local minimum: 119923 (including on plateau: 0)
+Total number of resets: 19619
+Total number of restarts: 2560
+
+Optimization cost: 10952
+Opt Cost BEFORE post-processing: 10952
+Optimization post-processing time: 7e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 694
+Hydralisk: 33
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.97ms
+Wall-clock time (full program): 116.164ms
+Satisfaction error: 0
+Number of search iterations: 373
+Number of local moves: 45 (including on plateau: 0)
+Number of local minimum: 94 (including on plateau: 0)
+Number of resets: 15
+Number of restarts: 2
+Total number of search iterations: 473358
+Total number of local moves: 66067 (including on plateau: 0)
+Total number of local minimum: 121403 (including on plateau: 0)
+Total number of resets: 19862
+Total number of restarts: 2591
+
+Optimization cost: 10938
+Opt Cost BEFORE post-processing: 10938
+Optimization post-processing time: 7.3e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 694
+Hydralisk: 1
+Lurker: 0
+Ultralisk: 8
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.896ms
+Wall-clock time (full program): 116.201ms
+Satisfaction error: 0
+Number of search iterations: 340
+Number of local moves: 51 (including on plateau: 0)
+Number of local minimum: 84 (including on plateau: 0)
+Number of resets: 14
+Number of restarts: 2
+Total number of search iterations: 478971
+Total number of local moves: 66845 (including on plateau: 0)
+Total number of local minimum: 122848 (including on plateau: 0)
+Total number of resets: 20100
+Total number of restarts: 2622
+
+Optimization cost: 10682
+Opt Cost BEFORE post-processing: 10682
+Optimization post-processing time: 8.1e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 688
+Hydralisk: 36
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.733ms
+Wall-clock time (full program): 115.973ms
+Satisfaction error: 0
+Number of search iterations: 338
+Number of local moves: 47 (including on plateau: 0)
+Number of local minimum: 84 (including on plateau: 0)
+Number of resets: 14
+Number of restarts: 2
+Total number of search iterations: 483910
+Total number of local moves: 67542 (including on plateau: 0)
+Total number of local minimum: 124111 (including on plateau: 0)
+Total number of resets: 20305
+Total number of restarts: 2650
+
+Optimization cost: 10896
+Opt Cost BEFORE post-processing: 10896
+Optimization post-processing time: 7.9e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 694
+Hydralisk: 31
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 1
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.534ms
+Wall-clock time (full program): 115.745ms
+Satisfaction error: 0
+Number of search iterations: 368
+Number of local moves: 51 (including on plateau: 0)
+Number of local minimum: 103 (including on plateau: 0)
+Number of resets: 17
+Number of restarts: 2
+Total number of search iterations: 489823
+Total number of local moves: 68367 (including on plateau: 0)
+Total number of local minimum: 125636 (including on plateau: 0)
+Total number of resets: 20556
+Total number of restarts: 2683
+
+Optimization cost: 10922
+Opt Cost BEFORE post-processing: 10922
+Optimization post-processing time: 7.6e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 694
+Hydralisk: 1
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 1
+Guardian: 15
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 112.053ms
+Wall-clock time (full program): 112.266ms
+Satisfaction error: 0
+Number of search iterations: 389
+Number of local moves: 54 (including on plateau: 0)
+Number of local minimum: 103 (including on plateau: 0)
+Number of resets: 17
+Number of restarts: 2
+Total number of search iterations: 495505
+Total number of local moves: 69123 (including on plateau: 0)
+Total number of local minimum: 127058 (including on plateau: 0)
+Total number of resets: 20787
+Total number of restarts: 2713
+
+Optimization cost: 10673.2
+Opt Cost BEFORE post-processing: 10673.2
+Optimization post-processing time: 7e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 684
+Hydralisk: 0
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 19
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.632ms
+Wall-clock time (full program): 115.829ms
+Satisfaction error: 0
+Number of search iterations: 355
+Number of local moves: 50 (including on plateau: 0)
+Number of local minimum: 92 (including on plateau: 0)
+Number of resets: 15
+Number of restarts: 2
+Total number of search iterations: 501082
+Total number of local moves: 69882 (including on plateau: 0)
+Total number of local minimum: 128484 (including on plateau: 0)
+Total number of resets: 21021
+Total number of restarts: 2744
+
+Optimization cost: 10564
+Opt Cost BEFORE post-processing: 10564
+Optimization post-processing time: 8.7e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 694
+Hydralisk: 33
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 114.715ms
+Wall-clock time (full program): 114.923ms
+Satisfaction error: 0
+Number of search iterations: 369
+Number of local moves: 52 (including on plateau: 0)
+Number of local minimum: 96 (including on plateau: 0)
+Number of resets: 16
+Number of restarts: 2
+Total number of search iterations: 506863
+Total number of local moves: 70674 (including on plateau: 0)
+Total number of local minimum: 129986 (including on plateau: 0)
+Total number of resets: 21267
+Total number of restarts: 2776
+
+Optimization cost: 10938
+Opt Cost BEFORE post-processing: 10938
+Optimization post-processing time: 7.9e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 696
+Hydralisk: 0
+Lurker: 0
+Ultralisk: 3
+Mutalisk: 0
+Guardian: 10
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 116.605ms
+Wall-clock time (full program): 116.818ms
+Satisfaction error: 0
+Number of search iterations: 401
+Number of local moves: 62 (including on plateau: 0)
+Number of local minimum: 97 (including on plateau: 0)
+Number of resets: 16
+Number of restarts: 2
+Total number of search iterations: 512541
+Total number of local moves: 71486 (including on plateau: 0)
+Total number of local minimum: 131411 (including on plateau: 0)
+Total number of resets: 21500
+Total number of restarts: 2807
+
+Optimization cost: 10696
+Opt Cost BEFORE post-processing: 10696
+Optimization post-processing time: 7.9e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 694
+Hydralisk: 1
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 16
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.84ms
+Wall-clock time (full program): 116.058ms
+Satisfaction error: 0
+Number of search iterations: 384
+Number of local moves: 54 (including on plateau: 0)
+Number of local minimum: 102 (including on plateau: 0)
+Number of resets: 17
+Number of restarts: 2
+Total number of search iterations: 518255
+Total number of local moves: 72278 (including on plateau: 0)
+Total number of local minimum: 132890 (including on plateau: 0)
+Total number of resets: 21742
+Total number of restarts: 2837
+
+Optimization cost: 10682
+Opt Cost BEFORE post-processing: 10682
+Optimization post-processing time: 7.5e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 694
+Hydralisk: 33
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.891ms
+Wall-clock time (full program): 116.111ms
+Satisfaction error: 0
+Number of search iterations: 406
+Number of local moves: 53 (including on plateau: 0)
+Number of local minimum: 108 (including on plateau: 0)
+Number of resets: 18
+Number of restarts: 3
+Total number of search iterations: 524227
+Total number of local moves: 73111 (including on plateau: 0)
+Total number of local minimum: 134393 (including on plateau: 0)
+Total number of resets: 21990
+Total number of restarts: 2870
+
+Optimization cost: 10938
+Opt Cost BEFORE post-processing: 10938
+Optimization post-processing time: 7.3e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 694
+Hydralisk: 1
+Lurker: 0
+Ultralisk: 8
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 116.102ms
+Wall-clock time (full program): 116.407ms
+Satisfaction error: 0
+Number of search iterations: 381
+Number of local moves: 55 (including on plateau: 0)
+Number of local minimum: 100 (including on plateau: 0)
+Number of resets: 16
+Number of restarts: 2
+Total number of search iterations: 529562
+Total number of local moves: 73902 (including on plateau: 0)
+Total number of local minimum: 135782 (including on plateau: 0)
+Total number of resets: 22216
+Total number of restarts: 2901
+
+Optimization cost: 10682
+Opt Cost BEFORE post-processing: 10682
+Optimization post-processing time: 0.000217
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 640
+Hydralisk: 0
+Lurker: 0
+Ultralisk: 15
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 127.125ms
+Wall-clock time (full program): 127.339ms
+Satisfaction error: 0
+Number of search iterations: 391
+Number of local moves: 53 (including on plateau: 0)
+Number of local minimum: 97 (including on plateau: 0)
+Number of resets: 16
+Number of restarts: 2
+Total number of search iterations: 534888
+Total number of local moves: 74645 (including on plateau: 0)
+Total number of local minimum: 137125 (including on plateau: 0)
+Total number of resets: 22436
+Total number of restarts: 2931
+
+Optimization cost: 10080
+Opt Cost BEFORE post-processing: 10080
+Optimization post-processing time: 7.3e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 694
+Hydralisk: 1
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 16
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.807ms
+Wall-clock time (full program): 116.028ms
+Satisfaction error: 0
+Number of search iterations: 377
+Number of local moves: 53 (including on plateau: 0)
+Number of local minimum: 91 (including on plateau: 0)
+Number of resets: 15
+Number of restarts: 2
+Total number of search iterations: 540807
+Total number of local moves: 75473 (including on plateau: 0)
+Total number of local minimum: 138636 (including on plateau: 0)
+Total number of resets: 22683
+Total number of restarts: 2964
+
+Optimization cost: 10682
+Opt Cost BEFORE post-processing: 10682
+Optimization post-processing time: 7.6e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 694
+Hydralisk: 33
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.881ms
+Wall-clock time (full program): 116.059ms
+Satisfaction error: 0
+Number of search iterations: 373
+Number of local moves: 51 (including on plateau: 0)
+Number of local minimum: 93 (including on plateau: 0)
+Number of resets: 15
+Number of restarts: 2
+Total number of search iterations: 546576
+Total number of local moves: 76287 (including on plateau: 0)
+Total number of local minimum: 140113 (including on plateau: 0)
+Total number of resets: 22925
+Total number of restarts: 2995
+
+Optimization cost: 10938
+Opt Cost BEFORE post-processing: 10938
+Optimization post-processing time: 7.5e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 652
+Hydralisk: 0
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 27
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 116.195ms
+Wall-clock time (full program): 116.378ms
+Satisfaction error: 0
+Number of search iterations: 396
+Number of local moves: 58 (including on plateau: 0)
+Number of local minimum: 96 (including on plateau: 0)
+Number of resets: 16
+Number of restarts: 2
+Total number of search iterations: 552222
+Total number of local moves: 77070 (including on plateau: 0)
+Total number of local minimum: 141537 (including on plateau: 0)
+Total number of resets: 23157
+Total number of restarts: 3025
+
+Optimization cost: 9974.4
+Opt Cost BEFORE post-processing: 9974.4
+Optimization post-processing time: 7.4e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 696
+Hydralisk: 0
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 0
+Guardian: 16
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.337ms
+Wall-clock time (full program): 115.523ms
+Satisfaction error: 0
+Number of search iterations: 357
+Number of local moves: 59 (including on plateau: 0)
+Number of local minimum: 91 (including on plateau: 0)
+Number of resets: 15
+Number of restarts: 2
+Total number of search iterations: 558015
+Total number of local moves: 77888 (including on plateau: 0)
+Total number of local minimum: 143047 (including on plateau: 0)
+Total number of resets: 23404
+Total number of restarts: 3057
+
+Optimization cost: 10696
+Opt Cost BEFORE post-processing: 10696
+Optimization post-processing time: 0.000124
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 682
+Hydralisk: 1
+Lurker: 0
+Ultralisk: 0
+Mutalisk: 19
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.91ms
+Wall-clock time (full program): 116.092ms
+Satisfaction error: 0
+Number of search iterations: 389
+Number of local moves: 53 (including on plateau: 0)
+Number of local minimum: 100 (including on plateau: 0)
+Number of resets: 16
+Number of restarts: 2
+Total number of search iterations: 563695
+Total number of local moves: 78700 (including on plateau: 0)
+Total number of local minimum: 144468 (including on plateau: 0)
+Total number of resets: 23635
+Total number of restarts: 3088
+
+Optimization cost: 10382.8
+Opt Cost BEFORE post-processing: 10382.8
+Optimization post-processing time: 6.6e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 6 resets are performed
+############
+Zergling: 694
+Hydralisk: 9
+Lurker: 0
+Ultralisk: 5
+Mutalisk: 2
+Guardian: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.734ms
+Wall-clock time (full program): 115.963ms
+Satisfaction error: 0
+Number of search iterations: 378
+Number of local moves: 55 (including on plateau: 0)
+Number of local minimum: 90 (including on plateau: 0)
+Number of resets: 15
+Number of restarts: 2
+Total number of search iterations: 569402
+Total number of local moves: 79488 (including on plateau: 0)
+Total number of local minimum: 145945 (including on plateau: 0)
+Total number of resets: 23875
+Total number of restarts: 3119
+
+Optimization cost: 10728.4
+Opt Cost BEFORE post-processing: 10728.4
+Optimization post-processing time: 6.9e-05
+
