@@ -7,7 +7,7 @@ using namespace std;
 
 class Building
 {
-	int _length;
+	int _width;
 	int _height;
 
 	int _gap_top;
@@ -21,9 +21,9 @@ class Building
 	string _name;
 
 public:
-	Building( int length, int height, int top, int right, int bottom, int left, Race race, int tree_depth, string name );
+	Building( int width, int height, int top, int right, int bottom, int left, Race race, int tree_depth, string name );
     
-	inline int get_length()	const	{ return _length; }
+	inline int get_width()	const	{ return _width; }
 	inline int get_height()	const	{ return _height; }
 
 	inline int get_gap_top()	  const	{ return _gap_top; }

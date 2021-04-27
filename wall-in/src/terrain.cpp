@@ -1,36 +1,32 @@
+#include <algorithm>
+
 #include "terrain.hpp"
 
-Terrain::Terrain( int lenght, int height )
-	: _length( lenght ),
-	  _height( height ),
-{
-	_terrain.resize( height );
-	for( int y = 0 ; y < height ; ++y )
-		_terrain[y].resize( length, false );
-}	
+Terrain::Terrain( int width, int height )
+	: Grid( width, height ),
+	  _terrain( vector<bool>( width * height, false ) )
+{ }	
 
 Terrain::Terrain( const ifstream& file_data )
 { }
 
-void Terrain::fill_terrain( vector<int> linear_terrain )
+void Terrain::fill_terrain( const vector<int>& linear_terrain )
 {
-	for( int position = 0 ; position < static_cast<int>( linear_terrain.size() ) ; ++position )
-	{
-		auto [x , y] = line2matrix( position, _length );
-
-		// 0 means unwalkable
-		// 1 means walkable but unconstructable
-		// 2 means constructable
-		if( linear_terrain[ position ] == 2 )
-			_terrain[y][x] = true;
-		else
-			_terrain[y][x] = false;
-	}
+	// 0 means unwalkable
+	// 1 means walkable but unconstructable
+	// 2 means constructable
+	std::transform( linear_terrain.begin(),
+	                linear_terrain.end(),
+	                _terrain.begin(),
+	                [&]( const auto& tile ){ return tile == 2 ? true : false; } );
 }
 
-bool Terrain::is_constructible( int coordinate )
+bool Terrain::is_constructible( int coordinate ) const
 {
-	auto [x , y] = line2matrix( coordinate, _length );
-	return _terrain[y][x];
+	return _terrain[coordinate];
 }
 
+bool Terrain::is_constructible( int x, int y ) const
+{
+	return is_constructible( matrix2line( x, y ) );
+}

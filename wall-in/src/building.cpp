@@ -1,7 +1,7 @@
 #include "building.hpp"
 
-Building::Building( int length, int height, int top, int right, int bottom, int left, Race race, int tree_depth, string name )
-	: _length( length ),
+Building::Building( int width, int height, int top, int right, int bottom, int left, Race race, int tree_depth, string name )
+	: _width( width ),
 	  _height( height ),
 	  _gap_top( top ), 
 	  _gap_right( right ), 
@@ -18,7 +18,7 @@ ostream& operator<<( ostream& os, const Building& b )
 		<< "Race: " <<  b.get_race_string() << endl
 		<< "Name: " << b._name << endl
 		<< "Tree depth: " << b._tree_depth << endl
-		<< "Length: " <<  b._length << endl
+		<< "Width: " <<  b._width << endl
 		<< "Height: " <<  b._height << endl
 		<< "Gap Top: " <<  b._gap_top << endl
 		<< "Gap Right: " <<  b._gap_right << endl
