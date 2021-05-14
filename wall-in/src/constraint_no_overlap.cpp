@@ -35,12 +35,34 @@ double NoOverlap::required_error( const std::vector<Variable>& variables ) const
 	return count;
 }
 
-// double NoOverlap::expert_delta_error( const std::vector<Variable>& variables,
-//                                       const std::vector<unsigned int>& variable_indexes,
-//                                       const std::vector<int>& candidate_values ) const
-// {
+double NoOverlap::expert_delta_error( const std::vector<Variable>& variables,
+                                      const std::vector<unsigned int>& variable_indexes,
+                                      const std::vector<int>& candidate_values ) const
+{
+	double diff = 0.0;
+	
+	for( int index = 0 ; index < static_cast<int>( variable_indexes.size() ) ; ++index )
+	{
+		auto position = variables[ variable_indexes[index] ].get_value();
+		if( position >= 0 )
+		{
+			for( int h = 0 ; h < _building[ variable_indexes[index] ].get_height() ; ++h )
+				for( int w = 0 ; w < _building[ variable_indexes[index] ].get_width() ; ++w )
+					if( static_cast<int>( _placement.what_is_at( position + _width*h + w ).size() ) > 1 )
+						--diff;
+		}
+		
+		if( candidate_values[index] >= 0 )
+		{
+			for( int h = 0 ; h < _building[ variable_indexes[index] ].get_height() ; ++h )
+				for( int w = 0 ; w < _building[ variable_indexes[index] ].get_width() ; ++w )
+					if( static_cast<int>( _placement.what_is_at( candidate_values[index] + _width*h + w ).size() ) > 0 )
+						++diff;
+		}
+	}
 
-// }
+	return diff;
+}
 
 void NoOverlap::update_constraint( const std::vector<Variable>& variables,
                                    unsigned int variable_index,
@@ -62,7 +84,7 @@ void NoOverlap::update_constraint( const std::vector<Variable>& variables,
 	{
 		for( int h = 0 ; h < _building[ variable_index ].get_height() ; ++h )
 			for( int w = 0 ; w < _building[ variable_index ].get_width() ; ++w )
-				if( static_cast<int>( _placement.what_is_at( new_value + _width*h + w ).size() ) > 0 )
+				if( static_cast<int>( _placement.what_is_at( new_value + _width*h + w ).size() ) > 1 )
 					++_error;
 	}
 }
