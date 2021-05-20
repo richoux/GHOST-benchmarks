@@ -8,8 +8,6 @@
 
 #include <ghost/solver.hpp>
 
-#include "all-diff.hpp"
-#include "fix_value.hpp"
 #include "factory_sudoku.hpp"
 #include "print_sudoku.hpp"
 
