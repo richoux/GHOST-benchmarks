@@ -5,6 +5,7 @@ MYFLAGS=
 CXXFIRSTFLAGS= -O3 -W -Wall -Wextra -Wno-sign-compare -Wno-unused-parameter
 CXXFIRSTFLAGSDEBUG= -g -O0 -DDEBUG -W -Wall -Wextra -Wno-sign-compare -Wno-unused-parameter -fsanitize=address
 CXXFIRSTFLAGSINFO= -g -O2 -W -Wall -Wextra -Wno-sign-compare -Wno-unused-parameter
+#LDFLAGSDEBUG=-pthread -lghost_staticd -fsanitize=address -static-libasan
 LDFLAGSDEBUG=-pthread -lghostd -fsanitize=address
 LDFLAGSINFO=-pthread -lghost
 
