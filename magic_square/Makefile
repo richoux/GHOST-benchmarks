@@ -51,17 +51,20 @@ debug: CXXFLAGS=$(CXXFLAGSDEBUG)
 debug: LDFLAGS=$(LDFLAGSDEBUG)
 debug: $(BINDIR)/magic-square_hamming $(BINDIR)/magic-square_num
 
-$(BINDIR)/magic-square_hamming: $(OBJDIR)/magic-square_hamming.o $(OBJDIR)/print_ms.o $(OBJDIR)/linear-eq_hamming.o
+$(BINDIR)/magic-square_hamming: $(OBJDIR)/magic-square_hamming.o $(OBJDIR)/factory_ms.o $(OBJDIR)/print_ms.o $(OBJDIR)/linear-eq_hamming.o
 	$(CXX) -o $@ $^ $(LDFLAGS) -DHAMMING
 
-$(BINDIR)/magic-square_num: $(OBJDIR)/magic-square_num.o $(OBJDIR)/print_ms.o $(OBJDIR)/linear-eq_num.o
+$(BINDIR)/magic-square_num: $(OBJDIR)/magic-square_num.o $(OBJDIR)/factory_ms.o $(OBJDIR)/print_ms.o $(OBJDIR)/linear-eq_num.o
 	$(CXX) -o $@ $^ $(LDFLAGS)
 
-$(OBJDIR)/magic-square_num.o: $(OBJDIR)/print_ms.o $(OBJDIR)/linear-eq_num.o
+$(OBJDIR)/magic-square_num.o: $(OBJDIR)/factory_ms.o $(OBJDIR)/print_ms.o $(OBJDIR)/linear-eq_num.o
 	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -c $(SRCDIR)/magic_square.cpp -o $@
 
-$(OBJDIR)/magic-square_hamming.o: print_ms.o linear-eq_hamming.o
+$(OBJDIR)/magic-square_hamming.o: $(OBJDIR)/factory_ms.o $(OBJDIR)/print_ms.o $(OBJDIR)/linear-eq_hamming.o
 	$(CXX) $(CXXFLAGS) -DHAMMING -I$(HPPDIR) -c $(SRCDIR)/magic_square.cpp -o $@
+
+$(OBJDIR)/factory_ms.o:
+	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -c $(SRCDIR)/factory_ms.cpp -o $@
 
 $(OBJDIR)/print_ms.o:
 	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -c $(SRCDIR)/print_ms.cpp -o $@
