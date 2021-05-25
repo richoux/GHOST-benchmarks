@@ -24,7 +24,6 @@ inline double binomial_with_2_diff_plus_1( int value )
 	return binomial_with_2( value + 1 ) - binomial_with_2( value );
 }
 
-
 AllDiff::AllDiff( const vector< Variable >& variables )
 	: Constraint( variables ),
 	  _count( vector<int>( variables.size() ) )

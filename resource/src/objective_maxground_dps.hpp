@@ -6,7 +6,7 @@
 #include <ghost/objective.hpp>
 #include <ghost/variable.hpp>
 
-#include "unitData.hpp"
+#include "unit_data.hpp"
 
 using namespace std;
 using namespace ghost;

@@ -7,14 +7,8 @@
 #include <cmath>
 
 #include <ghost/solver.hpp>
-#include <ghost/variable.hpp>
 
-#if defined HAMMING
-#include "linear-eq_hamming.hpp"
-#else
-#include "linear-eq_num.hpp"
-#endif
-
+#include "factory_ms.hpp"
 #include "print_ms.hpp"
 
 using namespace ghost;
@@ -115,8 +109,6 @@ int main( int argc, char **argv )
 	
 	int nb_vars = order * order;
 	int constant = order * ( nb_vars + 1 ) / 2;
-
-
 	
   // Create variables, with domains starting from value 1
   vector<Variable> variables;
@@ -139,55 +131,6 @@ int main( int argc, char **argv )
 	  variables[i++].set_value( 23 ); variables[i++].set_value( 52 ); variables[i++].set_value( 4 ); variables[i++].set_value( 59 ); variables[i++].set_value( 19 ); variables[i++].set_value( 8 ); variables[i++].set_value( 41 );  variables[i++].set_value( 57 ); 
   }
 	  
-  vector< vector<Variable> > rows( order );
-  vector< vector<Variable> > columns( order );
-  vector< vector<Variable> > diagonals( 2 );
-
-  // Prepare row variables
-  for( int row = 0; row < order; ++row )
-	  std::copy_n( variables.begin() + ( row * order ),
-	               order,
-	               std::back_inserter( rows[ row ] ) );
-  
-  // Prepare column variables
-  for( int col = 0; col < order; ++col )
-	  for( int row = 0; row < order; ++row )
-		  columns[ col ].push_back( variables[ col + ( row * order ) ] );
-	  
-  // Prepare square variables
-  for( int row = 0; row < order; ++row )
-  {
-	  diagonals[ 0 ].push_back( variables[ row + ( row * order ) ] );
-	  diagonals[ 1 ].push_back( variables[ order - 1 - row + ( row * order ) ] );
-  }
-
-  vector< LinearEq > constraint_rows;
-  vector< LinearEq > constraint_columns;
-  vector< LinearEq > constraint_diagonals;
-
-  for( int i = 0; i < order; ++i )
-  {
-	  constraint_rows.emplace_back( rows[i], constant );
-	  constraint_columns.emplace_back( columns[i], constant );
-  }
-  
-  constraint_diagonals.emplace_back( diagonals[0], constant );
-  constraint_diagonals.emplace_back( diagonals[1], constant );
-
-  vector< variant<LinearEq> > constraints;
-
-  std::move( constraint_rows.begin(),
-             constraint_rows.end(),
-             std::back_inserter( constraints ) );
-
-  std::move( constraint_columns.begin(),
-             constraint_columns.end(),
-             std::back_inserter( constraints ) );
-
-  std::move( constraint_diagonals.begin(),
-             constraint_diagonals.end(),
-             std::back_inserter( constraints ) );
-
   std::shared_ptr<Print> printer = std::make_shared<PrintMagicSquare>();
 	Options options;
 	options.print = printer;
@@ -201,8 +144,10 @@ int main( int argc, char **argv )
 	if( cores != -1 )
 		options.number_threads = static_cast<unsigned int>( cores );
 
+	FactoryMagicSquare factory( variables, order );
+	
   // true means it is a permutation problem
-  Solver solver( variables, constraints, true );
+  Solver solver( factory, true );
 
   double error = 0.0;
   vector<int> solution( variables.size(), 0 );
@@ -214,10 +159,7 @@ int main( int argc, char **argv )
 	// solver.solve( error, solution, 30000000 );
 	
   // 5s
-  if( order != 8 )
-	  solver.solve( error, solution, 5000000, options );
-  else
-	  solver.solve( error, solution, 5000000, options );
+  solver.solve( error, solution, 5000000, options );
 
 	// 0.5s
 	//solver.solve( error, solution, 500000 );

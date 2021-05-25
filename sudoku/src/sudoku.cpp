@@ -7,10 +7,8 @@
 #include <cmath>
 
 #include <ghost/solver.hpp>
-#include <ghost/variable.hpp>
 
-#include "all-diff.hpp"
-#include "fix_value.hpp"
+#include "factory_sudoku.hpp"
 #include "print_sudoku.hpp"
 
 using namespace ghost;
@@ -169,96 +167,10 @@ int main( int argc, char **argv )
 	  for( int i = 0; i < nb_vars; ++i )
 		  variables[i].set_value( ( i % size_side ) + 1 );
 	  
-	  
-  vector< vector< Variable > > rows( size_side );
-  vector< vector< Variable > > columns( size_side );
-  vector< vector< Variable > > squares( size_side );
-
-  // Prepare row variables
-  for( int r = 0; r < size_side; ++r )
-	  std::copy_n( variables.begin() + ( r * size_side ),
-	               size_side,
-	               std::back_inserter( rows[r] ) );
-  
-  // Prepare column variables
-  for( int c = 0; c < size_side; ++c )
-	  for( int line = 0; line < size_side; ++line )
-		  columns[c].push_back( variables[ c + ( line * size_side ) ] );
-	  
-  // Prepare square variables
-  for( int s_r = 0; s_r < size_side_small_square; ++s_r )
-	  for( int s_c = 0; s_c < size_side_small_square; ++s_c )
-		  for( int line = 0; line < size_side_small_square; ++line )
-			  std::copy_n( variables.begin() + ( ( s_r * size_side * size_side_small_square )
-			                                     + ( s_c * size_side_small_square )
-			                                     + ( line * size_side ) ),
-			               size_side_small_square,
-			               std::back_inserter( squares[ ( s_r * size_side_small_square ) + s_c ] ) );
-
-  vector<AllDiff> constraint_rows;
-  vector<AllDiff> constraint_columns;
-  vector<AllDiff> constraint_squares;
-  
-  for( int i = 0; i < size_side; ++i )
-  {
-	  constraint_rows.emplace_back( rows[i] );
-	  constraint_columns.emplace_back( columns[i] );
-	  constraint_squares.emplace_back( squares[i] );
-  }
-
-  vector<FixValue> constraint_fix_values;
-  if( hard_instance )
-  {
-	  constraint_fix_values.emplace_back( vector< Variable >{variables[5]}, 3 );
-	  constraint_fix_values.emplace_back( vector< Variable >{variables[7]}, 1 );
-	  constraint_fix_values.emplace_back( vector< Variable >{variables[8]}, 7 );
-	  constraint_fix_values.emplace_back( vector< Variable >{variables[10]}, 1 );
-	  constraint_fix_values.emplace_back( vector< Variable >{variables[11]}, 5 );
-	  constraint_fix_values.emplace_back( vector< Variable >{variables[14]}, 9 );
-	  constraint_fix_values.emplace_back( vector< Variable >{variables[17]}, 8 );
-	  constraint_fix_values.emplace_back( vector< Variable >{variables[19]}, 6 );
-	  constraint_fix_values.emplace_back( vector< Variable >{variables[27]}, 1 );
-	  constraint_fix_values.emplace_back( vector< Variable >{variables[32]}, 7 );
-	  constraint_fix_values.emplace_back( vector< Variable >{variables[38]}, 9 );
-	  constraint_fix_values.emplace_back( vector< Variable >{variables[42]}, 2 );
-	  constraint_fix_values.emplace_back( vector< Variable >{variables[48]}, 5 );
-	  constraint_fix_values.emplace_back( vector< Variable >{variables[53]}, 4 );
-	  constraint_fix_values.emplace_back( vector< Variable >{variables[61]}, 2 );
-	  constraint_fix_values.emplace_back( vector< Variable >{variables[63]}, 5 );
-	  constraint_fix_values.emplace_back( vector< Variable >{variables[66]}, 6 );
-	  constraint_fix_values.emplace_back( vector< Variable >{variables[69]}, 3 );
-	  constraint_fix_values.emplace_back( vector< Variable >{variables[70]}, 4 );
-	  constraint_fix_values.emplace_back( vector< Variable >{variables[72]}, 3 );
-	  constraint_fix_values.emplace_back( vector< Variable >{variables[73]}, 4 );
-	  constraint_fix_values.emplace_back( vector< Variable >{variables[75]}, 2 );
-  }
-  
-  vector<variant<AllDiff,FixValue>> constraints;
-
-  std::copy( constraint_rows.begin(),
-             constraint_rows.end(),
-             std::back_inserter( constraints ) );
-
-  std::copy( constraint_columns.begin(),
-             constraint_columns.end(),
-             std::back_inserter( constraints ) );
-
-  std::copy( constraint_squares.begin(),
-             constraint_squares.end(),
-             std::back_inserter( constraints ) );
-
-  if( hard_instance )
-	  std::copy( constraint_fix_values.begin(),
-	             constraint_fix_values.end(),
-	             std::back_inserter( constraints ) );
-	  
-
   shared_ptr<Print> printer = make_shared<PrintSudoku>();
-  
-  //cout << "Constraint size: " << constraints.size() << "\n";
-  
-  // true means it is a permutation problem
-  Solver solver( variables, constraints, true );
+
+  FactorySudoku factory( variables, size_side_small_square, hard_instance );
+  Solver solver( factory, true );
 
   double error = 0.0;
 	vector<int> solution( variables.size(), 0 );

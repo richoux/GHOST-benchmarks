@@ -1,7 +1,7 @@
 #include <numeric>
 #include <iostream>
 
-#include "objective_maxgrounddps.hpp"
+#include "objective_maxground_dps.hpp"
 
 using namespace std;
 

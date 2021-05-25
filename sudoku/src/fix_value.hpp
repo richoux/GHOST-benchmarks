@@ -19,6 +19,7 @@ class FixValue : public Constraint
 	                           const vector<int>& candidate_values ) const override;
 	
 	void update_constraint( const vector<Variable>& variables, unsigned int variable_id, int new_value ); 
+
 public:
 	FixValue( const vector< Variable >& variables, int value );
 };
