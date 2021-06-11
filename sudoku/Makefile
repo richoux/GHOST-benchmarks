@@ -3,10 +3,11 @@ EXEC=sudoku
 # Compiler flags
 MYFLAGS=
 CXXFIRSTFLAGS= -O3 -W -Wall -Wextra -Wno-sign-compare -Wno-unused-parameter
-CXXFIRSTFLAGSDEBUG= -g -O0 -DDEBUG -W -Wall -Wextra -Wno-sign-compare -Wno-unused-parameter -fsanitize=address
+#CXXFIRSTFLAGSDEBUG= -g -O0 -DDEBUG -W -Wall -Wextra -Wno-sign-compare -Wno-unused-parameter -fsanitize=address -v -da -Q
+CXXFIRSTFLAGSDEBUG= -g -O0 -DDEBUG -W -Wall -Wextra -Wno-sign-compare -Wno-unused-parameter
 CXXFIRSTFLAGSINFO= -g -O2 -W -Wall -Wextra -Wno-sign-compare -Wno-unused-parameter
 #LDFLAGSDEBUG=-pthread -lghost_staticd -fsanitize=address -static-libasan
-LDFLAGSDEBUG=-pthread -lghostd -fsanitize=address
+LDFLAGSDEBUG=-pthread -lghost_staticd
 LDFLAGSINFO=-pthread -lghost
 
 UNAME_S := $(shell uname -s)

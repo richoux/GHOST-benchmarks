@@ -14,14 +14,14 @@ class FactorySudoku : public FactoryModel
 	int _instance_size;
 	int _side_size;
 	bool _hard_instance;
-	vector< vector< Variable > > _rows;
-  vector< vector< Variable > > _columns;
-  vector< vector< Variable > > _squares;
+	vector< vector<int> > _rows;
+  vector< vector<int> > _columns;
+  vector< vector<int> > _squares;
 
 public:
 	FactorySudoku( const std::vector<Variable>& variables, 
 	               int instance_size,
 	               bool hard_instance );
 	
-	std::shared_ptr<Model> make_model() override;
+	void declare_constraints() override;
 };
