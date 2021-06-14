@@ -1,4 +1,4 @@
-EXEC=magic-square_hamming magic-square_num
+EXEC=magic-square_num
 
 # Compiler flags
 MYFLAGS=
@@ -11,14 +11,14 @@ LDFLAGSDEBUG=-pthread -lghost_staticd -fsanitize=address,undefined,leak -static-
 UNAME_S := $(shell uname -s)
 ifeq ($(UNAME_S),Linux)
 	CXX=g++
-	CXXFLAGS= -std=c++2a $(CXXFIRSTFLAGS) $(MYFLAGS)
-	CXXFLAGSDEBUG= -std=c++2a $(CXXFIRSTFLAGSDEBUG) $(MYFLAGS)
+	CXXFLAGS= -std=c++17 $(CXXFIRSTFLAGS) $(MYFLAGS)
+	CXXFLAGSDEBUG= -std=c++17 $(CXXFIRSTFLAGSDEBUG) $(MYFLAGS)
 	LDFLAGS=-lghost_static -pthread
 endif
 ifeq ($(UNAME_S),Darwin)
 	CXX=clang++
-	CXXFLAGS= -std=c++2a  -stdlib=libc++ $(CXXFIRSTFLAGS) $(MYFLAGS)
-	CXXFLAGSDEBUG= -std=c++2a  -stdlib=libc++ $(CXXFIRSTFLAGSDEBUG) $(MYFLAGS)
+	CXXFLAGS= -std=c++17  -stdlib=libc++ $(CXXFIRSTFLAGS) $(MYFLAGS)
+	CXXFLAGSDEBUG= -std=c++17  -stdlib=libc++ $(CXXFIRSTFLAGSDEBUG) $(MYFLAGS)
 	LDFLAGS=-lghost_static -lc++ -lc++abi -pthread
 endif
 
@@ -45,14 +45,11 @@ vpath %.o $(OBJDIR)
 
 # Rules
 
-all: $(BINDIR)/magic-square_hamming $(BINDIR)/magic-square_num
+all: $(BINDIR)/magic-square_num
 
 debug: CXXFLAGS=$(CXXFLAGSDEBUG)
 debug: LDFLAGS=$(LDFLAGSDEBUG)
-debug: $(BINDIR)/magic-square_hamming $(BINDIR)/magic-square_num
-
-$(BINDIR)/magic-square_hamming: $(OBJDIR)/magic-square_hamming.o $(OBJDIR)/factory_ms.o $(OBJDIR)/print_ms.o $(OBJDIR)/linear-eq_hamming.o
-	$(CXX) -o $@ $^ $(LDFLAGS) -DHAMMING
+debug: $(BINDIR)/magic-square_num
 
 $(BINDIR)/magic-square_num: $(OBJDIR)/magic-square_num.o $(OBJDIR)/factory_ms.o $(OBJDIR)/print_ms.o $(OBJDIR)/linear-eq_num.o
 	$(CXX) -o $@ $^ $(LDFLAGS)
@@ -60,17 +57,11 @@ $(BINDIR)/magic-square_num: $(OBJDIR)/magic-square_num.o $(OBJDIR)/factory_ms.o 
 $(OBJDIR)/magic-square_num.o: $(OBJDIR)/factory_ms.o $(OBJDIR)/print_ms.o $(OBJDIR)/linear-eq_num.o
 	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -c $(SRCDIR)/magic_square.cpp -o $@
 
-$(OBJDIR)/magic-square_hamming.o: $(OBJDIR)/factory_ms.o $(OBJDIR)/print_ms.o $(OBJDIR)/linear-eq_hamming.o
-	$(CXX) $(CXXFLAGS) -DHAMMING -I$(HPPDIR) -c $(SRCDIR)/magic_square.cpp -o $@
-
 $(OBJDIR)/factory_ms.o:
 	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -c $(SRCDIR)/factory_ms.cpp -o $@
 
 $(OBJDIR)/print_ms.o:
 	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -c $(SRCDIR)/print_ms.cpp -o $@
-
-$(OBJDIR)/linear-eq_hamming.o:
-	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -c $(SRCDIR)/linear-eq_hamming.cpp -o $@
 
 $(OBJDIR)/linear-eq_num.o:
 	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -c $(SRCDIR)/linear-eq_num.cpp -o $@

@@ -1,38 +1,57 @@
 #include "factory_ms.hpp"
 
-FactoryMagicSquare::FactoryMagicSquare( const std::vector<Variable>& variables, 
-                                        int instance_size )
-	: FactoryModel( variables ),
+FactoryMagicSquare::FactoryMagicSquare( int instance_size )
+	: FactoryModel(),
 	  _instance_size( instance_size ),
 	  _nb_vars( instance_size * instance_size),
 	  _constant( instance_size * ( _nb_vars + 1 ) / 2 ),
-	  _rows( vector< vector< Variable > >( instance_size ) ),
-	  _columns( vector< vector< Variable > >( instance_size ) ),
-	  _diagonals( vector< vector< Variable > >( 2 ) )	  
+	  _rows( vector< vector<int> >( instance_size ) ),
+	  _columns( vector< vector<int> >( instance_size ) ),
+	  _diagonals( vector< vector<int> >( 2 ) )	  
 {
 	// Prepare row variables
   for( int row = 0; row < _instance_size; ++row )
-	  std::copy_n( variables.begin() + ( row * _instance_size ),
-	               _instance_size,
-	               std::back_inserter( _rows[ row ] ) );
+	  for( int i = 0 ; i < _instance_size ; ++i )
+		  _rows[row].push_back( i + ( row * _instance_size ) );
   
   // Prepare column variables
   for( int col = 0; col < _instance_size; ++col )
 	  for( int row = 0; row < _instance_size; ++row )
-		  _columns[ col ].push_back( variables[ col + ( row * _instance_size ) ] );
+		  _columns[ col ].push_back( col + ( row * _instance_size ) );
 	  
   // Prepare square variables
   for( int row = 0; row < _instance_size; ++row )
   {
-	  _diagonals[ 0 ].push_back( variables[ row + ( row * _instance_size ) ] );
-	  _diagonals[ 1 ].push_back( variables[ _instance_size - 1 - row + ( row * _instance_size ) ] );
+	  _diagonals[ 0 ].push_back( row + ( row * _instance_size ) );
+	  _diagonals[ 1 ].push_back( _instance_size - 1 - row + ( row * _instance_size ) );
   }
 }
-	
-std::shared_ptr<Model> FactoryMagicSquare::make_model()
+
+void FactoryMagicSquare::declare_variables()
 {
-	constraints.clear();
+  // Create variables, with domains starting from value 1
+	for( int i = 0; i < _nb_vars; ++i )
+		variables.emplace_back( std::string("v") + std::to_string(i), 1, _nb_vars );
 	
+	if( _instance_size != 8 )
+		for( int i = 0; i < _nb_vars; ++i )
+			variables[i].set_value( i + 1 );
+	else
+	{
+		int i = 0;
+		variables[i++].set_value( 51 ); variables[i++].set_value( 63 ); variables[i++].set_value( 61 ); variables[i++].set_value( 44 ); variables[i++].set_value( 17 ); variables[i++].set_value( 37 ); variables[i++].set_value( 30 );  variables[i++].set_value( 6 ); 
+	  variables[i++].set_value( 21 ); variables[i++].set_value( 62 ); variables[i++].set_value( 35 ); variables[i++].set_value( 28 ); variables[i++].set_value( 12 ); variables[i++].set_value( 45 ); variables[i++].set_value( 5 );  variables[i++].set_value( 60 ); 
+	  variables[i++].set_value( 54 ); variables[i++].set_value( 13 ); variables[i++].set_value( 11 ); variables[i++].set_value( 36 ); variables[i++].set_value( 20 ); variables[i++].set_value( 29 ); variables[i++].set_value( 46 );  variables[i++].set_value( 10 ); 
+	  variables[i++].set_value( 49 ); variables[i++].set_value( 1 ); variables[i++].set_value( 3 ); variables[i++].set_value( 40 ); variables[i++].set_value( 48 ); variables[i++].set_value( 64 ); variables[i++].set_value( 15 );  variables[i++].set_value( 43 ); 
+	  variables[i++].set_value( 9 ); variables[i++].set_value( 47 ); variables[i++].set_value( 16 ); variables[i++].set_value( 2 ); variables[i++].set_value( 26 ); variables[i++].set_value( 31 ); variables[i++].set_value( 22 );  variables[i++].set_value( 34 ); 
+	  variables[i++].set_value( 24 ); variables[i++].set_value( 42 ); variables[i++].set_value( 50 ); variables[i++].set_value( 7 ); variables[i++].set_value( 53 ); variables[i++].set_value( 27 ); variables[i++].set_value( 56 );  variables[i++].set_value( 58 ); 
+	  variables[i++].set_value( 32 ); variables[i++].set_value( 25 ); variables[i++].set_value( 18 ); variables[i++].set_value( 39 ); variables[i++].set_value( 33 ); variables[i++].set_value( 14 ); variables[i++].set_value( 55 );  variables[i++].set_value( 38 ); 
+	  variables[i++].set_value( 23 ); variables[i++].set_value( 52 ); variables[i++].set_value( 4 ); variables[i++].set_value( 59 ); variables[i++].set_value( 19 ); variables[i++].set_value( 8 ); variables[i++].set_value( 41 );  variables[i++].set_value( 57 ); 
+	}
+}
+
+void FactoryMagicSquare::declare_constraints()
+{
 	for( int i = 0; i < _instance_size; ++i )
   {
 	  constraints.emplace_back( make_shared<LinearEq>( _rows[i], _constant ) );
@@ -41,6 +60,4 @@ std::shared_ptr<Model> FactoryMagicSquare::make_model()
   
 	constraints.emplace_back( make_shared<LinearEq>( _diagonals[0], _constant ) );
 	constraints.emplace_back( make_shared<LinearEq>( _diagonals[1], _constant ) );
-
-  return make_shared<Model>( variables, constraints, objective );  
 }

@@ -93,87 +93,36 @@ void check_solution( const vector<int>& solution )
 
 int main( int argc, char **argv )
 {
-	int size_side_small_square;
+	int instance_size;
 	bool hard_instance = false;
 
 	bool parallel = false;
 	int cores = -1;
 	
 	if( argc == 1 )
-		size_side_small_square = 3;
+		instance_size = 3;
 	else
 	{
-		size_side_small_square = std::stoi( argv[1] );
+		instance_size = std::stoi( argv[1] );
 		if( argc >= 3 )
 			parallel = ( std::stoi( argv[2] ) != 0 );
 		if( argc == 4 && parallel )
 			cores = std::stoi( argv[3] );
 	}
 
-	if( size_side_small_square < 3 )
+	if( instance_size < 3 )
 	{
-		size_side_small_square = 3;
+		instance_size = 3;
 		hard_instance = true;
 	}
 	
-	int size_side = size_side_small_square * size_side_small_square;
-	int nb_vars = size_side * size_side;
-  
-  // Create variables
-  vector< Variable > variables;
-  for( int i = 0; i < nb_vars; ++i )
-		variables.emplace_back( std::string("v") + std::to_string(i), 1, size_side );
-
-  if( hard_instance )
-  {
-	  /*
-	    0 0 0  0 0 3  0 1 7 
-	    0 1 5  0 0 9  0 0 8 
-	    0 6 0  0 0 0  0 0 0 
-
-	    1 0 0  0 0 7  0 0 0 
-	    0 0 9  0 0 0  2 0 0 
-	    0 0 0  5 0 0  0 0 4 
-
-	    0 0 0  0 0 0  0 2 0 
-	    5 0 0  6 0 0  3 4 0 
-	    3 4 0  2 0 0  0 0 0
-	    *
-	    * Solution:
-	    2 9 4  8 6 3  5 1 7 
-	    7 1 5  4 2 9  6 3 8 
-	    8 6 3  7 5 1  4 9 2 
-
-	    1 5 2  9 4 7  8 6 3 
-	    4 7 9  3 8 6  2 5 1 
-	    6 3 8  5 1 2  9 7 4 
-
-	    9 8 6  1 3 4  7 2 5 
-	    5 2 1  6 7 8  3 4 9 
-	    3 4 7  2 9 5  1 8 6
-	   */
-	  int i = 0;
-	  variables[i++].set_value(2); variables[i++].set_value(4); variables[i++].set_value(5); variables[i++].set_value(6); variables[i++].set_value(8); variables[i++].set_value(3); variables[i++].set_value(9); variables[i++].set_value(1); variables[i++].set_value(7);
-	  variables[i++].set_value(2); variables[i++].set_value(1); variables[i++].set_value(5); variables[i++].set_value(3); variables[i++].set_value(4); variables[i++].set_value(9); variables[i++].set_value(6); variables[i++].set_value(7); variables[i++].set_value(8);
-	  variables[i++].set_value(1); variables[i++].set_value(6); variables[i++].set_value(2); variables[i++].set_value(3); variables[i++].set_value(4); variables[i++].set_value(5); variables[i++].set_value(7); variables[i++].set_value(8); variables[i++].set_value(9);
-	  variables[i++].set_value(1); variables[i++].set_value(2); variables[i++].set_value(3); variables[i++].set_value(4); variables[i++].set_value(5); variables[i++].set_value(7); variables[i++].set_value(6); variables[i++].set_value(8); variables[i++].set_value(9);
-	  variables[i++].set_value(1); variables[i++].set_value(3); variables[i++].set_value(9); variables[i++].set_value(4); variables[i++].set_value(5); variables[i++].set_value(6); variables[i++].set_value(2); variables[i++].set_value(7); variables[i++].set_value(8);
-	  variables[i++].set_value(1); variables[i++].set_value(2); variables[i++].set_value(3); variables[i++].set_value(5); variables[i++].set_value(6); variables[i++].set_value(7); variables[i++].set_value(8); variables[i++].set_value(9); variables[i++].set_value(4);
-	  variables[i++].set_value(1); variables[i++].set_value(3); variables[i++].set_value(4); variables[i++].set_value(5); variables[i++].set_value(6); variables[i++].set_value(7); variables[i++].set_value(8); variables[i++].set_value(2); variables[i++].set_value(9);
-	  variables[i++].set_value(5); variables[i++].set_value(1); variables[i++].set_value(2); variables[i++].set_value(6); variables[i++].set_value(7); variables[i++].set_value(8); variables[i++].set_value(3); variables[i++].set_value(4); variables[i++].set_value(9);
-	  variables[i++].set_value(3); variables[i++].set_value(4); variables[i++].set_value(1); variables[i++].set_value(2); variables[i++].set_value(5); variables[i++].set_value(6); variables[i++].set_value(7); variables[i++].set_value(8); variables[i++].set_value(9);
-  }
-  else
-	  for( int i = 0; i < nb_vars; ++i )
-		  variables[i].set_value( ( i % size_side ) + 1 );
-	  
   shared_ptr<Print> printer = make_shared<PrintSudoku>();
 
-  FactorySudoku factory( variables, size_side_small_square, hard_instance );
+  FactorySudoku factory( instance_size, hard_instance );
   Solver solver( factory, true );
 
-  double error = 0.0;
-	vector<int> solution( variables.size(), 0 );
+  double error;
+  vector<int> solution;
 
 	Options options;
 	options.print = printer;

@@ -1,9 +1,8 @@
 #include "factory_sudoku.hpp"
 
-FactorySudoku::FactorySudoku( const std::vector<Variable>& variables, 
-                              int instance_size,
+FactorySudoku::FactorySudoku( int instance_size,
                               bool hard_instance )
-	: FactoryModel( variables ),
+	: FactoryModel(),
 	  _instance_size( instance_size ),
 	  _side_size( instance_size * instance_size ),
 	  _hard_instance( hard_instance ),
@@ -11,6 +10,57 @@ FactorySudoku::FactorySudoku( const std::vector<Variable>& variables,
 	  _columns( vector< vector<int> >( _side_size ) ),
 	  _squares( vector< vector<int> >( _side_size ) )
 { }
+
+void FactorySudoku::declare_variables()
+{
+	// Create variables
+	int nb_vars = _side_size*_side_size;
+	for( int i = 0; i < nb_vars ; ++i )
+		variables.emplace_back( std::string("v") + std::to_string(i), 1, _side_size );
+
+	if( _hard_instance )
+	{
+		/*
+		  0 0 0  0 0 3  0 1 7 
+		  0 1 5  0 0 9  0 0 8 
+		  0 6 0  0 0 0  0 0 0 
+
+		  1 0 0  0 0 7  0 0 0 
+		  0 0 9  0 0 0  2 0 0 
+		  0 0 0  5 0 0  0 0 4 
+
+		  0 0 0  0 0 0  0 2 0 
+		  5 0 0  6 0 0  3 4 0 
+		  3 4 0  2 0 0  0 0 0
+		  *
+		  * Solution:
+		  2 9 4  8 6 3  5 1 7 
+		  7 1 5  4 2 9  6 3 8 
+		  8 6 3  7 5 1  4 9 2 
+
+		  1 5 2  9 4 7  8 6 3 
+		  4 7 9  3 8 6  2 5 1 
+		  6 3 8  5 1 2  9 7 4 
+
+		  9 8 6  1 3 4  7 2 5 
+		  5 2 1  6 7 8  3 4 9 
+		  3 4 7  2 9 5  1 8 6
+		*/
+		int i = 0;
+		variables[i++].set_value(2); variables[i++].set_value(4); variables[i++].set_value(5); variables[i++].set_value(6); variables[i++].set_value(8); variables[i++].set_value(3); variables[i++].set_value(9); variables[i++].set_value(1); variables[i++].set_value(7);
+		variables[i++].set_value(2); variables[i++].set_value(1); variables[i++].set_value(5); variables[i++].set_value(3); variables[i++].set_value(4); variables[i++].set_value(9); variables[i++].set_value(6); variables[i++].set_value(7); variables[i++].set_value(8);
+		variables[i++].set_value(1); variables[i++].set_value(6); variables[i++].set_value(2); variables[i++].set_value(3); variables[i++].set_value(4); variables[i++].set_value(5); variables[i++].set_value(7); variables[i++].set_value(8); variables[i++].set_value(9);
+		variables[i++].set_value(1); variables[i++].set_value(2); variables[i++].set_value(3); variables[i++].set_value(4); variables[i++].set_value(5); variables[i++].set_value(7); variables[i++].set_value(6); variables[i++].set_value(8); variables[i++].set_value(9);
+		variables[i++].set_value(1); variables[i++].set_value(3); variables[i++].set_value(9); variables[i++].set_value(4); variables[i++].set_value(5); variables[i++].set_value(6); variables[i++].set_value(2); variables[i++].set_value(7); variables[i++].set_value(8);
+		variables[i++].set_value(1); variables[i++].set_value(2); variables[i++].set_value(3); variables[i++].set_value(5); variables[i++].set_value(6); variables[i++].set_value(7); variables[i++].set_value(8); variables[i++].set_value(9); variables[i++].set_value(4);
+		variables[i++].set_value(1); variables[i++].set_value(3); variables[i++].set_value(4); variables[i++].set_value(5); variables[i++].set_value(6); variables[i++].set_value(7); variables[i++].set_value(8); variables[i++].set_value(2); variables[i++].set_value(9);
+		variables[i++].set_value(5); variables[i++].set_value(1); variables[i++].set_value(2); variables[i++].set_value(6); variables[i++].set_value(7); variables[i++].set_value(8); variables[i++].set_value(3); variables[i++].set_value(4); variables[i++].set_value(9);
+		variables[i++].set_value(3); variables[i++].set_value(4); variables[i++].set_value(1); variables[i++].set_value(2); variables[i++].set_value(5); variables[i++].set_value(6); variables[i++].set_value(7); variables[i++].set_value(8); variables[i++].set_value(9);
+	}
+	else
+		for( int i = 0; i < nb_vars; ++i )
+			variables[i].set_value( ( i % _side_size ) + 1 );
+}
 
 void FactorySudoku::declare_constraints()
 {

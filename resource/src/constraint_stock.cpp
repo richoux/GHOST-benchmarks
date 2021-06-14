@@ -9,15 +9,15 @@ using namespace ghost;
 Stock::Stock( const vector<Variable>& variables,
               int quantity,
               ResourceType type,
-              const vector< UnitData >& unit_data )
+              shared_ptr<AuxiliaryData> auxiliary_data )
 	: Constraint( variables ),
     _quantity( quantity ),
     _type( type ),
-	  _unit_data( unit_data ),
+	  _unit_data( dynamic_pointer_cast<Data>(auxiliary_data)->unit_data ),
 	  _current_diff( 0 )
 { }
 
-double Stock::required_error( const vector< Variable >& variables ) const
+double Stock::required_error( const vector<Variable*>& variables ) const
 {
   double sum = 0.;
   double cost_value;
@@ -39,7 +39,7 @@ double Stock::required_error( const vector< Variable >& variables ) const
       throw 0;
     }
     
-    sum += ( variables[i].get_value() * cost_value );
+    sum += ( variables[i]->get_value() * cost_value );
   }
 
   _current_diff = sum - _quantity;
@@ -47,8 +47,8 @@ double Stock::required_error( const vector< Variable >& variables ) const
   return std::max( 0., _current_diff );
 }
 
-double Stock::expert_delta_error( const vector<Variable>& variables,
-                                  const vector<unsigned int>& variable_indexes,
+double Stock::expert_delta_error( const vector<Variable*>& variables,
+                                  const vector<int>& variable_indexes,
                                   const vector<int>& candidate_values ) const
 {
 	double diff = _current_diff;
@@ -71,13 +71,13 @@ double Stock::expert_delta_error( const vector<Variable>& variables,
       throw 0;
     }
 
-		diff += ( cost_value * ( candidate_values[ i ] - variables[ variable_indexes[i] ].get_value() ) );
+		diff += ( cost_value * ( candidate_values[ i ] - variables[ variable_indexes[i] ]->get_value() ) );
 	}
 	
 	return std::max( 0., diff ) - std::max( 0., _current_diff );
 } 
 
-void Stock::update_constraint( const vector<Variable>& variables, unsigned int variable_index, int new_value ) 
+void Stock::expert_update_if_delta_error_defined( const vector<Variable*>& variables, int variable_index, int new_value ) 
 {
   double cost_value;
 
@@ -96,6 +96,6 @@ void Stock::update_constraint( const vector<Variable>& variables, unsigned int v
       throw 0;
     }
 
-  _current_diff += ( cost_value * ( new_value - variables[ variable_index ].get_value() ) );
+  _current_diff += ( cost_value * ( new_value - variables[ variable_index ]->get_value() ) );
 }
 

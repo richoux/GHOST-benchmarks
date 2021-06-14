@@ -3,7 +3,7 @@
 #include <sstream>
 #include <vector>
 
-#include "ghost/misc/print.hpp"
+#include "ghost/print.hpp"
 #include "ghost/variable.hpp"
 
 using namespace std;

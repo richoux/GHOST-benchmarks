@@ -1,7 +1,7 @@
 #pragma once
 
-#include <memory>
-#include <ghost/model.hpp>
+#include <vector>
+#include <ghost/factory_model.hpp>
 
 #include "unit_data.hpp"
 #include "constraint_stock.hpp"
@@ -12,10 +12,37 @@ using namespace std;
 
 class FactoryResource : public FactoryModel
 {
-	vector< UnitData > _unit_data;
+protected:
+	int _supply;
 	
 public:
-	FactoryResource( const vector<Variable>& variables, const vector< UnitData >& unit_data );
-	
-	shared_ptr<Model> make_model() override;
+	FactoryResource( int supply );
+	virtual ~FactoryResource() = default;
+
+	void declare_constraints() override;
+	void declare_objective() override;
+};
+
+class FactoryTerran : public FactoryResource
+{
+public:
+	FactoryTerran( int supply );
+	void declare_variables() override;
+	void declare_auxiliary_data() override;
+};
+
+class FactoryProtoss : public FactoryResource
+{
+public:
+	FactoryProtoss( int supply );
+	void declare_variables() override;
+	void declare_auxiliary_data() override;
+};
+
+class FactoryZerg : public FactoryResource
+{
+public:
+	FactoryZerg( int supply );
+	void declare_variables() override;
+	void declare_auxiliary_data() override;
 };

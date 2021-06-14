@@ -1,7 +1,6 @@
 #pragma once
 
-#include <memory>
-#include <ghost/model.hpp>
+#include <ghost/factory_model.hpp>
 
 #include "all-diff.hpp"
 #include "fix_value.hpp"
@@ -19,9 +18,9 @@ class FactorySudoku : public FactoryModel
   vector< vector<int> > _squares;
 
 public:
-	FactorySudoku( const std::vector<Variable>& variables, 
-	               int instance_size,
+	FactorySudoku( int instance_size,
 	               bool hard_instance );
-	
+
+	void declare_variables() override;
 	void declare_constraints() override;
 };
