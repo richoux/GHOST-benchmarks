@@ -5,6 +5,7 @@
 #include <vector>
 #include <algorithm>
 #include <cmath>
+#include <chrono>
 
 #include <ghost/solver.hpp>
 
@@ -13,6 +14,7 @@
 
 using namespace ghost;
 using namespace std;
+using namespace std::literals::chrono_literals;
 
 bool alldiff_concept( const vector<int>& var )
 {
@@ -136,19 +138,20 @@ int main( int argc, char **argv )
 		options.number_threads = static_cast<unsigned int>( cores );
 	
 	// 10min
-	// solver.solve( error, solution, 600000000, options );
+	// solver.solve( error, solution, 600000, options );
 	
 	// 2min
-	// solver.solve( error, solution, 120000000, options );
+	// solver.solve( error, solution, 120000, options );
 
 	// 30s
-	// solver.solve( error, solution, 30000000, options );
+	// solver.solve( error, solution, 30000, options );
 	
   // 5s
-  solver.solve( error, solution, 5000000, options );		
+  //solver.solve( error, solution, 5000, options );		
+  solver.solve( error, solution, 5s, options );		
 
 	// 0.5s
-	//solver.solve( error, solution, 500000, options );
+	//solver.solve( error, solution, 500, options );
 
 	cout << "Error: " << error << "\n";
 	//print_solution( solution );

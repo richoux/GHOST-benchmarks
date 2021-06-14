@@ -5,7 +5,7 @@
 #include <string>
 
 #include <vector>
-// #include <functional>
+#include <chrono>
 
 #include <ghost/solver.hpp>
 
@@ -14,6 +14,7 @@
 
 using namespace ghost;
 using namespace std;
+using namespace std::literals::chrono_literals;
 
 //////////////////////////////////////////////////////////////////////////////
 //
@@ -127,7 +128,7 @@ int main(int argc, char **argv)
     double total = 0.;
 
     for(int i = 0 ; i < runs ; ++i )
-	    if( solver_p.solve( cost_p, solution_p, timeout * 1000, options ) )
+	    if( solver_p.solve( cost_p, solution_p, timeout, options ) )
       {
 	      ++count;
 	      total += cost_p;
@@ -165,7 +166,7 @@ int main(int argc, char **argv)
     double total = 0.;
     
     for(int i = 0 ; i < runs ; ++i )
-      if( solver_t.solve( cost_t, solution_t, timeout * 1000, options ) )
+	    if( solver_t.solve( cost_t, solution_t, timeout, options ) )
       {
 	      ++count;
 	      total += cost_t;
@@ -204,7 +205,7 @@ int main(int argc, char **argv)
     double total = 0.;
   
     for(int i = 0 ; i < runs ; ++i )
-      if( solver_z.solve( cost_z, solution_z, timeout * 1000, options ) )
+	    if( solver_z.solve( cost_z, solution_z, timeout, options ) )
       {
 	      ++count;
 	      total += cost_z;

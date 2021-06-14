@@ -5,7 +5,7 @@
 #include <vector>
 #include <algorithm>
 #include <cmath>
-
+#include <chrono>
 #include <ghost/solver.hpp>
 
 #include "factory_ms.hpp"
@@ -13,6 +13,7 @@
 
 using namespace ghost;
 using namespace std;
+using namespace std::literals::chrono_literals;
 
 void check_solution( const vector<int>& solution, int constant )
 {
@@ -129,16 +130,17 @@ int main( int argc, char **argv )
   vector<int> solution;
 
 	// 2min
-	//solver.solve( error, solution, 120000000 );
+	//solver.solve( error, solution, 120000 );
 
 	// 30s
-	// solver.solve( error, solution, 30000000 );
+	// solver.solve( error, solution, 30000 );
 	
   // 5s
-  solver.solve( error, solution, 5000000, options );
+  //solver.solve( error, solution, 5000, options );
+  solver.solve( error, solution, 5s, options );
 
 	// 0.5s
-	//solver.solve( error, solution, 500000 );
+	//solver.solve( error, solution, 500 );
 
 	cout << "Error: " << error << "\n";
 	check_solution( solution, order * ( order * order + 1 ) / 2 );
