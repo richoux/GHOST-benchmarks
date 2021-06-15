@@ -3,6 +3,9 @@
 #include <ghost/factory_model.hpp>
 
 #include "linear-eq_num.hpp"
+#if defined MINMS
+#include "min_sum_corners.hpp"
+#endif
 
 using namespace ghost;
 using namespace std;
@@ -21,4 +24,7 @@ public:
 	
 	void declare_variables() override;
 	void declare_constraints() override;
+#if defined MINMS
+	void declare_objective() override;
+#endif	
 };

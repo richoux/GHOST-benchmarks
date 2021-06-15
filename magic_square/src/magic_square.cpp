@@ -129,18 +129,7 @@ int main( int argc, char **argv )
   double error;
   vector<int> solution;
 
-	// 2min
-	//solver.solve( error, solution, 120000 );
-
-	// 30s
-	// solver.solve( error, solution, 30000 );
-	
-  // 5s
-  //solver.solve( error, solution, 5000, options );
-  solver.solve( error, solution, 5s, options );
-
-	// 0.5s
-	//solver.solve( error, solution, 500 );
+  solver.solve( error, solution, 100ms, options );
 
 	cout << "Error: " << error << "\n";
 	check_solution( solution, order * ( order * order + 1 ) / 2 );

@@ -1,4 +1,4 @@
-EXEC=magic-square_num
+EXEC=magic_square min_magic_square
 
 # Compiler flags
 MYFLAGS=
@@ -45,20 +45,29 @@ vpath %.o $(OBJDIR)
 
 # Rules
 
-all: $(BINDIR)/magic-square_num
+all: $(BINDIR)/magic_square $(BINDIR)/min_magic_square
 
 debug: CXXFLAGS=$(CXXFLAGSDEBUG)
 debug: LDFLAGS=$(LDFLAGSDEBUG)
-debug: $(BINDIR)/magic-square_num
+debug: $(BINDIR)/magic_square $(BINDIR)/min_magic_square
 
-$(BINDIR)/magic-square_num: $(OBJDIR)/magic-square_num.o $(OBJDIR)/factory_ms.o $(OBJDIR)/print_ms.o $(OBJDIR)/linear-eq_num.o
+$(BINDIR)/magic_square: $(OBJDIR)/magic_square.o $(OBJDIR)/factory_ms.o $(OBJDIR)/print_ms.o $(OBJDIR)/linear-eq_num.o
 	$(CXX) -o $@ $^ $(LDFLAGS)
 
-$(OBJDIR)/magic-square_num.o: $(OBJDIR)/factory_ms.o $(OBJDIR)/print_ms.o $(OBJDIR)/linear-eq_num.o
+$(BINDIR)/min_magic_square: $(OBJDIR)/min_magic_square.o $(OBJDIR)/min_factory_ms.o $(OBJDIR)/print_ms.o $(OBJDIR)/linear-eq_num.o $(OBJDIR)/min_sum_corners.o
+	$(CXX) -o $@ $^ $(LDFLAGS)
+
+$(OBJDIR)/magic_square.o: $(OBJDIR)/factory_ms.o $(OBJDIR)/print_ms.o $(OBJDIR)/linear-eq_num.o
+	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -c $(SRCDIR)/magic_square.cpp -o $@
+
+$(OBJDIR)/min_magic_square.o: $(OBJDIR)/min_factory_ms.o $(OBJDIR)/print_ms.o $(OBJDIR)/linear-eq_num.o $(OBJDIR)/min_sum_corners.o
 	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -c $(SRCDIR)/magic_square.cpp -o $@
 
 $(OBJDIR)/factory_ms.o:
 	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -c $(SRCDIR)/factory_ms.cpp -o $@
+
+$(OBJDIR)/min_factory_ms.o:
+	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -DMINMS -c $(SRCDIR)/factory_ms.cpp -o $@
 
 $(OBJDIR)/print_ms.o:
 	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -c $(SRCDIR)/print_ms.cpp -o $@
@@ -66,11 +75,8 @@ $(OBJDIR)/print_ms.o:
 $(OBJDIR)/linear-eq_num.o:
 	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -c $(SRCDIR)/linear-eq_num.cpp -o $@
 
-# %.o: %.cpp
-# 	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -c $< -o $@
-
-# $(OBJDIR)/%.o: %.cpp
-# 	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -c $< -o $@
+$(OBJDIR)/min_sum_corners.o:
+	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -c $(SRCDIR)/min_sum_corners.cpp -o $@
 
 .PHONY: clean
 

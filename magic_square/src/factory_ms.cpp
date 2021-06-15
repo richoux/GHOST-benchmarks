@@ -61,3 +61,10 @@ void FactoryMagicSquare::declare_constraints()
 	constraints.emplace_back( make_shared<LinearEq>( _diagonals[0], _constant ) );
 	constraints.emplace_back( make_shared<LinearEq>( _diagonals[1], _constant ) );
 }
+
+#if defined MINMS
+void FactoryMagicSquare::declare_objective()
+{
+	objective = std::make_shared<MinCorners>( variables );
+}
+#endif
