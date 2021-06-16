@@ -9,7 +9,7 @@
 
 #include <ghost/solver.hpp>
 
-#include "factory_resource.hpp"
+#include "builder_resource.hpp"
 #include "print_resource.hpp"
 
 using namespace ghost;
@@ -118,8 +118,8 @@ int main(int argc, char **argv)
   
   if( race == "protoss" )
   {
-    FactoryProtoss factory_p( SUPPLY );
-    Solver solver_p( factory_p );
+    BuilderProtoss builder_p( SUPPLY );
+    Solver solver_p( builder_p );
     
     double cost_p;
     vector<int> solution_p;
@@ -156,8 +156,8 @@ int main(int argc, char **argv)
   ////////////
   if( race == "terran" )
   {
-    FactoryTerran factory_t( SUPPLY );
-    Solver solver_t( factory_t );
+    BuilderTerran builder_t( SUPPLY );
+    Solver solver_t( builder_t );
     
     double cost_t;
     vector<int> solution_t;
@@ -195,8 +195,8 @@ int main(int argc, char **argv)
 
   if( race == "zerg" )
   {
-    FactoryZerg factory_z( SUPPLY );
-    Solver solver_z( factory_z );
+    BuilderZerg builder_z( SUPPLY );
+    Solver solver_z( builder_z );
     
     double cost_z;
     vector<int> solution_z;

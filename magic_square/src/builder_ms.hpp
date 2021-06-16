@@ -1,6 +1,6 @@
 #pragma once
 
-#include <ghost/factory_model.hpp>
+#include <ghost/model_builder.hpp>
 
 #include "linear-eq_num.hpp"
 #if defined MINMS
@@ -10,7 +10,7 @@
 using namespace ghost;
 using namespace std;
 
-class FactoryMagicSquare : public FactoryModel
+class BuilderMagicSquare : public ModelBuilder
 {
 	int _instance_size;
 	int _nb_vars;
@@ -20,7 +20,7 @@ class FactoryMagicSquare : public FactoryModel
   vector< vector<int> > _diagonals;
 
 public:
-	FactoryMagicSquare( int instance_size );
+	BuilderMagicSquare( int instance_size );
 	
 	void declare_variables() override;
 	void declare_constraints() override;

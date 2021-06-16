@@ -1,7 +1,7 @@
 #pragma once
 
 #include <vector>
-#include <ghost/factory_model.hpp>
+#include <ghost/model_builder.hpp>
 
 #include "unit_data.hpp"
 #include "constraint_stock.hpp"
@@ -10,39 +10,39 @@
 using namespace ghost;
 using namespace std;
 
-class FactoryResource : public FactoryModel
+class BuilderResource : public ModelBuilder
 {
 protected:
 	int _supply;
 	
 public:
-	FactoryResource( int supply );
-	virtual ~FactoryResource() = default;
+	BuilderResource( int supply );
+	virtual ~BuilderResource() = default;
 
 	void declare_constraints() override;
 	void declare_objective() override;
 };
 
-class FactoryTerran : public FactoryResource
+class BuilderTerran : public BuilderResource
 {
 public:
-	FactoryTerran( int supply );
+	BuilderTerran( int supply );
 	void declare_variables() override;
 	void declare_auxiliary_data() override;
 };
 
-class FactoryProtoss : public FactoryResource
+class BuilderProtoss : public BuilderResource
 {
 public:
-	FactoryProtoss( int supply );
+	BuilderProtoss( int supply );
 	void declare_variables() override;
 	void declare_auxiliary_data() override;
 };
 
-class FactoryZerg : public FactoryResource
+class BuilderZerg : public BuilderResource
 {
 public:
-	FactoryZerg( int supply );
+	BuilderZerg( int supply );
 	void declare_variables() override;
 	void declare_auxiliary_data() override;
 };

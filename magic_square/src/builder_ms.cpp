@@ -1,7 +1,7 @@
-#include "factory_ms.hpp"
+#include "builder_ms.hpp"
 
-FactoryMagicSquare::FactoryMagicSquare( int instance_size )
-	: FactoryModel(),
+BuilderMagicSquare::BuilderMagicSquare( int instance_size )
+	: ModelBuilder(),
 	  _instance_size( instance_size ),
 	  _nb_vars( instance_size * instance_size),
 	  _constant( instance_size * ( _nb_vars + 1 ) / 2 ),
@@ -27,7 +27,7 @@ FactoryMagicSquare::FactoryMagicSquare( int instance_size )
   }
 }
 
-void FactoryMagicSquare::declare_variables()
+void BuilderMagicSquare::declare_variables()
 {
   // Create variables, with domains starting from value 1
 	for( int i = 0; i < _nb_vars; ++i )
@@ -50,7 +50,7 @@ void FactoryMagicSquare::declare_variables()
 	}
 }
 
-void FactoryMagicSquare::declare_constraints()
+void BuilderMagicSquare::declare_constraints()
 {
 	for( int i = 0; i < _instance_size; ++i )
   {
@@ -63,7 +63,7 @@ void FactoryMagicSquare::declare_constraints()
 }
 
 #if defined MINMS
-void FactoryMagicSquare::declare_objective()
+void BuilderMagicSquare::declare_objective()
 {
 	objective = std::make_shared<MinCorners>( variables );
 }

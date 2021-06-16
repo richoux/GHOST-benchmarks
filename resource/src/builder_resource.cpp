@@ -1,30 +1,30 @@
 #include <numeric>
 #include <memory>
 
-#include "factory_resource.hpp"
+#include "builder_resource.hpp"
 
-FactoryResource::FactoryResource( int supply )
-	: FactoryModel(),
+BuilderResource::BuilderResource( int supply )
+	: ModelBuilder(),
 	  _supply( supply )
 { }
 	
-void FactoryResource::declare_constraints()
+void BuilderResource::declare_constraints()
 {
 	constraints.emplace_back( make_shared<Stock>( variables, 20000, ResourceType::Mineral, auxiliary_data ) );
 	constraints.emplace_back( make_shared<Stock>( variables, 14000, ResourceType::Gas, auxiliary_data ) );
 	constraints.emplace_back( make_shared<Stock>( variables, 380, ResourceType::Supply, auxiliary_data ) );
 }
 
-void FactoryResource::declare_objective()
+void BuilderResource::declare_objective()
 {
 	objective = make_shared<MaxGroundDPS>( variables, auxiliary_data );
 }
 
-FactoryTerran::FactoryTerran( int supply )
-	: FactoryResource( supply )
+BuilderTerran::BuilderTerran( int supply )
+	: BuilderResource( supply )
 { }
 
-void FactoryTerran::declare_variables()
+void BuilderTerran::declare_variables()
 {
 	variables.emplace_back( "Marine", 0, _supply + 1 );
 	variables.emplace_back( "Firebat", 0 , _supply + 1);
@@ -37,7 +37,7 @@ void FactoryTerran::declare_variables()
 	variables.emplace_back( "BattleCruiser", 0, _supply / 6 + 1 );
 }
 
-void FactoryTerran::declare_auxiliary_data()
+void BuilderTerran::declare_auxiliary_data()
 {
 	vector<UnitData> unit_data;
 	unit_data.emplace_back( 50, 0, 1., (6.0/15)*24 );
@@ -53,11 +53,11 @@ void FactoryTerran::declare_auxiliary_data()
 	auxiliary_data = make_shared<Data>( variables, unit_data );	
 }
 
-FactoryProtoss::FactoryProtoss( int supply )
-	: FactoryResource( supply )
+BuilderProtoss::BuilderProtoss( int supply )
+	: BuilderResource( supply )
 { }
 
-void FactoryProtoss::declare_variables()
+void BuilderProtoss::declare_variables()
 {
 	variables.emplace_back( "Zealot", 0, _supply / 2 + 1 );
 	variables.emplace_back( "Dragoon", 0, _supply / 2 + 1 );
@@ -66,7 +66,7 @@ void FactoryProtoss::declare_variables()
 	variables.emplace_back( "Scout", 0, _supply / 3 + 1 );
 }
 
-void FactoryProtoss::declare_auxiliary_data()
+void BuilderProtoss::declare_auxiliary_data()
 {
 	vector<UnitData> unit_data;
 	unit_data.emplace_back( 100, 0, 2., (16.0/22)*24 );
@@ -78,11 +78,11 @@ void FactoryProtoss::declare_auxiliary_data()
 	auxiliary_data = make_shared<Data>( variables, unit_data );
 }
 
-FactoryZerg::FactoryZerg( int supply )
-	: FactoryResource( supply )
+BuilderZerg::BuilderZerg( int supply )
+	: BuilderResource( supply )
 { }
 
-void FactoryZerg::declare_variables()
+void BuilderZerg::declare_variables()
 {
 	variables.emplace_back( "Zergling", 0, _supply * 2 + 1 );
 	variables.emplace_back( "Hydralisk", 0, _supply + 1 );
@@ -92,7 +92,7 @@ void FactoryZerg::declare_variables()
 	variables.emplace_back( "Guardian", 0, _supply / 2 + 1 );
 }
 
-void FactoryZerg::declare_auxiliary_data()
+void BuilderZerg::declare_auxiliary_data()
 {
 	vector<UnitData> unit_data;
 	unit_data.emplace_back( 25, 0, 0.5, 15.0 );

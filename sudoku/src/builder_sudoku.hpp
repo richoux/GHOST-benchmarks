@@ -1,6 +1,6 @@
 #pragma once
 
-#include <ghost/factory_model.hpp>
+#include <ghost/model_builder.hpp>
 
 #include "all-diff.hpp"
 #include "fix_value.hpp"
@@ -8,7 +8,7 @@
 using namespace ghost;
 using namespace std;
 
-class FactorySudoku : public FactoryModel
+class BuilderSudoku : public ModelBuilder
 {
 	int _instance_size;
 	int _side_size;
@@ -18,7 +18,7 @@ class FactorySudoku : public FactoryModel
   vector< vector<int> > _squares;
 
 public:
-	FactorySudoku( int instance_size,
+	BuilderSudoku( int instance_size,
 	               bool hard_instance );
 
 	void declare_variables() override;

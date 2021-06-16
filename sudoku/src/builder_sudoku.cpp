@@ -1,8 +1,8 @@
-#include "factory_sudoku.hpp"
+#include "builder_sudoku.hpp"
 
-FactorySudoku::FactorySudoku( int instance_size,
+BuilderSudoku::BuilderSudoku( int instance_size,
                               bool hard_instance )
-	: FactoryModel(),
+	: ModelBuilder(),
 	  _instance_size( instance_size ),
 	  _side_size( instance_size * instance_size ),
 	  _hard_instance( hard_instance ),
@@ -11,7 +11,7 @@ FactorySudoku::FactorySudoku( int instance_size,
 	  _squares( vector< vector<int> >( _side_size ) )
 { }
 
-void FactorySudoku::declare_variables()
+void BuilderSudoku::declare_variables()
 {
 	// Create variables
 	int nb_vars = _side_size*_side_size;
@@ -62,7 +62,7 @@ void FactorySudoku::declare_variables()
 			variables[i].set_value( ( i % _side_size ) + 1 );
 }
 
-void FactorySudoku::declare_constraints()
+void BuilderSudoku::declare_constraints()
 {
   // Prepare row variables
   for( int r = 0; r < _side_size; ++r )

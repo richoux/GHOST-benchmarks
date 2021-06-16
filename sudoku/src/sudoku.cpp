@@ -9,7 +9,7 @@
 
 #include <ghost/solver.hpp>
 
-#include "factory_sudoku.hpp"
+#include "builder_sudoku.hpp"
 #include "print_sudoku.hpp"
 
 using namespace ghost;
@@ -120,8 +120,8 @@ int main( int argc, char **argv )
 	
   shared_ptr<Print> printer = make_shared<PrintSudoku>();
 
-  FactorySudoku factory( instance_size, hard_instance );
-  Solver solver( factory, true );
+  BuilderSudoku builder( instance_size, hard_instance );
+  Solver solver( builder, true );
 
   double error;
   vector<int> solution;

@@ -8,7 +8,7 @@
 #include <chrono>
 #include <ghost/solver.hpp>
 
-#include "factory_ms.hpp"
+#include "builder_ms.hpp"
 #include "print_ms.hpp"
 
 using namespace ghost;
@@ -121,10 +121,10 @@ int main( int argc, char **argv )
 	if( cores != -1 )
 		options.number_threads = static_cast<unsigned int>( cores );
 
-	FactoryMagicSquare factory( order );
+	BuilderMagicSquare builder( order );
 	
   // true means it is a permutation problem
-  Solver solver( factory, true );
+  Solver solver( builder, true );
 
   double error;
   vector<int> solution;
