@@ -137,21 +137,7 @@ int main( int argc, char **argv )
 	if( cores != -1 )
 		options.number_threads = static_cast<unsigned int>( cores );
 	
-	// 10min
-	// solver.solve( error, solution, 600000, options );
-	
-	// 2min
-	// solver.solve( error, solution, 120000, options );
-
-	// 30s
-	// solver.solve( error, solution, 30000, options );
-	
-  // 5s
-  //solver.solve( error, solution, 5000, options );		
   solver.solve( error, solution, 5s, options );		
-
-	// 0.5s
-	//solver.solve( error, solution, 500, options );
 
 	cout << "Error: " << error << "\n";
 	//print_solution( solution );

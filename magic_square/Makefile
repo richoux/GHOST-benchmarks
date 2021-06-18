@@ -81,4 +81,4 @@ $(OBJDIR)/min_sum_corners.o:
 .PHONY: clean
 
 clean:
-	rm -fr core *~ $(BINDIR)/$(EXEC) $(OBJECTS) 
+	rm -fr core *~ $(BINDIR)/$(EXEC) $(OBJECTS) $(OBJDIR)/min_magic_square.o $(OBJDIR)/min_builder_ms.o

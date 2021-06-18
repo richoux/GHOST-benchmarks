@@ -16,7 +16,8 @@ void BuilderSudoku::declare_variables()
 	// Create variables
 	int nb_vars = _side_size*_side_size;
 	for( int i = 0; i < nb_vars ; ++i )
-		variables.emplace_back( std::string("v") + std::to_string(i), 1, _side_size );
+		//variables.emplace_back( std::string("v") + std::to_string(i), 1, _side_size );
+		variables.emplace_back( 1, _side_size );
 
 	if( _hard_instance )
 	{

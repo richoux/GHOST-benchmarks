@@ -2,7 +2,7 @@
 #include "min_sum_corners.hpp"
 
 MinCorners::MinCorners( const vector<Variable>& variables )
-	: Objective( "MinSumCorners", variables ),
+	: Objective( variables, "MinSumCorners" ),
 	  _number_variables( static_cast<int>( variables.size() ) ),
 	  _instance_size( static_cast<int>( std::sqrt( variables.size() ) ) )
 { }

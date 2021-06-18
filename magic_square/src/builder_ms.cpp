@@ -31,7 +31,7 @@ void BuilderMagicSquare::declare_variables()
 {
   // Create variables, with domains starting from value 1
 	for( int i = 0; i < _nb_vars; ++i )
-		variables.emplace_back( std::string("v") + std::to_string(i), 1, _nb_vars );
+		variables.emplace_back( 1, _nb_vars );
 	
 	if( _instance_size != 8 )
 		for( int i = 0; i < _nb_vars; ++i )

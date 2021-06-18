@@ -26,15 +26,15 @@ BuilderTerran::BuilderTerran( int supply )
 
 void BuilderTerran::declare_variables()
 {
-	variables.emplace_back( "Marine", 0, _supply + 1 );
-	variables.emplace_back( "Firebat", 0 , _supply + 1);
-	variables.emplace_back( "Ghost", 0, _supply + 1);
-	variables.emplace_back( "Vulture", 0, _supply / 2 + 1 );
-	variables.emplace_back( "SiegeTankTankMode", 0, _supply / 2 + 1 );
-	variables.emplace_back( "SiegeTankSiegeMode", 0, _supply / 2 + 1 );
-	variables.emplace_back( "Goliath", 0, _supply / 2 + 1 );
-	variables.emplace_back( "Wraith", 0, _supply / 2 + 1 );
-	variables.emplace_back( "BattleCruiser", 0, _supply / 6 + 1 );
+	variables.emplace_back( 0, _supply + 1, "Marine" );
+	variables.emplace_back( 0 , _supply + 1, "Firebat" );
+	variables.emplace_back( 0, _supply + 1, "Ghost" );
+	variables.emplace_back( 0, _supply / 2 + 1, "Vulture" );
+	variables.emplace_back( 0, _supply / 2 + 1, "SiegeTankTankMode" );
+	variables.emplace_back( 0, _supply / 2 + 1, "SiegeTankSiegeMode" );
+	variables.emplace_back( 0, _supply / 2 + 1, "Goliath" );
+	variables.emplace_back( 0, _supply / 2 + 1, "Wraith" );
+	variables.emplace_back( 0, _supply / 6 + 1, "BattleCruiser" );
 }
 
 void BuilderTerran::declare_auxiliary_data()
@@ -59,11 +59,11 @@ BuilderProtoss::BuilderProtoss( int supply )
 
 void BuilderProtoss::declare_variables()
 {
-	variables.emplace_back( "Zealot", 0, _supply / 2 + 1 );
-	variables.emplace_back( "Dragoon", 0, _supply / 2 + 1 );
-	variables.emplace_back( "DarkTemplar", 0, _supply / 2 + 1 );
-	variables.emplace_back( "Reaver", 0, _supply / 4 + 1 );
-	variables.emplace_back( "Scout", 0, _supply / 3 + 1 );
+	variables.emplace_back( 0, _supply / 2 + 1, "Zealot" );
+	variables.emplace_back( 0, _supply / 2 + 1, "Dragoon" );
+	variables.emplace_back( 0, _supply / 2 + 1, "DarkTemplar" );
+	variables.emplace_back( 0, _supply / 4 + 1, "Reaver" );
+	variables.emplace_back( 0, _supply / 3 + 1, "Scout" );
 }
 
 void BuilderProtoss::declare_auxiliary_data()
@@ -84,12 +84,12 @@ BuilderZerg::BuilderZerg( int supply )
 
 void BuilderZerg::declare_variables()
 {
-	variables.emplace_back( "Zergling", 0, _supply * 2 + 1 );
-	variables.emplace_back( "Hydralisk", 0, _supply + 1 );
-	variables.emplace_back( "Lurker", 0, _supply / 2 + 1);
-	variables.emplace_back( "Ultralisk", 0, _supply / 4 + 1 );
-	variables.emplace_back( "Mutalisk", 0, _supply / 2 + 1 );
-	variables.emplace_back( "Guardian", 0, _supply / 2 + 1 );
+	variables.emplace_back( 0, _supply * 2 + 1, "Zergling" );
+	variables.emplace_back( 0, _supply + 1, "Hydralisk" );
+	variables.emplace_back( 0, _supply / 2 + 1, "Lurker" );
+	variables.emplace_back( 0, _supply / 4 + 1, "Ultralisk" );
+	variables.emplace_back( 0, _supply / 2 + 1, "Mutalisk" );
+	variables.emplace_back( 0, _supply / 2 + 1, "Guardian" );
 }
 
 void BuilderZerg::declare_auxiliary_data()
