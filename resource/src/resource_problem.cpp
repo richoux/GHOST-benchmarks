@@ -5,16 +5,16 @@
 #include <string>
 
 #include <vector>
-// #include <functional>
+#include <chrono>
 
 #include <ghost/solver.hpp>
 
-#include "factory_variable_resource.hpp"
-#include "factory_resource.hpp"
+#include "builder_resource.hpp"
 #include "print_resource.hpp"
 
 using namespace ghost;
 using namespace std;
+using namespace std::literals::chrono_literals;
 
 //////////////////////////////////////////////////////////////////////////////
 //
@@ -76,7 +76,8 @@ int main(int argc, char **argv)
   string race;
 	bool random = false;
   
-  
+	int SUPPLY = 380;
+	
 	if( argc == 1 )
 	{
 		std::cout << "Usage: " << argv[0] << " protoss|terran|zerg [random=0/1; default is 0] [timeout=100ms] [#runs=100] [parallel=0/1; default is 0] [number_threads]\n";
@@ -117,47 +118,17 @@ int main(int argc, char **argv)
   
   if( race == "protoss" )
   {
-    // Create variables
-    vector< Variable > variables_p;
-    vector< UnitData > unit_data_p;
-    make_protoss( 380, variables_p, unit_data_p );    
-
-    // // Define constraints 
-    // Stock mineral_p( variables_p,
-    //                  20000,
-    //                  ResourceType::Mineral,
-    //                  unit_data_p );
-
-    // Stock gas_p( variables_p,
-    //              14000,
-    //              ResourceType::Gas,
-    //              unit_data_p );
+    BuilderProtoss builder_p( SUPPLY );
+    Solver solver_p( builder_p );
     
-    // Stock supply_p( variables_p,
-    //                 380,
-    //                 ResourceType::Supply,
-    //                 unit_data_p );
-  
-    // vector< variant<Stock> > constraints_p { mineral_p, gas_p, supply_p };
-
-    // Define objective
-    // shared_ptr<Objective> objective = make_shared<MaxGroundDPS>(  variables_p, unit_data_p );
-    // MaxGroundDPS objective( variables_p, unit_data_p );
-
-    FactoryResource factory_p( variables_p, unit_data_p );
-
-    // Define solver
-    //Solver<MaxGroundDPS,Stock> solver_p( variables_p, constraints_p, objective );
-    Solver solver_p( factory_p );
-    
-    double cost_p = 0.;
-    vector<int> solution_p( variables_p.size(), 0 );
+    double cost_p;
+    vector<int> solution_p;
   
     int count = 0;
     double total = 0.;
 
     for(int i = 0 ; i < runs ; ++i )
-	    if( solver_p.solve( cost_p, solution_p, timeout * 1000, options ) )
+	    if( solver_p.solve( cost_p, solution_p, timeout, options ) )
       {
 	      ++count;
 	      total += cost_p;
@@ -185,46 +156,17 @@ int main(int argc, char **argv)
   ////////////
   if( race == "terran" )
   {
-    // Create variables
-    vector< Variable > variables_t;
-    vector< UnitData > unit_data_t;
-    make_terran( 380, variables_t, unit_data_t );    
-
-    // Define constraints 
-    // Stock mineral_t( variables_t,
-    //                  20000,
-    //                  ResourceType::Mineral,
-    //                  unit_data_t );
+    BuilderTerran builder_t( SUPPLY );
+    Solver solver_t( builder_t );
     
-    // Stock gas_t( variables_t,
-    //              14000,
-    //              ResourceType::Gas,
-    //              unit_data_t );
-    
-    // Stock supply_t( variables_t,
-    //                 380,
-    //                 ResourceType::Supply,
-    //                 unit_data_t );
-    
-    // vector< variant<Stock> > constraints_t { mineral_t, gas_t, supply_t };
-
-    // // Define objective
-    // MaxGroundDPS objective( variables_t, unit_data_t );
-
-    FactoryResource factory_t( variables_t, unit_data_t );
-
-    // // Define solver
-    // Solver<MaxGroundDPS,Stock> solver_t( variables_t, constraints_t, objective );
-    Solver solver_t( factory_t );
-    
-    double cost_t = 0.;
-    vector<int> solution_t( variables_t.size(), 0 );
+    double cost_t;
+    vector<int> solution_t;
     
     int count = 0;
     double total = 0.;
     
     for(int i = 0 ; i < runs ; ++i )
-      if( solver_t.solve( cost_t, solution_t, timeout * 1000, options ) )
+	    if( solver_t.solve( cost_t, solution_t, timeout, options ) )
       {
 	      ++count;
 	      total += cost_t;
@@ -253,46 +195,17 @@ int main(int argc, char **argv)
 
   if( race == "zerg" )
   {
-    // Create variables
-    vector< Variable > variables_z;
-    vector< UnitData > unit_data_z;
-    make_zerg( 380, variables_z, unit_data_z );    
-
-    // // Define constraints 
-    // Stock mineral_z( variables_z,
-    //                  20000,
-    //                  ResourceType::Mineral,
-    //                  unit_data_z );
-
-    // Stock gas_z( variables_z,
-    //              14000,
-    //              ResourceType::Gas,
-    //              unit_data_z );
+    BuilderZerg builder_z( SUPPLY );
+    Solver solver_z( builder_z );
     
-    // Stock supply_z( variables_z,
-    //                 380,
-    //                 ResourceType::Supply,
-    //                 unit_data_z );
-  
-    // vector< variant<Stock> > constraints_z { mineral_z, gas_z, supply_z };
-
-    // // Define objective
-    // MaxGroundDPS objective( variables_z, unit_data_z );
-
-    FactoryResource factory_z( variables_z, unit_data_z );
-
-    // // Define solver
-    // Solver<MaxGroundDPS,Stock> solver_z( variables_z, constraints_z, objective );
-    Solver solver_z( factory_z );
-    
-    double cost_z = 0.;
-    vector<int> solution_z( variables_z.size(), 0 );
+    double cost_z;
+    vector<int> solution_z;
   
     int count = 0;
     double total = 0.;
   
     for(int i = 0 ; i < runs ; ++i )
-      if( solver_z.solve( cost_z, solution_z, timeout * 1000, options ) )
+	    if( solver_z.solve( cost_z, solution_z, timeout, options ) )
       {
 	      ++count;
 	      total += cost_z;

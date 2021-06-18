@@ -5,14 +5,15 @@
 #include <vector>
 #include <algorithm>
 #include <cmath>
-
+#include <chrono>
 #include <ghost/solver.hpp>
 
-#include "factory_ms.hpp"
+#include "builder_ms.hpp"
 #include "print_ms.hpp"
 
 using namespace ghost;
 using namespace std;
+using namespace std::literals::chrono_literals;
 
 void check_solution( const vector<int>& solution, int constant )
 {
@@ -106,31 +107,7 @@ int main( int argc, char **argv )
 		if( argc == 4 && parallel )
 			cores = std::stoi( argv[3] );
 	}
-	
-	int nb_vars = order * order;
-	int constant = order * ( nb_vars + 1 ) / 2;
-	
-  // Create variables, with domains starting from value 1
-  vector<Variable> variables;
-  for( int i = 0; i < nb_vars; ++i )
-		variables.emplace_back( std::string("v") + std::to_string(i), 1, nb_vars );
-
-  if( order != 8 )
-	  for( int i = 0; i < nb_vars; ++i )
-		  variables[i].set_value( i + 1 );
-  else
-  {
-	  int i = 0;
-	  variables[i++].set_value( 51 ); variables[i++].set_value( 63 ); variables[i++].set_value( 61 ); variables[i++].set_value( 44 ); variables[i++].set_value( 17 ); variables[i++].set_value( 37 ); variables[i++].set_value( 30 );  variables[i++].set_value( 6 ); 
-	  variables[i++].set_value( 21 ); variables[i++].set_value( 62 ); variables[i++].set_value( 35 ); variables[i++].set_value( 28 ); variables[i++].set_value( 12 ); variables[i++].set_value( 45 ); variables[i++].set_value( 5 );  variables[i++].set_value( 60 ); 
-	  variables[i++].set_value( 54 ); variables[i++].set_value( 13 ); variables[i++].set_value( 11 ); variables[i++].set_value( 36 ); variables[i++].set_value( 20 ); variables[i++].set_value( 29 ); variables[i++].set_value( 46 );  variables[i++].set_value( 10 ); 
-	  variables[i++].set_value( 49 ); variables[i++].set_value( 1 ); variables[i++].set_value( 3 ); variables[i++].set_value( 40 ); variables[i++].set_value( 48 ); variables[i++].set_value( 64 ); variables[i++].set_value( 15 );  variables[i++].set_value( 43 ); 
-	  variables[i++].set_value( 9 ); variables[i++].set_value( 47 ); variables[i++].set_value( 16 ); variables[i++].set_value( 2 ); variables[i++].set_value( 26 ); variables[i++].set_value( 31 ); variables[i++].set_value( 22 );  variables[i++].set_value( 34 ); 
-	  variables[i++].set_value( 24 ); variables[i++].set_value( 42 ); variables[i++].set_value( 50 ); variables[i++].set_value( 7 ); variables[i++].set_value( 53 ); variables[i++].set_value( 27 ); variables[i++].set_value( 56 );  variables[i++].set_value( 58 ); 
-	  variables[i++].set_value( 32 ); variables[i++].set_value( 25 ); variables[i++].set_value( 18 ); variables[i++].set_value( 39 ); variables[i++].set_value( 33 ); variables[i++].set_value( 14 ); variables[i++].set_value( 55 );  variables[i++].set_value( 38 ); 
-	  variables[i++].set_value( 23 ); variables[i++].set_value( 52 ); variables[i++].set_value( 4 ); variables[i++].set_value( 59 ); variables[i++].set_value( 19 ); variables[i++].set_value( 8 ); variables[i++].set_value( 41 );  variables[i++].set_value( 57 ); 
-  }
-	  
+		
   std::shared_ptr<Print> printer = std::make_shared<PrintMagicSquare>();
 	Options options;
 	options.print = printer;
@@ -144,28 +121,18 @@ int main( int argc, char **argv )
 	if( cores != -1 )
 		options.number_threads = static_cast<unsigned int>( cores );
 
-	FactoryMagicSquare factory( variables, order );
+	BuilderMagicSquare builder( order );
 	
   // true means it is a permutation problem
-  Solver solver( factory, true );
+  Solver solver( builder, true );
 
-  double error = 0.0;
-  vector<int> solution( variables.size(), 0 );
+  double error;
+  vector<int> solution;
 
-	// 2min
-	//solver.solve( error, solution, 120000000 );
-
-	// 30s
-	// solver.solve( error, solution, 30000000 );
-	
-  // 5s
-  solver.solve( error, solution, 5000000, options );
-
-	// 0.5s
-	//solver.solve( error, solution, 500000 );
+  solver.solve( error, solution, 100ms, options );
 
 	cout << "Error: " << error << "\n";
-	check_solution( solution, constant );
+	check_solution( solution, order * ( order * order + 1 ) / 2 );
 	
   return EXIT_SUCCESS;
 }

@@ -3,24 +3,25 @@ EXEC=sudoku
 # Compiler flags
 MYFLAGS=
 CXXFIRSTFLAGS= -O3 -W -Wall -Wextra -Wno-sign-compare -Wno-unused-parameter
-CXXFIRSTFLAGSDEBUG= -g -O0 -DDEBUG -W -Wall -Wextra -Wno-sign-compare -Wno-unused-parameter -fsanitize=address
+#CXXFIRSTFLAGSDEBUG= -g -O0 -DDEBUG -W -Wall -Wextra -Wno-sign-compare -Wno-unused-parameter -fsanitize=address -v -da -Q
+CXXFIRSTFLAGSDEBUG= -g -O0 -DDEBUG -W -Wall -Wextra -Wno-sign-compare -Wno-unused-parameter
 CXXFIRSTFLAGSINFO= -g -O2 -W -Wall -Wextra -Wno-sign-compare -Wno-unused-parameter
 #LDFLAGSDEBUG=-pthread -lghost_staticd -fsanitize=address -static-libasan
-LDFLAGSDEBUG=-pthread -lghostd -fsanitize=address
+LDFLAGSDEBUG=-pthread -lghost_staticd
 LDFLAGSINFO=-pthread -lghost
 
 UNAME_S := $(shell uname -s)
 ifeq ($(UNAME_S),Linux)
 	CXX=g++
-	CXXFLAGS= -std=c++2a $(CXXFIRSTFLAGS) $(MYFLAGS)
-	CXXFLAGSDEBUG= -std=c++2a $(CXXFIRSTFLAGSDEBUG) $(MYFLAGS)
-	CXXFLAGSINFO= -std=c++2a $(CXXFIRSTFLAGSINFO) $(MYFLAGS)
+	CXXFLAGS= -std=c++17 $(CXXFIRSTFLAGS) $(MYFLAGS)
+	CXXFLAGSDEBUG= -std=c++17 $(CXXFIRSTFLAGSDEBUG) $(MYFLAGS)
+	CXXFLAGSINFO= -std=c++17 $(CXXFIRSTFLAGSINFO) $(MYFLAGS)
 	LDFLAGS=-pthread -lghost_static
 endif
 ifeq ($(UNAME_S),Darwin)
 	CXX=clang++
-	CXXFLAGS= -std=c++2a  -stdlib=libc++ $(CXXFIRSTFLAGS) $(MYFLAGS)
-	CXXFLAGSDEBUG= -std=c++2a  -stdlib=libc++ $(CXXFIRSTFLAGSDEBUG) $(MYFLAGS)
+	CXXFLAGS= -std=c++17  -stdlib=libc++ $(CXXFIRSTFLAGS) $(MYFLAGS)
+	CXXFLAGSDEBUG= -std=c++17  -stdlib=libc++ $(CXXFIRSTFLAGSDEBUG) $(MYFLAGS)
 	LDFLAGS=-pthread -lghost_static -lc++ -lc++abi
 endif
 

@@ -15,9 +15,9 @@ public:
   UnitData() = default;
   
   UnitData( int m,
-	    int g,
-	    double s,
-	    double dps );
+            int g,
+            double s,
+            double dps );
 
   inline int	get_mineral()	const { return _mineral; }
   inline int	get_gas()	const { return _gas; }
