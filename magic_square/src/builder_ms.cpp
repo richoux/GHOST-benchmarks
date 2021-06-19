@@ -30,8 +30,7 @@ BuilderMagicSquare::BuilderMagicSquare( int instance_size )
 void BuilderMagicSquare::declare_variables()
 {
   // Create variables, with domains starting from value 1
-	for( int i = 0; i < _nb_vars; ++i )
-		variables.emplace_back( 1, _nb_vars );
+	create_n_variables( _nb_vars, 1, _nb_vars );
 	
 	if( _instance_size != 8 )
 		for( int i = 0; i < _nb_vars; ++i )
