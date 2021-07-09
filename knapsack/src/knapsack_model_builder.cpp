@@ -1,0 +1,36 @@
+#include "knapsack_model_builder.hpp"
+#include "knapsack_capacity.hpp"
+#include "knapsack_alldiff.hpp"
+#include "knapsack_objective.hpp"
+#include "knapsack_coefficients.hpp"
+
+KSBuilder::KSBuilder()
+	: ModelBuilder()
+{ }
+
+void KSBuilder::declare_variables()
+{
+	create_n_variables( 5, 0, 16 );
+	// variables.emplace_back( std::string( "v1" ), 0, 16 );
+	// variables.emplace_back( std::string( "v2" ), 0, 16 );
+	// variables.emplace_back( std::string( "v3" ), 0, 16 );
+	// variables.emplace_back( std::string( "v4" ), 0, 16 );
+	// variables.emplace_back( std::string( "v5" ), 0, 16 );
+}
+
+void KSBuilder::declare_constraints()
+{
+	constraints.emplace_back( std::make_shared<KSCapacity>( variables, 15, auxiliary_data ) );
+	constraints.emplace_back( std::make_shared<KSAllDiff>( variables ) );
+}
+
+void KSBuilder::declare_objective()
+{
+	objective = std::make_shared<KSObjective>( variables, auxiliary_data );
+}
+
+void KSBuilder::declare_auxiliary_data()
+{
+	auxiliary_data = std::make_shared<KSCoefficients>();
+}
+
