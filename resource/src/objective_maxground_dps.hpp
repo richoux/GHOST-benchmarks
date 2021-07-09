@@ -12,7 +12,7 @@
 using namespace std;
 using namespace ghost;
 
-class MaxGroundDPS : public Objective
+class MaxGroundDPS : public Maximize
 {
   vector<UnitData> _unit_data;
   

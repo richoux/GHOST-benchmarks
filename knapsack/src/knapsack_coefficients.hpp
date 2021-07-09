@@ -6,8 +6,8 @@
 class KSCoefficients : public ghost::AuxiliaryData
 {
 public:
-	std::vector<int> weights;
 	std::vector<int> values;
+	std::vector<int> weights;
 	
 	KSCoefficients();
 

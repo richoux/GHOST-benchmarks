@@ -6,7 +6,7 @@
 using namespace std;
 
 MaxGroundDPS::MaxGroundDPS( const vector<Variable>& variables, shared_ptr<AuxiliaryData> auxiliary_data )
-	: Objective( variables, true, "Max Ground DPS" ),
+	: Maximize( variables, "Max Ground DPS" ),
 	  _unit_data( dynamic_pointer_cast<Data>(auxiliary_data)->unit_data )
 { }
 
