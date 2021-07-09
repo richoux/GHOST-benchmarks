@@ -1,5 +1,3 @@
-EXEC=magic_square min_magic_square
-
 # Compiler flags
 MYFLAGS=
 CXXFIRSTFLAGS= -O3 -W -Wall -Wextra -Wno-sign-compare -Wno-unused-parameter
@@ -81,4 +79,4 @@ $(OBJDIR)/min_sum_corners.o:
 .PHONY: clean
 
 clean:
-	rm -fr core *~ $(BINDIR)/$(EXEC) $(OBJECTS) $(OBJDIR)/min_magic_square.o $(OBJDIR)/min_builder_ms.o
+	rm -fr core *~ $(BINDIR)/magic_square $(BINDIR)/min_magic_square $(OBJECTS) $(OBJDIR)/min_magic_square.o $(OBJDIR)/min_builder_ms.o
