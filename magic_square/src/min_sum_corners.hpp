@@ -5,7 +5,7 @@
 using namespace std;
 using namespace ghost;
 
-class MinCorners : public Objective
+class MinCorners : public Minimize
 {
 	int _number_variables;
 	int _instance_size;
