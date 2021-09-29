@@ -5,4 +5,4 @@ Data::Data( const std::vector<Variable>& variables, std::vector<UnitData> unit_d
 	  unit_data( unit_data )
 { }
 
-void Data::update( const std::vector<Variable*>& variables, int index, int new_value ) { }
+void Data::required_update( const std::vector<Variable*>& variables, int index, int new_value ) { }

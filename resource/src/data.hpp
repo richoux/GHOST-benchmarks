@@ -12,5 +12,5 @@ public:
 	
 	Data( const std::vector<Variable>& variables, std::vector<UnitData> unit_data );
 
-	void update( const std::vector<Variable*>& variables, int index, int new_value );
+	void required_update( const std::vector<Variable*>& variables, int index, int new_value ) override;
 };

@@ -14,9 +14,9 @@ class FixValue : public Constraint
 	mutable int _current_diff;
 
 	double required_error( const vector<Variable*>& variables ) const override;
-	double expert_delta_error( const vector<Variable*>& variables,
-	                           const vector<int>& variable_indexes,
-	                           const vector<int>& candidate_values ) const override;
+	double optional_delta_error( const vector<Variable*>& variables,
+	                             const vector<int>& variable_indexes,
+	                             const vector<int>& candidate_values ) const override;
 	
 public:
 	FixValue( const vector<int>& variables_index, int value );

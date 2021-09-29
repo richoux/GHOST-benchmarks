@@ -6,4 +6,4 @@ KSCoefficients::KSCoefficients()
 	  weights( std::vector<int>{12,2,1,1,4} )
 { }
 
-void KSCoefficients::update( const std::vector<ghost::Variable*>& variables, int index, int new_value ) { }
+void KSCoefficients::required_update( const std::vector<ghost::Variable*>& variables, int index, int new_value ) { }

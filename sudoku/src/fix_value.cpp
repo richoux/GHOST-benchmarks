@@ -14,9 +14,9 @@ double FixValue::required_error( const vector<Variable*>& variables ) const
 	return std::abs( _current_diff );
 }
 
-double FixValue::expert_delta_error( const vector<Variable*>& variables,
-                                     const vector<int>& variable_indexes,
-                                     const vector<int>& candidate_values ) const
+double FixValue::optional_delta_error( const vector<Variable*>& variables,
+                                       const vector<int>& variable_indexes,
+                                       const vector<int>& candidate_values ) const
 {
 	int diff = _current_diff + ( candidate_values[0] - variables[ variable_indexes[0] ]->get_value() );
 	

@@ -47,7 +47,7 @@ double AllDiff::required_error( const vector<Variable*>& variables ) const
 	return counter;
 }
 
-double AllDiff::expert_delta_error( const vector<Variable*>& variables, const vector<int>& variable_indexes, const vector<int>& candidate_values ) const
+double AllDiff::optional_delta_error( const vector<Variable*>& variables, const vector<int>& variable_indexes, const vector<int>& candidate_values ) const
 {
 	double diff = 0.0;
 	auto copy_count( _count );
@@ -90,7 +90,7 @@ double AllDiff::expert_delta_error( const vector<Variable*>& variables, const ve
 	return diff;
 }
 
-void AllDiff::expert_update_if_delta_error_defined( const vector<Variable*>& variables, int variable_index, int new_value )
+void AllDiff::conditional_update_data_structures( const vector<Variable*>& variables, int variable_index, int new_value )
 {
 	--_count[ variables[ variable_index ]->get_value() - 1 ];
 	++_count[ new_value - 1 ];

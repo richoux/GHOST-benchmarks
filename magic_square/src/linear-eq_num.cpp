@@ -23,9 +23,9 @@ double LinearEq::required_error( const vector<Variable*>& variables ) const
 	return std::abs( _current_diff );
 }
 
-double LinearEq::expert_delta_error( const vector<Variable*>& variables,
-                                     const vector<int>& variable_indexes,
-                                     const vector<int>& candidate_values ) const
+double LinearEq::optional_delta_error( const vector<Variable*>& variables,
+                                       const vector<int>& variable_indexes,
+                                       const vector<int>& candidate_values ) const
 {
 	int diff = _current_diff;
 
@@ -35,7 +35,7 @@ double LinearEq::expert_delta_error( const vector<Variable*>& variables,
 	return std::abs( diff ) - std::abs( _current_diff );
 } 
 
-void LinearEq::expert_update_if_delta_error_defined( const vector<Variable*>& variables, int variable_index, int new_value ) 
+void LinearEq::conditional_update_data_structures( const vector<Variable*>& variables, int variable_index, int new_value ) 
 {
 	_current_diff += ( new_value - variables[ variable_index ]->get_value() );
 }

@@ -47,9 +47,9 @@ double Stock::required_error( const vector<Variable*>& variables ) const
   return std::max( 0., _current_diff );
 }
 
-double Stock::expert_delta_error( const vector<Variable*>& variables,
-                                  const vector<int>& variable_indexes,
-                                  const vector<int>& candidate_values ) const
+double Stock::optional_delta_error( const vector<Variable*>& variables,
+                                    const vector<int>& variable_indexes,
+                                    const vector<int>& candidate_values ) const
 {
 	double diff = _current_diff;
   double cost_value;
@@ -77,7 +77,7 @@ double Stock::expert_delta_error( const vector<Variable*>& variables,
 	return std::max( 0., diff ) - std::max( 0., _current_diff );
 } 
 
-void Stock::expert_update_if_delta_error_defined( const vector<Variable*>& variables, int variable_index, int new_value ) 
+void Stock::conditional_update_data_structures( const vector<Variable*>& variables, int variable_index, int new_value ) 
 {
   double cost_value;
 
