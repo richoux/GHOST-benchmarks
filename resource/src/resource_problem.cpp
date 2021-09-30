@@ -77,7 +77,7 @@ int main(int argc, char **argv)
 	bool random = false;
   
 	int SUPPLY = 380;
-	
+
 	if( argc == 1 )
 	{
 		std::cout << "Usage: " << argv[0] << " protoss|terran|zerg [random=0/1; default is 0] [timeout=100ms] [#runs=100] [parallel=0/1; default is 0] [number_threads]\n";
@@ -98,6 +98,8 @@ int main(int argc, char **argv)
 		if( argc == 7 && parallel )
 			cores = std::stoi( argv[6] );
 	}
+
+	timeout *= 1000; // to convert milliseconds into microseconds
 
   std::shared_ptr<Print> printer = std::make_shared<PrintResource>();
   Options options;
