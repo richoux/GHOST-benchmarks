@@ -124,7 +124,7 @@ int main( int argc, char **argv )
 	BuilderMagicSquare builder( order );
 	
   // true means it is a permutation problem
-  Solver solver( builder, true );
+  Solver solver( builder );
 
   double error;
   vector<int> solution;

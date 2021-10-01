@@ -2,7 +2,7 @@
 
 BuilderSudoku::BuilderSudoku( int instance_size,
                               bool hard_instance )
-	: ModelBuilder(),
+	: ModelBuilder( true ),
 	  _instance_size( instance_size ),
 	  _side_size( instance_size * instance_size ),
 	  _hard_instance( hard_instance ),

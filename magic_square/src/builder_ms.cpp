@@ -1,7 +1,7 @@
 #include "builder_ms.hpp"
 
 BuilderMagicSquare::BuilderMagicSquare( int instance_size )
-	: ModelBuilder(),
+	: ModelBuilder( true ),
 	  _instance_size( instance_size ),
 	  _nb_vars( instance_size * instance_size),
 	  _constant( instance_size * ( _nb_vars + 1 ) / 2 ),

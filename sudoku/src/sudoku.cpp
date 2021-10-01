@@ -121,7 +121,7 @@ int main( int argc, char **argv )
   shared_ptr<Print> printer = make_shared<PrintSudoku>();
 
   BuilderSudoku builder( instance_size, hard_instance );
-  Solver solver( builder, true );
+  Solver solver( builder );
 
   double error;
   vector<int> solution;
