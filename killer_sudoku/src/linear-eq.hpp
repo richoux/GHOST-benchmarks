@@ -5,19 +5,22 @@
 #include <ghost/variable.hpp>
 #include <ghost/constraint.hpp>
 
-#include "linear-eq_concept.hpp"
-
 using namespace std;
 using namespace ghost;
 
 class LinearEq : public Constraint
 {
-	vector<int> _weights;
 	int _rhs;
-	LinearEqConcept _le_concept;
+	mutable int _current_diff;
 	
-	double required_cost() const override;
+	double required_error( const vector<Variable*>& variables ) const override;
+
+	double optional_delta_error( const vector<Variable*>& variables,
+	                             const vector<int>& variable_indexes,
+	                             const vector<int>& candidate_values ) const override;
+
+	void conditional_update_data_structures( const vector<Variable*>& variables, int variable_id, int new_value ) override;
 
 public:
-	LinearEq( const vector< reference_wrapper<Variable> >& variables, int max_value, int rhs );
+	LinearEq( const vector<int>& index, int rhs );
 };

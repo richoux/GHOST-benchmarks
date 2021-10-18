@@ -1,34 +1,39 @@
+#include <cmath>
 #include <algorithm>
+#include <iostream>
 
 #include "linear-eq.hpp"
-#include "../learn/function_to_learn_icn.hpp" // for number_functions
 
-// defined in cfn/function_to_learn_icn.cpp
-double intermediate_g( const vector<double>& inputs,
-                       const vector<double>& params,
-                       const vector<int>& weights,
-                       const int& max_domain_value,
-                       const int& nb_vars );
-
-LinearEq::LinearEq( const vector< reference_wrapper<Variable> >& variables, int max_value, int rhs )
-	: Constraint( variables ),
-	  _weights{1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0},
+LinearEq::LinearEq( const vector<int>& index, int rhs )
+	: Constraint( index ),
 	  _rhs( rhs ),
-	  _le_concept{ (int)variables.size(), max_value, rhs }
+	  _current_diff( 0 )
 { }
 
-double LinearEq::required_cost() const
+double LinearEq::required_error( const vector<Variable*>& variables ) const
 {
-	if( _le_concept.concept( variables ) )
-		return 0.;
+	int sum = 0;
+	for( const auto& var : variables )
+		sum += var->get_value();
 
-	vector<double> inputs( variables.size() );
-	std::transform( variables.begin(),
-	                variables.end(),
-	                inputs.begin(),
-	                []( const auto& v ){ return v.get().get_value(); } );
+	_current_diff = sum - _rhs;
+	
+	return std::abs( _current_diff );
+}
 
-	vector<double> param{ static_cast<double>( _rhs ) };
+double LinearEq::optional_delta_error( const vector<Variable*>& variables,
+                                       const vector<int>& variable_indexes,
+                                       const vector<int>& candidate_values ) const
+{
+	int diff = _current_diff;
 
-	return intermediate_g( inputs, param, _weights, _le_concept.max_value, _le_concept.nb_vars );
+	for( int i = 0 ; i < static_cast<int>( variable_indexes.size() ); ++i )
+		diff += ( candidate_values[ i ] - variables[ variable_indexes[i] ]->get_value() );
+	
+	return std::abs( diff ) - std::abs( _current_diff );
+} 
+
+void LinearEq::conditional_update_data_structures( const vector<Variable*>& variables, int variable_index, int new_value ) 
+{
+	_current_diff += ( new_value - variables[ variable_index ]->get_value() );
 }

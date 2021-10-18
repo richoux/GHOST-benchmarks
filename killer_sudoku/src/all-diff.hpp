@@ -5,18 +5,23 @@
 #include <ghost/variable.hpp>
 #include <ghost/constraint.hpp>
 
-#include "all-diff_concept.hpp"
-
 using namespace std;
 using namespace ghost;
 
 class AllDiff : public Constraint
 {
-	vector<int> _weights;
-	AllDiffConcept _ad_concept;
+	mutable vector<int> _count;
 	
-	double required_cost() const override;
+	double required_error( const vector<Variable*>& variables ) const override;
+	
+	double optional_delta_error( const vector<Variable*>& variables,
+	                             const vector<int>& variable_indexes,
+	                             const vector<int>& candidate_values ) const override;
+	
+	void conditional_update_data_structures( const vector<Variable*>& variables,
+	                                         int variable_index,
+	                                         int new_value ) override;
 
 public:
-	AllDiff( const vector< reference_wrapper<Variable> >& variables );
+	AllDiff( const vector<int>& variables_index );
 };

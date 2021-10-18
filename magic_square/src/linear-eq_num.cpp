@@ -1,6 +1,5 @@
 #include <cmath>
 #include <algorithm>
-#include <map>
 
 #include "linear-eq_num.hpp"
 

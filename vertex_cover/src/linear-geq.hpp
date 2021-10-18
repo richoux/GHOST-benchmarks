@@ -8,14 +8,14 @@
 using namespace std;
 using namespace ghost;
 
-class LinearEq : public Constraint
+class LinearGeq : public Constraint
 {
 	int _max_value;
 	int _rhs;
 	int _max_diff;
 	
-	double required_cost() const override;
+	double required_error( const vector<Variable*>& variables ) const override;
 
 public:
-	LinearEq( const vector< reference_wrapper<Variable> >& variables, int max_value, int rhs );
+	LinearGeq( const vector<int>& variables, int max_value, int rhs );
 };
