@@ -112,6 +112,14 @@ int main( int argc, char **argv )
 	Options options;
 	options.print = printer;
 
+	// Parameters tuning from Diaz et al.
+	options.percent_chance_escape_plateau = 6;
+	options.tabu_time_selected = 0;
+	options.tabu_time_local_min = 5;
+	options.reset_threshold = order;
+	options.restart_threshold = 0;
+	options.number_variables_to_reset = std::max( 1, order / 10 );
+	
 	if( order == 8 )
 		options.custom_starting_point = true;
 
