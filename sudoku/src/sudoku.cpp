@@ -31,14 +31,15 @@ bool alldiff_concept( const vector<int>& var )
 	return true;	
 }
 
-void check_solution( const vector<int>& solution )
+bool check_solution( const vector<int>& solution )
 {
 	int nb_vars = solution.size();
 	int size_side = static_cast<int>( std::sqrt( nb_vars ) );
 	int size_side_small_square = static_cast<int>( std::sqrt( size_side ) );
 
 	vector<int> partial_sol( size_side );
-
+	bool success = true;
+	
 	// Rows
 	for( int i = 0; i < size_side; ++i )
 	{
@@ -53,6 +54,7 @@ void check_solution( const vector<int>& solution )
 			           partial_sol.end(),
 			           std::ostream_iterator<int>( cout, " " ) );
 			cout << "\n";
+			success = false;
 		}
 	}
 
@@ -69,6 +71,7 @@ void check_solution( const vector<int>& solution )
 			           partial_sol.end(),
 			           std::ostream_iterator<int>( cout, " " ) );
 			cout << "\n";
+			success = false;
 		}
 	}
 
@@ -87,8 +90,11 @@ void check_solution( const vector<int>& solution )
 				           partial_sol.end(),
 				           std::ostream_iterator<int>( cout, " " ) );
 				cout << "\n";
+				success = false;
 			}
 		}
+
+	return success;
 }
 
 ///////////////////////
@@ -139,10 +145,11 @@ int main( int argc, char **argv )
 	
   solver.solve( error, solution, 5s, options );		
 
-	cout << "Error: " << error << "\n";
-	//print_solution( solution );
-	check_solution( solution );
+	bool success = check_solution( solution );
 	
-  return EXIT_SUCCESS;
+	if( success )
+		return EXIT_SUCCESS;
+	else
+		return EXIT_FAILURE;
 }
 

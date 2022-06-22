@@ -15,13 +15,14 @@ using namespace ghost;
 using namespace std;
 using namespace std::literals::chrono_literals;
 
-void check_solution( const vector<int>& solution, int constant )
+bool check_solution( const vector<int>& solution, int constant )
 {
 	int nb_vars = static_cast<int>( solution.size() );
 	int order = static_cast<int>( std::sqrt( nb_vars ) );
 	int sum = 0;	
 	vector<int> partial_sol( order );
-
+	bool success = true;
+	
 	// Rows
 	for( int i = 0; i < order; ++i )
 	{
@@ -37,6 +38,7 @@ void check_solution( const vector<int>& solution, int constant )
 			           partial_sol.end(),
 			           std::ostream_iterator<int>( cout, " " ) );
 			cout << "=> the sum is " << sum << " rather than " << constant << "\n";
+			success =  false;
 		}
 	}
 
@@ -54,6 +56,7 @@ void check_solution( const vector<int>& solution, int constant )
 			           partial_sol.end(),
 			           std::ostream_iterator<int>( cout, " " ) );
 			cout << "=> the sum is " << sum << " rather than " << constant << "\n";
+			success =  false;
 		}
 	}
 
@@ -69,6 +72,7 @@ void check_solution( const vector<int>& solution, int constant )
 		           partial_sol.end(),
 		           std::ostream_iterator<int>( cout, " " ) );
 		cout << "=> the sum is " << sum << " rather than " << constant << "\n";
+		success =  false;
 	}
 
 	// Diagonal 1
@@ -83,7 +87,10 @@ void check_solution( const vector<int>& solution, int constant )
 		           partial_sol.end(),
 		           std::ostream_iterator<int>( cout, " " ) );
 		cout << "=> the sum is " << sum << " rather than " << constant << "\n";
+		success =  false;
 	}
+
+	return success;
 }
 
 ///////////////////////
@@ -137,11 +144,13 @@ int main( int argc, char **argv )
   double error;
   vector<int> solution;
 
-  solver.solve( error, solution, 30s, options );
+  solver.solve( error, solution, 1s, options );
 
-	cout << "Error: " << error << "\n";
-	check_solution( solution, order * ( order * order + 1 ) / 2 );
+	bool success = check_solution( solution, order * ( order * order + 1 ) / 2 );
 	
-  return EXIT_SUCCESS;
+	if( success )
+		return EXIT_SUCCESS;
+	else
+		return EXIT_FAILURE;
 }
 

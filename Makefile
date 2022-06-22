@@ -1,23 +1,13 @@
 all:
-	$(MAKE) build_order
-	$(MAKE) resource
-	$(MAKE) target
-	$(MAKE) wallin
-
-build_order:
-	(cd build_order && $(MAKE))
-
-resource:
-	(cd resource && $(MAKE))
-
-target:
-	(cd target && $(MAKE))
-
-wallin:
-	(cd wallin && $(MAKE))
+	(cd killer_sudoku && $(MAKE))
+	(cd knapsack && $(MAKE))
+	(cd magic_square && $(MAKE))
+	(cd sudoku && $(MAKE))
+	(cd vertex_cover && $(MAKE))
 
 clean:
-	(cd build_order && $(MAKE) clean)
-	(cd resource && $(MAKE) clean)
-	(cd target && $(MAKE) clean)
-	(cd wallin && $(MAKE) clean)
+	(cd killer_sudoku && $(MAKE) clean)
+	(cd knapsack && $(MAKE) clean)
+	(cd magic_square && $(MAKE) clean)
+	(cd sudoku && $(MAKE) clean)
+	(cd vertex_cover && $(MAKE) clean)

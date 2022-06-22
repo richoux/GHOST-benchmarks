@@ -30,9 +30,6 @@ BINDIR=bin
 SOURCES=$(foreach sdir, $(SRCDIR), $(wildcard $(sdir)/*.cpp))
 OBJECTS=$(patsubst %.cpp, $(OBJDIR)/%.o, $(notdir $(SOURCES)))
 
-# For rm
-SOURCESTILDE=$(foreach sdir, $(SRCDIR), $(wildcard $(sdir)/*.cpp~))
-
 vpath %.cpp $(SRCDIR)
 vpath %.o $(OBJDIR)
 
@@ -79,4 +76,4 @@ $(OBJDIR)/min_sum_corners.o:
 .PHONY: clean
 
 clean:
-	rm -fr core *~ $(BINDIR)/magic_square $(BINDIR)/min_magic_square $(OBJECTS) $(OBJDIR)/min_magic_square.o $(OBJDIR)/min_builder_ms.o
+	rm -fr core $(BINDIR)/magic_square $(BINDIR)/min_magic_square $(OBJECTS) $(OBJDIR)/min_magic_square.o $(OBJDIR)/min_builder_ms.o

@@ -3,15 +3,13 @@
 
 #include "linear-leq.hpp"
 
-LinearLeq::LinearLeq( const vector<int>& variables, int max_value, int rhs )
+LinearLeq::LinearLeq( const vector<int>& variables, int rhs )
 	: Constraint( variables ),
-	  _max_value( max_value ),
 	  _rhs( rhs )
 { }
 
-LinearLeq::LinearLeq( vector<int>&& variables, int max_value, int rhs )
+LinearLeq::LinearLeq( vector<int>&& variables, int rhs )
 	: Constraint( std::move( variables ) ),
-	  _max_value( max_value ),
 	  _rhs( rhs )
 { }
 

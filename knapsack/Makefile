@@ -1,5 +1,3 @@
-EXEC=knapsack
-
 # Compiler flags
 MYFLAGS=
 CXXFIRSTFLAGS= -O3 -W -Wall -Wextra -Wno-sign-compare -Wno-unused-parameter
@@ -35,9 +33,6 @@ BINDIR=bin
 SOURCES=$(foreach sdir, $(SRCDIR), $(wildcard $(sdir)/*.cpp))
 OBJECTS=$(patsubst %.cpp, $(OBJDIR)/%.o, $(notdir $(SOURCES)))
 
-# For rm
-SOURCESTILDE=$(foreach sdir, $(SRCDIR), $(wildcard $(sdir)/*.cpp~))
-
 vpath %.cpp $(SRCDIR)
 
 # Reminder, 'cause it is easy to forget makefile's fucked-up syntax...
@@ -47,17 +42,20 @@ vpath %.cpp $(SRCDIR)
 
 # Rules
 
-all: $(BINDIR)/$(EXEC)
+all: $(BINDIR)/knapsack $(BINDIR)/alldiff_knapsack
 
 debug: CXXFLAGS=$(CXXFLAGSDEBUG)
 debug: LDFLAGS=$(LDFLAGSDEBUG)
-debug: $(BINDIR)/$(EXEC)
+debug: $(BINDIR)/knapsack $(BINDIR)/alldiff_knapsack
 
 info: CXXFLAGS=$(CXXFLAGSINFO)
 info: LDFLAGS=$(LDFLAGSINFO)
-info: $(BINDIR)/$(EXEC)
+info: $(BINDIR)/knapsack $(BINDIR)/alldiff_knapsack
 
-$(BINDIR)/$(EXEC): $(OBJECTS)
+$(BINDIR)/knapsack: $(OBJDIR)/knapsack.o $(OBJDIR)/knapsack_model_builder.o $(OBJDIR)/knapsack_capacity.o $(OBJDIR)/knapsack_coefficients.o $(OBJDIR)/knapsack_objective.o $(OBJDIR)/knapsack_print.o $(OBJDIR)/check_solution.o 
+	$(CXX) -o $@ $^ $(LDFLAGS)
+
+$(BINDIR)/alldiff_knapsack: $(OBJDIR)/knapsack.o $(OBJDIR)/alldiff_knapsack_model_builder.o $(OBJDIR)/knapsack_capacity.o $(OBJDIR)/knapsack_alldiff.o $(OBJDIR)/knapsack_coefficients.o $(OBJDIR)/knapsack_objective.o $(OBJDIR)/knapsack_print.o $(OBJDIR)/alldiff_check_solution.o
 	$(CXX) -o $@ $^ $(LDFLAGS)
 
 $(OBJDIR)/%.o: %.cpp
@@ -66,4 +64,4 @@ $(OBJDIR)/%.o: %.cpp
 .PHONY: clean
 
 clean:
-	rm -fr core *~ $(BINDIR)/$(EXEC) $(OBJECTS) 
+	rm -fr core $(BINDIR)/knapsack $(BINDIR)/alldiff_knapsack $(OBJECTS) 

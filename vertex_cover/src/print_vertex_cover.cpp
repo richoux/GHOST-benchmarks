@@ -36,35 +36,35 @@ stringstream PrintVertexCover::print_candidate( const std::vector<Variable>& var
 	{
 		stream << "Solution:\n\n";
 
-		if( variables[0].get_value() == 2 )
+		if( variables[0].get_value() == 1 )
 			stream << "\033[1;31mO\033[0m";
 		else
 			stream << "O";
 
 		stream << " - ";
 
-		if( variables[1].get_value() == 2 )
+		if( variables[1].get_value() == 1 )
 			stream << "\033[1;31mO\033[0m";
 		else
 			stream << "O";
 	
 		stream << " - ";
 		
-		if( variables[2].get_value() == 2 )
+		if( variables[2].get_value() == 1 )
 			stream << "\033[1;31mO\033[0m";
 		else
 			stream << "O";
 	
 		stream << " - ";
 		
-		if( variables[3].get_value() == 2 )
+		if( variables[3].get_value() == 1 )
 			stream << "\033[1;31mO\033[0m";
 		else
 			stream << "O";
 	
 		stream << " - ";
 		
-		if( variables[4].get_value() == 2 )
+		if( variables[4].get_value() == 1 )
 			stream << "\033[1;31mO\033[0m";
 		else
 			stream << "O";
@@ -73,35 +73,35 @@ stringstream PrintVertexCover::print_candidate( const std::vector<Variable>& var
 		stream << "| \\ |     / | X |";
 		stream << "\n";
 
-		if( variables[9].get_value() == 2 )
+		if( variables[9].get_value() == 1 )
 			stream << "\033[1;31mO\033[0m";
 		else
 			stream << "O";
 
 		stream << " - ";
 
-		if( variables[8].get_value() == 2 )
+		if( variables[8].get_value() == 1 )
 			stream << "\033[1;31mO\033[0m";
 		else
 			stream << "O";
 	
 		stream << " - ";
 		
-		if( variables[7].get_value() == 2 )
+		if( variables[7].get_value() == 1 )
 			stream << "\033[1;31mO\033[0m";
 		else
 			stream << "O";
 	
 		stream << " - ";
 		
-		if( variables[6].get_value() == 2 )
+		if( variables[6].get_value() == 1 )
 			stream << "\033[1;31mO\033[0m";
 		else
 			stream << "O";
 	
 		stream << " - ";
 		
-		if( variables[5].get_value() == 2 )
+		if( variables[5].get_value() == 1 )
 			stream << "\033[1;31mO\033[0m";
 		else
 			stream << "O";
@@ -110,35 +110,35 @@ stringstream PrintVertexCover::print_candidate( const std::vector<Variable>& var
 		stream << "  \\ |   | / |   |";
 		stream << "\n";
 
-		if( variables[11].get_value() == 2 )
+		if( variables[11].get_value() == 1 )
 			stream << "\033[1;31mO\033[0m";
 		else
 			stream << "O";
 
 		stream << " - ";
 
-		if( variables[10].get_value() == 2 )
+		if( variables[10].get_value() == 1 )
 			stream << "\033[1;31mO\033[0m";
 		else
 			stream << "O";
 	
 		stream << "   ";
 		
-		if( variables[15].get_value() == 2 )
+		if( variables[15].get_value() == 1 )
 			stream << "\033[1;31mO\033[0m";
 		else
 			stream << "O";
 	
 		stream << " - ";
 		
-		if( variables[16].get_value() == 2 )
+		if( variables[16].get_value() == 1 )
 			stream << "\033[1;31mO\033[0m";
 		else
 			stream << "O";
 	
 		stream << "   ";
 		
-		if( variables[19].get_value() == 2 )
+		if( variables[19].get_value() == 1 )
 			stream << "\033[1;31mO\033[0m";
 		else
 			stream << "O";
@@ -147,35 +147,35 @@ stringstream PrintVertexCover::print_candidate( const std::vector<Variable>& var
 		stream << "|     \\ |   |   ";
 		stream << "\n";
 
-		if( variables[12].get_value() == 2 )
+		if( variables[12].get_value() == 1 )
 			stream << "\033[1;31mO\033[0m";
 		else
 			stream << "O";
 
 		stream << " - ";
 
-		if( variables[13].get_value() == 2 )
+		if( variables[13].get_value() == 1 )
 			stream << "\033[1;31mO\033[0m";
 		else
 			stream << "O";
 	
 		stream << " - ";
 		
-		if( variables[14].get_value() == 2 )
+		if( variables[14].get_value() == 1 )
 			stream << "\033[1;31mO\033[0m";
 		else
 			stream << "O";
 	
 		stream << "   ";
 		
-		if( variables[17].get_value() == 2 )
+		if( variables[17].get_value() == 1 )
 			stream << "\033[1;31mO\033[0m";
 		else
 			stream << "O";
 	
 		stream << " - ";
 		
-		if( variables[18].get_value() == 2 )
+		if( variables[18].get_value() == 1 )
 			stream << "\033[1;31mO\033[0m";
 		else
 			stream << "O";

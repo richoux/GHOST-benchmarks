@@ -35,9 +35,6 @@ BINDIR=bin
 SOURCES=$(foreach sdir, $(SRCDIR), $(wildcard $(sdir)/*.cpp))
 OBJECTS=$(patsubst %.cpp, $(OBJDIR)/%.o, $(notdir $(SOURCES)))
 
-# For rm
-SOURCESTILDE=$(foreach sdir, $(SRCDIR), $(wildcard $(sdir)/*.cpp~))
-
 vpath %.cpp $(SRCDIR)
 
 # Reminder, 'cause it is easy to forget makefile's fucked-up syntax...
@@ -66,4 +63,4 @@ $(OBJDIR)/%.o: %.cpp
 .PHONY: clean
 
 clean:
-	rm -fr core *~ $(BINDIR)/$(EXEC) $(OBJECTS) 
+	rm -fr core $(BINDIR)/$(EXEC) $(OBJECTS) 

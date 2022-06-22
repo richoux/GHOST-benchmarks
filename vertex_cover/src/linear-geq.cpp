@@ -3,9 +3,13 @@
 
 #include "linear-geq.hpp"
 
-LinearGeq::LinearGeq( const vector<int>& variables, int max_value, int rhs )
+LinearGeq::LinearGeq( const vector<int>& variables, int rhs )
 	: Constraint( variables ),
-	  _max_value( max_value ),
+	  _rhs( rhs )
+{ }
+
+LinearGeq::LinearGeq( vector<int>&& variables, int rhs )
+	: Constraint( std::move( variables ) ),
 	  _rhs( rhs )
 { }
 
