@@ -5,6 +5,8 @@ CXXFIRSTFLAGS= -O3 -W -Wall -Wextra -Wno-sign-compare -Wno-unused-parameter
 #LDFLAGSDEBUG=-pthread -lghostd
 CXXFIRSTFLAGSDEBUG= -g -O0 -DDEBUG -W -Wall -Wextra -Wno-sign-compare -Wno-unused-parameter -fsanitize=address,undefined,leak
 LDFLAGSDEBUG=-pthread -lghost_staticd -fsanitize=address,undefined,leak -static-libasan
+CXXFIRSTFLAGSINFO= -g -O2 -W -Wall -Wextra -Wno-sign-compare -Wno-unused-parameter
+LDFLAGSINFO=-pthread -lghost
 
 UNAME_S := $(shell uname -s)
 ifeq ($(UNAME_S),Linux)
@@ -45,6 +47,10 @@ all: $(BINDIR)/magic_square $(BINDIR)/min_magic_square
 debug: CXXFLAGS=$(CXXFLAGSDEBUG)
 debug: LDFLAGS=$(LDFLAGSDEBUG)
 debug: $(BINDIR)/magic_square $(BINDIR)/min_magic_square
+
+info: CXXFLAGS=$(CXXFLAGSINFO)
+info: LDFLAGS=$(LDFLAGSINFO)
+info: $(BINDIR)/magic_square $(BINDIR)/min_magic_square
 
 $(BINDIR)/magic_square: $(OBJDIR)/magic_square.o $(OBJDIR)/builder_ms.o $(OBJDIR)/print_ms.o $(OBJDIR)/linear-eq_num.o
 	$(CXX) -o $@ $^ $(LDFLAGS)
