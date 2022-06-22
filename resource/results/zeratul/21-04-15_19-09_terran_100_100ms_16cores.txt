@@ -1,0 +1,4400 @@
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 121
+Firebat: 259
+Ghost: 0
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 118.7ms
+Wall-clock time (full program): 118.805ms
+Satisfaction error: 0
+Number of search iterations: 578
+Number of local moves: 61 (including on plateau: 0)
+Number of local minimum: 93 (including on plateau: 0)
+Number of resets: 15
+Number of restarts: 1
+Total number of search iterations: 9119
+Total number of local moves: 1061 (including on plateau: 0)
+Total number of local minimum: 1501 (including on plateau: 0)
+Total number of resets: 241
+Total number of restarts: 16
+
+Optimization cost: 5682.33
+Opt Cost BEFORE post-processing: 5682.33
+Optimization post-processing time: 0.00113
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 0
+Firebat: 266
+Ghost: 98
+Vulture: 8
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.058ms
+Wall-clock time (full program): 115.365ms
+Satisfaction error: 0
+Number of search iterations: 593
+Number of local moves: 72 (including on plateau: 0)
+Number of local minimum: 94 (including on plateau: 0)
+Number of resets: 15
+Number of restarts: 1
+Total number of search iterations: 18278
+Total number of local moves: 2121 (including on plateau: 0)
+Total number of local minimum: 3069 (including on plateau: 0)
+Total number of resets: 495
+Total number of restarts: 33
+
+Optimization cost: 5840
+Opt Cost BEFORE post-processing: 5840
+Optimization post-processing time: 6.3e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 20
+Firebat: 260
+Ghost: 100
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 119.059ms
+Wall-clock time (full program): 119.342ms
+Satisfaction error: 0
+Number of search iterations: 575
+Number of local moves: 66 (including on plateau: 0)
+Number of local minimum: 97 (including on plateau: 0)
+Number of resets: 16
+Number of restarts: 1
+Total number of search iterations: 27411
+Total number of local moves: 3205 (including on plateau: 0)
+Total number of local minimum: 4618 (including on plateau: 0)
+Total number of resets: 746
+Total number of restarts: 49
+
+Optimization cost: 5821.09
+Opt Cost BEFORE post-processing: 5821.09
+Optimization post-processing time: 7.1e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 46
+Firebat: 258
+Ghost: 0
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 14
+Goliath: 24
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.424ms
+Wall-clock time (full program): 115.875ms
+Satisfaction error: 0
+Number of search iterations: 596
+Number of local moves: 59 (including on plateau: 0)
+Number of local minimum: 96 (including on plateau: 0)
+Number of resets: 16
+Number of restarts: 1
+Total number of search iterations: 36208
+Total number of local moves: 4220 (including on plateau: 0)
+Total number of local minimum: 6086 (including on plateau: 0)
+Total number of resets: 985
+Total number of restarts: 64
+
+Optimization cost: 5572.65
+Opt Cost BEFORE post-processing: 5572.65
+Optimization post-processing time: 0.000184
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 0
+Firebat: 267
+Ghost: 91
+Vulture: 6
+SiegeTankTankMode: 5
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 116.49ms
+Wall-clock time (full program): 117.025ms
+Satisfaction error: 0
+Number of search iterations: 302
+Number of local moves: 31 (including on plateau: 0)
+Number of local minimum: 48 (including on plateau: 0)
+Number of resets: 8
+Number of restarts: 0
+Total number of search iterations: 44038
+Total number of local moves: 5127 (including on plateau: 0)
+Total number of local minimum: 7387 (including on plateau: 0)
+Total number of resets: 1195
+Total number of restarts: 79
+
+Optimization cost: 5846.39
+Opt Cost BEFORE post-processing: 5846.39
+Optimization post-processing time: 7.1e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 0
+Firebat: 258
+Ghost: 0
+Vulture: 61
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 129.705ms
+Wall-clock time (full program): 130.05ms
+Satisfaction error: 0
+Number of search iterations: 454
+Number of local moves: 61 (including on plateau: 0)
+Number of local minimum: 73 (including on plateau: 0)
+Number of resets: 11
+Number of restarts: 1
+Total number of search iterations: 52801
+Total number of local moves: 6114 (including on plateau: 0)
+Total number of local minimum: 8868 (including on plateau: 0)
+Total number of resets: 1432
+Total number of restarts: 96
+
+Optimization cost: 5479.27
+Opt Cost BEFORE post-processing: 5479.27
+Optimization post-processing time: 5.8e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 0
+Firebat: 265
+Ghost: 0
+Vulture: 0
+SiegeTankTankMode: 5
+SiegeTankSiegeMode: 40
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 114.955ms
+Wall-clock time (full program): 115.235ms
+Satisfaction error: 0
+Number of search iterations: 444
+Number of local moves: 52 (including on plateau: 0)
+Number of local minimum: 77 (including on plateau: 0)
+Number of resets: 12
+Number of restarts: 1
+Total number of search iterations: 61520
+Total number of local moves: 7122 (including on plateau: 0)
+Total number of local minimum: 10338 (including on plateau: 0)
+Total number of resets: 1673
+Total number of restarts: 112
+
+Optimization cost: 5618.75
+Opt Cost BEFORE post-processing: 5618.75
+Optimization post-processing time: 5.3e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 20
+Firebat: 258
+Ghost: 100
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 1
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 113.991ms
+Wall-clock time (full program): 114.242ms
+Satisfaction error: 0
+Number of search iterations: 512
+Number of local moves: 62 (including on plateau: 0)
+Number of local minimum: 86 (including on plateau: 0)
+Number of resets: 14
+Number of restarts: 1
+Total number of search iterations: 70466
+Total number of local moves: 8160 (including on plateau: 0)
+Total number of local minimum: 11871 (including on plateau: 0)
+Total number of resets: 1921
+Total number of restarts: 130
+
+Optimization cost: 5799.27
+Opt Cost BEFORE post-processing: 5799.27
+Optimization post-processing time: 6.6e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 0
+Firebat: 266
+Ghost: 98
+Vulture: 8
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.781ms
+Wall-clock time (full program): 116.117ms
+Satisfaction error: 0
+Number of search iterations: 539
+Number of local moves: 61 (including on plateau: 0)
+Number of local minimum: 92 (including on plateau: 0)
+Number of resets: 15
+Number of restarts: 1
+Total number of search iterations: 78816
+Total number of local moves: 9138 (including on plateau: 0)
+Total number of local minimum: 13303 (including on plateau: 0)
+Total number of resets: 2154
+Total number of restarts: 146
+
+Optimization cost: 5840
+Opt Cost BEFORE post-processing: 5840
+Optimization post-processing time: 7.2e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 125
+Firebat: 255
+Ghost: 0
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.123ms
+Wall-clock time (full program): 115.419ms
+Satisfaction error: 0
+Number of search iterations: 478
+Number of local moves: 56 (including on plateau: 0)
+Number of local minimum: 79 (including on plateau: 0)
+Number of resets: 13
+Number of restarts: 1
+Total number of search iterations: 86366
+Total number of local moves: 10021 (including on plateau: 0)
+Total number of local minimum: 14549 (including on plateau: 0)
+Total number of resets: 2358
+Total number of restarts: 162
+
+Optimization cost: 5650.91
+Opt Cost BEFORE post-processing: 5650.91
+Optimization post-processing time: 7.5e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 2
+Firebat: 265
+Ghost: 71
+Vulture: 1
+SiegeTankTankMode: 5
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 5
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.514ms
+Wall-clock time (full program): 115.79ms
+Satisfaction error: 0
+Number of search iterations: 484
+Number of local moves: 63 (including on plateau: 0)
+Number of local minimum: 84 (including on plateau: 0)
+Number of resets: 14
+Number of restarts: 1
+Total number of search iterations: 93891
+Total number of local moves: 10926 (including on plateau: 0)
+Total number of local minimum: 15826 (including on plateau: 0)
+Total number of resets: 2566
+Total number of restarts: 177
+
+Optimization cost: 5632.5
+Opt Cost BEFORE post-processing: 5632.5
+Optimization post-processing time: 6.8e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 111
+Firebat: 263
+Ghost: 0
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 1
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.54ms
+Wall-clock time (full program): 115.855ms
+Satisfaction error: 0
+Number of search iterations: 484
+Number of local moves: 50 (including on plateau: 0)
+Number of local minimum: 84 (including on plateau: 0)
+Number of resets: 14
+Number of restarts: 1
+Total number of search iterations: 101396
+Total number of local moves: 11797 (including on plateau: 0)
+Total number of local minimum: 17065 (including on plateau: 0)
+Total number of resets: 2766
+Total number of restarts: 193
+
+Optimization cost: 5676.15
+Opt Cost BEFORE post-processing: 5676.15
+Optimization post-processing time: 6.8e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 1
+Firebat: 258
+Ghost: 0
+Vulture: 0
+SiegeTankTankMode: 47
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 116.375ms
+Wall-clock time (full program): 116.871ms
+Satisfaction error: 0
+Number of search iterations: 477
+Number of local moves: 55 (including on plateau: 0)
+Number of local minimum: 84 (including on plateau: 0)
+Number of resets: 14
+Number of restarts: 1
+Total number of search iterations: 108570
+Total number of local moves: 12628 (including on plateau: 0)
+Total number of local minimum: 18274 (including on plateau: 0)
+Total number of resets: 2961
+Total number of restarts: 209
+
+Optimization cost: 5427.47
+Opt Cost BEFORE post-processing: 5427.47
+Optimization post-processing time: 9.1e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 122
+Firebat: 258
+Ghost: 0
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.484ms
+Wall-clock time (full program): 115.818ms
+Satisfaction error: 0
+Number of search iterations: 491
+Number of local moves: 59 (including on plateau: 0)
+Number of local minimum: 90 (including on plateau: 0)
+Number of resets: 15
+Number of restarts: 1
+Total number of search iterations: 115111
+Total number of local moves: 13397 (including on plateau: 0)
+Total number of local minimum: 19358 (including on plateau: 0)
+Total number of resets: 3136
+Total number of restarts: 223
+
+Optimization cost: 5674.47
+Opt Cost BEFORE post-processing: 5674.47
+Optimization post-processing time: 7.6e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 0
+Firebat: 267
+Ghost: 91
+Vulture: 6
+SiegeTankTankMode: 5
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.654ms
+Wall-clock time (full program): 115.923ms
+Satisfaction error: 0
+Number of search iterations: 465
+Number of local moves: 58 (including on plateau: 0)
+Number of local minimum: 78 (including on plateau: 0)
+Number of resets: 13
+Number of restarts: 1
+Total number of search iterations: 122570
+Total number of local moves: 14270 (including on plateau: 0)
+Total number of local minimum: 20591 (including on plateau: 0)
+Total number of resets: 3333
+Total number of restarts: 238
+
+Optimization cost: 5846.39
+Opt Cost BEFORE post-processing: 5846.39
+Optimization post-processing time: 7.5e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 0
+Firebat: 265
+Ghost: 0
+Vulture: 4
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 43
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 123.673ms
+Wall-clock time (full program): 123.952ms
+Satisfaction error: 0
+Number of search iterations: 483
+Number of local moves: 64 (including on plateau: 0)
+Number of local minimum: 81 (including on plateau: 0)
+Number of resets: 13
+Number of restarts: 1
+Total number of search iterations: 130225
+Total number of local moves: 15204 (including on plateau: 0)
+Total number of local minimum: 21882 (including on plateau: 0)
+Total number of resets: 3538
+Total number of restarts: 254
+
+Optimization cost: 5652.65
+Opt Cost BEFORE post-processing: 5652.65
+Optimization post-processing time: 6.6e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 115
+Firebat: 265
+Ghost: 0
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.752ms
+Wall-clock time (full program): 116.082ms
+Satisfaction error: 0
+Number of search iterations: 491
+Number of local moves: 53 (including on plateau: 0)
+Number of local minimum: 80 (including on plateau: 0)
+Number of resets: 13
+Number of restarts: 1
+Total number of search iterations: 137603
+Total number of local moves: 16062 (including on plateau: 0)
+Total number of local minimum: 23109 (including on plateau: 0)
+Total number of resets: 3735
+Total number of restarts: 269
+
+Optimization cost: 5729.45
+Opt Cost BEFORE post-processing: 5729.45
+Optimization post-processing time: 6.8e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 20
+Firebat: 260
+Ghost: 100
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 119.796ms
+Wall-clock time (full program): 120.059ms
+Satisfaction error: 0
+Number of search iterations: 477
+Number of local moves: 60 (including on plateau: 0)
+Number of local minimum: 76 (including on plateau: 0)
+Number of resets: 12
+Number of restarts: 1
+Total number of search iterations: 145230
+Total number of local moves: 16964 (including on plateau: 0)
+Total number of local minimum: 24363 (including on plateau: 0)
+Total number of resets: 3935
+Total number of restarts: 284
+
+Optimization cost: 5821.09
+Opt Cost BEFORE post-processing: 5821.09
+Optimization post-processing time: 7.8e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 0
+Firebat: 266
+Ghost: 98
+Vulture: 8
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.452ms
+Wall-clock time (full program): 115.74ms
+Satisfaction error: 0
+Number of search iterations: 514
+Number of local moves: 61 (including on plateau: 0)
+Number of local minimum: 86 (including on plateau: 0)
+Number of resets: 14
+Number of restarts: 1
+Total number of search iterations: 152960
+Total number of local moves: 17899 (including on plateau: 0)
+Total number of local minimum: 25683 (including on plateau: 0)
+Total number of resets: 4151
+Total number of restarts: 300
+
+Optimization cost: 5840
+Opt Cost BEFORE post-processing: 5840
+Optimization post-processing time: 7.9e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 1
+Firebat: 265
+Ghost: 0
+Vulture: 57
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.697ms
+Wall-clock time (full program): 116.089ms
+Satisfaction error: 0
+Number of search iterations: 483
+Number of local moves: 61 (including on plateau: 0)
+Number of local minimum: 82 (including on plateau: 0)
+Number of resets: 13
+Number of restarts: 1
+Total number of search iterations: 160462
+Total number of local moves: 18787 (including on plateau: 0)
+Total number of local minimum: 26940 (including on plateau: 0)
+Total number of resets: 4351
+Total number of restarts: 315
+
+Optimization cost: 5547.05
+Opt Cost BEFORE post-processing: 5547.05
+Optimization post-processing time: 7.6e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 59
+Firebat: 202
+Ghost: 119
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 121.365ms
+Wall-clock time (full program): 121.764ms
+Satisfaction error: 0
+Number of search iterations: 478
+Number of local moves: 51 (including on plateau: 0)
+Number of local minimum: 78 (including on plateau: 0)
+Number of resets: 13
+Number of restarts: 1
+Total number of search iterations: 167944
+Total number of local moves: 19686 (including on plateau: 0)
+Total number of local minimum: 28164 (including on plateau: 0)
+Total number of resets: 4549
+Total number of restarts: 330
+
+Optimization cost: 5390.4
+Opt Cost BEFORE post-processing: 5390.4
+Optimization post-processing time: 7.4e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 120
+Firebat: 260
+Ghost: 0
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 121.786ms
+Wall-clock time (full program): 122.206ms
+Satisfaction error: 0
+Number of search iterations: 494
+Number of local moves: 60 (including on plateau: 0)
+Number of local minimum: 78 (including on plateau: 0)
+Number of resets: 13
+Number of restarts: 1
+Total number of search iterations: 174364
+Total number of local moves: 20470 (including on plateau: 0)
+Total number of local minimum: 29256 (including on plateau: 0)
+Total number of resets: 4726
+Total number of restarts: 341
+
+Optimization cost: 5690.18
+Opt Cost BEFORE post-processing: 5690.18
+Optimization post-processing time: 7.5e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 1
+Firebat: 265
+Ghost: 0
+Vulture: 43
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 2
+BattleCruiser: 4
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.578ms
+Wall-clock time (full program): 115.866ms
+Satisfaction error: 0
+Number of search iterations: 478
+Number of local moves: 68 (including on plateau: 0)
+Number of local minimum: 82 (including on plateau: 0)
+Number of resets: 13
+Number of restarts: 1
+Total number of search iterations: 181662
+Total number of local moves: 21365 (including on plateau: 0)
+Total number of local minimum: 30456 (including on plateau: 0)
+Total number of resets: 4920
+Total number of restarts: 356
+
+Optimization cost: 5415.85
+Opt Cost BEFORE post-processing: 5415.85
+Optimization post-processing time: 7.8e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 0
+Firebat: 258
+Ghost: 100
+Vulture: 11
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 114.041ms
+Wall-clock time (full program): 114.304ms
+Satisfaction error: 0
+Number of search iterations: 475
+Number of local moves: 49 (including on plateau: 0)
+Number of local minimum: 78 (including on plateau: 0)
+Number of resets: 13
+Number of restarts: 1
+Total number of search iterations: 189201
+Total number of local moves: 22251 (including on plateau: 0)
+Total number of local minimum: 31728 (including on plateau: 0)
+Total number of resets: 5128
+Total number of restarts: 372
+
+Optimization cost: 5770.18
+Opt Cost BEFORE post-processing: 5770.18
+Optimization post-processing time: 8.2e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 0
+Firebat: 258
+Ghost: 0
+Vulture: 61
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 117.43ms
+Wall-clock time (full program): 117.707ms
+Satisfaction error: 0
+Number of search iterations: 474
+Number of local moves: 58 (including on plateau: 0)
+Number of local minimum: 78 (including on plateau: 0)
+Number of resets: 13
+Number of restarts: 1
+Total number of search iterations: 196653
+Total number of local moves: 23127 (including on plateau: 0)
+Total number of local minimum: 32970 (including on plateau: 0)
+Total number of resets: 5332
+Total number of restarts: 388
+
+Optimization cost: 5479.27
+Opt Cost BEFORE post-processing: 5479.27
+Optimization post-processing time: 7.4e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 115
+Firebat: 265
+Ghost: 0
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 119.681ms
+Wall-clock time (full program): 119.975ms
+Satisfaction error: 0
+Number of search iterations: 491
+Number of local moves: 64 (including on plateau: 0)
+Number of local minimum: 89 (including on plateau: 0)
+Number of resets: 14
+Number of restarts: 1
+Total number of search iterations: 204016
+Total number of local moves: 23995 (including on plateau: 0)
+Total number of local minimum: 34209 (including on plateau: 0)
+Total number of resets: 5533
+Total number of restarts: 403
+
+Optimization cost: 5729.45
+Opt Cost BEFORE post-processing: 5729.45
+Optimization post-processing time: 7.3e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 0
+Firebat: 192
+Ghost: 102
+Vulture: 43
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 114.898ms
+Wall-clock time (full program): 115.153ms
+Satisfaction error: 0
+Number of search iterations: 478
+Number of local moves: 54 (including on plateau: 0)
+Number of local minimum: 81 (including on plateau: 0)
+Number of resets: 13
+Number of restarts: 1
+Total number of search iterations: 211535
+Total number of local moves: 24846 (including on plateau: 0)
+Total number of local minimum: 35481 (including on plateau: 0)
+Total number of resets: 5741
+Total number of restarts: 418
+
+Optimization cost: 5152
+Opt Cost BEFORE post-processing: 5152
+Optimization post-processing time: 7.4e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 0
+Firebat: 258
+Ghost: 12
+Vulture: 20
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 35
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 116.401ms
+Wall-clock time (full program): 116.703ms
+Satisfaction error: 0
+Number of search iterations: 485
+Number of local moves: 56 (including on plateau: 0)
+Number of local minimum: 90 (including on plateau: 0)
+Number of resets: 15
+Number of restarts: 1
+Total number of search iterations: 218843
+Total number of local moves: 25677 (including on plateau: 0)
+Total number of local minimum: 36720 (including on plateau: 0)
+Total number of resets: 5942
+Total number of restarts: 432
+
+Optimization cost: 5738.18
+Opt Cost BEFORE post-processing: 5738.18
+Optimization post-processing time: 7.4e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 53
+Firebat: 265
+Ghost: 42
+Vulture: 10
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.788ms
+Wall-clock time (full program): 116.056ms
+Satisfaction error: 0
+Number of search iterations: 477
+Number of local moves: 53 (including on plateau: 0)
+Number of local minimum: 82 (including on plateau: 0)
+Number of resets: 13
+Number of restarts: 1
+Total number of search iterations: 226193
+Total number of local moves: 26534 (including on plateau: 0)
+Total number of local minimum: 37954 (including on plateau: 0)
+Total number of resets: 6142
+Total number of restarts: 446
+
+Optimization cost: 5752.44
+Opt Cost BEFORE post-processing: 5752.44
+Optimization post-processing time: 7.4e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 0
+Firebat: 313
+Ghost: 0
+Vulture: 0
+SiegeTankTankMode: 29
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.704ms
+Wall-clock time (full program): 116.101ms
+Satisfaction error: 0
+Number of search iterations: 449
+Number of local moves: 54 (including on plateau: 0)
+Number of local minimum: 75 (including on plateau: 0)
+Number of resets: 12
+Number of restarts: 1
+Total number of search iterations: 232830
+Total number of local moves: 27342 (including on plateau: 0)
+Total number of local minimum: 39044 (including on plateau: 0)
+Total number of resets: 6318
+Total number of restarts: 459
+
+Optimization cost: 6027.6
+Opt Cost BEFORE post-processing: 6027.6
+Optimization post-processing time: 0.000118
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 0
+Firebat: 260
+Ghost: 1
+Vulture: 13
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 40
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 127.47ms
+Wall-clock time (full program): 127.941ms
+Satisfaction error: 0
+Number of search iterations: 513
+Number of local moves: 58 (including on plateau: 0)
+Number of local minimum: 79 (including on plateau: 0)
+Number of resets: 13
+Number of restarts: 1
+Total number of search iterations: 239079
+Total number of local moves: 28065 (including on plateau: 0)
+Total number of local minimum: 40072 (including on plateau: 0)
+Total number of resets: 6481
+Total number of restarts: 470
+
+Optimization cost: 5653.09
+Opt Cost BEFORE post-processing: 5653.09
+Optimization post-processing time: 0.000296
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 71
+Firebat: 258
+Ghost: 39
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 6
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.462ms
+Wall-clock time (full program): 115.752ms
+Satisfaction error: 0
+Number of search iterations: 474
+Number of local moves: 51 (including on plateau: 0)
+Number of local minimum: 81 (including on plateau: 0)
+Number of resets: 13
+Number of restarts: 1
+Total number of search iterations: 246520
+Total number of local moves: 28935 (including on plateau: 0)
+Total number of local minimum: 41364 (including on plateau: 0)
+Total number of resets: 6691
+Total number of restarts: 486
+
+Optimization cost: 5688.87
+Opt Cost BEFORE post-processing: 5688.87
+Optimization post-processing time: 6.8e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 17
+Firebat: 265
+Ghost: 98
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.677ms
+Wall-clock time (full program): 115.947ms
+Satisfaction error: 0
+Number of search iterations: 479
+Number of local moves: 59 (including on plateau: 0)
+Number of local minimum: 78 (including on plateau: 0)
+Number of resets: 13
+Number of restarts: 1
+Total number of search iterations: 254131
+Total number of local moves: 29809 (including on plateau: 0)
+Total number of local minimum: 42618 (including on plateau: 0)
+Total number of resets: 6896
+Total number of restarts: 502
+
+Optimization cost: 5857.75
+Opt Cost BEFORE post-processing: 5857.75
+Optimization post-processing time: 7.2e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 0
+Firebat: 265
+Ghost: 0
+Vulture: 10
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 40
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.805ms
+Wall-clock time (full program): 116.088ms
+Satisfaction error: 0
+Number of search iterations: 490
+Number of local moves: 57 (including on plateau: 0)
+Number of local minimum: 73 (including on plateau: 0)
+Number of resets: 12
+Number of restarts: 1
+Total number of search iterations: 261692
+Total number of local moves: 30707 (including on plateau: 0)
+Total number of local minimum: 43863 (including on plateau: 0)
+Total number of resets: 7097
+Total number of restarts: 517
+
+Optimization cost: 5681.45
+Opt Cost BEFORE post-processing: 5681.45
+Optimization post-processing time: 7.9e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 24
+Firebat: 265
+Ghost: 91
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 117.438ms
+Wall-clock time (full program): 117.74ms
+Satisfaction error: 0
+Number of search iterations: 482
+Number of local moves: 51 (including on plateau: 0)
+Number of local minimum: 87 (including on plateau: 0)
+Number of resets: 14
+Number of restarts: 1
+Total number of search iterations: 269069
+Total number of local moves: 31594 (including on plateau: 0)
+Total number of local minimum: 45111 (including on plateau: 0)
+Total number of resets: 7298
+Total number of restarts: 532
+
+Optimization cost: 5848.58
+Opt Cost BEFORE post-processing: 5848.58
+Optimization post-processing time: 7.4e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 1
+Firebat: 260
+Ghost: 99
+Vulture: 9
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 1
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 114.941ms
+Wall-clock time (full program): 115.238ms
+Satisfaction error: 0
+Number of search iterations: 470
+Number of local moves: 57 (including on plateau: 0)
+Number of local minimum: 73 (including on plateau: 0)
+Number of resets: 12
+Number of restarts: 1
+Total number of search iterations: 276582
+Total number of local moves: 32440 (including on plateau: 0)
+Total number of local minimum: 46362 (including on plateau: 0)
+Total number of resets: 7502
+Total number of restarts: 548
+
+Optimization cost: 5784.87
+Opt Cost BEFORE post-processing: 5784.87
+Optimization post-processing time: 6.6e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 0
+Firebat: 265
+Ghost: 0
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 45
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 114.613ms
+Wall-clock time (full program): 114.887ms
+Satisfaction error: 0
+Number of search iterations: 475
+Number of local moves: 66 (including on plateau: 0)
+Number of local minimum: 79 (including on plateau: 0)
+Number of resets: 13
+Number of restarts: 1
+Total number of search iterations: 284235
+Total number of local moves: 33362 (including on plateau: 0)
+Total number of local minimum: 47623 (including on plateau: 0)
+Total number of resets: 7706
+Total number of restarts: 564
+
+Optimization cost: 5633.45
+Opt Cost BEFORE post-processing: 5633.45
+Optimization post-processing time: 6.7e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 46
+Firebat: 258
+Ghost: 6
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 31
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 127.913ms
+Wall-clock time (full program): 128.297ms
+Satisfaction error: 0
+Number of search iterations: 480
+Number of local moves: 60 (including on plateau: 0)
+Number of local minimum: 78 (including on plateau: 0)
+Number of resets: 13
+Number of restarts: 1
+Total number of search iterations: 291827
+Total number of local moves: 34257 (including on plateau: 0)
+Total number of local minimum: 48886 (including on plateau: 0)
+Total number of resets: 7909
+Total number of restarts: 580
+
+Optimization cost: 5704.73
+Opt Cost BEFORE post-processing: 5704.73
+Optimization post-processing time: 0.000124
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 0
+Firebat: 265
+Ghost: 2
+Vulture: 0
+SiegeTankTankMode: 22
+SiegeTankSiegeMode: 0
+Goliath: 34
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 118.776ms
+Wall-clock time (full program): 119.132ms
+Satisfaction error: 0
+Number of search iterations: 466
+Number of local moves: 57 (including on plateau: 0)
+Number of local minimum: 81 (including on plateau: 0)
+Number of resets: 13
+Number of restarts: 1
+Total number of search iterations: 298248
+Total number of local moves: 35002 (including on plateau: 0)
+Total number of local minimum: 49954 (including on plateau: 0)
+Total number of resets: 8081
+Total number of restarts: 592
+
+Optimization cost: 5520.47
+Opt Cost BEFORE post-processing: 5520.47
+Optimization post-processing time: 7.5e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 0
+Firebat: 265
+Ghost: 91
+Vulture: 7
+SiegeTankTankMode: 5
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 104.277ms
+Wall-clock time (full program): 104.584ms
+Satisfaction error: 0
+Number of search iterations: 484
+Number of local moves: 66 (including on plateau: 0)
+Number of local minimum: 80 (including on plateau: 0)
+Number of resets: 13
+Number of restarts: 1
+Total number of search iterations: 305336
+Total number of local moves: 35829 (including on plateau: 0)
+Total number of local minimum: 51141 (including on plateau: 0)
+Total number of resets: 8273
+Total number of restarts: 606
+
+Optimization cost: 5827.48
+Opt Cost BEFORE post-processing: 5827.48
+Optimization post-processing time: 8.6e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 1
+Firebat: 265
+Ghost: 4
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 44
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.576ms
+Wall-clock time (full program): 115.835ms
+Satisfaction error: 0
+Number of search iterations: 477
+Number of local moves: 59 (including on plateau: 0)
+Number of local minimum: 76 (including on plateau: 0)
+Number of resets: 12
+Number of restarts: 1
+Total number of search iterations: 312536
+Total number of local moves: 36688 (including on plateau: 0)
+Total number of local minimum: 52340 (including on plateau: 0)
+Total number of resets: 8466
+Total number of restarts: 621
+
+Optimization cost: 5664.29
+Opt Cost BEFORE post-processing: 5664.29
+Optimization post-processing time: 8.1e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 44
+Firebat: 258
+Ghost: 0
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 1
+Wraith: 0
+BattleCruiser: 12
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.673ms
+Wall-clock time (full program): 115.927ms
+Satisfaction error: 0
+Number of search iterations: 498
+Number of local moves: 59 (including on plateau: 0)
+Number of local minimum: 79 (including on plateau: 0)
+Number of resets: 13
+Number of restarts: 1
+Total number of search iterations: 319978
+Total number of local moves: 37579 (including on plateau: 0)
+Total number of local minimum: 53569 (including on plateau: 0)
+Total number of resets: 8663
+Total number of restarts: 636
+
+Optimization cost: 5178.76
+Opt Cost BEFORE post-processing: 5178.76
+Optimization post-processing time: 7.6e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 1
+Firebat: 265
+Ghost: 4
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 44
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.759ms
+Wall-clock time (full program): 116.051ms
+Satisfaction error: 0
+Number of search iterations: 445
+Number of local moves: 47 (including on plateau: 0)
+Number of local minimum: 78 (including on plateau: 0)
+Number of resets: 13
+Number of restarts: 1
+Total number of search iterations: 327481
+Total number of local moves: 38467 (including on plateau: 0)
+Total number of local minimum: 54829 (including on plateau: 0)
+Total number of resets: 8870
+Total number of restarts: 651
+
+Optimization cost: 5664.29
+Opt Cost BEFORE post-processing: 5664.29
+Optimization post-processing time: 7.3e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 80
+Firebat: 266
+Ghost: 0
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 17
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.713ms
+Wall-clock time (full program): 115.984ms
+Satisfaction error: 0
+Number of search iterations: 489
+Number of local moves: 58 (including on plateau: 0)
+Number of local minimum: 92 (including on plateau: 0)
+Number of resets: 15
+Number of restarts: 1
+Total number of search iterations: 334880
+Total number of local moves: 39313 (including on plateau: 0)
+Total number of local minimum: 56053 (including on plateau: 0)
+Total number of resets: 9067
+Total number of restarts: 665
+
+Optimization cost: 5791.71
+Opt Cost BEFORE post-processing: 5791.71
+Optimization post-processing time: 8e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 0
+Firebat: 265
+Ghost: 0
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 33
+Goliath: 18
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.681ms
+Wall-clock time (full program): 115.946ms
+Satisfaction error: 0
+Number of search iterations: 480
+Number of local moves: 53 (including on plateau: 0)
+Number of local minimum: 81 (including on plateau: 0)
+Number of resets: 13
+Number of restarts: 1
+Total number of search iterations: 342299
+Total number of local moves: 40214 (including on plateau: 0)
+Total number of local minimum: 57300 (including on plateau: 0)
+Total number of resets: 9268
+Total number of restarts: 680
+
+Optimization cost: 5600.29
+Opt Cost BEFORE post-processing: 5600.29
+Optimization post-processing time: 7.5e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 175
+Firebat: 205
+Ghost: 0
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.662ms
+Wall-clock time (full program): 115.963ms
+Satisfaction error: 0
+Number of search iterations: 507
+Number of local moves: 50 (including on plateau: 0)
+Number of local minimum: 84 (including on plateau: 0)
+Number of resets: 14
+Number of restarts: 1
+Total number of search iterations: 349600
+Total number of local moves: 41039 (including on plateau: 0)
+Total number of local minimum: 58497 (including on plateau: 0)
+Total number of resets: 9460
+Total number of restarts: 694
+
+Optimization cost: 5258.18
+Opt Cost BEFORE post-processing: 5258.18
+Optimization post-processing time: 6.6e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 18
+Firebat: 263
+Ghost: 99
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.97ms
+Wall-clock time (full program): 116.355ms
+Satisfaction error: 0
+Number of search iterations: 481
+Number of local moves: 72 (including on plateau: 0)
+Number of local minimum: 90 (including on plateau: 0)
+Number of resets: 14
+Number of restarts: 1
+Total number of search iterations: 356516
+Total number of local moves: 41924 (including on plateau: 0)
+Total number of local minimum: 59668 (including on plateau: 0)
+Total number of resets: 9648
+Total number of restarts: 708
+
+Optimization cost: 5843.35
+Opt Cost BEFORE post-processing: 5843.35
+Optimization post-processing time: 8.3e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 0
+Firebat: 260
+Ghost: 0
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 46
+Goliath: 1
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.355ms
+Wall-clock time (full program): 115.68ms
+Satisfaction error: 0
+Number of search iterations: 330
+Number of local moves: 35 (including on plateau: 0)
+Number of local minimum: 59 (including on plateau: 0)
+Number of resets: 9
+Number of restarts: 1
+Total number of search iterations: 362950
+Total number of local moves: 42703 (including on plateau: 0)
+Total number of local minimum: 60737 (including on plateau: 0)
+Total number of resets: 9820
+Total number of restarts: 721
+
+Optimization cost: 5581.67
+Opt Cost BEFORE post-processing: 5581.67
+Optimization post-processing time: 7.7e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 0
+Firebat: 312
+Ghost: 0
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 11
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.693ms
+Wall-clock time (full program): 116.003ms
+Satisfaction error: 0
+Number of search iterations: 476
+Number of local moves: 60 (including on plateau: 0)
+Number of local minimum: 82 (including on plateau: 0)
+Number of resets: 13
+Number of restarts: 1
+Total number of search iterations: 370451
+Total number of local moves: 43591 (including on plateau: 0)
+Total number of local minimum: 62002 (including on plateau: 0)
+Total number of resets: 10023
+Total number of restarts: 737
+
+Optimization cost: 5665.82
+Opt Cost BEFORE post-processing: 5665.82
+Optimization post-processing time: 6.9e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 1
+Firebat: 265
+Ghost: 1
+Vulture: 7
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 41
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.55ms
+Wall-clock time (full program): 115.822ms
+Satisfaction error: 0
+Number of search iterations: 503
+Number of local moves: 62 (including on plateau: 0)
+Number of local minimum: 81 (including on plateau: 0)
+Number of resets: 13
+Number of restarts: 1
+Total number of search iterations: 378061
+Total number of local moves: 44499 (including on plateau: 0)
+Total number of local minimum: 63284 (including on plateau: 0)
+Total number of resets: 10230
+Total number of restarts: 753
+
+Optimization cost: 5676.36
+Opt Cost BEFORE post-processing: 5676.36
+Optimization post-processing time: 8.6e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 122
+Firebat: 258
+Ghost: 0
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.923ms
+Wall-clock time (full program): 116.227ms
+Satisfaction error: 0
+Number of search iterations: 490
+Number of local moves: 64 (including on plateau: 0)
+Number of local minimum: 84 (including on plateau: 0)
+Number of resets: 14
+Number of restarts: 1
+Total number of search iterations: 385645
+Total number of local moves: 45401 (including on plateau: 0)
+Total number of local minimum: 64565 (including on plateau: 0)
+Total number of resets: 10436
+Total number of restarts: 768
+
+Optimization cost: 5674.47
+Opt Cost BEFORE post-processing: 5674.47
+Optimization post-processing time: 7.8e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 0
+Firebat: 258
+Ghost: 2
+Vulture: 0
+SiegeTankTankMode: 47
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.563ms
+Wall-clock time (full program): 115.824ms
+Satisfaction error: 0
+Number of search iterations: 487
+Number of local moves: 59 (including on plateau: 0)
+Number of local minimum: 81 (including on plateau: 0)
+Number of resets: 13
+Number of restarts: 1
+Total number of search iterations: 393286
+Total number of local moves: 46332 (including on plateau: 0)
+Total number of local minimum: 65834 (including on plateau: 0)
+Total number of resets: 10642
+Total number of restarts: 784
+
+Optimization cost: 5439.69
+Opt Cost BEFORE post-processing: 5439.69
+Optimization post-processing time: 7.5e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 80
+Firebat: 266
+Ghost: 0
+Vulture: 0
+SiegeTankTankMode: 17
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.622ms
+Wall-clock time (full program): 115.908ms
+Satisfaction error: 0
+Number of search iterations: 476
+Number of local moves: 56 (including on plateau: 0)
+Number of local minimum: 80 (including on plateau: 0)
+Number of resets: 13
+Number of restarts: 1
+Total number of search iterations: 400877
+Total number of local moves: 47246 (including on plateau: 0)
+Total number of local minimum: 67107 (including on plateau: 0)
+Total number of resets: 10849
+Total number of restarts: 800
+
+Optimization cost: 5741.72
+Opt Cost BEFORE post-processing: 5741.72
+Optimization post-processing time: 8e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 0
+Firebat: 265
+Ghost: 65
+Vulture: 25
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.778ms
+Wall-clock time (full program): 116.045ms
+Satisfaction error: 0
+Number of search iterations: 468
+Number of local moves: 48 (including on plateau: 0)
+Number of local minimum: 79 (including on plateau: 0)
+Number of resets: 13
+Number of restarts: 1
+Total number of search iterations: 408503
+Total number of local moves: 48174 (including on plateau: 0)
+Total number of local minimum: 68373 (including on plateau: 0)
+Total number of resets: 11053
+Total number of restarts: 816
+
+Optimization cost: 5734.55
+Opt Cost BEFORE post-processing: 5734.55
+Optimization post-processing time: 7.6e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 33
+Firebat: 325
+Ghost: 0
+Vulture: 0
+SiegeTankTankMode: 5
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 2
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.698ms
+Wall-clock time (full program): 115.972ms
+Satisfaction error: 0
+Number of search iterations: 455
+Number of local moves: 52 (including on plateau: 0)
+Number of local minimum: 78 (including on plateau: 0)
+Number of resets: 13
+Number of restarts: 1
+Total number of search iterations: 416056
+Total number of local moves: 49066 (including on plateau: 0)
+Total number of local minimum: 69620 (including on plateau: 0)
+Total number of resets: 11257
+Total number of restarts: 832
+
+Optimization cost: 6126.82
+Opt Cost BEFORE post-processing: 6126.82
+Optimization post-processing time: 7.7e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 20
+Firebat: 260
+Ghost: 100
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.697ms
+Wall-clock time (full program): 116.238ms
+Satisfaction error: 0
+Number of search iterations: 396
+Number of local moves: 40 (including on plateau: 0)
+Number of local minimum: 62 (including on plateau: 0)
+Number of resets: 10
+Number of restarts: 1
+Total number of search iterations: 423147
+Total number of local moves: 49921 (including on plateau: 0)
+Total number of local minimum: 70788 (including on plateau: 0)
+Total number of resets: 11445
+Total number of restarts: 848
+
+Optimization cost: 5821.09
+Opt Cost BEFORE post-processing: 5821.09
+Optimization post-processing time: 0.000199
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 58
+Firebat: 203
+Ghost: 119
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.374ms
+Wall-clock time (full program): 115.713ms
+Satisfaction error: 0
+Number of search iterations: 340
+Number of local moves: 43 (including on plateau: 0)
+Number of local minimum: 57 (including on plateau: 0)
+Number of resets: 9
+Number of restarts: 1
+Total number of search iterations: 429823
+Total number of local moves: 50730 (including on plateau: 0)
+Total number of local minimum: 71868 (including on plateau: 0)
+Total number of resets: 11619
+Total number of restarts: 861
+
+Optimization cost: 5398.25
+Opt Cost BEFORE post-processing: 5398.25
+Optimization post-processing time: 7.2e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 115
+Firebat: 265
+Ghost: 0
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 101.772ms
+Wall-clock time (full program): 102.06ms
+Satisfaction error: 0
+Number of search iterations: 209
+Number of local moves: 24 (including on plateau: 0)
+Number of local minimum: 38 (including on plateau: 0)
+Number of resets: 6
+Number of restarts: 0
+Total number of search iterations: 436878
+Total number of local moves: 51564 (including on plateau: 0)
+Total number of local minimum: 73069 (including on plateau: 0)
+Total number of resets: 11813
+Total number of restarts: 875
+
+Optimization cost: 5729.45
+Opt Cost BEFORE post-processing: 5729.45
+Optimization post-processing time: 7.9e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 20
+Firebat: 258
+Ghost: 100
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 1
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 116.221ms
+Wall-clock time (full program): 116.464ms
+Satisfaction error: 0
+Number of search iterations: 465
+Number of local moves: 71 (including on plateau: 0)
+Number of local minimum: 78 (including on plateau: 0)
+Number of resets: 13
+Number of restarts: 1
+Total number of search iterations: 444078
+Total number of local moves: 52425 (including on plateau: 0)
+Total number of local minimum: 74269 (including on plateau: 0)
+Total number of resets: 12008
+Total number of restarts: 890
+
+Optimization cost: 5799.27
+Opt Cost BEFORE post-processing: 5799.27
+Optimization post-processing time: 7.5e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 125
+Firebat: 255
+Ghost: 0
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 116.661ms
+Wall-clock time (full program): 116.955ms
+Satisfaction error: 0
+Number of search iterations: 434
+Number of local moves: 58 (including on plateau: 0)
+Number of local minimum: 72 (including on plateau: 0)
+Number of resets: 12
+Number of restarts: 1
+Total number of search iterations: 451461
+Total number of local moves: 53320 (including on plateau: 0)
+Total number of local minimum: 75513 (including on plateau: 0)
+Total number of resets: 12210
+Total number of restarts: 905
+
+Optimization cost: 5650.91
+Opt Cost BEFORE post-processing: 5650.91
+Optimization post-processing time: 6.7e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 0
+Firebat: 312
+Ghost: 2
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 29
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 114.69ms
+Wall-clock time (full program): 114.983ms
+Satisfaction error: 0
+Number of search iterations: 484
+Number of local moves: 52 (including on plateau: 0)
+Number of local minimum: 80 (including on plateau: 0)
+Number of resets: 13
+Number of restarts: 1
+Total number of search iterations: 458633
+Total number of local moves: 54140 (including on plateau: 0)
+Total number of local minimum: 76715 (including on plateau: 0)
+Total number of resets: 12406
+Total number of restarts: 919
+
+Optimization cost: 6117.24
+Opt Cost BEFORE post-processing: 6117.24
+Optimization post-processing time: 8.3e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 1
+Firebat: 208
+Ghost: 117
+Vulture: 27
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 121.05ms
+Wall-clock time (full program): 121.35ms
+Satisfaction error: 0
+Number of search iterations: 478
+Number of local moves: 55 (including on plateau: 0)
+Number of local minimum: 74 (including on plateau: 0)
+Number of resets: 12
+Number of restarts: 1
+Total number of search iterations: 466049
+Total number of local moves: 55034 (including on plateau: 0)
+Total number of local minimum: 77953 (including on plateau: 0)
+Total number of resets: 12606
+Total number of restarts: 934
+
+Optimization cost: 5348.51
+Opt Cost BEFORE post-processing: 5348.51
+Optimization post-processing time: 7.5e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 80
+Firebat: 258
+Ghost: 42
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 118.506ms
+Wall-clock time (full program): 118.763ms
+Satisfaction error: 0
+Number of search iterations: 495
+Number of local moves: 56 (including on plateau: 0)
+Number of local minimum: 83 (including on plateau: 0)
+Number of resets: 13
+Number of restarts: 1
+Total number of search iterations: 473725
+Total number of local moves: 55929 (including on plateau: 0)
+Total number of local minimum: 79241 (including on plateau: 0)
+Total number of resets: 12813
+Total number of restarts: 950
+
+Optimization cost: 5729.45
+Opt Cost BEFORE post-processing: 5729.45
+Optimization post-processing time: 6.6e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 4
+Firebat: 258
+Ghost: 64
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 27
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 116.813ms
+Wall-clock time (full program): 117.242ms
+Satisfaction error: 0
+Number of search iterations: 477
+Number of local moves: 57 (including on plateau: 0)
+Number of local minimum: 75 (including on plateau: 0)
+Number of resets: 12
+Number of restarts: 1
+Total number of search iterations: 481311
+Total number of local moves: 56863 (including on plateau: 0)
+Total number of local minimum: 80485 (including on plateau: 0)
+Total number of resets: 13013
+Total number of restarts: 966
+
+Optimization cost: 5844.65
+Opt Cost BEFORE post-processing: 5844.65
+Optimization post-processing time: 9.2e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 17
+Firebat: 265
+Ghost: 98
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.648ms
+Wall-clock time (full program): 115.962ms
+Satisfaction error: 0
+Number of search iterations: 481
+Number of local moves: 54 (including on plateau: 0)
+Number of local minimum: 78 (including on plateau: 0)
+Number of resets: 12
+Number of restarts: 1
+Total number of search iterations: 487702
+Total number of local moves: 57593 (including on plateau: 0)
+Total number of local minimum: 81560 (including on plateau: 0)
+Total number of resets: 13183
+Total number of restarts: 976
+
+Optimization cost: 5857.75
+Opt Cost BEFORE post-processing: 5857.75
+Optimization post-processing time: 7e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 64
+Firebat: 260
+Ghost: 0
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 28
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.612ms
+Wall-clock time (full program): 115.901ms
+Satisfaction error: 0
+Number of search iterations: 468
+Number of local moves: 68 (including on plateau: 0)
+Number of local minimum: 72 (including on plateau: 0)
+Number of resets: 12
+Number of restarts: 1
+Total number of search iterations: 495138
+Total number of local moves: 58517 (including on plateau: 0)
+Total number of local minimum: 82807 (including on plateau: 0)
+Total number of resets: 13385
+Total number of restarts: 992
+
+Optimization cost: 5519.13
+Opt Cost BEFORE post-processing: 5519.13
+Optimization post-processing time: 7.4e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 0
+Firebat: 258
+Ghost: 2
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 47
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.61ms
+Wall-clock time (full program): 115.876ms
+Satisfaction error: 0
+Number of search iterations: 474
+Number of local moves: 58 (including on plateau: 0)
+Number of local minimum: 84 (including on plateau: 0)
+Number of resets: 14
+Number of restarts: 1
+Total number of search iterations: 502707
+Total number of local moves: 59406 (including on plateau: 0)
+Total number of local minimum: 84103 (including on plateau: 0)
+Total number of resets: 13592
+Total number of restarts: 1008
+
+Optimization cost: 5577.89
+Opt Cost BEFORE post-processing: 5577.89
+Optimization post-processing time: 8.1e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 0
+Firebat: 312
+Ghost: 0
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 34
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.74ms
+Wall-clock time (full program): 116.025ms
+Satisfaction error: 0
+Number of search iterations: 499
+Number of local moves: 59 (including on plateau: 0)
+Number of local minimum: 82 (including on plateau: 0)
+Number of resets: 13
+Number of restarts: 1
+Total number of search iterations: 510347
+Total number of local moves: 60273 (including on plateau: 0)
+Total number of local minimum: 85360 (including on plateau: 0)
+Total number of resets: 13795
+Total number of restarts: 1024
+
+Optimization cost: 5890.91
+Opt Cost BEFORE post-processing: 5890.91
+Optimization post-processing time: 7.7e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 20
+Firebat: 260
+Ghost: 100
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.681ms
+Wall-clock time (full program): 116.031ms
+Satisfaction error: 0
+Number of search iterations: 479
+Number of local moves: 55 (including on plateau: 0)
+Number of local minimum: 74 (including on plateau: 0)
+Number of resets: 12
+Number of restarts: 1
+Total number of search iterations: 517722
+Total number of local moves: 61133 (including on plateau: 0)
+Total number of local minimum: 86581 (including on plateau: 0)
+Total number of resets: 13991
+Total number of restarts: 1039
+
+Optimization cost: 5821.09
+Opt Cost BEFORE post-processing: 5821.09
+Optimization post-processing time: 7.7e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 0
+Firebat: 266
+Ghost: 0
+Vulture: 52
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 5
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.587ms
+Wall-clock time (full program): 115.886ms
+Satisfaction error: 0
+Number of search iterations: 423
+Number of local moves: 45 (including on plateau: 0)
+Number of local minimum: 69 (including on plateau: 0)
+Number of resets: 11
+Number of restarts: 1
+Total number of search iterations: 525169
+Total number of local moves: 62013 (including on plateau: 0)
+Total number of local minimum: 87846 (including on plateau: 0)
+Total number of resets: 14195
+Total number of restarts: 1055
+
+Optimization cost: 5586.91
+Opt Cost BEFORE post-processing: 5586.91
+Optimization post-processing time: 7.6e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 0
+Firebat: 265
+Ghost: 0
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 45
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 114.033ms
+Wall-clock time (full program): 114.324ms
+Satisfaction error: 0
+Number of search iterations: 472
+Number of local moves: 54 (including on plateau: 0)
+Number of local minimum: 74 (including on plateau: 0)
+Number of resets: 12
+Number of restarts: 1
+Total number of search iterations: 532505
+Total number of local moves: 62897 (including on plateau: 0)
+Total number of local minimum: 89061 (including on plateau: 0)
+Total number of resets: 14390
+Total number of restarts: 1069
+
+Optimization cost: 5633.45
+Opt Cost BEFORE post-processing: 5633.45
+Optimization post-processing time: 8.1e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 0
+Firebat: 265
+Ghost: 1
+Vulture: 57
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 103.978ms
+Wall-clock time (full program): 104.278ms
+Satisfaction error: 0
+Number of search iterations: 492
+Number of local moves: 55 (including on plateau: 0)
+Number of local minimum: 78 (including on plateau: 0)
+Number of resets: 13
+Number of restarts: 1
+Total number of search iterations: 539785
+Total number of local moves: 63739 (including on plateau: 0)
+Total number of local minimum: 90264 (including on plateau: 0)
+Total number of resets: 14584
+Total number of restarts: 1083
+
+Optimization cost: 5548.36
+Opt Cost BEFORE post-processing: 5548.36
+Optimization post-processing time: 8.3e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 112
+Firebat: 258
+Ghost: 2
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 4
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 120.357ms
+Wall-clock time (full program): 120.748ms
+Satisfaction error: 0
+Number of search iterations: 483
+Number of local moves: 60 (including on plateau: 0)
+Number of local minimum: 78 (including on plateau: 0)
+Number of resets: 13
+Number of restarts: 1
+Total number of search iterations: 546743
+Total number of local moves: 64596 (including on plateau: 0)
+Total number of local minimum: 91406 (including on plateau: 0)
+Total number of resets: 14769
+Total number of restarts: 1099
+
+Optimization cost: 5625.89
+Opt Cost BEFORE post-processing: 5625.89
+Optimization post-processing time: 8.4e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 16
+Firebat: 266
+Ghost: 98
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 120.301ms
+Wall-clock time (full program): 120.606ms
+Satisfaction error: 0
+Number of search iterations: 423
+Number of local moves: 48 (including on plateau: 0)
+Number of local minimum: 67 (including on plateau: 0)
+Number of resets: 11
+Number of restarts: 1
+Total number of search iterations: 553525
+Total number of local moves: 65417 (including on plateau: 0)
+Total number of local minimum: 92525 (including on plateau: 0)
+Total number of resets: 14951
+Total number of restarts: 1113
+
+Optimization cost: 5865.6
+Opt Cost BEFORE post-processing: 5865.6
+Optimization post-processing time: 8.8e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 0
+Firebat: 355
+Ghost: 25
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 110.894ms
+Wall-clock time (full program): 111.173ms
+Satisfaction error: 0
+Number of search iterations: 486
+Number of local moves: 63 (including on plateau: 0)
+Number of local minimum: 81 (including on plateau: 0)
+Number of resets: 13
+Number of restarts: 1
+Total number of search iterations: 560802
+Total number of local moves: 66274 (including on plateau: 0)
+Total number of local minimum: 93724 (including on plateau: 0)
+Total number of resets: 15147
+Total number of restarts: 1127
+
+Optimization cost: 6469.09
+Opt Cost BEFORE post-processing: 6469.09
+Optimization post-processing time: 7.9e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 19
+Firebat: 260
+Ghost: 99
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 1
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 116.408ms
+Wall-clock time (full program): 116.695ms
+Satisfaction error: 0
+Number of search iterations: 479
+Number of local moves: 53 (including on plateau: 0)
+Number of local minimum: 71 (including on plateau: 0)
+Number of resets: 11
+Number of restarts: 1
+Total number of search iterations: 568158
+Total number of local moves: 67130 (including on plateau: 0)
+Total number of local minimum: 94973 (including on plateau: 0)
+Total number of resets: 15348
+Total number of restarts: 1142
+
+Optimization cost: 5813.67
+Opt Cost BEFORE post-processing: 5813.67
+Optimization post-processing time: 7e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 16
+Firebat: 266
+Ghost: 98
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.542ms
+Wall-clock time (full program): 115.869ms
+Satisfaction error: 0
+Number of search iterations: 470
+Number of local moves: 60 (including on plateau: 0)
+Number of local minimum: 84 (including on plateau: 0)
+Number of resets: 14
+Number of restarts: 1
+Total number of search iterations: 575684
+Total number of local moves: 68027 (including on plateau: 0)
+Total number of local minimum: 96259 (including on plateau: 0)
+Total number of resets: 15558
+Total number of restarts: 1157
+
+Optimization cost: 5865.6
+Opt Cost BEFORE post-processing: 5865.6
+Optimization post-processing time: 7.9e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 0
+Firebat: 258
+Ghost: 2
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 47
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.259ms
+Wall-clock time (full program): 115.543ms
+Satisfaction error: 0
+Number of search iterations: 491
+Number of local moves: 55 (including on plateau: 0)
+Number of local minimum: 80 (including on plateau: 0)
+Number of resets: 13
+Number of restarts: 1
+Total number of search iterations: 583257
+Total number of local moves: 68946 (including on plateau: 0)
+Total number of local minimum: 97549 (including on plateau: 0)
+Total number of resets: 15766
+Total number of restarts: 1173
+
+Optimization cost: 5577.89
+Opt Cost BEFORE post-processing: 5577.89
+Optimization post-processing time: 7.1e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 19
+Firebat: 265
+Ghost: 0
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 48
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 114.827ms
+Wall-clock time (full program): 115.102ms
+Satisfaction error: 0
+Number of search iterations: 480
+Number of local moves: 53 (including on plateau: 0)
+Number of local minimum: 84 (including on plateau: 0)
+Number of resets: 14
+Number of restarts: 1
+Total number of search iterations: 590756
+Total number of local moves: 69801 (including on plateau: 0)
+Total number of local minimum: 98797 (including on plateau: 0)
+Total number of resets: 15966
+Total number of restarts: 1188
+
+Optimization cost: 5436.22
+Opt Cost BEFORE post-processing: 5436.22
+Optimization post-processing time: 8e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 0
+Firebat: 312
+Ghost: 14
+Vulture: 0
+SiegeTankTankMode: 27
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.225ms
+Wall-clock time (full program): 115.489ms
+Satisfaction error: 0
+Number of search iterations: 469
+Number of local moves: 56 (including on plateau: 0)
+Number of local minimum: 90 (including on plateau: 0)
+Number of resets: 14
+Number of restarts: 1
+Total number of search iterations: 598361
+Total number of local moves: 70702 (including on plateau: 0)
+Total number of local minimum: 100083 (including on plateau: 0)
+Total number of resets: 16172
+Total number of restarts: 1204
+
+Optimization cost: 6123.95
+Opt Cost BEFORE post-processing: 6123.95
+Optimization post-processing time: 7.9e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 0
+Firebat: 258
+Ghost: 52
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 35
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 116.199ms
+Wall-clock time (full program): 116.493ms
+Satisfaction error: 0
+Number of search iterations: 507
+Number of local moves: 58 (including on plateau: 0)
+Number of local minimum: 90 (including on plateau: 0)
+Number of resets: 14
+Number of restarts: 1
+Total number of search iterations: 605880
+Total number of local moves: 71585 (including on plateau: 0)
+Total number of local minimum: 101330 (including on plateau: 0)
+Total number of resets: 16374
+Total number of restarts: 1220
+
+Optimization cost: 5854.55
+Opt Cost BEFORE post-processing: 5854.55
+Optimization post-processing time: 8.5e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 0
+Firebat: 258
+Ghost: 46
+Vulture: 38
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 117.041ms
+Wall-clock time (full program): 117.538ms
+Satisfaction error: 0
+Number of search iterations: 462
+Number of local moves: 55 (including on plateau: 0)
+Number of local minimum: 81 (including on plateau: 0)
+Number of resets: 13
+Number of restarts: 1
+Total number of search iterations: 613022
+Total number of local moves: 72461 (including on plateau: 0)
+Total number of local minimum: 102529 (including on plateau: 0)
+Total number of resets: 16567
+Total number of restarts: 1236
+
+Optimization cost: 5613.09
+Opt Cost BEFORE post-processing: 5613.09
+Optimization post-processing time: 9.7e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 115
+Firebat: 265
+Ghost: 0
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.452ms
+Wall-clock time (full program): 115.829ms
+Satisfaction error: 0
+Number of search iterations: 457
+Number of local moves: 58 (including on plateau: 0)
+Number of local minimum: 72 (including on plateau: 0)
+Number of resets: 12
+Number of restarts: 1
+Total number of search iterations: 619606
+Total number of local moves: 73228 (including on plateau: 0)
+Total number of local minimum: 103608 (including on plateau: 0)
+Total number of resets: 16741
+Total number of restarts: 1249
+
+Optimization cost: 5729.45
+Opt Cost BEFORE post-processing: 5729.45
+Optimization post-processing time: 7.3e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 0
+Firebat: 312
+Ghost: 0
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 34
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 109.859ms
+Wall-clock time (full program): 110.143ms
+Satisfaction error: 0
+Number of search iterations: 463
+Number of local moves: 54 (including on plateau: 0)
+Number of local minimum: 78 (including on plateau: 0)
+Number of resets: 13
+Number of restarts: 1
+Total number of search iterations: 626690
+Total number of local moves: 74076 (including on plateau: 0)
+Total number of local minimum: 104782 (including on plateau: 0)
+Total number of resets: 16931
+Total number of restarts: 1263
+
+Optimization cost: 5890.91
+Opt Cost BEFORE post-processing: 5890.91
+Optimization post-processing time: 7.9e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 115
+Firebat: 265
+Ghost: 0
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 120.674ms
+Wall-clock time (full program): 120.952ms
+Satisfaction error: 0
+Number of search iterations: 494
+Number of local moves: 55 (including on plateau: 0)
+Number of local minimum: 84 (including on plateau: 0)
+Number of resets: 14
+Number of restarts: 1
+Total number of search iterations: 634258
+Total number of local moves: 74967 (including on plateau: 0)
+Total number of local minimum: 106021 (including on plateau: 0)
+Total number of resets: 17131
+Total number of restarts: 1279
+
+Optimization cost: 5729.45
+Opt Cost BEFORE post-processing: 5729.45
+Optimization post-processing time: 6.9e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 0
+Firebat: 312
+Ghost: 0
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 34
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 116.568ms
+Wall-clock time (full program): 116.83ms
+Satisfaction error: 0
+Number of search iterations: 491
+Number of local moves: 61 (including on plateau: 0)
+Number of local minimum: 90 (including on plateau: 0)
+Number of resets: 14
+Number of restarts: 1
+Total number of search iterations: 641798
+Total number of local moves: 75873 (including on plateau: 0)
+Total number of local minimum: 107299 (including on plateau: 0)
+Total number of resets: 17338
+Total number of restarts: 1294
+
+Optimization cost: 5890.91
+Opt Cost BEFORE post-processing: 5890.91
+Optimization post-processing time: 7.7e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 109
+Firebat: 258
+Ghost: 13
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 116.739ms
+Wall-clock time (full program): 117.022ms
+Satisfaction error: 0
+Number of search iterations: 491
+Number of local moves: 55 (including on plateau: 0)
+Number of local minimum: 82 (including on plateau: 0)
+Number of resets: 13
+Number of restarts: 1
+Total number of search iterations: 649278
+Total number of local moves: 76779 (including on plateau: 0)
+Total number of local minimum: 108576 (including on plateau: 0)
+Total number of resets: 17544
+Total number of restarts: 1309
+
+Optimization cost: 5691.49
+Opt Cost BEFORE post-processing: 5691.49
+Optimization post-processing time: 7.7e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 22
+Firebat: 258
+Ghost: 100
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 103.015ms
+Wall-clock time (full program): 103.3ms
+Satisfaction error: 0
+Number of search iterations: 486
+Number of local moves: 51 (including on plateau: 0)
+Number of local minimum: 87 (including on plateau: 0)
+Number of resets: 14
+Number of restarts: 1
+Total number of search iterations: 656569
+Total number of local moves: 77603 (including on plateau: 0)
+Total number of local minimum: 109814 (including on plateau: 0)
+Total number of resets: 17741
+Total number of restarts: 1323
+
+Optimization cost: 5805.38
+Opt Cost BEFORE post-processing: 5805.38
+Optimization post-processing time: 8.2e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 115
+Firebat: 265
+Ghost: 0
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.186ms
+Wall-clock time (full program): 115.438ms
+Satisfaction error: 0
+Number of search iterations: 466
+Number of local moves: 60 (including on plateau: 0)
+Number of local minimum: 75 (including on plateau: 0)
+Number of resets: 12
+Number of restarts: 1
+Total number of search iterations: 663782
+Total number of local moves: 78461 (including on plateau: 0)
+Total number of local minimum: 110994 (including on plateau: 0)
+Total number of resets: 17932
+Total number of restarts: 1337
+
+Optimization cost: 5729.45
+Opt Cost BEFORE post-processing: 5729.45
+Optimization post-processing time: 8e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 17
+Firebat: 265
+Ghost: 98
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 114.547ms
+Wall-clock time (full program): 114.982ms
+Satisfaction error: 0
+Number of search iterations: 474
+Number of local moves: 55 (including on plateau: 0)
+Number of local minimum: 82 (including on plateau: 0)
+Number of resets: 13
+Number of restarts: 1
+Total number of search iterations: 671247
+Total number of local moves: 79345 (including on plateau: 0)
+Total number of local minimum: 112242 (including on plateau: 0)
+Total number of resets: 18135
+Total number of restarts: 1353
+
+Optimization cost: 5857.75
+Opt Cost BEFORE post-processing: 5857.75
+Optimization post-processing time: 8.2e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 111
+Firebat: 259
+Ghost: 0
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 5
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 136.702ms
+Wall-clock time (full program): 137.064ms
+Satisfaction error: 0
+Number of search iterations: 452
+Number of local moves: 57 (including on plateau: 0)
+Number of local minimum: 78 (including on plateau: 0)
+Number of resets: 13
+Number of restarts: 1
+Total number of search iterations: 677799
+Total number of local moves: 80124 (including on plateau: 0)
+Total number of local minimum: 113348 (including on plateau: 0)
+Total number of resets: 18312
+Total number of restarts: 1366
+
+Optimization cost: 5651.78
+Opt Cost BEFORE post-processing: 5651.78
+Optimization post-processing time: 6.4e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 0
+Firebat: 266
+Ghost: 74
+Vulture: 20
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.821ms
+Wall-clock time (full program): 116.098ms
+Satisfaction error: 0
+Number of search iterations: 478
+Number of local moves: 50 (including on plateau: 0)
+Number of local minimum: 79 (including on plateau: 0)
+Number of resets: 13
+Number of restarts: 1
+Total number of search iterations: 685466
+Total number of local moves: 81056 (including on plateau: 0)
+Total number of local minimum: 114633 (including on plateau: 0)
+Total number of resets: 18518
+Total number of restarts: 1382
+
+Optimization cost: 5770.18
+Opt Cost BEFORE post-processing: 5770.18
+Optimization post-processing time: 7.2e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 115
+Firebat: 265
+Ghost: 0
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.58ms
+Wall-clock time (full program): 115.855ms
+Satisfaction error: 0
+Number of search iterations: 484
+Number of local moves: 55 (including on plateau: 0)
+Number of local minimum: 84 (including on plateau: 0)
+Number of resets: 14
+Number of restarts: 1
+Total number of search iterations: 692979
+Total number of local moves: 81951 (including on plateau: 0)
+Total number of local minimum: 115921 (including on plateau: 0)
+Total number of resets: 18725
+Total number of restarts: 1397
+
+Optimization cost: 5729.45
+Opt Cost BEFORE post-processing: 5729.45
+Optimization post-processing time: 7.6e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 0
+Firebat: 354
+Ghost: 0
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 13
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.704ms
+Wall-clock time (full program): 115.954ms
+Satisfaction error: 0
+Number of search iterations: 475
+Number of local moves: 53 (including on plateau: 0)
+Number of local minimum: 86 (including on plateau: 0)
+Number of resets: 14
+Number of restarts: 1
+Total number of search iterations: 700570
+Total number of local moves: 82816 (including on plateau: 0)
+Total number of local minimum: 117202 (including on plateau: 0)
+Total number of resets: 18933
+Total number of restarts: 1412
+
+Optimization cost: 6470.11
+Opt Cost BEFORE post-processing: 6470.11
+Optimization post-processing time: 7.3e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 22
+Firebat: 258
+Ghost: 0
+Vulture: 33
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 17
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.655ms
+Wall-clock time (full program): 115.935ms
+Satisfaction error: 0
+Number of search iterations: 493
+Number of local moves: 53 (including on plateau: 0)
+Number of local minimum: 87 (including on plateau: 0)
+Number of resets: 14
+Number of restarts: 1
+Total number of search iterations: 708215
+Total number of local moves: 83704 (including on plateau: 0)
+Total number of local minimum: 118488 (including on plateau: 0)
+Total number of resets: 19141
+Total number of restarts: 1428
+
+Optimization cost: 5351.27
+Opt Cost BEFORE post-processing: 5351.27
+Optimization post-processing time: 7.2e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 0
+Firebat: 266
+Ghost: 0
+Vulture: 57
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.751ms
+Wall-clock time (full program): 116.012ms
+Satisfaction error: 0
+Number of search iterations: 500
+Number of local moves: 55 (including on plateau: 0)
+Number of local minimum: 84 (including on plateau: 0)
+Number of resets: 13
+Number of restarts: 1
+Total number of search iterations: 715781
+Total number of local moves: 84579 (including on plateau: 0)
+Total number of local minimum: 119781 (including on plateau: 0)
+Total number of resets: 19349
+Total number of restarts: 1444
+
+Optimization cost: 5554.91
+Opt Cost BEFORE post-processing: 5554.91
+Optimization post-processing time: 7.3e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 0
+Firebat: 258
+Ghost: 64
+Vulture: 1
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 27
+Goliath: 1
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.721ms
+Wall-clock time (full program): 116.022ms
+Satisfaction error: 0
+Number of search iterations: 489
+Number of local moves: 60 (including on plateau: 0)
+Number of local minimum: 80 (including on plateau: 0)
+Number of resets: 13
+Number of restarts: 1
+Total number of search iterations: 723294
+Total number of local moves: 85498 (including on plateau: 0)
+Total number of local minimum: 121027 (including on plateau: 0)
+Total number of resets: 19552
+Total number of restarts: 1460
+
+Optimization cost: 5835.35
+Opt Cost BEFORE post-processing: 5835.35
+Optimization post-processing time: 8.2e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 81
+Firebat: 265
+Ghost: 0
+Vulture: 0
+SiegeTankTankMode: 17
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.585ms
+Wall-clock time (full program): 115.845ms
+Satisfaction error: 0
+Number of search iterations: 491
+Number of local moves: 58 (including on plateau: 0)
+Number of local minimum: 81 (including on plateau: 0)
+Number of resets: 13
+Number of restarts: 1
+Total number of search iterations: 730878
+Total number of local moves: 86398 (including on plateau: 0)
+Total number of local minimum: 122272 (including on plateau: 0)
+Total number of resets: 19754
+Total number of restarts: 1475
+
+Optimization cost: 5733.87
+Opt Cost BEFORE post-processing: 5733.87
+Optimization post-processing time: 6.7e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 4
+Firebat: 258
+Ghost: 64
+Vulture: 0
+SiegeTankTankMode: 0
+SiegeTankSiegeMode: 27
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 115.691ms
+Wall-clock time (full program): 116.194ms
+Satisfaction error: 0
+Number of search iterations: 444
+Number of local moves: 52 (including on plateau: 0)
+Number of local minimum: 73 (including on plateau: 0)
+Number of resets: 12
+Number of restarts: 1
+Total number of search iterations: 738101
+Total number of local moves: 87263 (including on plateau: 0)
+Total number of local minimum: 123491 (including on plateau: 0)
+Total number of resets: 19949
+Total number of restarts: 1490
+
+Optimization cost: 5844.65
+Opt Cost BEFORE post-processing: 5844.65
+Optimization post-processing time: 0.000149
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: true
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 6 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 6 variables are frozen
+Do a restart each time 9 resets are performed
+############
+Marine: 126
+Firebat: 218
+Ghost: 0
+Vulture: 0
+SiegeTankTankMode: 18
+SiegeTankSiegeMode: 0
+Goliath: 0
+Wraith: 0
+BattleCruiser: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 119.479ms
+Wall-clock time (full program): 119.835ms
+Satisfaction error: 0
+Number of search iterations: 491
+Number of local moves: 64 (including on plateau: 0)
+Number of local minimum: 81 (including on plateau: 0)
+Number of resets: 13
+Number of restarts: 1
+Total number of search iterations: 744921
+Total number of local moves: 88091 (including on plateau: 0)
+Total number of local minimum: 124621 (including on plateau: 0)
+Total number of resets: 20133
+Total number of restarts: 1506
+
+Optimization cost: 5364.96
+Opt Cost BEFORE post-processing: 5364.96
+Optimization post-processing time: 8.3e-05
+

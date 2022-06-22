@@ -1,0 +1,3500 @@
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.286ms
+Satisfaction error: 0
+Number of search iterations: 1545
+Number of local moves: 229 (including on plateau: 0)
+Number of local minimum: 440 (including on plateau: 0)
+Number of resets: 88
+Number of restarts: 17
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 0.000491
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.09ms
+Satisfaction error: 0
+Number of search iterations: 2159
+Number of local moves: 308 (including on plateau: 0)
+Number of local minimum: 629 (including on plateau: 0)
+Number of resets: 125
+Number of restarts: 25
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 4.2e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.046ms
+Satisfaction error: 0
+Number of search iterations: 2065
+Number of local moves: 333 (including on plateau: 0)
+Number of local minimum: 577 (including on plateau: 0)
+Number of resets: 115
+Number of restarts: 23
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 0.000116
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.078ms
+Satisfaction error: 0
+Number of search iterations: 1970
+Number of local moves: 293 (including on plateau: 0)
+Number of local minimum: 555 (including on plateau: 0)
+Number of resets: 111
+Number of restarts: 22
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 4.1e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.085ms
+Satisfaction error: 0
+Number of search iterations: 2137
+Number of local moves: 324 (including on plateau: 0)
+Number of local minimum: 614 (including on plateau: 0)
+Number of resets: 122
+Number of restarts: 24
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 2.4e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.048ms
+Satisfaction error: 0
+Number of search iterations: 2170
+Number of local moves: 326 (including on plateau: 0)
+Number of local minimum: 630 (including on plateau: 0)
+Number of resets: 126
+Number of restarts: 25
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 4e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.054ms
+Satisfaction error: 0
+Number of search iterations: 2168
+Number of local moves: 325 (including on plateau: 0)
+Number of local minimum: 639 (including on plateau: 0)
+Number of resets: 127
+Number of restarts: 25
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 4e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.04ms
+Satisfaction error: 0
+Number of search iterations: 2165
+Number of local moves: 316 (including on plateau: 0)
+Number of local minimum: 635 (including on plateau: 0)
+Number of resets: 127
+Number of restarts: 25
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 4.4e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.05ms
+Satisfaction error: 0
+Number of search iterations: 2174
+Number of local moves: 350 (including on plateau: 0)
+Number of local minimum: 625 (including on plateau: 0)
+Number of resets: 125
+Number of restarts: 25
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 3.8e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.088ms
+Satisfaction error: 0
+Number of search iterations: 2189
+Number of local moves: 324 (including on plateau: 0)
+Number of local minimum: 616 (including on plateau: 0)
+Number of resets: 123
+Number of restarts: 24
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 3.9e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.07ms
+Satisfaction error: 0
+Number of search iterations: 2183
+Number of local moves: 327 (including on plateau: 0)
+Number of local minimum: 637 (including on plateau: 0)
+Number of resets: 127
+Number of restarts: 25
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 3.7e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.052ms
+Satisfaction error: 0
+Number of search iterations: 2172
+Number of local moves: 326 (including on plateau: 0)
+Number of local minimum: 626 (including on plateau: 0)
+Number of resets: 124
+Number of restarts: 24
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 3.9e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.075ms
+Satisfaction error: 0
+Number of search iterations: 2088
+Number of local moves: 313 (including on plateau: 0)
+Number of local minimum: 585 (including on plateau: 0)
+Number of resets: 117
+Number of restarts: 23
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 4.3e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.085ms
+Satisfaction error: 0
+Number of search iterations: 1975
+Number of local moves: 295 (including on plateau: 0)
+Number of local minimum: 577 (including on plateau: 0)
+Number of resets: 115
+Number of restarts: 23
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 4.4e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.074ms
+Satisfaction error: 0
+Number of search iterations: 2137
+Number of local moves: 311 (including on plateau: 0)
+Number of local minimum: 622 (including on plateau: 0)
+Number of resets: 124
+Number of restarts: 24
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 4e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.047ms
+Satisfaction error: 0
+Number of search iterations: 2139
+Number of local moves: 335 (including on plateau: 0)
+Number of local minimum: 613 (including on plateau: 0)
+Number of resets: 122
+Number of restarts: 24
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 4.6e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.061ms
+Satisfaction error: 0
+Number of search iterations: 2155
+Number of local moves: 319 (including on plateau: 0)
+Number of local minimum: 605 (including on plateau: 0)
+Number of resets: 121
+Number of restarts: 24
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 5.9e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.119ms
+Satisfaction error: 0
+Number of search iterations: 2113
+Number of local moves: 317 (including on plateau: 0)
+Number of local minimum: 609 (including on plateau: 0)
+Number of resets: 121
+Number of restarts: 24
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 3.7e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.052ms
+Satisfaction error: 0
+Number of search iterations: 2092
+Number of local moves: 306 (including on plateau: 0)
+Number of local minimum: 622 (including on plateau: 0)
+Number of resets: 124
+Number of restarts: 24
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 5.1e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.096ms
+Satisfaction error: 0
+Number of search iterations: 2113
+Number of local moves: 321 (including on plateau: 0)
+Number of local minimum: 620 (including on plateau: 0)
+Number of resets: 124
+Number of restarts: 24
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 9.2e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.085ms
+Satisfaction error: 0
+Number of search iterations: 2120
+Number of local moves: 307 (including on plateau: 0)
+Number of local minimum: 605 (including on plateau: 0)
+Number of resets: 121
+Number of restarts: 24
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 4.2e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.095ms
+Satisfaction error: 0
+Number of search iterations: 2100
+Number of local moves: 315 (including on plateau: 0)
+Number of local minimum: 607 (including on plateau: 0)
+Number of resets: 121
+Number of restarts: 24
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 4e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.068ms
+Satisfaction error: 0
+Number of search iterations: 2082
+Number of local moves: 314 (including on plateau: 0)
+Number of local minimum: 585 (including on plateau: 0)
+Number of resets: 117
+Number of restarts: 23
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 0.000104
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.088ms
+Satisfaction error: 0
+Number of search iterations: 2005
+Number of local moves: 307 (including on plateau: 0)
+Number of local minimum: 583 (including on plateau: 0)
+Number of resets: 116
+Number of restarts: 23
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 4e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.068ms
+Satisfaction error: 0
+Number of search iterations: 2112
+Number of local moves: 334 (including on plateau: 0)
+Number of local minimum: 607 (including on plateau: 0)
+Number of resets: 121
+Number of restarts: 24
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 4.9e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.079ms
+Satisfaction error: 0
+Number of search iterations: 2149
+Number of local moves: 323 (including on plateau: 0)
+Number of local minimum: 612 (including on plateau: 0)
+Number of resets: 122
+Number of restarts: 24
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 3.3e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.042ms
+Satisfaction error: 0
+Number of search iterations: 2156
+Number of local moves: 325 (including on plateau: 0)
+Number of local minimum: 609 (including on plateau: 0)
+Number of resets: 121
+Number of restarts: 24
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 3.4e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.075ms
+Satisfaction error: 0
+Number of search iterations: 2159
+Number of local moves: 324 (including on plateau: 0)
+Number of local minimum: 622 (including on plateau: 0)
+Number of resets: 124
+Number of restarts: 24
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 3.9e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.051ms
+Satisfaction error: 0
+Number of search iterations: 2149
+Number of local moves: 316 (including on plateau: 0)
+Number of local minimum: 622 (including on plateau: 0)
+Number of resets: 124
+Number of restarts: 24
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 3.8e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.044ms
+Satisfaction error: 0
+Number of search iterations: 2144
+Number of local moves: 313 (including on plateau: 0)
+Number of local minimum: 611 (including on plateau: 0)
+Number of resets: 122
+Number of restarts: 24
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 3.9e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.05ms
+Satisfaction error: 0
+Number of search iterations: 2159
+Number of local moves: 315 (including on plateau: 0)
+Number of local minimum: 629 (including on plateau: 0)
+Number of resets: 125
+Number of restarts: 25
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 3.7e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.037ms
+Satisfaction error: 0
+Number of search iterations: 2155
+Number of local moves: 319 (including on plateau: 0)
+Number of local minimum: 629 (including on plateau: 0)
+Number of resets: 125
+Number of restarts: 25
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 3.3e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.119ms
+Satisfaction error: 0
+Number of search iterations: 1825
+Number of local moves: 282 (including on plateau: 0)
+Number of local minimum: 526 (including on plateau: 0)
+Number of resets: 105
+Number of restarts: 21
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 5.2e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.097ms
+Satisfaction error: 0
+Number of search iterations: 1880
+Number of local moves: 285 (including on plateau: 0)
+Number of local minimum: 549 (including on plateau: 0)
+Number of resets: 109
+Number of restarts: 21
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 4.1e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 26
+Dragoon: 0
+DarkTemplar: 139
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.063ms
+Satisfaction error: 0
+Number of search iterations: 2117
+Number of local moves: 302 (including on plateau: 0)
+Number of local minimum: 620 (including on plateau: 0)
+Number of resets: 124
+Number of restarts: 24
+
+Optimization cost: 4901.82
+Opt Cost BEFORE post-processing: 4901.82
+Optimization post-processing time: 9.2e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.061ms
+Satisfaction error: 0
+Number of search iterations: 2160
+Number of local moves: 330 (including on plateau: 0)
+Number of local minimum: 610 (including on plateau: 0)
+Number of resets: 122
+Number of restarts: 24
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 3.8e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.066ms
+Satisfaction error: 0
+Number of search iterations: 2168
+Number of local moves: 304 (including on plateau: 0)
+Number of local minimum: 630 (including on plateau: 0)
+Number of resets: 126
+Number of restarts: 25
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 4.8e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.033ms
+Satisfaction error: 0
+Number of search iterations: 2143
+Number of local moves: 335 (including on plateau: 0)
+Number of local minimum: 636 (including on plateau: 0)
+Number of resets: 127
+Number of restarts: 25
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 3.4e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.062ms
+Satisfaction error: 0
+Number of search iterations: 2156
+Number of local moves: 328 (including on plateau: 0)
+Number of local minimum: 616 (including on plateau: 0)
+Number of resets: 123
+Number of restarts: 24
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 3.8e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.05ms
+Satisfaction error: 0
+Number of search iterations: 2162
+Number of local moves: 313 (including on plateau: 0)
+Number of local minimum: 612 (including on plateau: 0)
+Number of resets: 122
+Number of restarts: 24
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 3.4e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.039ms
+Satisfaction error: 0
+Number of search iterations: 2124
+Number of local moves: 319 (including on plateau: 0)
+Number of local minimum: 625 (including on plateau: 0)
+Number of resets: 125
+Number of restarts: 25
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 5e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.077ms
+Satisfaction error: 0
+Number of search iterations: 2167
+Number of local moves: 327 (including on plateau: 0)
+Number of local minimum: 623 (including on plateau: 0)
+Number of resets: 124
+Number of restarts: 24
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 3.6e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.077ms
+Satisfaction error: 0
+Number of search iterations: 2049
+Number of local moves: 303 (including on plateau: 0)
+Number of local minimum: 592 (including on plateau: 0)
+Number of resets: 118
+Number of restarts: 23
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 0.000122
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.105ms
+Satisfaction error: 0
+Number of search iterations: 1911
+Number of local moves: 296 (including on plateau: 0)
+Number of local minimum: 555 (including on plateau: 0)
+Number of resets: 111
+Number of restarts: 22
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 4.3e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.051ms
+Satisfaction error: 0
+Number of search iterations: 1995
+Number of local moves: 306 (including on plateau: 0)
+Number of local minimum: 581 (including on plateau: 0)
+Number of resets: 116
+Number of restarts: 23
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 4.1e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.057ms
+Satisfaction error: 0
+Number of search iterations: 2087
+Number of local moves: 308 (including on plateau: 0)
+Number of local minimum: 613 (including on plateau: 0)
+Number of resets: 122
+Number of restarts: 24
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 4.7e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.069ms
+Satisfaction error: 0
+Number of search iterations: 2146
+Number of local moves: 336 (including on plateau: 0)
+Number of local minimum: 615 (including on plateau: 0)
+Number of resets: 123
+Number of restarts: 24
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 3.8e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.058ms
+Satisfaction error: 0
+Number of search iterations: 2157
+Number of local moves: 302 (including on plateau: 0)
+Number of local minimum: 633 (including on plateau: 0)
+Number of resets: 126
+Number of restarts: 25
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 3.9e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.088ms
+Satisfaction error: 0
+Number of search iterations: 2155
+Number of local moves: 317 (including on plateau: 0)
+Number of local minimum: 616 (including on plateau: 0)
+Number of resets: 123
+Number of restarts: 24
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 4e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.033ms
+Satisfaction error: 0
+Number of search iterations: 2158
+Number of local moves: 301 (including on plateau: 0)
+Number of local minimum: 622 (including on plateau: 0)
+Number of resets: 124
+Number of restarts: 24
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 3.9e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.068ms
+Satisfaction error: 0
+Number of search iterations: 2172
+Number of local moves: 309 (including on plateau: 0)
+Number of local minimum: 626 (including on plateau: 0)
+Number of resets: 125
+Number of restarts: 25
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 3.2e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 22
+Dragoon: 4
+DarkTemplar: 138
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.037ms
+Satisfaction error: 0
+Number of search iterations: 2144
+Number of local moves: 321 (including on plateau: 0)
+Number of local minimum: 630 (including on plateau: 0)
+Number of resets: 126
+Number of restarts: 25
+
+Optimization cost: 4864
+Opt Cost BEFORE post-processing: 4864
+Optimization post-processing time: 4.1e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.076ms
+Satisfaction error: 0
+Number of search iterations: 1992
+Number of local moves: 285 (including on plateau: 0)
+Number of local minimum: 590 (including on plateau: 0)
+Number of resets: 118
+Number of restarts: 23
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 3.3e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.108ms
+Satisfaction error: 0
+Number of search iterations: 1989
+Number of local moves: 303 (including on plateau: 0)
+Number of local minimum: 576 (including on plateau: 0)
+Number of resets: 115
+Number of restarts: 23
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 4.2e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.071ms
+Satisfaction error: 0
+Number of search iterations: 2158
+Number of local moves: 310 (including on plateau: 0)
+Number of local minimum: 632 (including on plateau: 0)
+Number of resets: 126
+Number of restarts: 25
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 3.8e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.081ms
+Satisfaction error: 0
+Number of search iterations: 2170
+Number of local moves: 327 (including on plateau: 0)
+Number of local minimum: 641 (including on plateau: 0)
+Number of resets: 128
+Number of restarts: 25
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 4.2e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.055ms
+Satisfaction error: 0
+Number of search iterations: 2153
+Number of local moves: 310 (including on plateau: 0)
+Number of local minimum: 631 (including on plateau: 0)
+Number of resets: 126
+Number of restarts: 25
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 3.3e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.052ms
+Satisfaction error: 0
+Number of search iterations: 2147
+Number of local moves: 319 (including on plateau: 0)
+Number of local minimum: 606 (including on plateau: 0)
+Number of resets: 121
+Number of restarts: 24
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 3.3e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.101ms
+Satisfaction error: 0
+Number of search iterations: 2157
+Number of local moves: 309 (including on plateau: 0)
+Number of local minimum: 605 (including on plateau: 0)
+Number of resets: 121
+Number of restarts: 24
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 4.8e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.066ms
+Satisfaction error: 0
+Number of search iterations: 2160
+Number of local moves: 331 (including on plateau: 0)
+Number of local minimum: 613 (including on plateau: 0)
+Number of resets: 122
+Number of restarts: 24
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 2.7e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.044ms
+Satisfaction error: 0
+Number of search iterations: 2158
+Number of local moves: 314 (including on plateau: 0)
+Number of local minimum: 620 (including on plateau: 0)
+Number of resets: 124
+Number of restarts: 24
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 3.3e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.085ms
+Satisfaction error: 0
+Number of search iterations: 2161
+Number of local moves: 323 (including on plateau: 0)
+Number of local minimum: 621 (including on plateau: 0)
+Number of resets: 124
+Number of restarts: 24
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 4e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.105ms
+Satisfaction error: 0
+Number of search iterations: 2068
+Number of local moves: 308 (including on plateau: 0)
+Number of local minimum: 600 (including on plateau: 0)
+Number of resets: 120
+Number of restarts: 24
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 0.0001
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.116ms
+Satisfaction error: 0
+Number of search iterations: 2090
+Number of local moves: 308 (including on plateau: 0)
+Number of local minimum: 596 (including on plateau: 0)
+Number of resets: 119
+Number of restarts: 23
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 4e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 5
+Dragoon: 0
+DarkTemplar: 114
+Reaver: 26
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.05ms
+Satisfaction error: 0
+Number of search iterations: 2103
+Number of local moves: 329 (including on plateau: 0)
+Number of local minimum: 611 (including on plateau: 0)
+Number of resets: 122
+Number of restarts: 24
+
+Optimization cost: 4775.27
+Opt Cost BEFORE post-processing: 4775.27
+Optimization post-processing time: 3.4e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.07ms
+Satisfaction error: 0
+Number of search iterations: 2147
+Number of local moves: 311 (including on plateau: 0)
+Number of local minimum: 625 (including on plateau: 0)
+Number of resets: 124
+Number of restarts: 24
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 3.3e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.04ms
+Satisfaction error: 0
+Number of search iterations: 2093
+Number of local moves: 324 (including on plateau: 0)
+Number of local minimum: 590 (including on plateau: 0)
+Number of resets: 118
+Number of restarts: 23
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 2.4e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.041ms
+Satisfaction error: 0
+Number of search iterations: 2161
+Number of local moves: 315 (including on plateau: 0)
+Number of local minimum: 610 (including on plateau: 0)
+Number of resets: 122
+Number of restarts: 24
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 4e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.047ms
+Satisfaction error: 0
+Number of search iterations: 2151
+Number of local moves: 319 (including on plateau: 0)
+Number of local minimum: 625 (including on plateau: 0)
+Number of resets: 125
+Number of restarts: 25
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 3.9e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.031ms
+Satisfaction error: 0
+Number of search iterations: 2173
+Number of local moves: 327 (including on plateau: 0)
+Number of local minimum: 632 (including on plateau: 0)
+Number of resets: 126
+Number of restarts: 25
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 3.9e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.048ms
+Satisfaction error: 0
+Number of search iterations: 2154
+Number of local moves: 322 (including on plateau: 0)
+Number of local minimum: 607 (including on plateau: 0)
+Number of resets: 121
+Number of restarts: 24
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 3.1e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.039ms
+Satisfaction error: 0
+Number of search iterations: 2149
+Number of local moves: 304 (including on plateau: 0)
+Number of local minimum: 624 (including on plateau: 0)
+Number of resets: 124
+Number of restarts: 24
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 4e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.08ms
+Satisfaction error: 0
+Number of search iterations: 2053
+Number of local moves: 306 (including on plateau: 0)
+Number of local minimum: 589 (including on plateau: 0)
+Number of resets: 117
+Number of restarts: 23
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 0.000164
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.081ms
+Satisfaction error: 0
+Number of search iterations: 2048
+Number of local moves: 306 (including on plateau: 0)
+Number of local minimum: 586 (including on plateau: 0)
+Number of resets: 116
+Number of restarts: 23
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 3.4e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.079ms
+Satisfaction error: 0
+Number of search iterations: 2142
+Number of local moves: 316 (including on plateau: 0)
+Number of local minimum: 622 (including on plateau: 0)
+Number of resets: 124
+Number of restarts: 24
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 4.3e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.059ms
+Satisfaction error: 0
+Number of search iterations: 2155
+Number of local moves: 304 (including on plateau: 0)
+Number of local minimum: 617 (including on plateau: 0)
+Number of resets: 123
+Number of restarts: 24
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 4.1e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.078ms
+Satisfaction error: 0
+Number of search iterations: 2156
+Number of local moves: 320 (including on plateau: 0)
+Number of local minimum: 616 (including on plateau: 0)
+Number of resets: 123
+Number of restarts: 24
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 4.9e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.035ms
+Satisfaction error: 0
+Number of search iterations: 2156
+Number of local moves: 318 (including on plateau: 0)
+Number of local minimum: 611 (including on plateau: 0)
+Number of resets: 122
+Number of restarts: 24
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 3.9e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.068ms
+Satisfaction error: 0
+Number of search iterations: 2158
+Number of local moves: 333 (including on plateau: 0)
+Number of local minimum: 622 (including on plateau: 0)
+Number of resets: 124
+Number of restarts: 24
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 4e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.062ms
+Satisfaction error: 0
+Number of search iterations: 2168
+Number of local moves: 322 (including on plateau: 0)
+Number of local minimum: 615 (including on plateau: 0)
+Number of resets: 122
+Number of restarts: 24
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 3.9e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.087ms
+Satisfaction error: 0
+Number of search iterations: 2151
+Number of local moves: 322 (including on plateau: 0)
+Number of local minimum: 636 (including on plateau: 0)
+Number of resets: 127
+Number of restarts: 25
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 4.1e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.049ms
+Satisfaction error: 0
+Number of search iterations: 2080
+Number of local moves: 306 (including on plateau: 0)
+Number of local minimum: 594 (including on plateau: 0)
+Number of resets: 118
+Number of restarts: 23
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 3.3e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.061ms
+Satisfaction error: 0
+Number of search iterations: 2079
+Number of local moves: 307 (including on plateau: 0)
+Number of local minimum: 610 (including on plateau: 0)
+Number of resets: 122
+Number of restarts: 24
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 4.2e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.106ms
+Satisfaction error: 0
+Number of search iterations: 2068
+Number of local moves: 314 (including on plateau: 0)
+Number of local minimum: 595 (including on plateau: 0)
+Number of resets: 119
+Number of restarts: 23
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 8.7e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 1
+Dragoon: 0
+DarkTemplar: 108
+Reaver: 32
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.043ms
+Satisfaction error: 0
+Number of search iterations: 2119
+Number of local moves: 289 (including on plateau: 0)
+Number of local minimum: 616 (including on plateau: 0)
+Number of resets: 123
+Number of restarts: 24
+
+Optimization cost: 4753.45
+Opt Cost BEFORE post-processing: 4753.45
+Optimization post-processing time: 6.5e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.065ms
+Satisfaction error: 0
+Number of search iterations: 2119
+Number of local moves: 309 (including on plateau: 0)
+Number of local minimum: 630 (including on plateau: 0)
+Number of resets: 126
+Number of restarts: 25
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 3.2e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 18
+Dragoon: 10
+DarkTemplar: 135
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.092ms
+Satisfaction error: 0
+Number of search iterations: 2139
+Number of local moves: 314 (including on plateau: 0)
+Number of local minimum: 606 (including on plateau: 0)
+Number of resets: 121
+Number of restarts: 24
+
+Optimization cost: 4794.18
+Opt Cost BEFORE post-processing: 4794.18
+Optimization post-processing time: 4.1e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.076ms
+Satisfaction error: 0
+Number of search iterations: 2152
+Number of local moves: 307 (including on plateau: 0)
+Number of local minimum: 633 (including on plateau: 0)
+Number of resets: 126
+Number of restarts: 25
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 3.9e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.043ms
+Satisfaction error: 0
+Number of search iterations: 2145
+Number of local moves: 331 (including on plateau: 0)
+Number of local minimum: 608 (including on plateau: 0)
+Number of resets: 121
+Number of restarts: 24
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 4e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.055ms
+Satisfaction error: 0
+Number of search iterations: 2154
+Number of local moves: 330 (including on plateau: 0)
+Number of local minimum: 625 (including on plateau: 0)
+Number of resets: 125
+Number of restarts: 25
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 4e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.066ms
+Satisfaction error: 0
+Number of search iterations: 2167
+Number of local moves: 318 (including on plateau: 0)
+Number of local minimum: 623 (including on plateau: 0)
+Number of resets: 124
+Number of restarts: 24
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 4.6e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.053ms
+Satisfaction error: 0
+Number of search iterations: 2151
+Number of local moves: 343 (including on plateau: 0)
+Number of local minimum: 623 (including on plateau: 0)
+Number of resets: 124
+Number of restarts: 24
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 4.1e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.096ms
+Satisfaction error: 0
+Number of search iterations: 2041
+Number of local moves: 324 (including on plateau: 0)
+Number of local minimum: 596 (including on plateau: 0)
+Number of resets: 119
+Number of restarts: 23
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 9e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.095ms
+Satisfaction error: 0
+Number of search iterations: 2089
+Number of local moves: 308 (including on plateau: 0)
+Number of local minimum: 608 (including on plateau: 0)
+Number of resets: 121
+Number of restarts: 24
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 4.1e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.054ms
+Satisfaction error: 0
+Number of search iterations: 2118
+Number of local moves: 292 (including on plateau: 0)
+Number of local minimum: 620 (including on plateau: 0)
+Number of resets: 123
+Number of restarts: 24
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 4.8e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.058ms
+Satisfaction error: 0
+Number of search iterations: 2161
+Number of local moves: 338 (including on plateau: 0)
+Number of local minimum: 633 (including on plateau: 0)
+Number of resets: 126
+Number of restarts: 25
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 4e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.056ms
+Satisfaction error: 0
+Number of search iterations: 2069
+Number of local moves: 299 (including on plateau: 0)
+Number of local minimum: 603 (including on plateau: 0)
+Number of resets: 120
+Number of restarts: 24
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 4.8e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.079ms
+Satisfaction error: 0
+Number of search iterations: 2171
+Number of local moves: 332 (including on plateau: 0)
+Number of local minimum: 635 (including on plateau: 0)
+Number of resets: 127
+Number of restarts: 25
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 2.2e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.08ms
+Satisfaction error: 0
+Number of search iterations: 2167
+Number of local moves: 322 (including on plateau: 0)
+Number of local minimum: 635 (including on plateau: 0)
+Number of resets: 127
+Number of restarts: 25
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 3.8e-05
+
+@@@@@@@@@@@@
+Variable heuristic: Adaptive Search
+Value heuristic: Adaptive Search
+Started from a custom variables assignment: false
+Search resumed from a previous run: false
+Parallel search: false
+Number of threads (not used if no parallel search): 16
+Number of variable assignments samplings at start (if custom start and resume are set to false): 10
+Variables of local minimum are frozen for: 5 local moves
+Selected variables are frozen for: 0 local moves
+2 variables are reset when 5 variables are frozen
+Do a restart each time 5 resets are performed
+############
+Zealot: 25
+Dragoon: 0
+DarkTemplar: 140
+Reaver: 0
+Scout: 0
+
+OPTIMIZATION run with objective Max Ground DPS
+Permutation problem: false
+Time budget: 100ms
+Search time: 1.54608e-319ms
+Wall-clock time (full program): 100.056ms
+Satisfaction error: 0
+Number of search iterations: 2165
+Number of local moves: 318 (including on plateau: 0)
+Number of local minimum: 607 (including on plateau: 0)
+Number of resets: 121
+Number of restarts: 24
+
+Optimization cost: 4916.36
+Opt Cost BEFORE post-processing: 4916.36
+Optimization post-processing time: 4.2e-05
+

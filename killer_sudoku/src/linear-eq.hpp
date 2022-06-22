@@ -1,26 +1,18 @@
 #pragma once
 
 #include <vector>
-#include <functional>
-#include <memory>
 
-#include <ghost/constraint.hpp>
 #include <ghost/variable.hpp>
-
-#include "data.hpp"
+#include <ghost/constraint.hpp>
 
 using namespace std;
 using namespace ghost;
 
-enum ResourceType { Mineral, Gas, Supply };
-
-class Stock : public Constraint
+class LinearEq : public Constraint
 {
-  int	_quantity;
-  ResourceType _type;
-	vector<UnitData> _unit_data;
-	mutable double _current_diff;
-
+	int _rhs;
+	mutable int _current_diff;
+	
 	double required_error( const vector<Variable*>& variables ) const override;
 
 	double optional_delta_error( const vector<Variable*>& variables,
@@ -28,11 +20,7 @@ class Stock : public Constraint
 	                             const vector<int>& candidate_values ) const override;
 
 	void conditional_update_data_structures( const vector<Variable*>& variables, int variable_id, int new_value ) override;
+
 public:
-  Stock( const vector<Variable>& variables,
-         int quantity,
-         ResourceType type,
-         shared_ptr<AuxiliaryData> auxiliary_data );
-	
-	inline int get_resource() { return _quantity; }
+	LinearEq( const vector<int>& index, int rhs );
 };

@@ -1,17 +1,24 @@
 #!/bin/bash
 
-#$1 = terran/protoss/zerg
-#$2 = number of runs
+#$1 = random or empty
+
+RANDOM=0
+RANDOMFILE=""
+if [ $# -eq 1 ] && [ "$1" == "random" ]; then
+		RANDOM=1
+		RANDOMFILE="_random"
+fi
 
 HOST=$(hostname -fs)
 DATE=$(date +%y-%m-%d_%H-%M)
-ITER=1000
+ITER=100
+TIMEOUT=100 #ms
+CORES=$(lscpu | grep -E 'CPU\(s\)' | grep -v '-' | awk -F': ' '{print $2}' | tr -d [:blank:])
 
-if [ $# -eq 0 ]; then
-    bin/resource protoss $ITER > results/$HOST/"$DATE"_protoss_$ITER.txt
-    bin/resource terran $ITER > results/$HOST/"$DATE"_terran_$ITER.txt
-    bin/resource zerg $ITER > results/$HOST/"$DATE"_zerg_$ITER.txt
-    exit 0
-else
-    bin/resource $1 $2 > results/$HOST/"$DATE"_$1_$2.txt
-fi
+bin/resource protoss $RANDOM $TIMEOUT $ITER > results/$HOST/"$DATE"_protoss_"$ITER"_"$TIMEOUT"ms"$RANDOMFILE".txt
+bin/resource terran $RANDOM $TIMEOUT $ITER > results/$HOST/"$DATE"_terran_"$ITER"_"$TIMEOUT"ms"$RANDOMFILE".txt
+bin/resource zerg $RANDOM $TIMEOUT $ITER > results/$HOST/"$DATE"_zerg_"$ITER"_"$TIMEOUT"ms"$RANDOMFILE".txt
+bin/resource protoss $RANDOM $TIMEOUT $ITER 1 > results/$HOST/"$DATE"_protoss_"$ITER"_"$TIMEOUT"ms_"$CORES"cores"$RANDOMFILE".txt
+bin/resource terran $RANDOM $TIMEOUT $ITER 1 > results/$HOST/"$DATE"_terran_"$ITER"_"$TIMEOUT"ms_"$CORES"cores"$RANDOMFILE".txt
+bin/resource zerg $RANDOM $TIMEOUT $ITER 1 > results/$HOST/"$DATE"_zerg_"$ITER"_"$TIMEOUT"ms_"$CORES"cores"$RANDOMFILE".txt
+exit 0
