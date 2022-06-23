@@ -103,27 +103,14 @@ void BuilderSudoku::declare_constraints()
 
   if( _hard_instance )
   {
-	  constraints.emplace_back( make_shared<global_constraints::FixValue>( vector<int>{5}, 3 ) );
-	  constraints.emplace_back( make_shared<global_constraints::FixValue>( vector<int>{7}, 1 ) );
-	  constraints.emplace_back( make_shared<global_constraints::FixValue>( vector<int>{8}, 7 ) );
-	  constraints.emplace_back( make_shared<global_constraints::FixValue>( vector<int>{10}, 1 ) );
-	  constraints.emplace_back( make_shared<global_constraints::FixValue>( vector<int>{11}, 5 ) );
-	  constraints.emplace_back( make_shared<global_constraints::FixValue>( vector<int>{14}, 9 ) );
+	  constraints.emplace_back( make_shared<global_constraints::FixValue>( vector<int>{7, 10, 27}, 1 ) );
+	  constraints.emplace_back( make_shared<global_constraints::FixValue>( vector<int>{42, 61, 75}, 2 ) );
+	  constraints.emplace_back( make_shared<global_constraints::FixValue>( vector<int>{5, 69, 72}, 3 ) );
+	  constraints.emplace_back( make_shared<global_constraints::FixValue>( vector<int>{53, 70, 73}, 4 ) );
+	  constraints.emplace_back( make_shared<global_constraints::FixValue>( vector<int>{11, 48, 63}, 5 ) );
+	  constraints.emplace_back( make_shared<global_constraints::FixValue>( vector<int>{19, 66}, 6 ) );
+	  constraints.emplace_back( make_shared<global_constraints::FixValue>( vector<int>{8, 32}, 7 ) );
 	  constraints.emplace_back( make_shared<global_constraints::FixValue>( vector<int>{17}, 8 ) );
-	  constraints.emplace_back( make_shared<global_constraints::FixValue>( vector<int>{19}, 6 ) );
-	  constraints.emplace_back( make_shared<global_constraints::FixValue>( vector<int>{27}, 1 ) );
-	  constraints.emplace_back( make_shared<global_constraints::FixValue>( vector<int>{32}, 7 ) );
-	  constraints.emplace_back( make_shared<global_constraints::FixValue>( vector<int>{38}, 9 ) );
-	  constraints.emplace_back( make_shared<global_constraints::FixValue>( vector<int>{42}, 2 ) );
-	  constraints.emplace_back( make_shared<global_constraints::FixValue>( vector<int>{48}, 5 ) );
-	  constraints.emplace_back( make_shared<global_constraints::FixValue>( vector<int>{53}, 4 ) );
-	  constraints.emplace_back( make_shared<global_constraints::FixValue>( vector<int>{61}, 2 ) );
-	  constraints.emplace_back( make_shared<global_constraints::FixValue>( vector<int>{63}, 5 ) );
-	  constraints.emplace_back( make_shared<global_constraints::FixValue>( vector<int>{66}, 6 ) );
-	  constraints.emplace_back( make_shared<global_constraints::FixValue>( vector<int>{69}, 3 ) );
-	  constraints.emplace_back( make_shared<global_constraints::FixValue>( vector<int>{70}, 4 ) );
-	  constraints.emplace_back( make_shared<global_constraints::FixValue>( vector<int>{72}, 3 ) );
-	  constraints.emplace_back( make_shared<global_constraints::FixValue>( vector<int>{73}, 4 ) );
-	  constraints.emplace_back( make_shared<global_constraints::FixValue>( vector<int>{75}, 2 ) );
+	  constraints.emplace_back( make_shared<global_constraints::FixValue>( vector<int>{14, 38}, 9 ) );
   }
 }
