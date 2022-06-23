@@ -31,7 +31,12 @@ bool alldiff_concept( const vector<int>& var )
 	return true;	
 }
 
-bool check_solution( const vector<int>& solution )
+void check_hard_instance( const vector<int>& solution, int index, int expected_value )
+{
+	std::cout << "Error with the hard instance: var[" << index << "]=" << solution[index] << " but should be assigned at " << expected_value << ".\n";
+}
+
+bool check_solution( const vector<int>& solution, bool hard_instance )
 {
 	int nb_vars = solution.size();
 	int size_side = static_cast<int>( std::sqrt( nb_vars ) );
@@ -49,7 +54,7 @@ bool check_solution( const vector<int>& solution )
 
 		if( !alldiff_concept( partial_sol ) )
 		{
-			cout << "Problem in row " << i+1 << ": ";
+			cout << "Error in row " << i+1 << ": ";
 			std::copy( partial_sol.begin(),
 			           partial_sol.end(),
 			           std::ostream_iterator<int>( cout, " " ) );
@@ -66,7 +71,7 @@ bool check_solution( const vector<int>& solution )
 
 		if( !alldiff_concept( partial_sol ) )
 		{
-			cout << "Problem in column " << i+1 << ": ";
+			cout << "Error in column " << i+1 << ": ";
 			std::copy( partial_sol.begin(),
 			           partial_sol.end(),
 			           std::ostream_iterator<int>( cout, " " ) );
@@ -85,7 +90,7 @@ bool check_solution( const vector<int>& solution )
 			
 			if( !alldiff_concept( partial_sol ) )
 			{
-				cout << "Problem in square (" << i+1 << "," << j+1 << "): ";
+				cout << "Error in square (" << i+1 << "," << j+1 << "): ";
 				std::copy( partial_sol.begin(),
 				           partial_sol.end(),
 				           std::ostream_iterator<int>( cout, " " ) );
@@ -93,6 +98,71 @@ bool check_solution( const vector<int>& solution )
 				success = false;
 			}
 		}
+
+	if( hard_instance )
+	{
+		for( auto index : std::vector<int>{7, 10, 27} )
+			if( solution[index] != 1 )
+			{
+				check_hard_instance( solution, index, 1 );
+				success = false;
+			}
+
+		for( auto index : std::vector<int>{42, 61, 75} )
+			if( solution[index] != 2 )
+			{
+				check_hard_instance( solution, index, 2 );
+				success = false;
+			}
+
+		for( auto index : std::vector<int>{5, 69, 72} )
+			if( solution[index] != 3 )
+			{
+				check_hard_instance( solution, index, 3 );
+				success = false;
+			}
+
+		for( auto index : std::vector<int>{53, 70, 73} )
+			if( solution[index] != 4 )
+			{
+				check_hard_instance( solution, index, 4 );
+				success = false;
+			}
+
+		for( auto index : std::vector<int>{11, 48, 63} )
+			if( solution[index] != 5 )
+			{
+				check_hard_instance( solution, index, 5 );
+				success = false;
+			}
+
+		for( auto index : std::vector<int>{19, 66} )
+			if( solution[index] != 6 )
+			{
+				check_hard_instance( solution, index, 6 );
+				success = false;
+			}
+
+		for( auto index : std::vector<int>{8, 32} )
+			if( solution[index] != 7 )
+			{
+				check_hard_instance( solution, index, 7 );
+				success = false;
+			}
+
+		if( solution[17] != 8 )
+		{
+			check_hard_instance( solution, 17, 8 );
+			success = false;
+		}
+
+		for( auto index : std::vector<int>{14, 38} )
+			if( solution[index] != 9 )
+			{
+				check_hard_instance( solution, index, 9 );
+				success = false;
+			}
+	}
 
 	return success;
 }
@@ -145,7 +215,7 @@ int main( int argc, char **argv )
 	
   solver.solve( error, solution, 5s, options );		
 
-	bool success = check_solution( solution );
+  bool success = check_solution( solution, hard_instance );
 	
 	if( success )
 		return EXIT_SUCCESS;

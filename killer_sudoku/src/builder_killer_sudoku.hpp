@@ -2,9 +2,6 @@
 
 #include <ghost/model_builder.hpp>
 
-#include "all-diff.hpp"
-#include "linear-eq.hpp"
-
 using namespace ghost;
 using namespace std;
 
