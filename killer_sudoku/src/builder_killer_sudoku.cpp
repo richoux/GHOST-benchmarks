@@ -1,3 +1,6 @@
+#include <ghost/global_constraints/all_different.hpp>
+#include <ghost/global_constraints/linear_equation.hpp>
+
 #include "builder_killer_sudoku.hpp"
 
 BuilderKillerSudoku::BuilderKillerSudoku()
@@ -164,12 +167,12 @@ void BuilderKillerSudoku::declare_constraints()
 {
   for( int i = 0; i < _side_size; ++i )
   {
-	  constraints.emplace_back( make_shared<AllDiff>( _rows[i] ) );
-	  constraints.emplace_back( make_shared<AllDiff>( _columns[i] ) );
-	  constraints.emplace_back( make_shared<AllDiff>( _squares[i] ) );
+	  constraints.emplace_back( make_shared<global_constraints::AllDifferent>( _rows[i] ) );
+	  constraints.emplace_back( make_shared<global_constraints::AllDifferent>( _columns[i] ) );
+	  constraints.emplace_back( make_shared<global_constraints::AllDifferent>( _squares[i] ) );
   }
 
   vector<int> rhs_eq{ 3, 15, 22, 4, 16, 15, 25, 17, 9, 8, 20, 6, 14, 17, 17, 13, 20, 12, 27, 6, 20, 6, 10, 14, 8, 16, 15, 13, 17 };
   for( int i = 0; i < 29; ++i )
-	  constraints.emplace_back( make_shared<LinearEq>( _cages[i], rhs_eq[i] ) );
+	  constraints.emplace_back( make_shared<global_constraints::LinearEquation>( _cages[i], rhs_eq[i] ) );
 }

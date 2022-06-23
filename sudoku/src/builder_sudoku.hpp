@@ -2,9 +2,6 @@
 
 #include <ghost/model_builder.hpp>
 
-#include "all-diff.hpp"
-#include "fix_value.hpp"
-
 using namespace ghost;
 using namespace std;
 
