@@ -1,5 +1,3 @@
-EXEC=vertex_cover
-
 # Compiler flags
 MYFLAGS=
 CXXFIRSTFLAGS= -O3 -W -Wall -Wextra -Wno-sign-compare -Wno-unused-parameter
@@ -44,17 +42,20 @@ vpath %.cpp $(SRCDIR)
 
 # Rules
 
-all: $(BINDIR)/$(EXEC)
+all: $(BINDIR)/vertex_cover_20 #$(BINDIR)/vertex_cover_125
 
 debug: CXXFLAGS=$(CXXFLAGSDEBUG)
 debug: LDFLAGS=$(LDFLAGSDEBUG)
-debug: $(BINDIR)/$(EXEC)
+debug: $(BINDIR)/vertex_cover_20 #$(BINDIR)/vertex_cover_125
 
 info: CXXFLAGS=$(CXXFLAGSINFO)
 info: LDFLAGS=$(LDFLAGSINFO)
-info: $(BINDIR)/$(EXEC)
+info: $(BINDIR)/vertex_cover_20 #$(BINDIR)/vertex_cover_125
 
-$(BINDIR)/$(EXEC): $(OBJECTS)
+$(BINDIR)/vertex_cover_20: $(OBJDIR)/vertex_cover.o $(OBJDIR)/print_vertex_cover.o $(OBJDIR)/linear-leq.o $(OBJDIR)/linear-geq.o $(OBJDIR)/builder_vertex_cover.o
+	$(CXX) -o $@ $^ $(LDFLAGS)
+
+$(BINDIR)/vertex_cover_125: $(OBJDIR)/vertex_cover.o $(OBJDIR)/print_vertex_cover.o $(OBJDIR)/linear-leq.o $(OBJDIR)/linear-geq.o $(OBJDIR)/builder_vertex_cover-125.o
 	$(CXX) -o $@ $^ $(LDFLAGS)
 
 $(OBJDIR)/%.o: %.cpp
@@ -63,4 +64,4 @@ $(OBJDIR)/%.o: %.cpp
 .PHONY: clean
 
 clean:
-	rm -fr core $(BINDIR)/$(EXEC) $(OBJECTS) 
+	rm -fr core $(BINDIR)/vertex_cover_20 $(BINDIR)/vertex_cover_125 $(OBJECTS) 

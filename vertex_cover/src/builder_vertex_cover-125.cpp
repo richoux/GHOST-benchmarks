@@ -1,5 +1,22 @@
-https://iridia.ulb.ac.be/~fmascia/maximum_clique/DIMACS-benchmark#
+#include <numeric>
 
+#include "builder_vertex_cover.hpp"
+
+BuilderVC::BuilderVC()
+	: ModelBuilder(),
+	  _constant( 40 ), // best know: 34
+	  _all_variables( 125 )
+{
+	std::iota( _all_variables.begin(), _all_variables.end(), 0 );
+}
+
+void BuilderVC::declare_variables()
+{
+	create_n_variables( 125, 0, 2 );
+}
+
+void BuilderVC::declare_constraints()
+{
 constraints.emplace_back( make_shared< LinearGeq >( std::vector<int>{1,0}, 1 ) );
 constraints.emplace_back( make_shared< LinearGeq >( std::vector<int>{2,0}, 1 ) );
 constraints.emplace_back( make_shared< LinearGeq >( std::vector<int>{3,0}, 1 ) );
@@ -6963,3 +6980,6 @@ constraints.emplace_back( make_shared< LinearGeq >( std::vector<int>{124,120}, 1
 constraints.emplace_back( make_shared< LinearGeq >( std::vector<int>{124,121}, 1 ) );
 constraints.emplace_back( make_shared< LinearGeq >( std::vector<int>{124,122}, 1 ) );
 constraints.emplace_back( make_shared< LinearGeq >( std::vector<int>{124,123}, 1 ) );
+
+	constraints.emplace_back( make_shared< LinearLeq >( _all_variables, _constant ) );
+}
