@@ -33,7 +33,7 @@ bool check_solution( const vector<int>& solution, int constant )
 		sum = std::accumulate( partial_sol.begin(), partial_sol.end(), 0 );
 		if( sum != constant )
 		{			
-			cout << "Problem in row " << i+1 << ": ";
+			cout << "Magic Square - Error in row " << i+1 << ": ";
 			std::copy( partial_sol.begin(),
 			           partial_sol.end(),
 			           std::ostream_iterator<int>( cout, " " ) );
@@ -51,7 +51,7 @@ bool check_solution( const vector<int>& solution, int constant )
 		sum = std::accumulate( partial_sol.begin(), partial_sol.end(), 0 );
 		if( sum != constant )
 		{
-			cout << "Problem in column " << i+1 << ": ";
+			cout << "Magic Square - Error in column " << i+1 << ": ";
 			std::copy( partial_sol.begin(),
 			           partial_sol.end(),
 			           std::ostream_iterator<int>( cout, " " ) );
@@ -67,7 +67,7 @@ bool check_solution( const vector<int>& solution, int constant )
 	sum = std::accumulate( partial_sol.begin(), partial_sol.end(), 0 );
 	if( sum != constant )
 	{
-		cout << "Problem in diagonal 0: ";
+		cout << "Magic Square - Error in diagonal 0: ";
 		std::copy( partial_sol.begin(),
 		           partial_sol.end(),
 		           std::ostream_iterator<int>( cout, " " ) );
@@ -82,7 +82,7 @@ bool check_solution( const vector<int>& solution, int constant )
 	sum = std::accumulate( partial_sol.begin(), partial_sol.end(), 0 );
 	if( sum != constant )
 	{
-		cout << "Problem in diagonal 1: ";
+		cout << "Magic Square - Error in diagonal 1: ";
 		std::copy( partial_sol.begin(),
 		           partial_sol.end(),
 		           std::ostream_iterator<int>( cout, " " ) );

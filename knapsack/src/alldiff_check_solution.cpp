@@ -9,7 +9,7 @@ bool check_solution( const std::vector<int>& solution, int capacity, std::vector
 
 	if( sum > capacity )
 	{
-		std::cout << "Error: Total weight " << sum << " is exceeding capacity " << capacity << "\n";
+		std::cout << "AllDiff Knapsack - Error: Total weight " << sum << " is exceeding capacity " << capacity << "\n";
 		success = false;
 	}
 
@@ -17,7 +17,7 @@ bool check_solution( const std::vector<int>& solution, int capacity, std::vector
 		for( int j = i+1 ; j < static_cast<int>( solution.size() ) ; ++j )
 			if( solution[i] == solution[j] )
 			{
-				std::cout << "Error: var[" << i << "] = var[" << j << "] (both at " << solution[i] << ")\n";
+				std::cout << "AllDiff Knapsack - Error: var[" << i << "] = var[" << j << "] (both at " << solution[i] << ")\n";
 				success = false;
 			}
 

@@ -14,13 +14,13 @@ ifeq ($(UNAME_S),Linux)
 	CXXFLAGS= -std=c++17 $(CXXFIRSTFLAGS) $(MYFLAGS)
 	CXXFLAGSDEBUG= -std=c++17 $(CXXFIRSTFLAGSDEBUG) $(MYFLAGS)
 	CXXFLAGSINFO= -std=c++17 $(CXXFIRSTFLAGSINFO) $(MYFLAGS)
-	LDFLAGS=-pthread -lghost_static
+	LDFLAGS=-lghost_static -pthread
 endif
 ifeq ($(UNAME_S),Darwin)
 	CXX=clang++
 	CXXFLAGS= -std=c++17  -stdlib=libc++ $(CXXFIRSTFLAGS) $(MYFLAGS)
 	CXXFLAGSDEBUG= -std=c++17  -stdlib=libc++ $(CXXFIRSTFLAGSDEBUG) $(MYFLAGS)
-	LDFLAGS=-pthread -lghost_static -lc++ -lc++abi
+	LDFLAGS=-lghost_static -lc++ -lc++abi -pthread
 endif
 
 # Directories
@@ -42,20 +42,17 @@ vpath %.cpp $(SRCDIR)
 
 # Rules
 
-all: $(BINDIR)/vertex_cover_20 #$(BINDIR)/vertex_cover_125
+all: $(BINDIR)/multidimentional_knapsack
 
 debug: CXXFLAGS=$(CXXFLAGSDEBUG)
 debug: LDFLAGS=$(LDFLAGSDEBUG)
-debug: $(BINDIR)/vertex_cover_20 #$(BINDIR)/vertex_cover_125
+debug: $(BINDIR)/multidimentional_knapsack
 
 info: CXXFLAGS=$(CXXFLAGSINFO)
 info: LDFLAGS=$(LDFLAGSINFO)
-info: $(BINDIR)/vertex_cover_20 #$(BINDIR)/vertex_cover_125
+info: $(BINDIR)/multidimentional_knapsack
 
-$(BINDIR)/vertex_cover_20: $(OBJDIR)/vertex_cover.o $(OBJDIR)/print_vertex_cover.o $(OBJDIR)/linear-leq.o $(OBJDIR)/linear-geq.o $(OBJDIR)/builder_vertex_cover.o
-	$(CXX) -o $@ $^ $(LDFLAGS)
-
-$(BINDIR)/vertex_cover_125: $(OBJDIR)/vertex_cover.o $(OBJDIR)/print_vertex_cover.o $(OBJDIR)/linear-leq.o $(OBJDIR)/linear-geq.o $(OBJDIR)/builder_vertex_cover-125.o
+$(BINDIR)/multidimentional_knapsack: $(OBJDIR)/multi_knapsack.o $(OBJDIR)/multi_knapsack_model_builder.o $(OBJDIR)/sat_multi_knapsack_model_builder.o $(OBJDIR)/multi_knapsack_capacity.o $(OBJDIR)/multi_knapsack_reach_value.o $(OBJDIR)/multi_knapsack_objective.o $(OBJDIR)/zo_knapsack_print.o $(OBJDIR)/check_solution.o 
 	$(CXX) -o $@ $^ $(LDFLAGS)
 
 $(OBJDIR)/%.o: %.cpp
@@ -64,4 +61,4 @@ $(OBJDIR)/%.o: %.cpp
 .PHONY: clean
 
 clean:
-	rm -fr core $(BINDIR)/vertex_cover_20 $(BINDIR)/vertex_cover_125 $(OBJECTS) 
+	rm -fr core $(BINDIR)/multidimentional_knapsack $(OBJECTS) 

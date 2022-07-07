@@ -35,7 +35,7 @@ bool check_cage( const std::vector<int>& solution, int cage_number, int total, i
 {
 	if( solution[var1] + solution[var2] != total )
 	{
-		std::cout << "Error cage " << cage_number << ": " << "v[" << var1 << "]+v[" << var2 << "] = "
+		std::cout << "Killer Sudoku - Error cage " << cage_number << ": " << "v[" << var1 << "]+v[" << var2 << "] = "
 		          << solution[var1] << "+" << solution[var2] << " != " << total << "\n";
 		return false;
 	}
@@ -46,7 +46,7 @@ bool check_cage( const std::vector<int>& solution, int cage_number, int total, i
 {
 	if( solution[var1] + solution[var2] + solution[var3] != total )
 	{
-		std::cout << "Error cage " << cage_number << ": " << "v[" << var1 << "]+v[" << var2 << "]+v[" << var3 << "] = "
+		std::cout << "Killer Sudoku - Error cage " << cage_number << ": " << "v[" << var1 << "]+v[" << var2 << "]+v[" << var3 << "] = "
 		          << solution[var1] << "+" << solution[var2] << "+" << solution[var3] << " != " << total << "\n";
 		return false;
 	}
@@ -57,7 +57,7 @@ bool check_cage( const std::vector<int>& solution, int cage_number, int total, i
 {
 	if( solution[var1] + solution[var2] + solution[var3] + solution[var4] != total )
 	{
-		std::cout << "Error cage " << cage_number << ": " << "v[" << var1 << "]+v[" << var2 << "]+v[" << var3 << "]+v[" << var4 << "] = "
+		std::cout << "Killer Sudoku - Error cage " << cage_number << ": " << "v[" << var1 << "]+v[" << var2 << "]+v[" << var3 << "]+v[" << var4 << "] = "
 		          << solution[var1] << "+" << solution[var2] << "+" << solution[var3] << "+" << solution[var4] << " != " << total << "\n";
 		return false;
 	}
@@ -82,7 +82,7 @@ bool check_solution( const vector<int>& solution )
 
 		if( !alldiff_concept( partial_sol ) )
 		{
-			cout << "Problem in row " << i+1 << ": ";
+			cout << "Killer Sudoku - Error in row " << i+1 << ": ";
 			std::copy( partial_sol.begin(),
 			           partial_sol.end(),
 			           std::ostream_iterator<int>( cout, " " ) );
@@ -99,7 +99,7 @@ bool check_solution( const vector<int>& solution )
 
 		if( !alldiff_concept( partial_sol ) )
 		{
-			cout << "Problem in column " << i+1 << ": ";
+			cout << "Killer Sudoku - Error in column " << i+1 << ": ";
 			std::copy( partial_sol.begin(),
 			           partial_sol.end(),
 			           std::ostream_iterator<int>( cout, " " ) );
@@ -118,7 +118,7 @@ bool check_solution( const vector<int>& solution )
 			
 			if( !alldiff_concept( partial_sol ) )
 			{
-				cout << "Problem in square (" << i+1 << "," << j+1 << "): ";
+				cout << "Killer Sudoku - Error in square (" << i+1 << "," << j+1 << "): ";
 				std::copy( partial_sol.begin(),
 				           partial_sol.end(),
 				           std::ostream_iterator<int>( cout, " " ) );

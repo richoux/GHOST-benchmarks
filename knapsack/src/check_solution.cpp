@@ -8,7 +8,7 @@ bool check_solution( const std::vector<int>& solution, int capacity, std::vector
 
 	if( sum > capacity )
 	{
-		std::cout << "Error: Total weight " << sum << " is exceeding capacity " << capacity << "\n";
+		std::cout << "Knapsack - Error: Total weight " << sum << " is exceeding capacity " << capacity << "\n";
 		return false;
 	}
 	else

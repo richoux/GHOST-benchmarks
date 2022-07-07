@@ -33,7 +33,7 @@ bool alldiff_concept( const vector<int>& var )
 
 void check_hard_instance( const vector<int>& solution, int index, int expected_value )
 {
-	std::cout << "Error with the hard instance: var[" << index << "]=" << solution[index] << " but should be assigned at " << expected_value << ".\n";
+	std::cout << "Sudoku - Error with the hard instance: var[" << index << "]=" << solution[index] << " but should be assigned at " << expected_value << ".\n";
 }
 
 bool check_solution( const vector<int>& solution, bool hard_instance )
@@ -54,7 +54,7 @@ bool check_solution( const vector<int>& solution, bool hard_instance )
 
 		if( !alldiff_concept( partial_sol ) )
 		{
-			cout << "Error in row " << i+1 << ": ";
+			cout << "Sudoku - Error in row " << i+1 << ": ";
 			std::copy( partial_sol.begin(),
 			           partial_sol.end(),
 			           std::ostream_iterator<int>( cout, " " ) );
@@ -71,7 +71,7 @@ bool check_solution( const vector<int>& solution, bool hard_instance )
 
 		if( !alldiff_concept( partial_sol ) )
 		{
-			cout << "Error in column " << i+1 << ": ";
+			cout << "Sudoku - Error in column " << i+1 << ": ";
 			std::copy( partial_sol.begin(),
 			           partial_sol.end(),
 			           std::ostream_iterator<int>( cout, " " ) );
@@ -90,7 +90,7 @@ bool check_solution( const vector<int>& solution, bool hard_instance )
 			
 			if( !alldiff_concept( partial_sol ) )
 			{
-				cout << "Error in square (" << i+1 << "," << j+1 << "): ";
+				cout << "Sudoku - Error in square (" << i+1 << "," << j+1 << "): ";
 				std::copy( partial_sol.begin(),
 				           partial_sol.end(),
 				           std::ostream_iterator<int>( cout, " " ) );
