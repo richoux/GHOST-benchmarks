@@ -1,6 +1,6 @@
 #include "sat_multi_knapsack_model_builder.hpp"
 #include "multi_knapsack_capacity.hpp"
-#include "multi_knapsack_min_value.hpp"
+#include "multi_knapsack_reach_value.hpp"
 
 SatMultiKSBuilder::SatMultiKSBuilder( int number_variables,
                                 int number_constraints,
@@ -27,6 +27,6 @@ void SatMultiKSBuilder::declare_constraints()
 	for( int i = 0 ; i < _number_constraints ; ++i )
 		constraints.emplace_back( std::make_shared<MultiKSCapacity>( variables, _coefficients[i], _capacities[i] ) );
 
-	constraints.emplace_back( std::make_shared<MultiKSMinValue>( variables, _values, _optimal ) );
+	constraints.emplace_back( std::make_shared<MultiKSReachValue>( variables, _values, _optimal ) );
 }
 
