@@ -4,7 +4,7 @@
 #include <iostream>
 
 bool check_solution( const std::vector<int>& solution,
-                     const std::vector<std::vector<int>>& coefficients,
+                     const std::vector<std::vector<double>>& coefficients,
                      const std::vector<int>& capacities,
-                     const std::vector<int>& values,
+                     const std::vector<double>& values,
                      int optimal);

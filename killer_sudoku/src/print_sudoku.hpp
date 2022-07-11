@@ -6,11 +6,8 @@
 #include "ghost/print.hpp"
 #include "ghost/variable.hpp"
 
-using namespace std;
-using namespace ghost;
-
-class PrintSudoku : public Print
+class PrintSudoku : public ghost::Print
 {
 public:
-	stringstream print_candidate( const std::vector<Variable>& variables ) const override;
+	std::stringstream print_candidate( const std::vector<ghost::Variable>& variables ) const override;
 };

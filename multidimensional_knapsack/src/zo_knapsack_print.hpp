@@ -5,10 +5,10 @@
 
 class ZeroOneKSPrint : public ghost::Print
 {
-	std::vector<int> _values;
+	std::vector<double> _values;
 	
 public:
-	ZeroOneKSPrint( const std::vector<int>& values );
+	ZeroOneKSPrint( const std::vector<double>& values );
 	
 	std::stringstream print_candidate( const std::vector<ghost::Variable>& variables ) const override;
 };	

@@ -26,6 +26,7 @@ int main( int argc, char** argv )
 	int number_constraints;
 	int optimal;
 	int integer;
+	double real;
 	
 	if( argc == 1 )
 	{
@@ -44,9 +45,9 @@ int main( int argc, char** argv )
 	// First line
 	line_stream >> number_variables >> number_constraints >> optimal;
 
-	std::vector<std::vector<int>> coefficients( number_constraints, std::vector<int>( number_variables ) );
+	std::vector<std::vector<double>> coefficients( number_constraints, std::vector<double>( number_variables ) );
 	std::vector<int> capacities( number_constraints );
-	std::vector<int> values( number_variables );
+	std::vector<double> values( number_variables );
 
 	getline( file, line );
 	line_stream = std::stringstream( line );
@@ -55,8 +56,8 @@ int main( int argc, char** argv )
 	{
 		line_stream >> string_number;
 		std::stringstream number_stream( string_number );
-		number_stream >> integer;
-		values[var_index] = integer;
+		number_stream >> real;
+		values[var_index] = real;
 	}
 
 	// Coefficients matrix [number_constraints x number_variables]
@@ -68,8 +69,8 @@ int main( int argc, char** argv )
 		{
 			line_stream >> string_number;
 			std::stringstream number_stream( string_number );
-			number_stream >> integer;
-			coefficients[constraint_id][var_index] = integer;
+			number_stream >> real;
+			coefficients[constraint_id][var_index] = real;
 		}
 	}
 

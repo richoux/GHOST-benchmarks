@@ -8,16 +8,16 @@ class MultiKSBuilder : public ghost::ModelBuilder
 {
 	int _number_variables;
 	int _number_constraints;
-	std::vector<std::vector<int>> _coefficients;
+	std::vector<std::vector<double>> _coefficients;
 	std::vector<int> _capacities;
-	std::vector<int> _values;
+	std::vector<double> _values;
 	
 public:
 	MultiKSBuilder( int number_variables,
 	                int number_constraints,
-	                const std::vector<std::vector<int>>& coefficients,
+	                const std::vector<std::vector<double>>& coefficients,
 	                const std::vector<int>& capacities,
-	                const std::vector<int>& values );
+	                const std::vector<double>& values );
 
 	void declare_variables() override;
 	void declare_constraints() override;

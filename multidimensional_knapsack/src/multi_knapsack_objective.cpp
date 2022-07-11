@@ -1,6 +1,6 @@
 #include "multi_knapsack_objective.hpp"
 
-MultiKSObjective::MultiKSObjective( const std::vector<ghost::Variable>& variables, const std::vector<int>& values )
+MultiKSObjective::MultiKSObjective( const std::vector<ghost::Variable>& variables, const std::vector<double>& values )
 	: Maximize( variables, "Max profit" ),
 	  _values( values )
 { }

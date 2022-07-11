@@ -11,16 +11,14 @@
 #include "builder_ms.hpp"
 #include "print_ms.hpp"
 
-using namespace ghost;
-using namespace std;
 using namespace std::literals::chrono_literals;
 
-bool check_solution( const vector<int>& solution, int constant )
+bool check_solution( const std::vector<int>& solution, int constant )
 {
 	int nb_vars = static_cast<int>( solution.size() );
 	int order = static_cast<int>( std::sqrt( nb_vars ) );
 	int sum = 0;	
-	vector<int> partial_sol( order );
+	std::vector<int> partial_sol( order );
 	bool success = true;
 	
 	// Rows
@@ -33,11 +31,11 @@ bool check_solution( const vector<int>& solution, int constant )
 		sum = std::accumulate( partial_sol.begin(), partial_sol.end(), 0 );
 		if( sum != constant )
 		{			
-			cout << "Magic Square - Error in row " << i+1 << ": ";
+			std::cout << "Magic Square - Error in row " << i+1 << ": ";
 			std::copy( partial_sol.begin(),
 			           partial_sol.end(),
-			           std::ostream_iterator<int>( cout, " " ) );
-			cout << "=> the sum is " << sum << " rather than " << constant << "\n";
+			           std::ostream_iterator<int>( std::cout, " " ) );
+			std::cout << "=> the sum is " << sum << " rather than " << constant << "\n";
 			success =  false;
 		}
 	}
@@ -51,11 +49,11 @@ bool check_solution( const vector<int>& solution, int constant )
 		sum = std::accumulate( partial_sol.begin(), partial_sol.end(), 0 );
 		if( sum != constant )
 		{
-			cout << "Magic Square - Error in column " << i+1 << ": ";
+			std::cout << "Magic Square - Error in column " << i+1 << ": ";
 			std::copy( partial_sol.begin(),
 			           partial_sol.end(),
-			           std::ostream_iterator<int>( cout, " " ) );
-			cout << "=> the sum is " << sum << " rather than " << constant << "\n";
+			           std::ostream_iterator<int>( std::cout, " " ) );
+			std::cout << "=> the sum is " << sum << " rather than " << constant << "\n";
 			success =  false;
 		}
 	}
@@ -67,11 +65,11 @@ bool check_solution( const vector<int>& solution, int constant )
 	sum = std::accumulate( partial_sol.begin(), partial_sol.end(), 0 );
 	if( sum != constant )
 	{
-		cout << "Magic Square - Error in diagonal 0: ";
+		std::cout << "Magic Square - Error in diagonal 0: ";
 		std::copy( partial_sol.begin(),
 		           partial_sol.end(),
-		           std::ostream_iterator<int>( cout, " " ) );
-		cout << "=> the sum is " << sum << " rather than " << constant << "\n";
+		           std::ostream_iterator<int>( std::cout, " " ) );
+		std::cout << "=> the sum is " << sum << " rather than " << constant << "\n";
 		success =  false;
 	}
 
@@ -82,11 +80,11 @@ bool check_solution( const vector<int>& solution, int constant )
 	sum = std::accumulate( partial_sol.begin(), partial_sol.end(), 0 );
 	if( sum != constant )
 	{
-		cout << "Magic Square - Error in diagonal 1: ";
+		std::cout << "Magic Square - Error in diagonal 1: ";
 		std::copy( partial_sol.begin(),
 		           partial_sol.end(),
-		           std::ostream_iterator<int>( cout, " " ) );
-		cout << "=> the sum is " << sum << " rather than " << constant << "\n";
+		           std::ostream_iterator<int>( std::cout, " " ) );
+		std::cout << "=> the sum is " << sum << " rather than " << constant << "\n";
 		success =  false;
 	}
 
@@ -115,8 +113,8 @@ int main( int argc, char **argv )
 			cores = std::stoi( argv[3] );
 	}
 		
-  std::shared_ptr<Print> printer = std::make_shared<PrintMagicSquare>();
-	Options options;
+	std::shared_ptr<ghost::Print> printer = std::make_shared<PrintMagicSquare>();
+  ghost::Options options;
 	options.print = printer;
 
 	// Parameters tuning from Diaz et al.
@@ -139,10 +137,10 @@ int main( int argc, char **argv )
 	BuilderMagicSquare builder( order );
 	
   // true means it is a permutation problem
-  Solver solver( builder );
+	ghost::Solver solver( builder );
 
   double error;
-  vector<int> solution;
+  std::vector<int> solution;
 
   solver.solve( error, solution, 1s, options );
 

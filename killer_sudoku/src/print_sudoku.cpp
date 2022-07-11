@@ -5,9 +5,9 @@
 
 #include "print_sudoku.hpp"
 
-stringstream PrintSudoku::print_candidate( const std::vector<Variable>& variables ) const
+std::stringstream PrintSudoku::print_candidate( const std::vector<ghost::Variable>& variables ) const
 {
-	stringstream stream;
+	std::stringstream stream;
 	
 	int size_side = static_cast<int>( std::sqrt( static_cast<int>( variables.size() ) ) );
 	int size_side_small_square = static_cast<int>( std::sqrt( size_side ) );

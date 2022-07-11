@@ -1,13 +1,15 @@
+#include <ghost/global_constraints/linear_equation_eq.hpp>
+
 #include "builder_ms.hpp"
 
 BuilderMagicSquare::BuilderMagicSquare( int instance_size )
-	: ModelBuilder( true ),
+	: ghost::ModelBuilder( true ),
 	  _instance_size( instance_size ),
 	  _nb_vars( instance_size * instance_size),
 	  _constant( instance_size * ( _nb_vars + 1 ) / 2 ),
-	  _rows( vector< vector<int> >( instance_size ) ),
-	  _columns( vector< vector<int> >( instance_size ) ),
-	  _diagonals( vector< vector<int> >( 2 ) )	  
+	  _rows( std::vector< std::vector<int> >( instance_size ) ),
+	  _columns( std::vector< std::vector<int> >( instance_size ) ),
+	  _diagonals( std::vector< std::vector<int> >( 2 ) )	  
 {
 	// Prepare row variables
   for( int row = 0; row < _instance_size; ++row )
@@ -53,12 +55,16 @@ void BuilderMagicSquare::declare_constraints()
 {
 	for( int i = 0; i < _instance_size; ++i )
   {
-	  constraints.emplace_back( make_shared<LinearEq>( _rows[i], _constant ) );
-	  constraints.emplace_back( make_shared<LinearEq>( _columns[i], _constant ) );
+	  // constraints.emplace_back( make_shared<LinearEq>( _rows[i], _constant ) );
+	  // constraints.emplace_back( make_shared<LinearEq>( _columns[i], _constant ) );
+	  constraints.emplace_back( std::make_shared<ghost::global_constraints::LinearEquationEq>( _rows[i], _constant ) );
+	  constraints.emplace_back( std::make_shared<ghost::global_constraints::LinearEquationEq>( _columns[i], _constant ) );
   }
   
-	constraints.emplace_back( make_shared<LinearEq>( _diagonals[0], _constant ) );
-	constraints.emplace_back( make_shared<LinearEq>( _diagonals[1], _constant ) );
+	// constraints.emplace_back( make_shared<LinearEq>( _diagonals[0], _constant ) );
+	// constraints.emplace_back( make_shared<LinearEq>( _diagonals[1], _constant ) );
+	constraints.emplace_back( std::make_shared<ghost::global_constraints::LinearEquationEq>( _diagonals[0], _constant ) );
+	constraints.emplace_back( std::make_shared<ghost::global_constraints::LinearEquationEq>( _diagonals[1], _constant ) );
 }
 
 #if defined MINMS

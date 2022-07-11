@@ -4,14 +4,12 @@
 #include <memory>
 #include <ghost/objective.hpp>
 
-#include "knapsack_coefficients.hpp"
-
 class KSObjective : public ghost::Maximize
 {
-	std::vector<int> _values;
+	std::vector<double> _values;
 
 public:
-	KSObjective( const std::vector<ghost::Variable>& variables, std::shared_ptr<ghost::AuxiliaryData> data );
+	KSObjective( const std::vector<ghost::Variable>& variables, const std::vector<double>& values );
 
 	double required_cost( const std::vector<ghost::Variable*>& variables ) const override;
 };

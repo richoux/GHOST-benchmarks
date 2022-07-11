@@ -13,21 +13,23 @@ using namespace std::literals::chrono_literals;
 
 int main( int argc, char** argv )
 {
-	KSBuilder builder;
+	std::vector<double> weights{12,2,1,1,4};
+	std::vector<double> values{4,2,2,1,10};
+	
+	KSBuilder builder( weights, values );
 
-	std::shared_ptr<ghost::Print> printer = std::make_shared<KSPrint>( std::vector<int>{4,2,2,1,10}, std::vector<int>{12,2,1,1,4} );
+	std::shared_ptr<ghost::Print> printer = std::make_shared<KSPrint>( weights, values );
 	
 	double cost;
 	std::vector<int> solution;
 
 	ghost::Options options;
 	options.print = printer;
-	options.parallel_runs = true;
 	
 	ghost::Solver solver( builder );
-	solver.solve( cost, solution, 1s, options );
+	solver.solve( cost, solution, 100ms, options );
 
-	bool success = check_solution( solution, 15, std::vector<int>{12,2,1,1,4} );
+	bool success = check_solution( solution, 15, weights );
 	
 	if( success )
 		return EXIT_SUCCESS;

@@ -2,7 +2,7 @@
 
 #include "zo_knapsack_print.hpp"
 
-ZeroOneKSPrint::ZeroOneKSPrint( const std::vector<int>& values )
+ZeroOneKSPrint::ZeroOneKSPrint( const std::vector<double>& values )
 	: _values( values )
 { }
 
