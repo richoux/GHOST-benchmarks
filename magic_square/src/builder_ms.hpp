@@ -2,22 +2,18 @@
 
 #include <ghost/model_builder.hpp>
 
-#include "linear-eq_num.hpp"
 #if defined MINMS
 #include "min_sum_corners.hpp"
 #endif
 
-using namespace ghost;
-using namespace std;
-
-class BuilderMagicSquare : public ModelBuilder
+class BuilderMagicSquare : public ghost::ModelBuilder
 {
 	int _instance_size;
 	int _nb_vars;
 	int _constant;
-	vector< vector<int> > _rows;
-  vector< vector<int> > _columns;
-  vector< vector<int> > _diagonals;
+	std::vector< std::vector<int> > _rows;
+  std::vector< std::vector<int> > _columns;
+  std::vector< std::vector<int> > _diagonals;
 
 public:
 	BuilderMagicSquare( int instance_size );

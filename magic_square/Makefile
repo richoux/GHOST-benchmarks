@@ -52,16 +52,16 @@ info: CXXFLAGS=$(CXXFLAGSINFO)
 info: LDFLAGS=$(LDFLAGSINFO)
 info: $(BINDIR)/magic_square $(BINDIR)/min_magic_square
 
-$(BINDIR)/magic_square: $(OBJDIR)/magic_square.o $(OBJDIR)/builder_ms.o $(OBJDIR)/print_ms.o $(OBJDIR)/linear-eq_num.o
+$(BINDIR)/magic_square: $(OBJDIR)/magic_square.o $(OBJDIR)/builder_ms.o $(OBJDIR)/print_ms.o
 	$(CXX) -o $@ $^ $(LDFLAGS)
 
-$(BINDIR)/min_magic_square: $(OBJDIR)/min_magic_square.o $(OBJDIR)/min_builder_ms.o $(OBJDIR)/print_ms.o $(OBJDIR)/linear-eq_num.o $(OBJDIR)/min_sum_corners.o
+$(BINDIR)/min_magic_square: $(OBJDIR)/min_magic_square.o $(OBJDIR)/min_builder_ms.o $(OBJDIR)/print_ms.o $(OBJDIR)/min_sum_corners.o
 	$(CXX) -o $@ $^ $(LDFLAGS)
 
-$(OBJDIR)/magic_square.o: $(OBJDIR)/builder_ms.o $(OBJDIR)/print_ms.o $(OBJDIR)/linear-eq_num.o
+$(OBJDIR)/magic_square.o: $(OBJDIR)/builder_ms.o $(OBJDIR)/print_ms.o
 	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -c $(SRCDIR)/magic_square.cpp -o $@
 
-$(OBJDIR)/min_magic_square.o: $(OBJDIR)/min_builder_ms.o $(OBJDIR)/print_ms.o $(OBJDIR)/linear-eq_num.o $(OBJDIR)/min_sum_corners.o
+$(OBJDIR)/min_magic_square.o: $(OBJDIR)/min_builder_ms.o $(OBJDIR)/print_ms.o $(OBJDIR)/min_sum_corners.o
 	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -c $(SRCDIR)/magic_square.cpp -o $@
 
 $(OBJDIR)/builder_ms.o:
@@ -72,9 +72,6 @@ $(OBJDIR)/min_builder_ms.o:
 
 $(OBJDIR)/print_ms.o:
 	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -c $(SRCDIR)/print_ms.cpp -o $@
-
-$(OBJDIR)/linear-eq_num.o:
-	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -c $(SRCDIR)/linear-eq_num.cpp -o $@
 
 $(OBJDIR)/min_sum_corners.o:
 	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -c $(SRCDIR)/min_sum_corners.cpp -o $@

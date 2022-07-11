@@ -5,11 +5,11 @@
 
 class KSPrint : public ghost::Print
 {
-	std::vector<int> _values;
-	std::vector<int> _weights;
+	std::vector<double> _weights;
+	std::vector<double> _values;
 	
 public:
-	KSPrint( std::vector<int>&& values, std::vector<int>&& weights );
+	KSPrint( const std::vector<double>& weights, const std::vector<double>& values );
 	
 	std::stringstream print_candidate( const std::vector<ghost::Variable>& variables ) const override;
 };	

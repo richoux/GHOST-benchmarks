@@ -1,5 +1,5 @@
 #include <ghost/global_constraints/all_different.hpp>
-#include <ghost/global_constraints/linear_equation.hpp>
+#include <ghost/global_constraints/linear_equation_eq.hpp>
 
 #include "builder_killer_sudoku.hpp"
 
@@ -8,10 +8,10 @@ BuilderKillerSudoku::BuilderKillerSudoku()
 	  _instance_size( 3 ),
 	  _side_size( 9 ),
 	  _nb_vars( 81 ),
-	  _rows( vector< vector<int> >( 9 ) ),
-	  _columns( vector< vector<int> >( 9 ) ),
-	  _squares( vector< vector<int> >( 9 ) ),
-	  _cages( vector< vector<int> >( 29 ) )
+	  _rows( std::vector< std::vector<int> >( 9 ) ),
+	  _columns( std::vector< std::vector<int> >( 9 ) ),
+	  _squares( std::vector< std::vector<int> >( 9 ) ),
+	  _cages( std::vector< std::vector<int> >( 29 ) )
 {
 	// Prepare row variables
 	for( int r = 0; r < _side_size; ++r )
@@ -167,12 +167,12 @@ void BuilderKillerSudoku::declare_constraints()
 {
   for( int i = 0; i < _side_size; ++i )
   {
-	  constraints.emplace_back( make_shared<global_constraints::AllDifferent>( _rows[i] ) );
-	  constraints.emplace_back( make_shared<global_constraints::AllDifferent>( _columns[i] ) );
-	  constraints.emplace_back( make_shared<global_constraints::AllDifferent>( _squares[i] ) );
+	  constraints.emplace_back( std::make_shared<ghost::global_constraints::AllDifferent>( _rows[i] ) );
+	  constraints.emplace_back( std::make_shared<ghost::global_constraints::AllDifferent>( _columns[i] ) );
+	  constraints.emplace_back( std::make_shared<ghost::global_constraints::AllDifferent>( _squares[i] ) );
   }
 
-  vector<int> rhs_eq{ 3, 15, 22, 4, 16, 15, 25, 17, 9, 8, 20, 6, 14, 17, 17, 13, 20, 12, 27, 6, 20, 6, 10, 14, 8, 16, 15, 13, 17 };
+  std::vector<double> rhs_eq{ 3, 15, 22, 4, 16, 15, 25, 17, 9, 8, 20, 6, 14, 17, 17, 13, 20, 12, 27, 6, 20, 6, 10, 14, 8, 16, 15, 13, 17 };
   for( int i = 0; i < 29; ++i )
-	  constraints.emplace_back( make_shared<global_constraints::LinearEquation>( _cages[i], rhs_eq[i] ) );
+	  constraints.emplace_back( std::make_shared<ghost::global_constraints::LinearEquationEq>( _cages[i], rhs_eq[i] ) );
 }

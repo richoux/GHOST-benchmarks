@@ -52,10 +52,10 @@ info: CXXFLAGS=$(CXXFLAGSINFO)
 info: LDFLAGS=$(LDFLAGSINFO)
 info: $(BINDIR)/knapsack $(BINDIR)/alldiff_knapsack
 
-$(BINDIR)/knapsack: $(OBJDIR)/knapsack.o $(OBJDIR)/knapsack_model_builder.o $(OBJDIR)/knapsack_capacity.o $(OBJDIR)/knapsack_coefficients.o $(OBJDIR)/knapsack_objective.o $(OBJDIR)/knapsack_print.o $(OBJDIR)/check_solution.o 
+$(BINDIR)/knapsack: $(OBJDIR)/knapsack.o $(OBJDIR)/knapsack_model_builder.o $(OBJDIR)/knapsack_objective.o $(OBJDIR)/knapsack_print.o $(OBJDIR)/check_solution.o 
 	$(CXX) -o $@ $^ $(LDFLAGS)
 
-$(BINDIR)/alldiff_knapsack: $(OBJDIR)/knapsack.o $(OBJDIR)/alldiff_knapsack_model_builder.o $(OBJDIR)/knapsack_capacity.o $(OBJDIR)/knapsack_alldiff.o $(OBJDIR)/knapsack_coefficients.o $(OBJDIR)/knapsack_objective.o $(OBJDIR)/knapsack_print.o $(OBJDIR)/alldiff_check_solution.o
+$(BINDIR)/alldiff_knapsack: $(OBJDIR)/knapsack.o $(OBJDIR)/alldiff_knapsack_model_builder.o $(OBJDIR)/knapsack_objective.o $(OBJDIR)/knapsack_print.o $(OBJDIR)/alldiff_check_solution.o
 	$(CXX) -o $@ $^ $(LDFLAGS)
 
 $(OBJDIR)/%.o: %.cpp

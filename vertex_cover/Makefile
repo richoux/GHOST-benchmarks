@@ -52,10 +52,10 @@ info: CXXFLAGS=$(CXXFLAGSINFO)
 info: LDFLAGS=$(LDFLAGSINFO)
 info: $(BINDIR)/vertex_cover_20 #$(BINDIR)/vertex_cover_125
 
-$(BINDIR)/vertex_cover_20: $(OBJDIR)/vertex_cover.o $(OBJDIR)/print_vertex_cover.o $(OBJDIR)/linear-leq.o $(OBJDIR)/linear-geq.o $(OBJDIR)/builder_vertex_cover.o
+$(BINDIR)/vertex_cover_20: $(OBJDIR)/vertex_cover.o $(OBJDIR)/print_vertex_cover.o $(OBJDIR)/builder_vertex_cover.o
 	$(CXX) -o $@ $^ $(LDFLAGS)
 
-$(BINDIR)/vertex_cover_125: $(OBJDIR)/vertex_cover.o $(OBJDIR)/print_vertex_cover.o $(OBJDIR)/linear-leq.o $(OBJDIR)/linear-geq.o $(OBJDIR)/builder_vertex_cover-125.o
+$(BINDIR)/vertex_cover_125: $(OBJDIR)/vertex_cover.o $(OBJDIR)/print_vertex_cover.o $(OBJDIR)/builder_vertex_cover-125.o
 	$(CXX) -o $@ $^ $(LDFLAGS)
 
 $(OBJDIR)/%.o: %.cpp

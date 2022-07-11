@@ -2,18 +2,15 @@
 
 #include <ghost/model_builder.hpp>
 
-using namespace ghost;
-using namespace std;
-
-class BuilderKillerSudoku : public ModelBuilder
+class BuilderKillerSudoku : public ghost::ModelBuilder
 {
 	int _instance_size;
 	int _side_size;
 	int _nb_vars;
-	vector< vector<int> > _rows;
-  vector< vector<int> > _columns;
-  vector< vector<int> > _squares;
-  vector< vector<int> > _cages;
+	std::vector< std::vector<int> > _rows;
+  std::vector< std::vector<int> > _columns;
+  std::vector< std::vector<int> > _squares;
+  std::vector< std::vector<int> > _cages;
 
 public:
 	BuilderKillerSudoku();

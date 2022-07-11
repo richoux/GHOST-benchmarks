@@ -52,7 +52,7 @@ info: CXXFLAGS=$(CXXFLAGSINFO)
 info: LDFLAGS=$(LDFLAGSINFO)
 info: $(BINDIR)/multidimentional_knapsack
 
-$(BINDIR)/multidimentional_knapsack: $(OBJDIR)/multi_knapsack.o $(OBJDIR)/multi_knapsack_model_builder.o $(OBJDIR)/sat_multi_knapsack_model_builder.o $(OBJDIR)/multi_knapsack_capacity.o $(OBJDIR)/multi_knapsack_reach_value.o $(OBJDIR)/multi_knapsack_objective.o $(OBJDIR)/zo_knapsack_print.o $(OBJDIR)/check_solution.o 
+$(BINDIR)/multidimentional_knapsack: $(OBJDIR)/multi_knapsack.o $(OBJDIR)/multi_knapsack_model_builder.o $(OBJDIR)/sat_multi_knapsack_model_builder.o $(OBJDIR)/multi_knapsack_objective.o $(OBJDIR)/zo_knapsack_print.o $(OBJDIR)/check_solution.o 
 	$(CXX) -o $@ $^ $(LDFLAGS)
 
 $(OBJDIR)/%.o: %.cpp

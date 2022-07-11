@@ -5,10 +5,10 @@
 
 class MultiKSObjective : public ghost::Maximize
 {
-	std::vector<int> _values;
+	std::vector<double> _values;
 
 public:
-	MultiKSObjective( const std::vector<ghost::Variable>& variables, const std::vector<int>& values );
+	MultiKSObjective( const std::vector<ghost::Variable>& variables, const std::vector<double>& values );
 
 	double required_cost( const std::vector<ghost::Variable*>& variables ) const override;
 };

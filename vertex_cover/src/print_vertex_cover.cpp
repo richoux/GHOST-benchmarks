@@ -5,9 +5,9 @@
 
 #include "print_vertex_cover.hpp"
 
-stringstream PrintVertexCover::print_candidate( const std::vector<Variable>& variables ) const
+std::stringstream PrintVertexCover::print_candidate( const std::vector<ghost::Variable>& variables ) const
 {
-	stringstream stream;
+	std::stringstream stream;
 
 	if( variables.size() != 20 )
 	{

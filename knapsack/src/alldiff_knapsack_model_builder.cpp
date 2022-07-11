@@ -1,11 +1,14 @@
-#include "knapsack_model_builder.hpp"
-#include "knapsack_capacity.hpp"
-#include "knapsack_alldiff.hpp"
-#include "knapsack_objective.hpp"
-#include "knapsack_coefficients.hpp"
+#include <ghost/global_constraints/all_different.hpp>
+#include <ghost/global_constraints/linear_equation_leq.hpp>
 
-KSBuilder::KSBuilder()
-	: ModelBuilder()
+#include "knapsack_model_builder.hpp"
+#include "knapsack_objective.hpp"
+
+KSBuilder::KSBuilder( const std::vector<double>& weights,
+                      const std::vector<double>& values )
+	: ModelBuilder(),
+	  _weights( weights ),
+	  _values( values )
 { }
 
 void KSBuilder::declare_variables()
@@ -15,17 +18,11 @@ void KSBuilder::declare_variables()
 
 void KSBuilder::declare_constraints()
 {
-	constraints.emplace_back( std::make_shared<KSCapacity>( variables, 15, auxiliary_data ) );
-	constraints.emplace_back( std::make_shared<KSAllDiff>( variables ) );
+	constraints.emplace_back( std::make_shared<ghost::global_constraints::LinearEquationLeq>( variables, 15.0, _weights ) ); // knapsack capacity
+	constraints.emplace_back( std::make_shared<ghost::global_constraints::AllDifferent>( variables ) );
 }
 
 void KSBuilder::declare_objective()
 {
-	objective = std::make_shared<KSObjective>( variables, auxiliary_data );
+	objective = std::make_shared<KSObjective>( variables, _values );
 }
-
-void KSBuilder::declare_auxiliary_data()
-{
-	auxiliary_data = std::make_shared<KSCoefficients>();
-}
-

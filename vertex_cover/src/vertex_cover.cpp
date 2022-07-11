@@ -12,11 +12,9 @@
 #include "builder_vertex_cover.hpp"
 #include "print_vertex_cover.hpp"
 
-using namespace ghost;
-using namespace std;
 using namespace std::literals::chrono_literals;
 
-bool check_solution( const vector<int>& solution, int constant )
+bool check_solution( const std::vector<int>& solution, int constant )
 {
 	bool success = true;
 	
@@ -134,15 +132,15 @@ int main( int argc, char **argv )
 	if( argc == 3 && parallel )
 		cores = std::stoi( argv[2] );
 	
-  shared_ptr<Print> printer = make_shared<PrintVertexCover>();
+	std::shared_ptr<ghost::Print> printer = std::make_shared<PrintVertexCover>();
 
   BuilderVC builder;
-  Solver solver( builder );
+  ghost::Solver solver( builder );
 
   double error;
-  vector<int> solution;
+  std::vector<int> solution;
 
-	Options options;
+	ghost::Options options;
 	options.print = printer;
 
 	if( parallel )

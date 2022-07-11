@@ -12,14 +12,12 @@
 #include "builder_sudoku.hpp"
 #include "print_sudoku.hpp"
 
-using namespace ghost;
-using namespace std;
 using namespace std::literals::chrono_literals;
 
-bool alldiff_concept( const vector<int>& var )
+bool alldiff_concept( const std::vector<int>& var )
 {
 	// We assume our k variables can take values in [1, k]
-	vector<bool> bitvec( var.size(), false );
+	std::vector<bool> bitvec( var.size(), false );
 
 	// Returns false if and only if we have two variables sharing the same value, 
 	for( int i = 0 ; i < static_cast<int>( var.size() ) ; ++i )
@@ -31,18 +29,18 @@ bool alldiff_concept( const vector<int>& var )
 	return true;	
 }
 
-void check_hard_instance( const vector<int>& solution, int index, int expected_value )
+void check_hard_instance( const std::vector<int>& solution, int index, int expected_value )
 {
 	std::cout << "Sudoku - Error with the hard instance: var[" << index << "]=" << solution[index] << " but should be assigned at " << expected_value << ".\n";
 }
 
-bool check_solution( const vector<int>& solution, bool hard_instance )
+bool check_solution( const std::vector<int>& solution, bool hard_instance )
 {
 	int nb_vars = solution.size();
 	int size_side = static_cast<int>( std::sqrt( nb_vars ) );
 	int size_side_small_square = static_cast<int>( std::sqrt( size_side ) );
 
-	vector<int> partial_sol( size_side );
+	std::vector<int> partial_sol( size_side );
 	bool success = true;
 	
 	// Rows
@@ -54,11 +52,11 @@ bool check_solution( const vector<int>& solution, bool hard_instance )
 
 		if( !alldiff_concept( partial_sol ) )
 		{
-			cout << "Sudoku - Error in row " << i+1 << ": ";
+			std::cout << "Sudoku - Error in row " << i+1 << ": ";
 			std::copy( partial_sol.begin(),
 			           partial_sol.end(),
-			           std::ostream_iterator<int>( cout, " " ) );
-			cout << "\n";
+			           std::ostream_iterator<int>( std::cout, " " ) );
+			std::cout << "\n";
 			success = false;
 		}
 	}
@@ -71,11 +69,11 @@ bool check_solution( const vector<int>& solution, bool hard_instance )
 
 		if( !alldiff_concept( partial_sol ) )
 		{
-			cout << "Sudoku - Error in column " << i+1 << ": ";
+			std::cout << "Sudoku - Error in column " << i+1 << ": ";
 			std::copy( partial_sol.begin(),
 			           partial_sol.end(),
-			           std::ostream_iterator<int>( cout, " " ) );
-			cout << "\n";
+			           std::ostream_iterator<int>( std::cout, " " ) );
+			std::cout << "\n";
 			success = false;
 		}
 	}
@@ -90,11 +88,11 @@ bool check_solution( const vector<int>& solution, bool hard_instance )
 			
 			if( !alldiff_concept( partial_sol ) )
 			{
-				cout << "Sudoku - Error in square (" << i+1 << "," << j+1 << "): ";
+				std::cout << "Sudoku - Error in square (" << i+1 << "," << j+1 << "): ";
 				std::copy( partial_sol.begin(),
 				           partial_sol.end(),
-				           std::ostream_iterator<int>( cout, " " ) );
-				cout << "\n";
+				           std::ostream_iterator<int>( std::cout, " " ) );
+				std::cout << "\n";
 				success = false;
 			}
 		}
@@ -194,15 +192,15 @@ int main( int argc, char **argv )
 		hard_instance = true;
 	}
 	
-  shared_ptr<Print> printer = make_shared<PrintSudoku>();
+	std::shared_ptr<ghost::Print> printer = std::make_shared<PrintSudoku>();
 
   BuilderSudoku builder( instance_size, hard_instance );
-  Solver solver( builder );
+  ghost::Solver solver( builder );
 
   double error;
-  vector<int> solution;
+  std::vector<int> solution;
 
-	Options options;
+  ghost::Options options;
 	options.print = printer;
 	if( hard_instance )
 		options.custom_starting_point = true;

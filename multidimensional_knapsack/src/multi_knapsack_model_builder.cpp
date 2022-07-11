@@ -1,12 +1,13 @@
+#include <ghost/global_constraints/linear_equation_leq.hpp>
+
 #include "multi_knapsack_model_builder.hpp"
-#include "multi_knapsack_capacity.hpp"
 #include "multi_knapsack_objective.hpp"
 
 MultiKSBuilder::MultiKSBuilder( int number_variables,
                                 int number_constraints,
-                                const std::vector<std::vector<int>>& coefficients,
+                                const std::vector<std::vector<double>>& coefficients,
                                 const std::vector<int>& capacities,
-                                const std::vector<int>& values )
+                                const std::vector<double>& values )
 	: ModelBuilder(),
 	  _number_variables( number_variables ),
 	  _number_constraints( number_constraints ),
@@ -23,7 +24,7 @@ void MultiKSBuilder::declare_variables()
 void MultiKSBuilder::declare_constraints()
 {
 	for( int i = 0 ; i < _number_constraints ; ++i )
-		constraints.emplace_back( std::make_shared<MultiKSCapacity>( variables, _coefficients[i], _capacities[i] ) );
+		constraints.emplace_back( std::make_shared<ghost::global_constraints::LinearEquationLeq>( variables, _capacities[i], _coefficients[i] ) );
 }
 
 void MultiKSBuilder::declare_objective()

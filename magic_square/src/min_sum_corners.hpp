@@ -2,15 +2,12 @@
 
 #include <ghost/objective.hpp>
 
-using namespace std;
-using namespace ghost;
-
-class MinCorners : public Minimize
+class MinCorners : public ghost::Minimize
 {
 	int _number_variables;
 	int _instance_size;
 	
 public:
-	MinCorners( const vector<Variable>& variables );
-	double required_cost( const vector<Variable*>& variables ) const override;
+	MinCorners( const std::vector<ghost::Variable>& variables );
+	double required_cost( const std::vector<ghost::Variable*>& variables ) const override;
 };
