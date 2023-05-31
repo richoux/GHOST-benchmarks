@@ -1,5 +1,5 @@
 # GHOST Benchmarks
-Tested with GHOST v2.5
+Tested with GHOST v2.8
 
 ## List of benchmarks
 ### Classic benchmarks
@@ -9,6 +9,8 @@ Tested with GHOST v2.5
 - 0-1 Multidimensional Knapsack (satisfaction or optimization, non-permutation, constraint: Linear-Less-Than-or-Equals-To and Linear-Greater-Than-or-Equals-To)
 - Magic Square (satisfaction, permutation, constraint: Linear-Equation-Equals-To)
 - Min Magic Square (optimization, permutation, constraint: Linear-Equation-Equals-To)
+- Quadratic Assignment Problem (optimization, permutation, no constraints). Require GHOST v2.8 or above.
+- AllDiff Quadratic Assignment Problem (optimization, non-permutation, constraints: All-Different)
 - Sudoku (satisfaction, permutation, constraint: All-Different)
 - Vertex Cover (satisfaction, non-permutation, constraints: Linear-Less-Than-or-Equals-To and Linear-Greater-Than-or-Equals-To)
 
@@ -21,7 +23,7 @@ Compile with
 ```shell
 $> ./make
 ```
-Important: GHOST v2.5 (at least) must be installed.
+Important: GHOST v2.5 or above must be installed. The Quadratic Assignment Problem requires at least GHOST v2.8.
 
 Run all classic benchmarks (except 0-1 multidimensional knapsack) with
 ```shell
