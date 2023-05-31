@@ -1,0 +1,6 @@
+Instances mainly from http://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/tsp/
+
+
+p01 is from https://people.sc.fsu.edu/~jburkardt/datasets/tsp/tsp.html (p01, gr17)
+
+ja9847 is from https://www.math.uwaterloo.ca/tsp/world/countries.html

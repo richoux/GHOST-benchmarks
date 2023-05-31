@@ -11,16 +11,16 @@ LDFLAGSINFO=-pthread -lghost
 UNAME_S := $(shell uname -s)
 ifeq ($(UNAME_S),Linux)
 	CXX=g++
-	CXXFLAGS= -std=c++17 $(CXXFIRSTFLAGS) $(MYFLAGS)
-	CXXFLAGSDEBUG= -std=c++17 $(CXXFIRSTFLAGSDEBUG) $(MYFLAGS)
-	CXXFLAGSINFO= -std=c++17 $(CXXFIRSTFLAGSINFO) $(MYFLAGS)
-	LDFLAGS=-lghost_static -pthread
+	CXXFLAGS= -std=c++20 $(CXXFIRSTFLAGS) $(MYFLAGS)
+	CXXFLAGSDEBUG= -std=c++20 $(CXXFIRSTFLAGSDEBUG) $(MYFLAGS)
+	CXXFLAGSINFO= -std=c++20 $(CXXFIRSTFLAGSINFO) $(MYFLAGS)
+	LDFLAGS=-pthread -lghost_static
 endif
 ifeq ($(UNAME_S),Darwin)
 	CXX=clang++
-	CXXFLAGS= -std=c++17  -stdlib=libc++ $(CXXFIRSTFLAGS) $(MYFLAGS)
-	CXXFLAGSDEBUG= -std=c++17  -stdlib=libc++ $(CXXFIRSTFLAGSDEBUG) $(MYFLAGS)
-	LDFLAGS=-lghost_static -lc++ -lc++abi -pthread
+	CXXFLAGS= -std=c++20  -stdlib=libc++ $(CXXFIRSTFLAGS) $(MYFLAGS)
+	CXXFLAGSDEBUG= -std=c++20  -stdlib=libc++ $(CXXFIRSTFLAGSDEBUG) $(MYFLAGS)
+	LDFLAGS=-pthread -lghost_static -lc++ -lc++abi
 endif
 
 # Directories
@@ -42,17 +42,20 @@ vpath %.cpp $(SRCDIR)
 
 # Rules
 
-all: $(BINDIR)/multidimensional_knapsack
+all: $(BINDIR)/tsp_permut $(BINDIR)/tsp_alldiff
 
 debug: CXXFLAGS=$(CXXFLAGSDEBUG)
 debug: LDFLAGS=$(LDFLAGSDEBUG)
-debug: $(BINDIR)/multidimensional_knapsack
+debug: $(BINDIR)/tsp_permut $(BINDIR)/tsp_alldiff
 
 info: CXXFLAGS=$(CXXFLAGSINFO)
 info: LDFLAGS=$(LDFLAGSINFO)
-info: $(BINDIR)/multidimensional_knapsack
+info: $(BINDIR)/tsp_permut $(BINDIR)/tsp_alldiff
 
-$(BINDIR)/multidimensional_knapsack: $(OBJDIR)/multi_knapsack.o $(OBJDIR)/multi_knapsack_model_builder.o $(OBJDIR)/sat_multi_knapsack_model_builder.o $(OBJDIR)/multi_knapsack_objective.o $(OBJDIR)/zo_knapsack_print.o $(OBJDIR)/check_solution.o 
+$(BINDIR)/tsp_permut: $(OBJDIR)/tsp.o $(OBJDIR)/tsp_builder_permut.o $(OBJDIR)/tsp_objective.o $(OBJDIR)/tsp_print.o $(OBJDIR)/check.o $(OBJDIR)/extract.o
+	$(CXX) -o $@ $^ $(LDFLAGS)
+
+$(BINDIR)/tsp_alldiff: $(OBJDIR)/tsp.o $(OBJDIR)/tsp_builder_alldiff.o $(OBJDIR)/tsp_objective.o $(OBJDIR)/tsp_print.o $(OBJDIR)/check.o $(OBJDIR)/extract.o
 	$(CXX) -o $@ $^ $(LDFLAGS)
 
 $(OBJDIR)/%.o: %.cpp
@@ -61,4 +64,4 @@ $(OBJDIR)/%.o: %.cpp
 .PHONY: clean
 
 clean:
-	rm -fr core $(BINDIR)/multidimensional_knapsack $(OBJECTS) 
+	rm -fr core $(BINDIR)/tsp_permut $(BINDIR)/tsp_alldiff $(OBJECTS) 
