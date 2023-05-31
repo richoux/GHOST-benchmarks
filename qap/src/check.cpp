@@ -14,14 +14,11 @@ bool check_solution( const std::vector<int>& solution )
 	return true;
 }
 
-double check_cost( const std::vector<int>& solution, const std::string& filename )
+double check_cost( const std::vector<int>& solution,
+                   int number_variables,
+                   const std::vector<std::vector<int>>& distances,
+                   const std::vector<std::vector<int>>& flows	)
 {
-	int number_variables;
-	std::vector< std::vector<int> > matrix_distances;
-	std::vector< std::vector<int> > matrix_flows;
-
-	extract_data_from_file( filename, number_variables, matrix_distances, matrix_flows );
-
 	double sum = 0.0;
 	
 	for( int i = 0 ; i < number_variables ; ++i )
@@ -31,7 +28,7 @@ double check_cost( const std::vector<int>& solution, const std::string& filename
 		for( int j = 0 ; j < number_variables ; ++j )
 		{
 			int b = solution[j] - 1;
-			sum += matrix_distances[i][j] * matrix_flows[a][b];
+			sum += distances[i][j] * flows[a][b];
 		}
 	}
 

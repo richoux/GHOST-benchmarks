@@ -11,7 +11,9 @@ class BuilderQAP : public ghost::ModelBuilder
 	std::vector< std::vector<int> > _matrix_flows;
 	
 public:
-	BuilderQAP( std::string filename );
+	BuilderQAP( int number_variables,
+	            const std::vector< std::vector<int> >& matrix_distances,
+	            const std::vector< std::vector<int> >& matrix_flows );
 
 	void declare_variables() override;
 	void declare_constraints() override;

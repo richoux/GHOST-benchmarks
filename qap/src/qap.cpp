@@ -39,7 +39,12 @@ int main( int argc, char **argv )
 	if( argc == 4 && parallel )
 		cores = std::stoi( argv[3] );
 
-  BuilderQAP builder( filename );
+	int number_variables;
+	std::vector< std::vector<int> > distances;
+	std::vector< std::vector<int> > flows;
+	extract_data_from_file( filename, number_variables, distances, flows );
+	
+  BuilderQAP builder( number_variables, distances, flows );
   ghost::Solver solver( builder );
 
   double cost;
@@ -61,7 +66,7 @@ int main( int argc, char **argv )
 	if( success )
 	{
 		std::cout << "Best cost found: " << cost
-		          << "\nChecking cost: " << check_cost(solution, filename) << "\n";
+		          << "\nChecking cost: " << check_cost(solution, number_variables, distances, flows) << "\n";
 
 		std::string filename_without_extension = filename.substr(0, filename.find_last_of(".") );
 		std::string solutionfile = filename_without_extension + ".sln";

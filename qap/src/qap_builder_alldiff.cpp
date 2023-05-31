@@ -7,11 +7,14 @@
 #include "qap_objective.hpp"
 #include "extract.hpp"
 
-BuilderQAP::BuilderQAP( std::string filename )
-	: ModelBuilder()
-{
-	extract_data_from_file( filename, _number_variables, _matrix_distances, _matrix_flows );
-}
+BuilderQAP::BuilderQAP( int number_variables,
+                        const std::vector< std::vector<int> >& matrix_distances,
+                        const std::vector< std::vector<int> >& matrix_flows )
+	: ModelBuilder(),
+	  _number_variables( number_variables ),
+	  _matrix_distances( matrix_distances ),
+	  _matrix_flows( matrix_flows )
+{ }
 
 void BuilderQAP::declare_variables()
 {
