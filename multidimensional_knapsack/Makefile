@@ -42,17 +42,17 @@ vpath %.cpp $(SRCDIR)
 
 # Rules
 
-all: $(BINDIR)/multidimentional_knapsack
+all: $(BINDIR)/multidimensional_knapsack
 
 debug: CXXFLAGS=$(CXXFLAGSDEBUG)
 debug: LDFLAGS=$(LDFLAGSDEBUG)
-debug: $(BINDIR)/multidimentional_knapsack
+debug: $(BINDIR)/multidimensional_knapsack
 
 info: CXXFLAGS=$(CXXFLAGSINFO)
 info: LDFLAGS=$(LDFLAGSINFO)
-info: $(BINDIR)/multidimentional_knapsack
+info: $(BINDIR)/multidimensional_knapsack
 
-$(BINDIR)/multidimentional_knapsack: $(OBJDIR)/multi_knapsack.o $(OBJDIR)/multi_knapsack_model_builder.o $(OBJDIR)/sat_multi_knapsack_model_builder.o $(OBJDIR)/multi_knapsack_objective.o $(OBJDIR)/zo_knapsack_print.o $(OBJDIR)/check_solution.o 
+$(BINDIR)/multidimensional_knapsack: $(OBJDIR)/multi_knapsack.o $(OBJDIR)/multi_knapsack_model_builder.o $(OBJDIR)/sat_multi_knapsack_model_builder.o $(OBJDIR)/multi_knapsack_objective.o $(OBJDIR)/zo_knapsack_print.o $(OBJDIR)/check_solution.o 
 	$(CXX) -o $@ $^ $(LDFLAGS)
 
 $(OBJDIR)/%.o: %.cpp
@@ -61,4 +61,4 @@ $(OBJDIR)/%.o: %.cpp
 .PHONY: clean
 
 clean:
-	rm -fr core $(BINDIR)/multidimentional_knapsack $(OBJECTS) 
+	rm -fr core $(BINDIR)/multidimensional_knapsack $(OBJECTS) 
