@@ -12,6 +12,7 @@ Tested with GHOST v2.8
 - Quadratic Assignment Problem (optimization, permutation, no constraints). Require GHOST v2.8 or above.
 - AllDiff Quadratic Assignment Problem (optimization, non-permutation, constraints: All-Different)
 - Sudoku (satisfaction, permutation, constraint: All-Different)
+- N-Queens (satisfaction, permutation, constraint: custom diagonal checks)
 - Traveling Salesman Problem (optimization, permutation, no constraints). Require GHOST v2.8 or above.
 - AllDiff Traveling Salesman Problem (optimization, non-permutation, constraints: All-Different)
 - Vertex Cover (satisfaction, non-permutation, constraints: Linear-Less-Than-or-Equals-To and Linear-Greater-Than-or-Equals-To)
