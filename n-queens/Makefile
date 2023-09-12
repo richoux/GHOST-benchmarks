@@ -1,5 +1,3 @@
-EXEC=nqueens
-
 # Compiler flags
 MYFLAGS=
 CXXFIRSTFLAGS= -O3 -W -Wall -Wextra -Wno-sign-compare -Wno-unused-parameter
@@ -44,17 +42,20 @@ vpath %.cpp $(SRCDIR)
 
 # Rules
 
-all: $(BINDIR)/$(EXEC)
+all: $(BINDIR)/nqueens_permut $(BINDIR)/nqueens_alldiff
 
 debug: CXXFLAGS=$(CXXFLAGSDEBUG)
 debug: LDFLAGS=$(LDFLAGSDEBUG)
-debug: $(BINDIR)/$(EXEC)
+debug: $(BINDIR)/nqueens_permut $(BINDIR)/nqueens_alldiff
 
 info: CXXFLAGS=$(CXXFLAGSINFO)
 info: LDFLAGS=$(LDFLAGSINFO)
-info: $(BINDIR)/$(EXEC)
+info: $(BINDIR)/nqueens_permut $(BINDIR)/nqueens_alldiff
 
-$(BINDIR)/$(EXEC): $(OBJECTS)
+$(BINDIR)/nqueens_permut: $(OBJDIR)/nqueens.o $(OBJDIR)/builder_nqueens_permut.o $(OBJDIR)/constraint_diagonal.o $(OBJDIR)/print_nqueens.o
+	$(CXX) -o $@ $^ $(LDFLAGS)
+
+$(BINDIR)/nqueens_alldiff: $(OBJDIR)/nqueens.o $(OBJDIR)/builder_nqueens_alldiff.o $(OBJDIR)/constraint_diagonal.o $(OBJDIR)/print_nqueens.o
 	$(CXX) -o $@ $^ $(LDFLAGS)
 
 $(OBJDIR)/%.o: %.cpp
@@ -63,4 +64,4 @@ $(OBJDIR)/%.o: %.cpp
 .PHONY: clean
 
 clean:
-	rm -fr core $(BINDIR)/$(EXEC) $(OBJECTS) 
+	rm -fr core $(BINDIR)/nqueens_permut $(BINDIR)/nqueens_alldiff $(OBJECTS) 
