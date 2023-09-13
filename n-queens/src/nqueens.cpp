@@ -28,15 +28,20 @@ int main( int argc, char **argv )
   BuilderNQueens builder( n );
   ghost::Solver solver( builder );
 
-  double error;
-  std::vector<int> solution;
-
   ghost::Options options;
 	options.print = printer;
 	
-  bool success = solver.solve( error, solution, 1s, options );		
+#if defined EXHAUSTIVESEARCH
+	std::vector<double> errors;
+  std::vector< std::vector<int> > solutions;
+  bool success = solver.exhaustive_search( errors, solutions, options );
+#else
+  double error;
+  std::vector<int> solution;
+  bool success = solver.solve( error, solution, 1s, options );
   // bool success = check_solution( solution );
-	
+#endif
+  
 	if( success )
 		return EXIT_SUCCESS;
 	else

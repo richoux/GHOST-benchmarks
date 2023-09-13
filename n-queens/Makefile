@@ -42,15 +42,15 @@ vpath %.cpp $(SRCDIR)
 
 # Rules
 
-all: $(BINDIR)/nqueens_permut $(BINDIR)/nqueens_alldiff
+all: $(BINDIR)/nqueens_permut $(BINDIR)/nqueens_alldiff $(BINDIR)/nqueens_exhaustive
 
 debug: CXXFLAGS=$(CXXFLAGSDEBUG)
 debug: LDFLAGS=$(LDFLAGSDEBUG)
-debug: $(BINDIR)/nqueens_permut $(BINDIR)/nqueens_alldiff
+debug: $(BINDIR)/nqueens_permut $(BINDIR)/nqueens_alldiff $(BINDIR)/nqueens_exhaustive
 
 info: CXXFLAGS=$(CXXFLAGSINFO)
 info: LDFLAGS=$(LDFLAGSINFO)
-info: $(BINDIR)/nqueens_permut $(BINDIR)/nqueens_alldiff
+info: $(BINDIR)/nqueens_permut $(BINDIR)/nqueens_alldiff $(BINDIR)/nqueens_exhaustive
 
 $(BINDIR)/nqueens_permut: $(OBJDIR)/nqueens.o $(OBJDIR)/builder_nqueens_permut.o $(OBJDIR)/constraint_diagonal.o $(OBJDIR)/print_nqueens.o
 	$(CXX) -o $@ $^ $(LDFLAGS)
@@ -58,10 +58,31 @@ $(BINDIR)/nqueens_permut: $(OBJDIR)/nqueens.o $(OBJDIR)/builder_nqueens_permut.o
 $(BINDIR)/nqueens_alldiff: $(OBJDIR)/nqueens.o $(OBJDIR)/builder_nqueens_alldiff.o $(OBJDIR)/constraint_diagonal.o $(OBJDIR)/print_nqueens.o
 	$(CXX) -o $@ $^ $(LDFLAGS)
 
-$(OBJDIR)/%.o: %.cpp
-	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -c $< -o $@
+$(BINDIR)/nqueens_exhaustive: $(OBJDIR)/nqueens_exhaustive.o $(OBJDIR)/builder_nqueens_alldiff.o $(OBJDIR)/constraint_diagonal.o $(OBJDIR)/print_nqueens.o
+	$(CXX) -o $@ $^ $(LDFLAGS)
+
+$(OBJDIR)/nqueens.o: $(OBJDIR)/builder_nqueens_permut.o $(OBJDIR)/builder_nqueens_alldiff.o $(OBJDIR)/print_nqueens.o
+	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -c $(SRCDIR)/nqueens.cpp -o $@
+
+$(OBJDIR)/nqueens_exhaustive.o: $(OBJDIR)/builder_nqueens_alldiff.o $(OBJDIR)/print_nqueens.o
+	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -DEXHAUSTIVESEARCH -c $(SRCDIR)/nqueens.cpp -o $@
+
+$(OBJDIR)/builder_nqueens_permut.o: $(OBJDIR)/constraint_diagonal.o
+	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -c $(SRCDIR)/builder_nqueens_permut.cpp -o $@
+
+$(OBJDIR)/builder_nqueens_alldiff.o: $(OBJDIR)/constraint_diagonal.o
+	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -c $(SRCDIR)/builder_nqueens_alldiff.cpp -o $@
+
+$(OBJDIR)/constraint_diagonal.o:
+	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -c $(SRCDIR)/constraint_diagonal.cpp -o $@
+
+$(OBJDIR)/print_nqueens.o:
+	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -c $(SRCDIR)/print_nqueens.cpp -o $@
+
+# $(OBJDIR)/%.o: %.cpp
+# 	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -c $< -o $@
 
 .PHONY: clean
 
 clean:
-	rm -fr core $(BINDIR)/nqueens_permut $(BINDIR)/nqueens_alldiff $(OBJECTS) 
+	rm -fr core $(BINDIR)/nqueens_permut $(BINDIR)/nqueens_alldiff $(BINDIR)/nqueens_exhaustive $(OBJECTS) 
