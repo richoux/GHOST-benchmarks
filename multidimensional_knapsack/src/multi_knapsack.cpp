@@ -103,7 +103,7 @@ int main( int argc, char** argv )
 #endif
 		
 		ghost::Solver solver( builder );
-		solver.solve( cost, solution, 1min, options );
+		solver.fast_search( cost, solution, 1min, options );
 	}
 	else
 	{
@@ -115,7 +115,7 @@ int main( int argc, char** argv )
 #endif
 
 		ghost::Solver solver( builder );
-		solver.solve( cost, solution, 1min, options );
+		solver.fast_search( cost, solution, 1min, options );
 	}
 
 	bool success = check_solution( solution, coefficients, capacities, values, optimal );

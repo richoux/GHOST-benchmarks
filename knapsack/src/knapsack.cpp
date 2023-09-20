@@ -27,7 +27,7 @@ int main( int argc, char** argv )
 	options.print = printer;
 	
 	ghost::Solver solver( builder );
-	solver.solve( cost, solution, 100ms, options );
+	solver.fast_search( cost, solution, 100ms, options );
 
 	bool success = check_solution( solution, 15, weights );
 	

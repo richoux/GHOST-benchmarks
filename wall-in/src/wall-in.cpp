@@ -93,7 +93,7 @@ int main(int argc, char **argv)
   cout << boolalpha << "GapObj movable: " << is_nothrow_move_constructible<GapObj>::value << endl;
 #endif
   
-  solver.solve( 20, 150 );    
+  solver.fast_search( 20, 150 );    
 
   
   // BO
@@ -117,5 +117,5 @@ int main(int argc, char **argv)
 
   // Solver<Action, BuildOrderDomain, BuildOrderConstraint> solver(&vec, &domain, vecConstraints, objective );
 
-  // solver.solve( 20, 30 );
+  // solver.fast_search( 20, 30 );
 }

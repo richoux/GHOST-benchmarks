@@ -94,6 +94,6 @@ int main(int argc, char **argv)
 
   Solver<Action, BuildOrderDomain, BuildOrderConstraint> solver(&vec, &domain, vecConstraints, objective );
 
-  solver.solve( sat, opt );
+  solver.fast_search( sat, opt );
   cout << "Time reference: " << static_cast<double>(time)/23.81 << endl;
 }

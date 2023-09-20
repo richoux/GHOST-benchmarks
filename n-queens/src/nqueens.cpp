@@ -67,10 +67,10 @@ int main( int argc, char **argv )
   ghost::Options options;
 	options.print = printer;
 	
-#if defined EXHAUSTIVESEARCH
+#if defined COMPLETESEARCH
 	std::vector<double> errors;
   std::vector< std::vector<int> > solutions;
-  bool success = solver.exhaustive_search( errors, solutions, options );
+  bool success = solver.complete_search( errors, solutions, options );
   if( success )
 	  for( int i = 0 ; i < static_cast<int>( solutions.size() ) ; ++i )
 	  {
@@ -80,8 +80,9 @@ int main( int argc, char **argv )
 #else
   double error;
   std::vector<int> solution;
-  bool success = solver.solve( error, solution, 1s, options );
-  // bool success = check_solution( solution );
+  bool success = solver.fast_search( error, solution, 1s, options );
+  if( success )
+	  std::cout << print_solution( solution ).str() << "\n";
 #endif
   
 	if( success )
