@@ -19,8 +19,10 @@ void BuilderNQueens::declare_variables()
 
 void BuilderNQueens::declare_constraints()
 {
+	constraints.emplace_back( std::make_shared<ghost::global_constraints::AllDifferent>( variables ) );
+
 	std::vector<int> variables_index{0};
-		
+
   for( int c = 1; c <= _n-1; ++c )
   {
 	  variables_index.push_back( c );
@@ -45,6 +47,4 @@ void BuilderNQueens::declare_constraints()
 	  std::iota( diag_left_bottom.begin(), diag_left_bottom.end(), 0 );
 	  constraints.emplace_back( std::make_shared<Diagonal>( variables_index, diag_left_bottom ) );
   }
-
-	constraints.emplace_back( std::make_shared<ghost::global_constraints::AllDifferent>( variables ) );
 }
