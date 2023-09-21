@@ -142,7 +142,7 @@ int main( int argc, char **argv )
   double error;
   std::vector<int> solution;
 
-  solver.solve( error, solution, 1s, options );
+  solver.fast_search( error, solution, 1s, options );
 
 	bool success = check_solution( solution, order * ( order * order + 1 ) / 2 );
 	

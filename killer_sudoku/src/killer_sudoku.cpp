@@ -189,7 +189,7 @@ int main( int argc, char **argv )
 	if( cores != -1 )
 		options.number_threads = static_cast<unsigned int>( cores );
 	
-  solver.solve( error, solution, 5s, options );		
+  solver.fast_search( error, solution, 5s, options );		
 
 	bool success = check_solution( solution );
 	

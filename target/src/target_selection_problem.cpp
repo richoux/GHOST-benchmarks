@@ -229,7 +229,7 @@ int main(int argc, char **argv)
     cost = 0.;
     std::fill( solution.begin(), solution.end(), -1 );
 
-    solver.solve( cost, solution, sat, opt );
+    solver.fast_search( cost, solution, sat, opt );
 
     total_damages = 0.;
     total_damages_enemy = 0.;
