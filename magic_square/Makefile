@@ -42,20 +42,26 @@ vpath %.o $(OBJDIR)
 
 # Rules
 
-all: $(BINDIR)/magic_square $(BINDIR)/min_magic_square
+all: $(BINDIR)/magic_square $(BINDIR)/min_magic_square $(BINDIR)/magic_square_complete $(BINDIR)/min_magic_square_complete
 
 debug: CXXFLAGS=$(CXXFLAGSDEBUG)
 debug: LDFLAGS=$(LDFLAGSDEBUG)
-debug: $(BINDIR)/magic_square $(BINDIR)/min_magic_square
+debug: $(BINDIR)/magic_square $(BINDIR)/min_magic_square $(BINDIR)/magic_square_complete $(BINDIR)/min_magic_square_complete
 
 info: CXXFLAGS=$(CXXFLAGSINFO)
 info: LDFLAGS=$(LDFLAGSINFO)
-info: $(BINDIR)/magic_square $(BINDIR)/min_magic_square
+info: $(BINDIR)/magic_square $(BINDIR)/min_magic_square $(BINDIR)/magic_square_complete $(BINDIR)/min_magic_square_complete
 
 $(BINDIR)/magic_square: $(OBJDIR)/magic_square.o $(OBJDIR)/builder_ms.o $(OBJDIR)/print_ms.o
 	$(CXX) -o $@ $^ $(LDFLAGS)
 
 $(BINDIR)/min_magic_square: $(OBJDIR)/min_magic_square.o $(OBJDIR)/min_builder_ms.o $(OBJDIR)/print_ms.o $(OBJDIR)/min_sum_corners.o
+	$(CXX) -o $@ $^ $(LDFLAGS)
+
+$(BINDIR)/magic_square_complete: $(OBJDIR)/magic_square_complete.o $(OBJDIR)/builder_ms_complete.o $(OBJDIR)/print_ms.o
+	$(CXX) -o $@ $^ $(LDFLAGS)
+
+$(BINDIR)/min_magic_square_complete: $(OBJDIR)/min_magic_square_complete.o $(OBJDIR)/min_builder_ms_complete.o $(OBJDIR)/print_ms.o $(OBJDIR)/min_sum_corners.o
 	$(CXX) -o $@ $^ $(LDFLAGS)
 
 $(OBJDIR)/magic_square.o: $(OBJDIR)/builder_ms.o $(OBJDIR)/print_ms.o
@@ -64,11 +70,23 @@ $(OBJDIR)/magic_square.o: $(OBJDIR)/builder_ms.o $(OBJDIR)/print_ms.o
 $(OBJDIR)/min_magic_square.o: $(OBJDIR)/min_builder_ms.o $(OBJDIR)/print_ms.o $(OBJDIR)/min_sum_corners.o
 	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -c $(SRCDIR)/magic_square.cpp -o $@
 
+$(OBJDIR)/magic_square_complete.o: $(OBJDIR)/builder_ms_complete.o $(OBJDIR)/print_ms.o
+	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -DCOMPLETESEARCH -c $(SRCDIR)/magic_square.cpp -o $@
+
+$(OBJDIR)/min_magic_square_complete.o: $(OBJDIR)/min_builder_ms_complete.o $(OBJDIR)/print_ms.o $(OBJDIR)/min_sum_corners.o
+	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -DCOMPLETESEARCH -c $(SRCDIR)/magic_square.cpp -o $@
+
 $(OBJDIR)/builder_ms.o:
 	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -c $(SRCDIR)/builder_ms.cpp -o $@
 
 $(OBJDIR)/min_builder_ms.o:
 	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -DMINMS -c $(SRCDIR)/builder_ms.cpp -o $@
+
+$(OBJDIR)/builder_ms_complete.o:
+	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -DCOMPLETESEARCH -c $(SRCDIR)/builder_ms.cpp -o $@
+
+$(OBJDIR)/min_builder_ms_complete.o:
+	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -DCOMPLETESEARCH -DMINMS -c $(SRCDIR)/builder_ms.cpp -o $@
 
 $(OBJDIR)/print_ms.o:
 	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -c $(SRCDIR)/print_ms.cpp -o $@
@@ -79,4 +97,4 @@ $(OBJDIR)/min_sum_corners.o:
 .PHONY: clean
 
 clean:
-	rm -fr core $(BINDIR)/magic_square $(BINDIR)/min_magic_square $(OBJECTS) $(OBJDIR)/min_magic_square.o $(OBJDIR)/min_builder_ms.o
+	rm -fr core $(BINDIR)/magic_square $(BINDIR)/min_magic_square $(BINDIR)/magic_square_complete $(BINDIR)/min_magic_square_complete $(OBJECTS) $(OBJDIR)/min_magic_square.o $(OBJDIR)/min_builder_ms.o

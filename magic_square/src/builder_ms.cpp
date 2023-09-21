@@ -1,9 +1,16 @@
 #include <ghost/global_constraints/linear_equation_eq.hpp>
+#if defined COMPLETESEARCH
+#include <ghost/global_constraints/all_different.hpp>
+#endif
 
 #include "builder_ms.hpp"
 
 BuilderMagicSquare::BuilderMagicSquare( int instance_size )
+#if defined COMPLETESEARCH
+	: ghost::ModelBuilder(),
+#else
 	: ghost::ModelBuilder( true ),
+#endif
 	  _instance_size( instance_size ),
 	  _nb_vars( instance_size * instance_size),
 	  _constant( instance_size * ( _nb_vars + 1 ) / 2 ),
@@ -34,6 +41,7 @@ void BuilderMagicSquare::declare_variables()
   // Create variables, with domains starting from value 1
 	create_n_variables( _nb_vars, 1, _nb_vars );
 	
+#if not defined COMPLETESEARCH
 	if( _instance_size != 8 )
 		for( int i = 0; i < _nb_vars; ++i )
 			variables[i].set_value( i + 1 );
@@ -49,10 +57,15 @@ void BuilderMagicSquare::declare_variables()
 	  variables[i++].set_value( 32 ); variables[i++].set_value( 25 ); variables[i++].set_value( 18 ); variables[i++].set_value( 39 ); variables[i++].set_value( 33 ); variables[i++].set_value( 14 ); variables[i++].set_value( 55 );  variables[i++].set_value( 38 ); 
 	  variables[i++].set_value( 23 ); variables[i++].set_value( 52 ); variables[i++].set_value( 4 ); variables[i++].set_value( 59 ); variables[i++].set_value( 19 ); variables[i++].set_value( 8 ); variables[i++].set_value( 41 );  variables[i++].set_value( 57 ); 
 	}
+#endif
 }
 
 void BuilderMagicSquare::declare_constraints()
 {
+#if defined COMPLETESEARCH	
+	constraints.emplace_back( std::make_shared<ghost::global_constraints::AllDifferent>( variables ) );
+#endif
+
 	for( int i = 0; i < _instance_size; ++i )
   {
 	  // constraints.emplace_back( make_shared<LinearEq>( _rows[i], _constant ) );

@@ -13,6 +13,28 @@
 
 using namespace std::literals::chrono_literals;
 
+#if defined COMPLETESEARCH
+std::stringstream print_solution( const std::vector<int>& solution )
+{
+	std::stringstream stream;
+
+	int nb_vars = static_cast<int>( solution.size() );
+	int order = static_cast<int>( std::sqrt( nb_vars ) );
+	int indent = std::ceil( std::log10( nb_vars ) ) + 1;
+	
+	for( int i = 0 ; i < nb_vars ; ++i )
+	{
+		if( i%order == 0 )
+			stream << "\n";
+		
+		stream << std::setw( indent ) << solution[i];
+	}
+	
+	stream << "\n";
+	return stream;
+}
+#endif
+
 bool check_solution( const std::vector<int>& solution, int constant )
 {
 	int nb_vars = static_cast<int>( solution.size() );
@@ -138,13 +160,25 @@ int main( int argc, char **argv )
 	
   // true means it is a permutation problem
 	ghost::Solver solver( builder );
-
+	bool success;
+	
+#if defined COMPLETESEARCH
+	std::vector<double> errors;
+  std::vector< std::vector<int> > solutions;
+  success = solver.complete_search( errors, solutions, options );
+  if( success )
+	  for( int i = 0 ; i < static_cast<int>( solutions.size() ) ; ++i )
+	  {
+		  std::cout << "Solution " << i << ": cost=" << errors[i] << "\n"
+		            << print_solution( solutions[i] ).str() << "\n";
+	  }  
+#else
   double error;
   std::vector<int> solution;
-
   solver.fast_search( error, solution, 1s, options );
-
-	bool success = check_solution( solution, order * ( order * order + 1 ) / 2 );
+  success = check_solution( solution, order * ( order * order + 1 ) / 2 );
+#endif
+  
 	
 	if( success )
 		return EXIT_SUCCESS;
