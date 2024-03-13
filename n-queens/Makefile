@@ -42,7 +42,7 @@ vpath %.cpp $(SRCDIR)
 
 # Rules
 
-all: $(BINDIR)/nqueens_permut $(BINDIR)/nqueens_alldiff $(BINDIR)/nqueens_complete
+all: $(BINDIR)/nqueens_permut $(BINDIR)/nqueens_alldiff $(BINDIR)/nqueens_permut_pure_csp $(BINDIR)/nqueens_alldiff_pure_csp $(BINDIR)/nqueens_complete
 
 debug: CXXFLAGS=$(CXXFLAGSDEBUG)
 debug: LDFLAGS=$(LDFLAGSDEBUG)
@@ -56,6 +56,12 @@ $(BINDIR)/nqueens_permut: $(OBJDIR)/nqueens.o $(OBJDIR)/builder_nqueens_permut.o
 	$(CXX) -o $@ $^ $(LDFLAGS)
 
 $(BINDIR)/nqueens_alldiff: $(OBJDIR)/nqueens.o $(OBJDIR)/builder_nqueens_alldiff.o $(OBJDIR)/constraint_diagonal.o $(OBJDIR)/print_nqueens.o
+	$(CXX) -o $@ $^ $(LDFLAGS)
+
+$(BINDIR)/nqueens_permut_pure_csp: $(OBJDIR)/nqueens.o $(OBJDIR)/builder_nqueens_permut.o $(OBJDIR)/constraint_diagonal_pure_csp.o $(OBJDIR)/print_nqueens.o
+	$(CXX) -o $@ $^ $(LDFLAGS)
+
+$(BINDIR)/nqueens_alldiff_pure_csp: $(OBJDIR)/nqueens.o $(OBJDIR)/builder_nqueens_alldiff.o $(OBJDIR)/constraint_diagonal_pure_csp.o $(OBJDIR)/print_nqueens.o
 	$(CXX) -o $@ $^ $(LDFLAGS)
 
 $(BINDIR)/nqueens_complete: $(OBJDIR)/nqueens_complete.o $(OBJDIR)/builder_nqueens_alldiff.o $(OBJDIR)/constraint_diagonal.o $(OBJDIR)/print_nqueens.o
@@ -76,6 +82,9 @@ $(OBJDIR)/builder_nqueens_alldiff.o: $(OBJDIR)/constraint_diagonal.o
 $(OBJDIR)/constraint_diagonal.o:
 	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -c $(SRCDIR)/constraint_diagonal.cpp -o $@
 
+$(OBJDIR)/constraint_diagonal_pure_csp.o:
+	$(CXX) $(CXXFLAGS) -DPURE_CSP -I$(HPPDIR) -c $(SRCDIR)/constraint_diagonal.cpp -o $@
+
 $(OBJDIR)/print_nqueens.o:
 	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -c $(SRCDIR)/print_nqueens.cpp -o $@
 
@@ -85,4 +94,4 @@ $(OBJDIR)/print_nqueens.o:
 .PHONY: clean
 
 clean:
-	rm -fr core $(BINDIR)/nqueens_permut $(BINDIR)/nqueens_alldiff $(BINDIR)/nqueens_complete $(OBJECTS) 
+	rm -fr core $(BINDIR)/nqueens_permut $(BINDIR)/nqueens_alldiff $(BINDIR)/nqueens_complete $(OBJDIR)/*

@@ -12,11 +12,15 @@ Diagonal::Diagonal( const std::vector<int>& variables_index,
 
 double Diagonal::required_error( const std::vector<Variable*>& variables ) const
 {
-  double sum = 0.;
+	double sum = 0.;
 
   for( int i = 0 ; i < static_cast<int>( variables.size() ) ; ++i )
 	  if( variables[i]->get_value() == _positions[i] )
 		  ++sum;
   
+#if defined PURE_CSP
+  return std::max( 0., std::min( 1., sum - 1 ) );
+#else
   return std::max( 0., sum - 1 );
+#endif
 }
