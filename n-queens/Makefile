@@ -94,4 +94,4 @@ $(OBJDIR)/print_nqueens.o:
 .PHONY: clean
 
 clean:
-	rm -fr core $(BINDIR)/nqueens_permut $(BINDIR)/nqueens_alldiff $(BINDIR)/nqueens_complete $(OBJDIR)/*
+	rm -fr core $(BINDIR)/nqueens_permut $(BINDIR)/nqueens_alldiff $(BINDIR)/nqueens_permut_pure_csp $(BINDIR)/nqueens_alldiff_pure_csp $(BINDIR)/nqueens_complete $(OBJDIR)/*
