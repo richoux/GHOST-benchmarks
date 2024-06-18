@@ -88,8 +88,8 @@ int main( int argc, char **argv )
 //   bool success = solver.fast_search( error, solution, 1s, options );
 // #endif
 
-  if( success )
-	  std::cout << print_solution( solution ).str() << "\n";
+  // if( success )
+	//   std::cout << print_solution( solution ).str() << "\n";
 #endif
   
 	if( success )
