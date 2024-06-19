@@ -11,13 +11,8 @@ std::stringstream PrintNQueens::print_candidate( const std::vector<ghost::Variab
 	int n = static_cast<int>( variables.size() );
 	std::string line = "-";
 
-	std::vector<int> queen_by_row( variables.size() );
 	for( int i = 0 ; i < n ; ++i )
-	{
-		int row = variables[ i ].get_value();
-		queen_by_row[ row ] = i;
 		line = line + "--";
-	}
 	
 	stream << "Solution:\n";
 	std::string queen_or_empty;
@@ -27,7 +22,7 @@ std::stringstream PrintNQueens::print_candidate( const std::vector<ghost::Variab
 		stream << line << "\n";
 		for( int col = 0; col < n; ++col )
 		{
-			if( queen_by_row[ row ] == col )
+			if( variables[ row ].get_value() == col )
 				queen_or_empty = "♛";
 			else
 				queen_or_empty = " ";
