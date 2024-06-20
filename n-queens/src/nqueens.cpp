@@ -81,15 +81,10 @@ int main( int argc, char **argv )
   double error;
   std::vector<int> solution;
 
-  bool success = solver.fast_search( error, solution, 1min, options );
-// #if defined GHOST_FITNESS_CLOUD
-//   bool success = solver.fast_search( error, solution, 1min, options );
-// #else
-//   bool success = solver.fast_search( error, solution, 1s, options );
-// #endif
+   bool success = solver.fast_search( error, solution, 1s, options );
 
-  // if( success )
-	//   std::cout << print_solution( solution ).str() << "\n";
+  if( success )
+	  std::cout << print_solution( solution ).str() << "\n";
 #endif
   
 	if( success )

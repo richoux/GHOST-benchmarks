@@ -18,9 +18,5 @@ double Diagonal::required_error( const std::vector<Variable*>& variables ) const
 	  if( variables[i]->get_value() == _positions[i] )
 		  ++sum;
   
-#if defined PURE_CSP
-  return std::max( 0., std::min( 1., sum - 1 ) );
-#else
   return std::max( 0., sum - 1 );
-#endif
 }
