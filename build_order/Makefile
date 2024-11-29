@@ -18,12 +18,12 @@ LDFLAGS=-pthread -lghost
 
 # Compiler
 ifneq (,$(findstring clang,$(CXX)))
-	CXXFLAGS= -std=c++1y  -stdlib=libc++ $(CXXFIRSTFLAGS)
-	CXXFLAGSDEBUG= -std=c++1y  -stdlib=libc++ $(CXXFIRSTFLAGSDEBUG)
+	CXXFLAGS= -std=c++20  -stdlib=libc++ $(CXXFIRSTFLAGS)
+	CXXFLAGSDEBUG= -std=c++20  -stdlib=libc++ $(CXXFIRSTFLAGSDEBUG)
 	LDFLAGS=-pthread -lghost -lc++ -lc++abi
 else
-	CXXFLAGS= -std=c++14 $(CXXFIRSTFLAGS)
-	CXXFLAGSDEBUG= -std=c++14 $(CXXFIRSTFLAGSDEBUG)
+	CXXFLAGS= -std=c++20 $(CXXFIRSTFLAGS)
+	CXXFLAGSDEBUG= -std=c++20 $(CXXFIRSTFLAGSDEBUG)
 endif
 
 # Files
