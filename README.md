@@ -1,5 +1,5 @@
 # GHOST Benchmarks
-Tested with GHOST v3.0
+Tested with GHOST v3
 
 ## List of benchmarks
 ### Classic benchmarks
