@@ -80,7 +80,9 @@ int main( int argc, char **argv )
 #else
   double error;
   std::vector<int> solution;
-  bool success = solver.fast_search( error, solution, 1s, options );
+
+   bool success = solver.fast_search( error, solution, 1s, options );
+
   if( success )
 	  std::cout << print_solution( solution ).str() << "\n";
 #endif

@@ -20,6 +20,17 @@ bench:
 	(cd tsp && $(MAKE) MYFLAGS=-DGHOST_BENCH)
 	(cd vertex_cover && $(MAKE) MYFLAGS=-DGHOST_BENCH)
 
+trace:
+	(cd killer_sudoku && $(MAKE) MYFLAGS=-DGHOST_TRACE)
+	(cd knapsack && $(MAKE) MYFLAGS=-DGHOST_TRACE)
+	(cd magic_square && $(MAKE) MYFLAGS=-DGHOST_TRACE)
+	(cd multidimensional_knapsack && $(MAKE) MYFLAGS=-DGHOST_TRACE)
+	(cd n-queens && $(MAKE) MYFLAGS=-DGHOST_TRACE)
+	(cd qap && $(MAKE) MYFLAGS=-DGHOST_TRACE)
+	(cd sudoku && $(MAKE) MYFLAGS=-DGHOST_TRACE)
+	(cd tsp && $(MAKE) MYFLAGS=-DGHOST_TRACE)
+	(cd vertex_cover && $(MAKE) MYFLAGS=-DGHOST_TRACE)
+
 clean:
 	(cd killer_sudoku && $(MAKE) clean)
 	(cd knapsack && $(MAKE) clean)

@@ -11,15 +11,15 @@ LDFLAGSINFO=-pthread -lghost
 UNAME_S := $(shell uname -s)
 ifeq ($(UNAME_S),Linux)
 	CXX=g++
-	CXXFLAGS= -std=c++17 $(CXXFIRSTFLAGS) $(MYFLAGS)
-	CXXFLAGSDEBUG= -std=c++17 $(CXXFIRSTFLAGSDEBUG) $(MYFLAGS)
-	CXXFLAGSINFO= -std=c++17 $(CXXFIRSTFLAGSINFO) $(MYFLAGS)
+	CXXFLAGS= -std=c++20 $(CXXFIRSTFLAGS) $(MYFLAGS)
+	CXXFLAGSDEBUG= -std=c++20 $(CXXFIRSTFLAGSDEBUG) $(MYFLAGS)
+	CXXFLAGSINFO= -std=c++20 $(CXXFIRSTFLAGSINFO) $(MYFLAGS)
 	LDFLAGS=-pthread -lghost_static
 endif
 ifeq ($(UNAME_S),Darwin)
 	CXX=clang++
-	CXXFLAGS= -std=c++17  -stdlib=libc++ $(CXXFIRSTFLAGS) $(MYFLAGS)
-	CXXFLAGSDEBUG= -std=c++17  -stdlib=libc++ $(CXXFIRSTFLAGSDEBUG) $(MYFLAGS)
+	CXXFLAGS= -std=c++20  -stdlib=libc++ $(CXXFIRSTFLAGS) $(MYFLAGS)
+	CXXFLAGSDEBUG= -std=c++20  -stdlib=libc++ $(CXXFIRSTFLAGSDEBUG) $(MYFLAGS)
 	LDFLAGS=-pthread -lghost_static -lc++ -lc++abi
 endif
 
@@ -79,10 +79,7 @@ $(OBJDIR)/constraint_diagonal.o:
 $(OBJDIR)/print_nqueens.o:
 	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -c $(SRCDIR)/print_nqueens.cpp -o $@
 
-# $(OBJDIR)/%.o: %.cpp
-# 	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -c $< -o $@
-
 .PHONY: clean
 
 clean:
-	rm -fr core $(BINDIR)/nqueens_permut $(BINDIR)/nqueens_alldiff $(BINDIR)/nqueens_complete $(OBJECTS) 
+	rm -fr core $(BINDIR)/nqueens_permut $(BINDIR)/nqueens_alldiff $(BINDIR)/nqueens_complete $(OBJDIR)/*
