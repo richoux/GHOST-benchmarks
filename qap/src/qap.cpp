@@ -65,8 +65,8 @@ int main( int argc, char **argv )
 	
 	if( success )
 	{
-		std::cout << "Best cost found: " << cost
-		          << "\nChecking cost: " << check_cost(solution, number_variables, distances, flows) << "\n";
+		std::cout << "Best cost found: " << std::llround(cost)
+		          << "\nChecking cost: " << std::llround( check_cost(solution, number_variables, distances, flows) ) << "\n";
 
 		std::string filename_without_extension = filename.substr(0, filename.find_last_of(".") );
 		std::string solutionfile = filename_without_extension + ".sln";
