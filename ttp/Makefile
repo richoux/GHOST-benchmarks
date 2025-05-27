@@ -42,20 +42,17 @@ vpath %.cpp $(SRCDIR)
 
 # Rules
 
-all: $(BINDIR)/tsp_permut $(BINDIR)/tsp_alldiff
+all: $(BINDIR)/ttp
 
 debug: CXXFLAGS=$(CXXFLAGSDEBUG)
 debug: LDFLAGS=$(LDFLAGSDEBUG)
-debug: $(BINDIR)/tsp_permut $(BINDIR)/tsp_alldiff
+debug: $(BINDIR)/ttp
 
 info: CXXFLAGS=$(CXXFLAGSINFO)
 info: LDFLAGS=$(LDFLAGSINFO)
-info: $(BINDIR)/tsp_permut $(BINDIR)/tsp_alldiff
+info: $(BINDIR)/ttp
 
-$(BINDIR)/tsp_permut: $(OBJDIR)/tsp.o $(OBJDIR)/tsp_builder_permut.o $(OBJDIR)/tsp_objective.o $(OBJDIR)/tsp_print.o $(OBJDIR)/check.o $(OBJDIR)/extract.o
-	$(CXX) -o $@ $^ $(LDFLAGS)
-
-$(BINDIR)/tsp_alldiff: $(OBJDIR)/tsp.o $(OBJDIR)/tsp_builder_alldiff.o $(OBJDIR)/tsp_objective.o $(OBJDIR)/tsp_print.o $(OBJDIR)/check.o $(OBJDIR)/extract.o
+$(BINDIR)/ttp: $(OBJDIR)/traveling_tournament_problem.o $(OBJDIR)/builder_ttp.o $(OBJDIR)/constraint_no_repeat.o $(OBJDIR)/constraint_max_streak.o $(OBJDIR)/print_ttp.o $(OBJDIR)/convert.o
 	$(CXX) -o $@ $^ $(LDFLAGS)
 
 $(OBJDIR)/%.o: %.cpp
@@ -64,4 +61,4 @@ $(OBJDIR)/%.o: %.cpp
 .PHONY: clean
 
 clean:
-	rm -fr core $(BINDIR)/tsp_permut $(BINDIR)/tsp_alldiff $(OBJECTS) 
+	rm -fr core $(BINDIR)/ttp $(OBJECTS) 
