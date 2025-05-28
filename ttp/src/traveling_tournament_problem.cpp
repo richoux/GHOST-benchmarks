@@ -29,6 +29,8 @@ bool check_solution( const std::vector<int> &solution, int number_teams )
 	std::vector< std::vector<int> > weeks( number_weeks );
 	int home = -1;
 	int away = -1;
+
+	bool all_constraints_satisfied = true;
 	
 	for( int match = 0 ; match < number_matches ; ++match )
 		weeks[solution[match] - 1].push_back( match );
@@ -50,7 +52,7 @@ bool check_solution( const std::vector<int> &solution, int number_teams )
 				if( streaks[ home-1 ] >= 4 )
 				{
 					std::cout << "Error: team " << home << " has more than 3 games home (last on week " << week+1 << ")\n";
-					return false;
+					all_constraints_satisfied = false;
 				}
 			}
 			
@@ -62,7 +64,7 @@ bool check_solution( const std::vector<int> &solution, int number_teams )
 				if( streaks[ away-1 ] <= -4 )
 				{
 					std::cout << "Error: team " << away << " has more than 3 games away (last on week " << week+1 << ")\n";
-					return false;
+					all_constraints_satisfied = false;
 				}
 			}
 		}
@@ -73,7 +75,7 @@ bool check_solution( const std::vector<int> &solution, int number_teams )
 								<< "\nHere is the set of teams: ";
 			std::copy( teams.begin(), teams.end(), std::ostream_iterator< int >(std::cout, " ") );
 			std::cout << "\n";
-			return false;
+			all_constraints_satisfied = false;
 		}
 	}
 
@@ -86,12 +88,12 @@ bool check_solution( const std::vector<int> &solution, int number_teams )
 			if( std::abs( solution[ match_a ] - solution[ match_b ] ) <= 1 )
 			{
 				std::cout << "Error: teams " << home << " and " << away << "have two games in a row at weeks " << solution[ match_a ] << " and " << solution[ match_b ] << "\n";
-				return false;
+				all_constraints_satisfied = false;
 			}
 		}
 	}
 
-	return true;
+	return all_constraints_satisfied;
 }
 
 /////////////////////////
@@ -145,7 +147,7 @@ int main( int argc, char **argv )
 	bool success;
   double error;
   std::vector<int> solution;
-  success = solver.fast_search( error, solution, 1min, options );
+  success = solver.fast_search( error, solution, 1h, options );
 
 	if( !check_solution( solution, number_teams ) )
 		std::cout << "NOT A SOLUTION\n";
