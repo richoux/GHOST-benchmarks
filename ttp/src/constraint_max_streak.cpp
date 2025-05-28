@@ -11,6 +11,7 @@ MaxStreak::MaxStreak( const std::vector<int>& variables_index )
 double MaxStreak::required_error( const std::vector<Variable*>& variables ) const
 {
 	double maxstreak = 0.;
+	double streak = 1.;
 	
 	std::vector<int> weeks( variables.size() );
 	std::transform( variables.begin(),
@@ -21,9 +22,13 @@ double MaxStreak::required_error( const std::vector<Variable*>& variables ) cons
 	
 	for( size_t i = 0 ; i < weeks.size() - 1 ; ++i )
 		if( weeks[i] == weeks[i+1] - 1 )
-			++maxstreak;
+		{
+			++streak;
+			if( maxstreak < streak )
+				maxstreak = streak;
+		}
 		else
-			maxstreak = 0.;
+			streak = 1.;
 	
 	return std::max( 0.0, maxstreak - 3 );
 }

@@ -3,6 +3,7 @@
 #include <string>
 
 #include <vector>
+#include <set>
 #include <algorithm>
 #include <cmath>
 #include <chrono>
@@ -17,6 +18,83 @@
 #endif
 
 using namespace std::literals::chrono_literals;
+
+
+bool check_solution( const std::vector<int> &solution, int number_teams )
+{
+	int number_weeks = 2 * ( number_teams - 1 );
+	int number_matches = number_teams * ( number_teams - 1 );
+	std::set<int> teams;
+	std::vector<int> streaks( number_teams, 0 );
+	std::vector< std::vector<int> > weeks( number_weeks );
+	int home = -1;
+	int away = -1;
+	
+	for( int match = 0 ; match < number_matches ; ++match )
+		weeks[solution[match] - 1].push_back( match );
+
+	for( int week = 0 ; week < number_weeks ; ++week )
+	{
+		teams.clear();
+		for( auto& match: weeks[week] )
+		{
+			convert( match, number_teams, home, away );
+			teams.insert( home );
+			teams.insert( away );
+
+			if( streaks[ home-1 ] <= 0 )
+				streaks[ home-1 ] = 1;
+			else
+			{
+				++streaks[ home-1 ];
+				if( streaks[ home-1 ] >= 4 )
+				{
+					std::cout << "Error: team " << home << " has more than 3 games home (last on week " << week+1 << ")\n";
+					return false;
+				}
+			}
+			
+			if( streaks[ away-1 ] >= 0 )
+				streaks[ away-1 ] = -1;
+			else
+			{
+				--streaks[ away-1 ];
+				if( streaks[ away-1 ] <= -4 )
+				{
+					std::cout << "Error: team " << away << " has more than 3 games away (last on week " << week+1 << ")\n";
+					return false;
+				}
+			}
+		}
+
+		if( teams.size() != number_teams )
+		{
+			std::cout << "Error: there are not " << number_teams << " team playing on week " << week+1
+								<< "\nHere is the set of teams: ";
+			std::copy( teams.begin(), teams.end(), std::ostream_iterator< int >(std::cout, " ") );
+			std::cout << "\n";
+			return false;
+		}
+	}
+
+	for( int match_a = 0 ; match_a < number_matches ; ++match_a )
+	{
+		convert( match_a, number_teams, home, away );
+		if( home < away )
+		{
+			int match_b = match_a + ( number_teams - 2 ) * ( away - home ) + 1;
+			if( std::abs( solution[ match_a ] - solution[ match_b ] ) <= 1 )
+			{
+				std::cout << "Error: teams " << home << " and " << away << "have two games in a row at weeks " << solution[ match_a ] << " and " << solution[ match_b ] << "\n";
+				return false;
+			}
+		}
+	}
+
+	return true;
+}
+
+/////////////////////////
 
 int main( int argc, char **argv )
 {
@@ -63,28 +141,14 @@ int main( int argc, char **argv )
 	BuilderTTP builder( number_teams );
 #endif
 	
-  // true means it is a permutation problem
 	ghost::Solver solver( builder );
 	bool success;
   double error;
   std::vector<int> solution;
   success = solver.fast_search( error, solution, 1min, options );
 
-	int home = -1;
-	int away = -1;
-	int count = 1;
-	int indent = std::ceil( std::log10( number_teams ) ) + 1;
-
-	for( size_t match = 0 ; match < solution.size() ; ++match )
-	{
-		convert( match, number_teams, home, away );
-		if( home != away )
-			std::cout << std::setw( indent ) << home << "/" << away << std::setw( indent+1 ) << solution[match] <<", ";
-
-		if( count % ( number_teams - 1 ) == 0 )
-			std::cout << "\n";
-		++count;			
-	}
+	if( !check_solution( solution, number_teams ) )
+		std::cout << "NOT A SOLUTION\n";
 	
 	if( success )
 		return EXIT_SUCCESS;
