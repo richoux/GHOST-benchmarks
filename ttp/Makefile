@@ -42,23 +42,32 @@ vpath %.cpp $(SRCDIR)
 
 # Rules
 
-all: $(BINDIR)/ttp
+all: $(BINDIR)/ttp_sat $(BINDIR)/ttp_opt 
 
 debug: CXXFLAGS=$(CXXFLAGSDEBUG)
 debug: LDFLAGS=$(LDFLAGSDEBUG)
-debug: $(BINDIR)/ttp
+debug: $(BINDIR)/ttp_sat $(BINDIR)/ttp_opt
 
 info: CXXFLAGS=$(CXXFLAGSINFO)
 info: LDFLAGS=$(LDFLAGSINFO)
-info: $(BINDIR)/ttp
+info: $(BINDIR)/ttp_sat $(BINDIR)/ttp_opt
 
-$(BINDIR)/ttp: $(OBJDIR)/traveling_tournament_problem.o $(OBJDIR)/builder_ttp.o $(OBJDIR)/constraint_no_repeat.o $(OBJDIR)/constraint_max_streak.o $(OBJDIR)/print_ttp.o $(OBJDIR)/convert.o
+$(BINDIR)/ttp_sat: $(OBJDIR)/traveling_tournament_problem.o $(OBJDIR)/builder_ttp.o $(OBJDIR)/constraint_no_repeat.o $(OBJDIR)/constraint_max_streak.o $(OBJDIR)/print_ttp.o $(OBJDIR)/convert.o
+	$(CXX) -o $@ $^ $(LDFLAGS)
+
+$(BINDIR)/ttp_opt: $(OBJDIR)/min_traveling_tournament_problem.o $(OBJDIR)/min_builder_ttp.o $(OBJDIR)/constraint_no_repeat.o $(OBJDIR)/constraint_max_streak.o $(OBJDIR)/min_max_streak_distance.o $(OBJDIR)/print_ttp.o $(OBJDIR)/convert.o $(OBJDIR)/extract.o
 	$(CXX) -o $@ $^ $(LDFLAGS)
 
 $(OBJDIR)/%.o: %.cpp
 	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -c $< -o $@
 
+$(OBJDIR)/min_builder_ttp.o: $(OBJDIR)/constraint_no_repeat.o $(OBJDIR)/constraint_max_streak.o $(OBJDIR)/min_max_streak_distance.o $(OBJDIR)/convert.o
+	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -DTTP_OPT -c $(SRCDIR)/builder_ttp.cpp -o $@
+
+$(OBJDIR)/min_traveling_tournament_problem.o: $(OBJDIR)/min_builder_ttp.o $(OBJDIR)/print_ttp.o $(OBJDIR)/convert.o $(OBJDIR)/extract.o
+	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -DTTP_OPT -c $(SRCDIR)/traveling_tournament_problem.cpp -o $@
+
 .PHONY: clean
 
 clean:
-	rm -fr core $(BINDIR)/ttp $(OBJECTS) 
+	rm -fr core $(BINDIR)/ttp_sat $(BINDIR)/ttp_opt $(OBJECTS) 

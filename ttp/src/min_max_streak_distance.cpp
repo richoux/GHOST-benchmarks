@@ -1,13 +1,41 @@
 #include <cmath>
-#include "min_sum_corners.hpp"
+#include "min_max_streak_distance.hpp"
+#include "convert.hpp"
 
-MinCorners::MinCorners( const std::vector<ghost::Variable>& variables )
-	: Minimize( variables, "MinSumCorners" ),
-	  _number_variables( static_cast<int>( variables.size() ) ),
-	  _instance_size( static_cast<int>( std::sqrt( variables.size() ) ) )
+MinMaxStreakDistance::MinMaxStreakDistance( const std::vector<ghost::Variable>& variables,
+																						int number_teams,
+																						int number_weeks,
+																						const std::vector< std::vector<double> >& matrix_distances )
+	: Minimize( variables, "MinMaxStreakDistance" ),
+	  _number_teams( number_teams ),
+		_number_weeks( number_weeks ),
+	  _matrix_distances( matrix_distances )
 { }
 
-double MinCorners::required_cost( const std::vector<ghost::Variable*>& variables ) const
+double MinMaxStreakDistance::required_cost( const std::vector<ghost::Variable*>& variables ) const
 {
-	return variables[0]->get_value() + variables[_instance_size - 1]->get_value() + variables[_number_variables - 1]->get_value() + variables[_number_variables - _instance_size ]->get_value();
+	double max_streak = 0.;
+	std::vector<double> max_streaks( _number_teams, 0. );
+	std::vector< std::vector<int> > weeks( _number_weeks );
+
+	for( size_t match = 0 ; match < variables.size() ; ++match )
+		weeks[variables[match]->get_value() - 1].push_back( match ); // variables[match]->get_value() - 1 because weeks start at 1
+	
+	int home = -1;
+	int away = -1;
+
+	for( int week = 0 ; week < _number_weeks ; ++week )
+		for( auto& match: weeks[week] )
+		{		
+			convert( match, _number_teams, home, away );
+			--home; // because team numbers start at 1, and we want indices
+			--away;
+			
+			max_streaks[home] = 0.;
+			max_streaks[away] += _matrix_distances[away][home];
+			if( max_streak < max_streaks[away] )
+				max_streak = max_streaks[away];
+		}
+
+	return max_streak;
 }

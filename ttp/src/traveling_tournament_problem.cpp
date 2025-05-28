@@ -12,6 +12,10 @@
 #include "print_ttp.hpp"
 #include "convert.hpp"
 
+#if defined TTP_OPT
+#include "extract.hpp"
+#endif
+
 using namespace std::literals::chrono_literals;
 
 int main( int argc, char **argv )
@@ -20,6 +24,10 @@ int main( int argc, char **argv )
 	bool parallel = false;
 	int cores = -1;
 
+#if defined TTP_OPT
+	std::vector< std::vector<double> > distances;
+#endif
+	
 	if( argc == 1 )
 	{
 		std::cout << "Usage: " << argv[0] << " N [parallel=0/1] [number_threads]\n";
@@ -27,7 +35,12 @@ int main( int argc, char **argv )
 	}
 	else
 	{
+#if defined TTP_OPT
+		std::string filename( argv[1] );
+		extract_data_from_file( filename, number_teams, distances );
+#else
 		number_teams = std::stoi( argv[1] );
+#endif
 		if( argc >= 3 )
 			parallel = ( std::stoi( argv[2] ) != 0 );
 		if( argc == 4 && parallel )
@@ -44,7 +57,11 @@ int main( int argc, char **argv )
 	if( cores != -1 )
 		options.number_threads = static_cast<unsigned int>( cores );
 
-	BuilderTTP builder( number_teams, {} );
+#if defined TTP_OPT
+	BuilderTTP builder( number_teams, distances );
+#else
+	BuilderTTP builder( number_teams );
+#endif
 	
   // true means it is a permutation problem
 	ghost::Solver solver( builder );
@@ -62,7 +79,7 @@ int main( int argc, char **argv )
 	{
 		convert( match, number_teams, home, away );
 		if( home != away )
-			std::cout << std::setw( indent ) << home << "/" << away << std::setw( indent ) << solution[match] <<", ";
+			std::cout << std::setw( indent ) << home << "/" << away << std::setw( indent+1 ) << solution[match] <<", ";
 
 		if( count % ( number_teams - 1 ) == 0 )
 			std::cout << "\n";

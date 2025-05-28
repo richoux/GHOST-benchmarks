@@ -8,8 +8,10 @@
 #include "builder_ttp.hpp"
 #include "constraint_no_repeat.hpp"
 #include "constraint_max_streak.hpp"
-//#include "min_max_streak_distance.hpp"
 #include "convert.hpp"
+#if defined TTP_OPT
+#include "min_max_streak_distance.hpp"
+#endif
 
 BuilderTTP::BuilderTTP( int number_teams,
 												const std::vector< std::vector<double> >& distances )
@@ -17,7 +19,7 @@ BuilderTTP::BuilderTTP( int number_teams,
 	  _number_teams( number_teams ),
 		_number_matches( number_teams * ( number_teams - 1 ) ),
 		_number_weeks( 2 * ( number_teams - 1 ) ),
-	  _distance_matrix( distances ),
+		_distance_matrix( distances ),
 		_homes( std::vector< std::vector<int> >( number_teams ) ),
 		_aways( std::vector< std::vector<int> >( number_teams ) ),
 		_pairs( std::vector< std::vector<int> >( _number_matches / 2 ) )
@@ -54,6 +56,10 @@ BuilderTTP::BuilderTTP( int number_teams,
 		}
   }
 }
+
+BuilderTTP::BuilderTTP( int number_teams )
+	: BuilderTTP( number_teams, {} )
+{ }
 
 void BuilderTTP::declare_variables()
 {
@@ -97,7 +103,12 @@ void BuilderTTP::declare_constraints()
 	}
 }
 
-// void BuilderTTP::declare_objective()
-// {
-// 	objective = std::make_shared<MinMaxStreakDistance>( variables );
-// }
+#if defined TTP_OPT
+void BuilderTTP::declare_objective()
+{
+	objective = std::make_shared<MinMaxStreakDistance>( variables,
+																											_number_teams,
+																											_number_weeks,
+																											_distance_matrix );
+}
+#endif

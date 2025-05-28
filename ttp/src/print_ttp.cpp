@@ -24,7 +24,7 @@ std::stringstream PrintTTP::print_candidate( const std::vector<ghost::Variable>&
 	{
 		convert( match, nb_teams, home, away );
 		if( home != away )
-			stream << std::setw( indent ) << home << "/" << away << std::setw( indent ) << variables[match].get_value() <<", ";
+			stream << std::setw( indent ) << home << "/" << away << std::setw( indent+1 ) << variables[match].get_value() <<", ";
 
 		if( count % ( nb_teams - 1 ) == 0 )
 			stream << "\n";
