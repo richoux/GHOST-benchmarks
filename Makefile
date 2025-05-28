@@ -7,6 +7,7 @@ all:
 	(cd qap && $(MAKE))
 	(cd sudoku && $(MAKE))
 	(cd tsp && $(MAKE))
+	(cd tpp && $(MAKE))
 	(cd vertex_cover && $(MAKE))
 
 bench:
@@ -18,6 +19,7 @@ bench:
 	(cd qap && $(MAKE) MYFLAGS=-DGHOST_BENCH)
 	(cd sudoku && $(MAKE) MYFLAGS=-DGHOST_BENCH)
 	(cd tsp && $(MAKE) MYFLAGS=-DGHOST_BENCH)
+	(cd ttp && $(MAKE) MYFLAGS=-DGHOST_BENCH)
 	(cd vertex_cover && $(MAKE) MYFLAGS=-DGHOST_BENCH)
 
 trace:
@@ -29,6 +31,7 @@ trace:
 	(cd qap && $(MAKE) MYFLAGS=-DGHOST_TRACE)
 	(cd sudoku && $(MAKE) MYFLAGS=-DGHOST_TRACE)
 	(cd tsp && $(MAKE) MYFLAGS=-DGHOST_TRACE)
+	(cd ttp && $(MAKE) MYFLAGS=-DGHOST_TRACE)
 	(cd vertex_cover && $(MAKE) MYFLAGS=-DGHOST_TRACE)
 
 clean:
@@ -40,4 +43,5 @@ clean:
 	(cd qap && $(MAKE) clean)
 	(cd sudoku && $(MAKE) clean)
 	(cd tsp && $(MAKE) clean)
+	(cd ttp && $(MAKE) clean)
 	(cd vertex_cover && $(MAKE) clean)
