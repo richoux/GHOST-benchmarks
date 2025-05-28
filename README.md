@@ -4,19 +4,29 @@ Tested with GHOST v3
 ## List of benchmarks
 ### Classic benchmarks
 - Killer Sudoku (satisfaction, permutation, constraints: All-Different and Linear-Equation-Equals-To)
+
 - Knapsack (optimization, non-permutation, constraints: Linear-Less-Than-or-Equals-To)
 - AllDiff Knapsack (optimization, non-permutation, constraints: All-Different and Linear-Less-Than-or-Equals-To)
 - 0-1 Multidimensional Knapsack (satisfaction or optimization, non-permutation, constraints: Linear-Less-Than-or-Equals-To and Linear-Greater-Than-or-Equals-To)
+
 - Magic Square (satisfaction, permutation, constraints: Linear-Equation-Equals-To)
 - Min Magic Square (optimization, permutation, constraints: Linear-Equation-Equals-To)
+
 - Quadratic Assignment Problem (optimization, permutation, no constraints).
 - AllDiff Quadratic Assignment Problem (optimization, non-permutation, constraints: All-Different)
+
 - Sudoku (satisfaction, permutation, constraints: All-Different)
+
 - N-Queens (satisfaction, permutation, constraints: custom diagonal checks)
 - AllDiff N-Queens (satisfaction, non-permutation, constraints: custom diagonal checks, All-Different)
 - Complete N-Queens (satisfaction, non-permutation, constraints: custom diagonal checks, All-Different), solved with Solver::complete_search
+
 - Traveling Salesman Problem (optimization, permutation, no constraints).
 - AllDiff Traveling Salesman Problem (optimization, non-permutation, constraints: All-Different)
+
+- Traveling Tournament Problem (satisfaction, permutation, constraints: All-Different and custom constraints).
+- Min Traveling Tournament Problem (optimization, permutation, constraints: All-Different and custom constraints).
+
 - Vertex Cover (satisfaction, non-permutation, constraints: Linear-Less-Than-or-Equals-To and Linear-Greater-Than-or-Equals-To)
 
 ### StarCraft-related benchmarks
