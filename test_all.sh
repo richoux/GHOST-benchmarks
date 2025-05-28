@@ -8,4 +8,5 @@
 (cd qap && ./bin/qap_permut instances/tai12a.dat 2> /dev/null)
 (cd sudoku && ./bin/sudoku 2> /dev/null && ./bin/sudoku 3 1 2> /dev/null)
 (cd tsp && ./bin/tsp_permut instances/p01.tsp 2> /dev/null)
+(cd ttp && ./bin/ttp_opt instances/j1_2025_road_distances.txt 2> /dev/null)
 (cd vertex_cover && ./bin/vertex_cover 2> /dev/null && ./bin/vertex_cover 1 2> /dev/null)
