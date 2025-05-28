@@ -19,3 +19,28 @@
 358 1048 140 620 775 273 460 450 421 488 168 105 91 62 62 36 52 0 42 40 
 340 1067 158 638 794 292 479 468 439 506 130 72 70 32 32 28 19 42 0 6
 337 1067 158 638 794 292 479 468 440 506 131 72 66 25 25 22 17 40 6 0
+
+# Taking the shortest route between stadiums from google maps (stadium coordinates are in the j1_2025.txt file).
+# FC Tokyo and Tokyo Verdy are sharing the same stadium, the Ajinomoto Stadium
+# Cerezo Osaka has 2 stadiums: Yanmar Stadium Nagai and Yodoko Sakura Stadium. Yanmar Stadium Nagai is consider here because it has a larger capacity (almost twice as big as Yodoko Sakura Stadium).
+
+1,Albirex Niigata
+2,Avispa Fukuoka
+3,Shimizu S-Pulse
+4,Fagiano Okayama
+5,Sanfrecce Hiroshima
+6,Nagoya Grampus
+7,Cerezo Osaka
+8,Gamba Osaka
+9,Kyoto Sanga FC
+10,Vissel Kobe
+11,Kashima Antlers
+12,Kashiwa Reysol
+13,Urawa Red Diamonds
+14,FC Tokyo
+15,Tokyo Verdy
+16,FC Machida Zelvia
+17,Kawasaki Frontale
+18,Shonan Bellmare
+19,Yokohama FC
+20,Yokohama F. Marinos
