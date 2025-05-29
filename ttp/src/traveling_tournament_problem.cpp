@@ -20,7 +20,7 @@
 using namespace std::literals::chrono_literals;
 
 
-bool check_solution( const std::vector<int> &solution, int number_teams )
+int check_solution( const std::vector<int> &solution, int number_teams )
 {
 	int number_weeks = 2 * ( number_teams - 1 );
 	int number_matches = number_teams * ( number_teams - 1 );
@@ -30,7 +30,7 @@ bool check_solution( const std::vector<int> &solution, int number_teams )
 	int home = -1;
 	int away = -1;
 
-	bool all_constraints_satisfied = true;
+	int number_violated_constraints = 0;
 	
 	for( int match = 0 ; match < number_matches ; ++match )
 		weeks[solution[match] - 1].push_back( match );
@@ -52,7 +52,7 @@ bool check_solution( const std::vector<int> &solution, int number_teams )
 				if( streaks[ home-1 ] >= 4 )
 				{
 					std::cout << "Error: team " << home << " has more than 3 games home (last on week " << week+1 << ")\n";
-					all_constraints_satisfied = false;
+					++number_violated_constraints;
 				}
 			}
 			
@@ -64,7 +64,7 @@ bool check_solution( const std::vector<int> &solution, int number_teams )
 				if( streaks[ away-1 ] <= -4 )
 				{
 					std::cout << "Error: team " << away << " has more than 3 games away (last on week " << week+1 << ")\n";
-					all_constraints_satisfied = false;
+					++number_violated_constraints;
 				}
 			}
 		}
@@ -75,7 +75,7 @@ bool check_solution( const std::vector<int> &solution, int number_teams )
 								<< "\nHere is the set of teams: ";
 			std::copy( teams.begin(), teams.end(), std::ostream_iterator< int >(std::cout, " ") );
 			std::cout << "\n";
-			all_constraints_satisfied = false;
+			++number_violated_constraints;
 		}
 	}
 
@@ -88,12 +88,12 @@ bool check_solution( const std::vector<int> &solution, int number_teams )
 			if( std::abs( solution[ match_a ] - solution[ match_b ] ) <= 1 )
 			{
 				std::cout << "Error: teams " << home << " and " << away << "have two games in a row at weeks " << solution[ match_a ] << " and " << solution[ match_b ] << "\n";
-				all_constraints_satisfied = false;
+				++number_violated_constraints;
 			}
 		}
 	}
 
-	return all_constraints_satisfied;
+	return number_violated_constraints;
 }
 
 /////////////////////////
@@ -149,8 +149,10 @@ int main( int argc, char **argv )
   std::vector<int> solution;
   success = solver.fast_search( error, solution, 1h, options );
 
-	if( !check_solution( solution, number_teams ) )
-		std::cout << "NOT A SOLUTION\n";
+  int number_violated_constraints = check_solution( solution, number_teams );
+	if( number_violated_constraints > 0 )
+		std::cout << "NOT A SOLUTION\n"
+		          << "Number of constraints unsatisfied: " << number_violated_constraints << "\n";
 	
 	if( success )
 		return EXIT_SUCCESS;
