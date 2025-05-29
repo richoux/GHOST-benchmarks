@@ -13,15 +13,15 @@ double MaxStreak::required_error( const std::vector<Variable*>& variables ) cons
 	double maxstreak = 0.;
 	double streak = 1.;
 	
-	std::vector<int> weeks( variables.size() );
+	std::vector<int> rounds( variables.size() );
 	std::transform( variables.begin(),
 									variables.end(),
-									weeks.begin(),
+									rounds.begin(),
 									[&](auto& var){return var->get_value();} );
-	std::sort( weeks.begin(), weeks.end() );
+	std::sort( rounds.begin(), rounds.end() );
 	
-	for( size_t i = 0 ; i < weeks.size() - 1 ; ++i )
-		if( weeks[i] == weeks[i+1] - 1 )
+	for( size_t i = 0 ; i < rounds.size() - 1 ; ++i )
+		if( rounds[i] == rounds[i+1] - 1 )
 		{
 			++streak;
 			if( maxstreak < streak )

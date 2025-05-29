@@ -4,11 +4,11 @@
 
 MinMaxStreakDistance::MinMaxStreakDistance( const std::vector<ghost::Variable>& variables,
 																						int number_teams,
-																						int number_weeks,
+																						int number_rounds,
 																						const std::vector< std::vector<double> >& matrix_distances )
 	: Minimize( variables, "MinMaxStreakDistance" ),
 	  _number_teams( number_teams ),
-		_number_weeks( number_weeks ),
+		_number_rounds( number_rounds ),
 	  _matrix_distances( matrix_distances )
 { }
 
@@ -16,16 +16,16 @@ double MinMaxStreakDistance::required_cost( const std::vector<ghost::Variable*>&
 {
 	double max_streak = 0.;
 	std::vector<double> max_streaks( _number_teams, 0. );
-	std::vector< std::vector<int> > weeks( _number_weeks );
+	std::vector< std::vector<int> > rounds( _number_rounds );
 
 	for( size_t match = 0 ; match < variables.size() ; ++match )
-		weeks[variables[match]->get_value() - 1].push_back( match ); // variables[match]->get_value() - 1 because weeks start at 1
+		rounds[variables[match]->get_value() - 1].push_back( match ); // variables[match]->get_value() - 1 because rounds start at 1
 	
 	int home = -1;
 	int away = -1;
 
-	for( int week = 0 ; week < _number_weeks ; ++week )
-		for( auto& match: weeks[week] )
+	for( int round = 0 ; round < _number_rounds ; ++round )
+		for( auto& match: rounds[round] )
 		{		
 			convert( match, _number_teams, home, away );
 			--home; // because team numbers start at 1, and we want indices

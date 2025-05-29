@@ -6,7 +6,7 @@ class BuilderTTP : public ghost::ModelBuilder
 {
 	int _number_teams;
 	int _number_matches;
-	int _number_weeks; // each team plays a match per week.
+	int _number_rounds; // each team plays a match per round.
 	std::vector< std::vector<double> > _distance_matrix;
 	
 	// variable scopes

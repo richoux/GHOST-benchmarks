@@ -18,7 +18,7 @@ BuilderTTP::BuilderTTP( int number_teams,
 	: ghost::ModelBuilder( true ),
 	  _number_teams( number_teams ),
 		_number_matches( number_teams * ( number_teams - 1 ) ),
-		_number_weeks( 2 * ( number_teams - 1 ) ),
+		_number_rounds( 2 * ( number_teams - 1 ) ),
 		_distance_matrix( distances ),
 		_homes( std::vector< std::vector<int> >( number_teams ) ),
 		_aways( std::vector< std::vector<int> >( number_teams ) ),
@@ -63,15 +63,15 @@ BuilderTTP::BuilderTTP( int number_teams )
 
 void BuilderTTP::declare_variables()
 {
-	int week = 0; // to start with value 1, since i % matches_per_week == 0 when i=0
-	int matches_per_week = _number_teams / 2;	
+	int round = 0; // to start with value 1, since i % matches_per_round == 0 when i=0
+	int matches_per_round = _number_teams / 2;	
 
 	std::vector<int> domain( _number_matches ); // {1,...,1,2,...,2,...,2(n-1),...,2(n-1)}, with 1,...,1 n/2 times
 	for( int i = 0; i < _number_matches; ++i )
 	{
-		if( i % matches_per_week == 0 )
-			++week;
-		domain[i] = week;
+		if( i % matches_per_round == 0 )
+			++round;
+		domain[i] = round;
 	}
 
 	create_n_variables( _number_matches, domain );
@@ -108,7 +108,7 @@ void BuilderTTP::declare_objective()
 {
 	objective = std::make_shared<MinMaxStreakDistance>( variables,
 																											_number_teams,
-																											_number_weeks,
+																											_number_rounds,
 																											_distance_matrix );
 }
 #endif

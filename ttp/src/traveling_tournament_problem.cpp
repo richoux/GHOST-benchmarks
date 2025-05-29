@@ -22,23 +22,23 @@ using namespace std::literals::chrono_literals;
 
 int check_solution( const std::vector<int> &solution, int number_teams )
 {
-	int number_weeks = 2 * ( number_teams - 1 );
+	int number_rounds = 2 * ( number_teams - 1 );
 	int number_matches = number_teams * ( number_teams - 1 );
 	std::set<int> teams;
 	std::vector<int> streaks( number_teams, 0 );
-	std::vector< std::vector<int> > weeks( number_weeks );
+	std::vector< std::vector<int> > rounds( number_rounds );
 	int home = -1;
 	int away = -1;
 
 	int number_violated_constraints = 0;
 	
 	for( int match = 0 ; match < number_matches ; ++match )
-		weeks[solution[match] - 1].push_back( match );
+		rounds[solution[match] - 1].push_back( match );
 
-	for( int week = 0 ; week < number_weeks ; ++week )
+	for( int round = 0 ; round < number_rounds ; ++round )
 	{
 		teams.clear();
-		for( auto& match: weeks[week] )
+		for( auto& match: rounds[round] )
 		{
 			convert( match, number_teams, home, away );
 			teams.insert( home );
@@ -51,7 +51,7 @@ int check_solution( const std::vector<int> &solution, int number_teams )
 				++streaks[ home-1 ];
 				if( streaks[ home-1 ] >= 4 )
 				{
-					std::cout << "Error: team " << home << " has more than 3 games home (last on week " << week+1 << ")\n";
+					std::cout << "Error: team " << home << " has more than 3 games home (last on round " << round+1 << ")\n";
 					++number_violated_constraints;
 				}
 			}
@@ -63,7 +63,7 @@ int check_solution( const std::vector<int> &solution, int number_teams )
 				--streaks[ away-1 ];
 				if( streaks[ away-1 ] <= -4 )
 				{
-					std::cout << "Error: team " << away << " has more than 3 games away (last on week " << week+1 << ")\n";
+					std::cout << "Error: team " << away << " has more than 3 games away (last on round " << round+1 << ")\n";
 					++number_violated_constraints;
 				}
 			}
@@ -71,7 +71,7 @@ int check_solution( const std::vector<int> &solution, int number_teams )
 
 		if( teams.size() != number_teams )
 		{
-			std::cout << "Error: there are not " << number_teams << " team playing on week " << week+1
+			std::cout << "Error: there are not " << number_teams << " team playing on round " << round+1
 								<< "\nHere is the set of teams: ";
 			std::copy( teams.begin(), teams.end(), std::ostream_iterator< int >(std::cout, " ") );
 			std::cout << "\n";
@@ -87,7 +87,7 @@ int check_solution( const std::vector<int> &solution, int number_teams )
 			int match_b = match_a + ( number_teams - 2 ) * ( away - home ) + 1;
 			if( std::abs( solution[ match_a ] - solution[ match_b ] ) <= 1 )
 			{
-				std::cout << "Error: teams " << home << " and " << away << "have two games in a row at weeks " << solution[ match_a ] << " and " << solution[ match_b ] << "\n";
+				std::cout << "Error: teams " << home << " and " << away << "have two games in a row at rounds " << solution[ match_a ] << " and " << solution[ match_b ] << "\n";
 				++number_violated_constraints;
 			}
 		}
