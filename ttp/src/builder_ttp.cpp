@@ -10,6 +10,7 @@
 #include "constraint_max_streak.hpp"
 #include "convert.hpp"
 #if defined TTP_OPT
+#include "min_travel_distance.hpp"
 #include "min_max_streak_distance.hpp"
 #endif
 
@@ -106,9 +107,13 @@ void BuilderTTP::declare_constraints()
 #if defined TTP_OPT
 void BuilderTTP::declare_objective()
 {
-	objective = std::make_shared<MinMaxStreakDistance>( variables,
-																											_number_teams,
-																											_number_rounds,
-																											_distance_matrix );
+	objective = std::make_shared<MinTravelDistance>( variables,
+																									 _number_teams,
+																									 _number_rounds,
+																									 _distance_matrix );
+	// objective = std::make_shared<MinMaxStreakDistance>( variables,
+	// 																										_number_teams,
+	// 																										_number_rounds,
+	// 																										_distance_matrix );
 }
 #endif

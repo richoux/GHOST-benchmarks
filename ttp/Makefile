@@ -1,10 +1,8 @@
 # Compiler flags
 MYFLAGS=
 CXXFIRSTFLAGS= -O3 -W -Wall -Wextra -Wno-sign-compare -Wno-unused-parameter -Wno-use-after-free
-#CXXFIRSTFLAGSDEBUG= -g -O0 -DDEBUG -W -Wall -Wextra -Wno-sign-compare -Wno-unused-parameter -Wno-use-after-free -fsanitize=address -v -da -Q
 CXXFIRSTFLAGSDEBUG= -g -O0 -DDEBUG -W -Wall -Wextra -Wno-sign-compare -Wno-unused-parameter -Wno-use-after-free
 CXXFIRSTFLAGSINFO= -g -O2 -W -Wall -Wextra -Wno-sign-compare -Wno-unused-parameter -Wno-use-after-free
-#LDFLAGSDEBUG=-pthread -lghost_staticd -fsanitize=address -static-libasan
 LDFLAGSDEBUG=-pthread -lghost_staticd
 LDFLAGSINFO=-pthread -lghost
 
@@ -55,13 +53,13 @@ info: $(BINDIR)/ttp_sat $(BINDIR)/ttp_opt
 $(BINDIR)/ttp_sat: $(OBJDIR)/traveling_tournament_problem.o $(OBJDIR)/builder_ttp.o $(OBJDIR)/constraint_no_repeat.o $(OBJDIR)/constraint_max_streak.o $(OBJDIR)/print_ttp.o $(OBJDIR)/convert.o
 	$(CXX) -o $@ $^ $(LDFLAGS)
 
-$(BINDIR)/ttp_opt: $(OBJDIR)/min_traveling_tournament_problem.o $(OBJDIR)/min_builder_ttp.o $(OBJDIR)/constraint_no_repeat.o $(OBJDIR)/constraint_max_streak.o $(OBJDIR)/min_max_streak_distance.o $(OBJDIR)/print_ttp.o $(OBJDIR)/convert.o $(OBJDIR)/extract.o
+$(BINDIR)/ttp_opt: $(OBJDIR)/min_traveling_tournament_problem.o $(OBJDIR)/min_builder_ttp.o $(OBJDIR)/constraint_no_repeat.o $(OBJDIR)/constraint_max_streak.o $(OBJDIR)/objective.o $(OBJDIR)/min_travel_distance.o $(OBJDIR)/min_max_streak_distance.o $(OBJDIR)/print_ttp.o $(OBJDIR)/convert.o $(OBJDIR)/extract.o
 	$(CXX) -o $@ $^ $(LDFLAGS)
 
 $(OBJDIR)/%.o: %.cpp
 	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -c $< -o $@
 
-$(OBJDIR)/min_builder_ttp.o: $(OBJDIR)/constraint_no_repeat.o $(OBJDIR)/constraint_max_streak.o $(OBJDIR)/min_max_streak_distance.o $(OBJDIR)/convert.o
+$(OBJDIR)/min_builder_ttp.o: $(OBJDIR)/constraint_no_repeat.o $(OBJDIR)/constraint_max_streak.o $(OBJDIR)/min_travel_distance.o $(OBJDIR)/min_max_streak_distance.o $(OBJDIR)/convert.o
 	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -DTTP_OPT -c $(SRCDIR)/builder_ttp.cpp -o $@
 
 $(OBJDIR)/min_traveling_tournament_problem.o: $(OBJDIR)/min_builder_ttp.o $(OBJDIR)/print_ttp.o $(OBJDIR)/convert.o $(OBJDIR)/extract.o

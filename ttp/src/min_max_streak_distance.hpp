@@ -1,18 +1,14 @@
 #pragma once
 
-#include <ghost/objective.hpp>
+#include "objective.hpp"
 
-class MinMaxStreakDistance : public ghost::Minimize
+class MinMaxStreakDistance : public TTPObjective
 {
-	int _number_teams;
-	int _number_rounds;
-	std::vector< std::vector<double> > _matrix_distances;
-	
 public:
 	MinMaxStreakDistance( const std::vector<ghost::Variable>& variables,
-												int number_teams,
-												int number_rounds,
-												const std::vector< std::vector<double> >& matrix_distances );
+												int nb_teams,
+												int nb_rounds,
+												const std::vector< std::vector<double> >& distances );
 	
 	double required_cost( const std::vector<ghost::Variable*>& variables ) const override;
 };
