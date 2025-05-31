@@ -45,7 +45,7 @@ double MinTravelDistance::required_cost( const std::vector<ghost::Variable*>& va
 				previously_at[ home ] = home;
 			}
 			if( round == number_rounds - 1 )
-				total_distance += matrix_distances[ previously_at[ away ] ][ away ];
+				total_distance += matrix_distances[ home ][ away ]; // away returns home
 			else
 				previously_at[ away ] = home;
 		}
