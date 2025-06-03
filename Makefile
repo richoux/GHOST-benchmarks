@@ -7,7 +7,7 @@ all:
 	(cd qap && $(MAKE))
 	(cd sudoku && $(MAKE))
 	(cd tsp && $(MAKE))
-	(cd tpp && $(MAKE))
+	(cd ttp && $(MAKE))
 	(cd vertex_cover && $(MAKE))
 
 bench:
