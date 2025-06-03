@@ -8,7 +8,7 @@
 #include "builder_ttp.hpp"
 #include "constraint_no_repeat.hpp"
 #include "constraint_max_streak.hpp"
-#include "convert.hpp"
+#include "misc.hpp"
 #if defined TTP_OPT
 #include "min_travel_distance.hpp"
 #include "min_max_streak_distance.hpp"

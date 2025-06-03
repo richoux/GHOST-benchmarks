@@ -2,7 +2,7 @@
 #include <algorithm>
 
 #include "min_travel_distance.hpp"
-#include "convert.hpp"
+#include "misc.hpp"
 
 MinTravelDistance::MinTravelDistance( const std::vector<ghost::Variable>& variables,
 																			int nb_teams,

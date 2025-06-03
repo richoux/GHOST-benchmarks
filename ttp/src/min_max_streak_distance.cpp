@@ -1,6 +1,6 @@
 #include <cmath>
 #include "min_max_streak_distance.hpp"
-#include "convert.hpp"
+#include "misc.hpp"
 
 MinMaxStreakDistance::MinMaxStreakDistance( const std::vector<ghost::Variable>& variables,
 																						int nb_teams,

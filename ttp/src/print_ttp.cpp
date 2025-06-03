@@ -4,7 +4,7 @@
 #include <cmath>
 
 #include "print_ttp.hpp"
-#include "convert.hpp"
+#include "misc.hpp"
 
 std::stringstream PrintTTP::print_candidate( const std::vector<ghost::Variable>& variables ) const
 {
