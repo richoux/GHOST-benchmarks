@@ -62,10 +62,10 @@ $(BINDIR)/solution_checker: $(OBJDIR)/solution_checker.o $(OBJDIR)/misc.o
 $(OBJDIR)/%.o: %.cpp
 	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -c $< -o $@
 
-$(OBJDIR)/min_builder_ttp.o: $(OBJDIR)/constraint_no_repeat.o $(OBJDIR)/constraint_max_streak.o $(OBJDIR)/min_travel_distance.o $(OBJDIR)/min_max_streak_distance.o $(OBJDIR)/misc.o
+$(OBJDIR)/min_builder_ttp.o: $(OBJDIR)/constraint_no_repeat.o $(OBJDIR)/constraint_max_streak.o $(OBJDIR)/min_travel_distance.o $(OBJDIR)/min_max_streak_distance.o $(OBJDIR)/misc.o builder_ttp.cpp
 	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -DTTP_OPT -c $(SRCDIR)/builder_ttp.cpp -o $@
 
-$(OBJDIR)/min_traveling_tournament_problem.o: $(OBJDIR)/min_builder_ttp.o $(OBJDIR)/print_ttp.o $(OBJDIR)/misc.o
+$(OBJDIR)/min_traveling_tournament_problem.o: $(OBJDIR)/min_builder_ttp.o $(OBJDIR)/print_ttp.o $(OBJDIR)/misc.o traveling_tournament_problem.cpp
 	$(CXX) $(CXXFLAGS) -I$(HPPDIR) -DTTP_OPT -c $(SRCDIR)/traveling_tournament_problem.cpp -o $@
 
 .PHONY: clean
