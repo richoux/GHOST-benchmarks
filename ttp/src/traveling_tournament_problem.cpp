@@ -68,7 +68,7 @@ int main( int argc, char **argv )
 	bool success;
   double error;
   std::vector<int> solution;
-  success = solver.fast_search( error, solution, 10s, options );
+  success = solver.fast_search( error, solution, 12h, options );
 
   int number_violated_constraints = check_solution( solution, number_teams );
 	if( number_violated_constraints > 0 )
