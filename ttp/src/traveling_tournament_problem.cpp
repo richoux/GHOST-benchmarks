@@ -29,7 +29,11 @@ int main( int argc, char **argv )
 	
 	if( argc == 1 )
 	{
+#if defined TTP_OPT
+		std::cout << "Usage: " << argv[0] << " FILE [parallel=0/1] [number_threads]\n";
+#else
 		std::cout << "Usage: " << argv[0] << " N [parallel=0/1] [number_threads]\n";
+#endif
 		return EXIT_FAILURE;
 	}
 	else
@@ -50,7 +54,7 @@ int main( int argc, char **argv )
   ghost::Options options;
 	options.print = printer;
 	options.number_start_samplings = number_teams * number_teams;
-	options.enable_optimization_guidance = false;
+	// options.enable_optimization_guidance = false;
 	
 	if( parallel )
 		options.parallel_runs = true;
@@ -68,12 +72,16 @@ int main( int argc, char **argv )
 	bool success;
   double error;
   std::vector<int> solution;
-  success = solver.fast_search( error, solution, 12h, options );
+  success = solver.fast_search( error, solution, 1s, options );
 
-  int number_violated_constraints = check_solution( solution, number_teams );
+  int number_violated_constraints = check_error_solution( solution, number_teams );
 	if( number_violated_constraints > 0 )
 		std::cout << "NOT A SOLUTION\n"
 		          << "Number of constraints unsatisfied: " << number_violated_constraints << "\n";
+
+#if defined TTP_OPT
+	std::cout << "Cost check: " << check_cost_solution( solution, number_teams, distances ) << "\n";
+#endif
 	
 	if( success )
 		return EXIT_SUCCESS;

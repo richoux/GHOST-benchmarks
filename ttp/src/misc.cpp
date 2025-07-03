@@ -6,6 +6,7 @@
 #include <iostream>
 #include <iomanip>
 #include <set>
+#include <numeric>
 
 void convert( int match, int number_teams, int &home_team, int &away_team )
 {
@@ -47,7 +48,7 @@ void extract_data_from_file( const std::string& filename,
 	}
 }
 
-int check_solution( const std::vector<int> &solution, int number_teams )
+int check_error_solution( const std::vector<int> &solution, int number_teams )
 {
 	int number_rounds = 2 * ( number_teams - 1 );
 	int number_matches = number_teams * ( number_teams - 1 );
@@ -121,4 +122,44 @@ int check_solution( const std::vector<int> &solution, int number_teams )
 	}
 
 	return number_violated_constraints;
+}
+
+double check_cost_solution( const std::vector<int> &solution, int number_teams, const std::vector< std::vector<double> >& matrix_distances )
+{
+	double total_distance = 0.;
+	int home = -1;
+	int away = -1;
+	
+	int number_matches = number_teams * ( number_teams - 1 );
+	int number_rounds = 2 * ( number_teams - 1 );
+	std::vector< std::vector<int> > rounds( number_rounds );
+
+	for( int match = 0 ; match < number_matches ; ++match )
+		rounds[ solution[match] - 1 ].push_back( match ); // solution[match] - 1 because rounds start at 1
+
+	std::vector<int> previously_at( number_teams);
+	std::iota( previously_at.begin(), previously_at.end(), 0 );
+
+	for( int round = 0 ; round < number_rounds ; ++round )
+	{
+		for( auto& match: rounds[round] )
+		{		
+			convert( match, number_teams, home, away );
+			--home; // because team numbers start at 1, and we want indices
+			--away;
+
+			total_distance += matrix_distances[ previously_at[ away ] ][ home ];
+			if( previously_at[ home ] != home )
+			{
+				total_distance += matrix_distances[ previously_at[ home ] ][ home ];
+				previously_at[ home ] = home;
+			}
+			if( round == number_rounds - 1 )
+				total_distance += matrix_distances[ home ][ away ]; // away returns home
+			else
+				previously_at[ away ] = home;
+		}
+	}
+	
+	return total_distance;
 }
