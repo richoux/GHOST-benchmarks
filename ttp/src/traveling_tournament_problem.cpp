@@ -54,7 +54,7 @@ int main( int argc, char **argv )
   ghost::Options options;
 	options.print = printer;
 	options.number_start_samplings = number_teams * number_teams;
-	// options.enable_optimization_guidance = false;
+	options.enable_optimization_guidance = false;
 	
 	if( parallel )
 		options.parallel_runs = true;
@@ -72,7 +72,7 @@ int main( int argc, char **argv )
 	bool success;
   double error;
   std::vector<int> solution;
-  success = solver.fast_search( error, solution, 1s, options );
+  success = solver.fast_search( error, solution, 10s, options );
 
   int number_violated_constraints = check_error_solution( solution, number_teams );
 	if( number_violated_constraints > 0 )
