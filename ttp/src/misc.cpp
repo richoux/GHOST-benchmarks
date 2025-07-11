@@ -115,7 +115,7 @@ int check_error_solution( const std::vector<int> &solution, int number_teams )
 			int match_b = match_a + ( number_teams - 2 ) * ( away - home ) + 1;
 			if( std::abs( solution[ match_a ] - solution[ match_b ] ) <= 1 )
 			{
-				std::cout << "Error: teams " << home << " and " << away << "have two games in a row at rounds " << solution[ match_a ] << " and " << solution[ match_b ] << "\n";
+				std::cout << "Error: teams " << home << " and " << away << " have two games in a row at rounds " << solution[ match_a ] << " and " << solution[ match_b ] << "\n";
 				++number_violated_constraints;
 			}
 		}
