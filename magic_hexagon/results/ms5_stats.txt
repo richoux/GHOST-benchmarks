@@ -1,0 +1,16 @@
+https://www.calculatorsoup.com/calculators/statistics/mean-median-mode.php
+https://www.calculator.net/standard-deviation-calculator.html?
+
+Var AS Val AS
+Mean 312.0470779
+Median 226.569
+Outliers 920.995, 965.288, 1028.82, 1032.28, 1053.86, 1076.12, 1180.12
+Min 2.69731
+Std Dev (sample) 291.45339823757
+
+Var AS Val AD
+Mean 
+Median 
+Outliers 
+Min 
+Std Dev (sample) 

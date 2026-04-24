@@ -12,6 +12,9 @@ Tested with GHOST v3
 - Magic Square (satisfaction, permutation, constraints: Linear-Equation-Equals-To)
 - Min Magic Square (optimization, permutation, constraints: Linear-Equation-Equals-To)
 
+- Magic Hexagon (satisfaction, permutation, constraints: Linear-Equation-Equals-To)
+- Min Magic Hexagon (optimization, permutation, constraints: Linear-Equation-Equals-To)
+
 - Quadratic Assignment Problem (optimization, permutation, no constraints).
 - AllDiff Quadratic Assignment Problem (optimization, non-permutation, constraints: All-Different)
 
