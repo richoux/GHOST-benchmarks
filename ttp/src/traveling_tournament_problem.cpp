@@ -54,8 +54,6 @@ int main( int argc, char **argv )
   ghost::Options options;
 	options.print = printer;
 	options.number_start_samplings = number_teams * number_teams;
-	options.enable_optimization_guidance = false;
-	options.max_moves_in_opt_space = 2; //TODO: to tweak
 	if( parallel )
 		options.parallel_runs = true;
 	
