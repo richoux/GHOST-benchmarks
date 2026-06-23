@@ -8,14 +8,13 @@ SRCDIR=src
 OBJDIR=obj
 BINDIR=bin
 
-
 # Compiler flags
 MYFLAGS=
 CXXFIRSTFLAGS= -O3 -W -Wall -Wextra -pedantic -Wno-sign-compare -Wno-unused-parameter -Wno-use-after-free
 CXXFIRSTFLAGSDEBUG= -g -O0 -W -Wall -Wextra -pedantic -Wno-sign-compare -Wno-unused-parameter -Wno-use-after-free
 
 # Linker flags
-LDFLAGS=-pthread -lghost
+LDFLAGS=-pthread -lghostd
 
 # Compiler
 ifneq (,$(findstring clang,$(CXX)))
