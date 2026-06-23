@@ -2,24 +2,31 @@
 MYFLAGS=
 CXXFIRSTFLAGS= -O3 -W -Wall -Wextra -Wno-sign-compare -Wno-unused-parameter -Wno-use-after-free
 CXXFIRSTFLAGSDEBUG= -g -O0 -DDEBUG -W -Wall -Wextra -Wno-sign-compare -Wno-unused-parameter -Wno-use-after-free
-LDFLAGSDEBUG=-pthread -lghostd
-# CXXFIRSTFLAGSDEBUG= -g -O0 -DDEBUG -W -Wall -Wextra -Wno-sign-compare -Wno-unused-parameter -Wno-use-after-free -fsanitize=address,undefined,leak
-# LDFLAGSDEBUG=-pthread -lghost_staticd -fsanitize=address,undefined,leak -static-libasan
+CXXFIRSTFLAGSASAN= -g -O0 -DDEBUG -W -Wall -Wextra -Wno-sign-compare -Wno-unused-parameter -Wno-use-after-free -fsanitize=address,undefined,leak
 CXXFIRSTFLAGSINFO= -g -O2 -W -Wall -Wextra -Wno-sign-compare -Wno-unused-parameter -Wno-use-after-free
-LDFLAGSINFO=-pthread -lghost
 
 UNAME_S := $(shell uname -s)
 ifeq ($(UNAME_S),Linux)
 	CXX=g++
 	CXXFLAGS= -std=c++20 $(CXXFIRSTFLAGS) $(MYFLAGS)
 	CXXFLAGSDEBUG= -std=c++20 $(CXXFIRSTFLAGSDEBUG) $(MYFLAGS)
-	LDFLAGS=-lghost_static -pthread
+	CXXFLAGSASAN= -std=c++20 $(CXXFIRSTFLAGSASAN) $(MYFLAGS)
+	CXXFLAGSINFO= -std=c++20 $(CXXFIRSTFLAGSINFO) $(MYFLAGS)
+	LDFLAGS=-lghost_static -pthread # static
+	LDFLAGSDEBUG=-lghostd -pthread # dynamic debug
+	LDFLAGSASAN=-lghostd -pthread -fsanitize=address,undefined,leak -static-libasan # dynamic debug
+	LDFLAGSINFO=-lghost -pthread # dynamic
 endif
 ifeq ($(UNAME_S),Darwin)
 	CXX=clang++
 	CXXFLAGS= -std=c++20  -stdlib=libc++ $(CXXFIRSTFLAGS) $(MYFLAGS)
 	CXXFLAGSDEBUG= -std=c++20  -stdlib=libc++ $(CXXFIRSTFLAGSDEBUG) $(MYFLAGS)
+	CXXFLAGSASAN= -std=c++20 -stdlib=libc++ $(CXXFIRSTFLAGSASAN) $(MYFLAGS)
+	CXXFLAGSINFO= -std=c++20 -stdlib=libc++ $(CXXFIRSTFLAGSINFO) $(MYFLAGS)
 	LDFLAGS=-lghost_static -lc++ -lc++abi -pthread
+	LDFLAGSDEBUG=-lghostd -lc++ -lc++abi -pthread
+	LDFLAGSASAN=-lghostd -lc++ -lc++abi -pthread -fsanitize=address,undefined,leak -static-libasan
+	LDFLAGSINFO=-lghost -lc++ -lc++abi -pthread
 endif
 
 # Directories
@@ -47,6 +54,10 @@ all: $(BINDIR)/magic_square $(BINDIR)/min_magic_square $(BINDIR)/magic_square_co
 debug: CXXFLAGS=$(CXXFLAGSDEBUG)
 debug: LDFLAGS=$(LDFLAGSDEBUG)
 debug: $(BINDIR)/magic_square $(BINDIR)/min_magic_square $(BINDIR)/magic_square_complete $(BINDIR)/min_magic_square_complete
+
+asan: CXXFLAGS=$(CXXFLAGSASAN)
+asan: LDFLAGS=$(LDFLAGSASAN)
+asan: $(BINDIR)/magic_square $(BINDIR)/min_magic_square $(BINDIR)/magic_square_complete $(BINDIR)/min_magic_square_complete
 
 info: CXXFLAGS=$(CXXFLAGSINFO)
 info: LDFLAGS=$(LDFLAGSINFO)
