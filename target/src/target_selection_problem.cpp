@@ -86,17 +86,17 @@ void print_setup( const vector<UnitData>& my_army, const vector<Variable>& varia
     auto var = variables[ i ];
     
     cout << var_data.name << ":" << var.get_id() << "\n"
-	 << "Coordinates: (" << var_data.coord.x << ", " << var_data.coord.y << ")\n"
-	 << "Can shoot in: " << var_data.can_shoot_in << " frames" << "\n"
-	 << "Cooldown: " <<  var_data.cooldown << "\n"
-	 << "HP: " <<  var_data.hp << "\n"
-	 << "Inital HP: " <<  var_data.initial_HP << "\n"
-      	 << "Size: " <<  var_data.get_size_string() << "\n"
-	 << "Damage: " <<  var_data.damage << "\n"
-	 << "Damage Type: " <<  var_data.get_damage_type_string() << "\n"
-	 << "Armor: " <<  var_data.armor << "\n"
-	 << "Target: " << var.get_value() << "\n"
-	 << "-------" << "\n\n";
+         << "Coordinates: (" << var_data.coord.x << ", " << var_data.coord.y << ")\n"
+         << "Can shoot in: " << var_data.can_shoot_in << " frames" << "\n"
+         << "Cooldown: " <<  var_data.cooldown << "\n"
+         << "HP: " <<  var_data.hp << "\n"
+         << "Inital HP: " <<  var_data.initial_HP << "\n"
+         << "Size: " <<  var_data.get_size_string() << "\n"
+         << "Damage: " <<  var_data.damage << "\n"
+         << "Damage Type: " <<  var_data.get_damage_type_string() << "\n"
+         << "Armor: " <<  var_data.armor << "\n"
+         << "Target: " << var.get_value() << "\n"
+         << "-------" << "\n\n";
   }
 
   cout << "===============\nEnemies:\n";
@@ -105,16 +105,16 @@ void print_setup( const vector<UnitData>& my_army, const vector<Variable>& varia
     auto var_data = enemies[ i ];
     
     cout << var_data.name << ":" << i << "\n" 
-	 << "Coordinates: (" << var_data.coord.x << ", " << var_data.coord.y << ")\n"
-	 << "Can shoot in: " << var_data.can_shoot_in << " frames" << "\n"
-	 << "Cooldown: " <<  var_data.cooldown << "\n"
-	 << "HP: " <<  var_data.hp << "\n"
-	 << "Inital HP: " <<  var_data.initial_HP << "\n"
-      	 << "Size: " <<  var_data.get_size_string() << "\n"
-	 << "Damage: " <<  var_data.damage << "\n"
-	 << "Damage Type: " <<  var_data.get_damage_type_string() << "\n"
-	 << "Armor: " <<  var_data.armor << "\n"
-	 << "-------" << "\n";
+         << "Coordinates: (" << var_data.coord.x << ", " << var_data.coord.y << ")\n"
+         << "Can shoot in: " << var_data.can_shoot_in << " frames" << "\n"
+         << "Cooldown: " <<  var_data.cooldown << "\n"
+         << "HP: " <<  var_data.hp << "\n"
+         << "Inital HP: " <<  var_data.initial_HP << "\n"
+         << "Size: " <<  var_data.get_size_string() << "\n"
+         << "Damage: " <<  var_data.damage << "\n"
+         << "Damage Type: " <<  var_data.get_damage_type_string() << "\n"
+         << "Armor: " <<  var_data.armor << "\n"
+         << "-------" << "\n";
   }  
 }
 
