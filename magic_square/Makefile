@@ -1,7 +1,7 @@
 # Compiler flags
 MYFLAGS=
 CXXFIRSTFLAGS= -O3 -W -Wall -Wextra -Wno-sign-compare -Wno-unused-parameter -Wno-use-after-free
-CXXFIRSTFLAGSDEBUG= -g -O0 -DDEBUG -W -Wall -Wextra -Wno-sign-compare -Wno-unused-parameter -Wno-use-after-free
+CXXFIRSTFLAGSDEBUG= -g -O0 -DDEBUG -W -Wall -Wextra -Wno-sign-compare -Wno-unused-parameter -Wno-use-after-free -fsanitize=address,undefined,leak
 CXXFIRSTFLAGSASAN= -g -O0 -DDEBUG -W -Wall -Wextra -Wno-sign-compare -Wno-unused-parameter -Wno-use-after-free -fsanitize=address,undefined,leak
 CXXFIRSTFLAGSINFO= -g -O2 -W -Wall -Wextra -Wno-sign-compare -Wno-unused-parameter -Wno-use-after-free
 
@@ -13,8 +13,8 @@ ifeq ($(UNAME_S),Linux)
 	CXXFLAGSASAN= -std=c++20 $(CXXFIRSTFLAGSASAN) $(MYFLAGS)
 	CXXFLAGSINFO= -std=c++20 $(CXXFIRSTFLAGSINFO) $(MYFLAGS)
 	LDFLAGS=-lghost_static -pthread # static
-	LDFLAGSDEBUG=-lghostd -pthread # dynamic debug
-	LDFLAGSASAN=-lghostd -pthread -fsanitize=address,undefined,leak -static-libasan # dynamic debug
+	LDFLAGSDEBUG=-fsanitize=address,undefined,leak -lghostd -pthread # dynamic debug
+	LDFLAGSASAN=-fsanitize=address,undefined,leak -static-libasan -lghostd -pthread # dynamic debug
 	LDFLAGSINFO=-lghost -pthread # dynamic
 endif
 ifeq ($(UNAME_S),Darwin)
@@ -24,8 +24,8 @@ ifeq ($(UNAME_S),Darwin)
 	CXXFLAGSASAN= -std=c++20 -stdlib=libc++ $(CXXFIRSTFLAGSASAN) $(MYFLAGS)
 	CXXFLAGSINFO= -std=c++20 -stdlib=libc++ $(CXXFIRSTFLAGSINFO) $(MYFLAGS)
 	LDFLAGS=-lghost_static -lc++ -lc++abi -pthread
-	LDFLAGSDEBUG=-lghostd -lc++ -lc++abi -pthread
-	LDFLAGSASAN=-lghostd -lc++ -lc++abi -pthread -fsanitize=address,undefined,leak -static-libasan
+	LDFLAGSDEBUG=-fsanitize=address,undefined,leak -lghostd -lc++ -lc++abi -pthread
+	LDFLAGSASAN=-fsanitize=address,undefined,leak -static-libasan -lghostd -lc++ -lc++abi -pthread
 	LDFLAGSINFO=-lghost -lc++ -lc++abi -pthread
 endif
 
