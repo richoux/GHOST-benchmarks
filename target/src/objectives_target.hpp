@@ -7,68 +7,66 @@
 
 #include "unitData.hpp"
 
-using namespace std;
-using namespace ghost;
-
 ///////////////
 // MaxDamage //
 ///////////////
-class MaxDamage : public Objective
+class MaxDamage : public ghost::Maximize
 {
-  const vector< UnitData >& _my_army;
-  const vector< UnitData >& _enemy_army;
+	const std::vector< UnitData >& _my_army;
+	const std::vector< UnitData >& _enemies;
   
-  double required_cost( const vector< Variable >& vec_variables ) const override;
+	double required_cost( const std::vector< ghost::Variable* >& variables ) const override;
   
 public:
-  MaxDamage( const vector< UnitData >& my_army,
-	     const vector< UnitData >& enemy_army );
+	MaxDamage( const std::vector< UnitData >& my_army,
+	           const std::vector< UnitData >& enemies );
 };
 
 //////////////////////
 // MaxDamageMaxKill //
 //////////////////////
-class MaxDamageMaxKill : public Objective
+class MaxDamageMaxKill : public ghost::Maximize
 {
-  const vector< UnitData >& _my_army;
-  const vector< UnitData >& _enemy_army;
+	const std::vector< UnitData >& _my_army;
+	const std::vector< UnitData >& _enemies;
   
-  double required_cost( const vector< Variable >& vec_variables ) const override;
-  int expert_heuristic_value( const vector< Variable >&	variables,
-			      Variable&			var,
-			      const vector< int >&	possible_values ) const override;
+	double required_cost( const std::vector< ghost::Variable* >& variables ) const override;
+	int expert_heuristic_value( const std::vector< ghost::Variable* >&	variables,
+	                            int var_index,
+	                            const std::vector< int >&	possible_values,
+	                            randutils::mt19937_rng& rng	) const override;
   
 public:
-  MaxDamageMaxKill( const vector< UnitData >& my_army,
-		    const vector< UnitData >& enemy_army );
+	MaxDamageMaxKill( const std::vector< UnitData >& my_army,
+	                  const std::vector< UnitData >& enemies );
 };
 
 /////////////
 // MaxKill //
 /////////////
-class MaxKill : public Objective
+class MaxKill : public ghost::Maximize
 {
-  const vector< UnitData >& _my_army;
-  const vector< UnitData >& _enemy_army;
+	const std::vector< UnitData >& _my_army;
+	const std::vector< UnitData >& _enemies;
   
-  double required_cost( const vector< Variable >& vec_variables ) const override;
+	double required_cost( const std::vector< ghost::Variable* >& variables ) const override;
   
 public:
-  MaxKill( const vector< UnitData >& my_army,
-	   const vector< UnitData >& enemy_army );
+	MaxKill( const std::vector< UnitData >& my_army,
+	         const std::vector< UnitData >& enemies );
 };
 
 /////////////////
 // MinOverkill //
 /////////////////
-class MinOverkill : public Objective
+class MinOverkill : public ghost::Minimize
 {
-  const vector< UnitData >& _my_army;
-  const vector< UnitData >& _enemy_army;
+	const std::vector< UnitData >& _my_army;
+	const std::vector< UnitData >& _enemies;
   
-  double required_cost( const vector< Variable >& vec_variables ) const override;
+	double required_cost( const std::vector< ghost::Variable* >& variables ) const override;
   
 public:
-  MinOverkill( const vector< UnitData >& my_army,
-	       const vector< UnitData >& enemy_army );
+	MinOverkill( const std::vector< UnitData >& my_army,
+	             const std::vector< UnitData >& enemies );
 };

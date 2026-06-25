@@ -5,45 +5,53 @@
 #include "constraint_shootable.hpp"
 #include "objectives_target.hpp"
 
-BuilderTarget::BuilderTarget()
-	: ModelBuilder()
+BuilderTarget::BuilderTarget( const std::vector<UnitType>& my_units,
+                              int number_enemies,
+                              const std::vector<UnitData>& my_army,
+                              const std::vector<UnitData>& enemies )
+	: ModelBuilder(),
+	  _my_units(my_units),
+	  _number_enemies(number_enemies),
+	  _my_army(my_army),
+	  _enemies(enemies)
 { }
 
 void BuilderTerran::declare_variables()
 {
-	create_variable( 0, _supply + 1, "Marine" );
-	create_variable( 0 , _supply + 1, "Firebat" );
-	create_variable( 0, _supply + 1, "Ghost" );
-	create_variable( 0, _supply / 2 + 1, "Vulture" );
-	create_variable( 0, _supply / 2 + 1, "SiegeTankTankMode" );
-	create_variable( 0, _supply / 2 + 1, "SiegeTankSiegeMode" );
-	create_variable( 0, _supply / 2 + 1, "Goliath" );
-	create_variable( 0, _supply / 2 + 1, "Wraith" );
-	create_variable( 0, _supply / 6 + 1, "BattleCruiser" );
+	for( auto& u : _my_units )
+		create_variable( u );
 }
 
 void BuilderTarget::declare_constraints()
 {
-	constraints.emplace_back( make_shared<Shootable>( variables, my_army, enemies ) );
+	constraints.emplace_back( make_shared<Shootable>( variables, _my_army, _enemies ) );
 }
 
 void BuilderTarget::declare_objective()
 {
-	objective = make_shared<MaxDamageMaxKill>( my_army, enemies );
+	objective = make_shared<MaxDamageMaxKill>( variables, _my_army, _enemies );
 }
 
-void BuilderTerran::declare_auxiliary_data()
+void BuilderTarget::create_variable( UnitType type )
 {
-	vector<UnitData> unit_data;
-	unit_data.emplace_back( 50, 0, 1., (6.0/15)*24 );
-	unit_data.emplace_back( 50, 25, 1., (16.0/22)*24 );
-	unit_data.emplace_back( 25, 75, 1., (10.0/22)*24 );
-	unit_data.emplace_back( 75, 0, 2., (20.0/30)*24 );
-	unit_data.emplace_back( 150, 100, 2., (30.0/37)*24 );
-	unit_data.emplace_back( 150, 100, 2., (70.0/75)*24 );
-	unit_data.emplace_back( 100, 50, 2., (12.0/22)*24 );
-	unit_data.emplace_back( 150, 100, 2., (8.0/30)*24 );
-	unit_data.emplace_back( 400, 300, 6., (25.0/30)*24 );
-	
-	auxiliary_data = make_shared<Data>( variables, unit_data );	
+  switch( type )
+  {
+    // Terran
+  case UnitType::Marine:
+	  create_variable( -1, _number_enemies, "Marine" );
+  case UnitType::Firebat:
+    create_variable( -1, _number_enemies, "Firebat" );
+  case UnitType::Ghost:
+    create_variable( -1, _number_enemies,"Ghost" );
+  case UnitType::Vulture:
+    create_variable( -1, _number_enemies, "Vulture" );
+  case UnitType::Goliath:
+    create_variable( -1, _number_enemies, "Goliath" );
+  case UnitType::SiegeTankTankMode:
+    create_variable( -1, _number_enemies, "SiegeTankTankMode" );
+  case UnitType::SiegeTankSiegeMode:
+    create_variable( -1, _number_enemies, "SiegeTankSiegeMode" );
+  default:
+    throw 0;
+  }
 }

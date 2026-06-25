@@ -8,18 +8,15 @@
 
 #include "unitData.hpp"
 
-using namespace std;
-using namespace ghost;
-
-class Shootable : public Constraint
+class Shootable : public ghost::Constraint
 {
-  const vector< UnitData >& _my_army;
-  const vector< UnitData >& _enemy_army;
+	std::vector< UnitData > _my_army;
+	std::vector< UnitData > _enemies;
   
-  double required_cost() const override;
+  double required_cost( const std::vector<ghost::Variable*>& variables ) const override;
   
 public:
-  Shootable( const vector< reference_wrapper<Variable> >& variables,
-	     const vector< UnitData >& my_army,
-	     const vector< UnitData >& enemy_army );
+	Shootable( const std::vector< ghost::Variable >& variables,
+	           const std::vector< UnitData >& my_army,
+	           const std::vector< UnitData >& enemies );
 };
