@@ -18,7 +18,8 @@ class MaxDamage : public ghost::Maximize
 	double required_cost( const std::vector< ghost::Variable* >& variables ) const override;
   
 public:
-	MaxDamage( const std::vector< UnitData >& my_army,
+	MaxDamage( const std::vector<ghost::Variable>& variables,
+	           const std::vector< UnitData >& my_army,
 	           const std::vector< UnitData >& enemies );
 };
 
@@ -37,7 +38,8 @@ class MaxDamageMaxKill : public ghost::Maximize
 	                            randutils::mt19937_rng& rng	) const override;
   
 public:
-	MaxDamageMaxKill( const std::vector< UnitData >& my_army,
+	MaxDamageMaxKill( const std::vector<ghost::Variable>& variables,
+	                  const std::vector< UnitData >& my_army,
 	                  const std::vector< UnitData >& enemies );
 };
 
@@ -52,7 +54,8 @@ class MaxKill : public ghost::Maximize
 	double required_cost( const std::vector< ghost::Variable* >& variables ) const override;
   
 public:
-	MaxKill( const std::vector< UnitData >& my_army,
+	MaxKill( const std::vector<ghost::Variable>& variables,
+	         const std::vector< UnitData >& my_army,
 	         const std::vector< UnitData >& enemies );
 };
 
@@ -67,6 +70,7 @@ class MinOverkill : public ghost::Minimize
 	double required_cost( const std::vector< ghost::Variable* >& variables ) const override;
   
 public:
-	MinOverkill( const std::vector< UnitData >& my_army,
+	MinOverkill( const std::vector<ghost::Variable>& variables,
+	             const std::vector< UnitData >& my_army,
 	             const std::vector< UnitData >& enemies );
 };

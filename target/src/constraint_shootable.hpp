@@ -13,7 +13,7 @@ class Shootable : public ghost::Constraint
 	std::vector< UnitData > _my_army;
 	std::vector< UnitData > _enemies;
   
-  double required_cost( const std::vector<ghost::Variable*>& variables ) const override;
+  double required_error( const std::vector<ghost::Variable*>& variables ) const override;
   
 public:
 	Shootable( const std::vector< ghost::Variable >& variables,

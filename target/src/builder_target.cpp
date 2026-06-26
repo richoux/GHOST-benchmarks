@@ -6,20 +6,19 @@
 #include "objectives_target.hpp"
 
 BuilderTarget::BuilderTarget( const std::vector<UnitType>& my_units,
-                              int number_enemies,
                               const std::vector<UnitData>& my_army,
                               const std::vector<UnitData>& enemies )
 	: ModelBuilder(),
 	  _my_units(my_units),
-	  _number_enemies(number_enemies),
 	  _my_army(my_army),
-	  _enemies(enemies)
+	  _enemies(enemies),
+	  _number_enemies(enemies.size())
 { }
 
-void BuilderTerran::declare_variables()
+void BuilderTarget::declare_variables()
 {
 	for( auto& u : _my_units )
-		create_variable( u );
+		create_variable_from_type( u );
 }
 
 void BuilderTarget::declare_constraints()
@@ -30,27 +29,37 @@ void BuilderTarget::declare_constraints()
 void BuilderTarget::declare_objective()
 {
 	objective = make_shared<MaxDamageMaxKill>( variables, _my_army, _enemies );
+	// objective = make_shared<MaxDamage>( variables, _my_army, _enemies );
+	// objective = make_shared<MaxKill>( variables, _my_army, _enemies );
+	// objective = make_shared<MinOverkill>( variables, _my_army, _enemies );
 }
 
-void BuilderTarget::create_variable( UnitType type )
+void BuilderTarget::create_variable_from_type( UnitType type )
 {
   switch( type )
   {
     // Terran
   case UnitType::Marine:
-	  create_variable( -1, _number_enemies, "Marine" );
+	  create_variable( -1, _number_enemies, std::string("Marine") );
+	  break;
   case UnitType::Firebat:
-    create_variable( -1, _number_enemies, "Firebat" );
+	  create_variable( -1, _number_enemies, std::string("Firebat") );
+	  break;
   case UnitType::Ghost:
-    create_variable( -1, _number_enemies,"Ghost" );
+	  create_variable( -1, _number_enemies, std::string("Ghost") );
+	  break;
   case UnitType::Vulture:
-    create_variable( -1, _number_enemies, "Vulture" );
+	  create_variable( -1, _number_enemies, std::string("Vulture") );
+	  break;
   case UnitType::Goliath:
-    create_variable( -1, _number_enemies, "Goliath" );
+	  create_variable( -1, _number_enemies, std::string("Goliath") );
+	  break;
   case UnitType::SiegeTankTankMode:
-    create_variable( -1, _number_enemies, "SiegeTankTankMode" );
+	  create_variable( -1, _number_enemies, std::string("SiegeTankTankMode") );
+	  break;
   case UnitType::SiegeTankSiegeMode:
-    create_variable( -1, _number_enemies, "SiegeTankSiegeMode" );
+	  create_variable( -1, _number_enemies, std::string("SiegeTankSiegeMode") );
+	  break;
   default:
     throw 0;
   }

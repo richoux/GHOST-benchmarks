@@ -8,7 +8,6 @@
 #include <limits>
 #include <functional>
 
-#include <ghost/misc/random.hpp>
 #include <ghost/variable.hpp>
 #include <ghost/constraint.hpp>
 #include <ghost/objective.hpp>
@@ -20,13 +19,11 @@
 #include "unitType.hpp"
 #include "damageFunctions.hpp"
 #include "factory_variable_target.hpp"
+#include "builder_target.hpp"
 
-using namespace ghost;
-using namespace std;
-
-vector<int> get_living_enemies_in_range( const UnitData& u, const vector< UnitData >& vec )
+std::vector<int> get_living_enemies_in_range( const UnitData& u, const std::vector< UnitData >& vec )
 {
-  vector<int> in_range;
+  std::vector<int> in_range;
 
   for( int i = 0 ; i < vec.size() ; ++i )
     if( u.is_in_range_and_alive( vec[ i ] ) )
@@ -35,10 +32,10 @@ vector<int> get_living_enemies_in_range( const UnitData& u, const vector< UnitDa
   return in_range;
 }
 
-// int get_lowest_HP_unit( const vector<int> &inRange, const vector<Unit> &vec, Random &random )
+// int get_lowest_HP_unit( const std::vector<int> &inRange, const std::vector<Unit> &vec, randutils::mt19937_rng& rng )
 // {
 //   double minHP = std::numeric_limits<double>::max();
-//   vector<int> ties;
+//   std::vector<int> ties;
   
 //   for( int i = 0 ; i < inRange.size() ; ++i )
 //     if( vec[i].getHP() == minHP )
@@ -50,14 +47,14 @@ vector<int> get_living_enemies_in_range( const UnitData& u, const vector< UnitDa
 //       minHP = vec[i].getHP();
 //     }
 
-//   return random.getRandNum( ties.size() );
+//   return rng.pick( ties );
 // }
 
-int get_lowest_HP_ratio_unit( const vector<int>& in_range, const vector< UnitData >& vec, Random& random )
+int get_lowest_HP_ratio_unit( const std::vector<int>& in_range, const std::vector< UnitData >& vec, randutils::mt19937_rng& rng )
 {
   double minHP = std::numeric_limits<double>::max();
   double ratio;
-  vector<int> ties;
+  std::vector<int> ties;
   
   for( int i = 0 ; i < in_range.size() ; ++i )
     if( ( ratio = vec[i].hp / vec[i].initial_HP ) == minHP )
@@ -72,20 +69,19 @@ int get_lowest_HP_ratio_unit( const vector<int>& in_range, const vector< UnitDat
   int unit_index = ties[ 0 ];
   
   if( ties.size() > 1 )
-    unit_index = ties[ random.get_random_number( ties.size() ) ];
+	  unit_index = rng.pick( ties );
 
   return unit_index;
 }
 
-void print_setup( const vector<UnitData>& my_army, const vector<Variable>& variables, const vector<UnitData>& enemies )
+void print_setup( const std::vector<UnitData>& my_army, const std::vector<UnitData>& enemies, const std::vector<int>& solution )
 {
   cout << "My units:\n";
-  for( int i= 0; i < variables.size(); ++i )
+  for( int i= 0; i < my_army.size(); ++i )
   {
     auto var_data = my_army[ i ];
-    auto var = variables[ i ];
     
-    cout << var_data.name << ":" << var.get_id() << "\n"
+    cout << var_data.name << ":" << i << "\n"
          << "Coordinates: (" << var_data.coord.x << ", " << var_data.coord.y << ")\n"
          << "Can shoot in: " << var_data.can_shoot_in << " frames" << "\n"
          << "Cooldown: " <<  var_data.cooldown << "\n"
@@ -95,7 +91,7 @@ void print_setup( const vector<UnitData>& my_army, const vector<Variable>& varia
          << "Damage: " <<  var_data.damage << "\n"
          << "Damage Type: " <<  var_data.get_damage_type_string() << "\n"
          << "Armor: " <<  var_data.armor << "\n"
-         << "Target: " << var.get_value() << "\n"
+         << "Target: " << solution[ i ] << "\n"
          << "-------" << "\n\n";
   }
 
@@ -120,99 +116,72 @@ void print_setup( const vector<UnitData>& my_army, const vector<Variable>& varia
 
 int main(int argc, char **argv)
 {
-  // input
-  // vector< pair<string, int> > input;
-  
-  // ifstream inputFile;
-  // ofstream outputFile;
-  // char read[256];
-  // string str;
-  // int count = 0;
+	bool parallel = false;
+	int cores = -1;
 
-  // string action;
-  // int time;
+	if( argc > 3 )
+	{
+		std::cout << "Usage: " << argv[0] << " [parallel=0/1] [number_threads]\n";
+		return EXIT_FAILURE;
+	}
+	else
+	{
+		if( argc >= 2 )
+			parallel = ( std::stoi( argv[1] ) != 0 );
+		if( argc == 3 && parallel )
+			cores = std::stoi( argv[2] );
+	}
+		
+  ghost::Options options;
 
-  int sat = 5000;
-  int opt = 30000;
-  if( argc > 1 )
-    sat = stoi(argv[1]);
-  if( argc > 2 )
-    opt = stoi(argv[2]);
-
-  // inputFile.open( argv[1], std::ifstream::in );
-  // if( inputFile.is_open() && inputFile.peek() != std::ifstream::traits_type::eof() )
-  // {
-  //   while( inputFile >> read )
-  //   {
-  //     str = read;
-
-  //     if( count % 3 == 0 )
-  //     {
-  // 	if( isdigit( str[0] ) )
-  // 	{
-  // 	  time = stoi(str);
-  // 	  break;
-  // 	}
-  // 	else
-  // 	  action = str;
-  //     }
-  //     else if( count % 3 == 1 )
-  //     {
-  // 	input.emplace_back( action, stoi(str) );
-  //     }
-
-  //     ++count;
-  //   }
-  // }
+	if( parallel )
+		options.parallel_runs = true;
+	
+	if( cores != -1 )
+		options.number_threads = static_cast<unsigned int>( cores );
   
   // Define our army variables and data
-  vector< Variable > variables;
-  vector< UnitData > my_army;
-  make_my_terran( variables, my_army );
+  std::vector< UnitType > my_units_type;
+  std::vector< UnitData > my_army;
+  make_my_terran( my_units_type, my_army );
   
   // Define enemies, mirror to our units
-  vector< UnitData > enemies;
+  std::vector< UnitData > enemies;
   make_enemy_terran( enemies );
- 
-  // Define constraints
-  vector< reference_wrapper<Variable> > variables_ref( variables.begin(), variables.end() );
-  vector< shared_ptr<Constraint> > constraints { make_shared<Shootable>( variables_ref, my_army, enemies ) };
 
-  // Define objective
-  // shared_ptr<Objective> objective = make_shared<MaxDamage>( my_army, enemies );
-  shared_ptr<Objective> objective = make_shared<MaxDamageMaxKill>( my_army, enemies );
-  // shared_ptr<Objective> objective = make_shared<MaxKill>( my_army, enemies );
-  // shared_ptr<Objective> objective = make_shared<MinOverkill>( my_army, enemies );
+  std::vector<int> in_range;
 
-  // Define solver
-  Solver solver( variables, constraints, objective );
+  int num_units = static_cast<int>( my_army.size() );
+  int num_enemy = static_cast<int>( enemies.size() );
 
-  Random random;
-  vector<int> in_range;
-
-  int num_units = my_army.size();
-  int num_enemy = enemies.size();
-
-  vector<int> aimed_units( num_units, -1 );
+  std::vector<int> aimed_units( num_units, -1 );
 
   int dead_units = 0;
   int dead_enemy = 0;
 
+#if defined DEBUG
   double total_damages;
   double total_damages_enemy;
+#endif
+  
+  double error;
+  std::vector<int> solution;
 
-#ifndef NDEBUG
+#if defined DEBUG
   int tour = 1;
-  // print_setup( my_army, variables, enemies );
+  // print_setup( my_army, enemies, solution );
 #endif
 
-  vector< UnitData > copy_enemies( enemies );
+  std::vector< UnitData > copy_enemies( enemies );
 
-  double cost;
-  vector<int> solution( variables.size(), -1 );
-
+  bool draw = false;
+	randutils::mt19937_rng rng;
+  
   do
   {
+	  BuilderTarget builder( my_units_type, my_army, enemies );
+	  ghost::Solver solver( builder );
+
     // If no one can shoot, is alive or has enemy in range, go next step
 	  if( all_of( begin( my_army ), end( my_army ), [&](UnitData& u){return ( !u.can_shoot() || u.is_dead() || get_living_enemies_in_range( u, enemies ).empty() );} ) 
 	      &&
@@ -222,23 +191,28 @@ int main(int argc, char **argv)
       for_each( begin( enemies ), end( enemies ), [](UnitData& u){ u.one_step(); } );
       continue;
     }
+	  
+	  if( all_of( begin( my_army ), end( my_army ), [&](UnitData& u){return ( u.is_dead() || ( u.can_shoot() && get_living_enemies_in_range( u, enemies ).empty() ) );} ) 
+	      &&
+	      all_of( begin( enemies ), end( enemies ), [&](UnitData& u){return ( u.is_dead() || ( u.can_shoot() && get_living_enemies_in_range( u, my_army ).empty() ) );} ) )
+	  {
+		  draw = true;
+		  break;
+	  }
+	  
+    solver.fast_search( error, solution, 100ms, options );
 
-    cost = 0.;
-    std::fill( solution.begin(), solution.end(), -1 );
-
-    solver.fast_search( cost, solution, sat, opt );
-
+#if defined DEBUG
     total_damages = 0.;
     total_damages_enemy = 0.;
 
-#ifndef NDEBUG
     cout << "Tour " << tour++ << "\n";
 
     // My units attack
     cout << ":::: My turn ::::" << "\n";
 
     // if( tour == 2 )
-    //   print_setup( my_army, variables, enemies );
+    //   print_setup( my_army, enemies, solution );
 #endif
     
     for( int i = 0 ; i < num_enemy ; ++i )
@@ -250,19 +224,20 @@ int main(int argc, char **argv)
 
 	    if( var_data.is_alive() )
 	    {
-#ifndef NDEBUG
+#if defined DEBUG
 		    int cooldown = var_data.can_shoot_in;
 #endif
-		    auto& var = variables[ i ];
-		    if( var_data.can_shoot() && var.get_value() != -1 )
+		    if( var_data.can_shoot() && solution[ i ] != -1 )
 		    {
-			    auto vec_damages = compute_damage( var_data, var.get_value(), copy_enemies ); //compute_my_shoot_damage( i, variables );
+			    auto vec_damages = compute_damage( var_data, solution[ i ], copy_enemies );
 
+#if defined DEBUG
 			    double hit = 0.;
 			    for( auto& value: vec_damages )
 				    hit += value;
 
 			    total_damages += hit;
+#endif
 			    for( int i = 0 ; i < num_enemy ; ++i )
 				    copy_enemies[ i ].hp -= vec_damages[ i ];
 
@@ -271,23 +246,23 @@ int main(int argc, char **argv)
 		    else
 			    if( !var_data.can_shoot() )
 				    var_data.one_step();
-#ifndef NDEBUG
+#if defined DEBUG
 		    string dead_or_alive = var_data.is_alive() ? "alive" : "DEAD";
-		    cout << var_data.name << ":" << var.get_id()
+		    cout << var_data.name << ":" << i
 		         << " HP=" << var_data.hp
 		         << ", status=" << dead_or_alive
 		         << ", wait=" << cooldown
-		         << " value="<< var.get_value() << "(" << copy_enemies[ var.get_value() ].hp << " HP left)\n";
+		         << " value="<< solution[ i ] << "(" << copy_enemies[ solution[ i ] ].hp << " HP left)\n";
 
-		    // if( var.get_value() == -1 && cooldown == 0 )
+		    // if( solution[ i ] == -1 && cooldown == 0 )
 		    //   for( int j = 0; j < copy_enemies.size(); ++j )
 		    //     if( var_data.is_in_range_and_alive( copy_enemies[ j ] ) ) 
-		    //       cout << "==> " << var_data.name << ":" << var.get_id() << " could shoot " << copy_enemies[ j ].name << "@" << j << "\n";
+		    //       cout << "==> " << var_data.name << ":" << i << " could shoot " << copy_enemies[ j ].name << "@" << j << "\n";
 #endif
 	    }
     }
     
-#ifndef NDEBUG
+#if defined DEBUG
     // cout << "\n" << "\n" << "Simulation" << "\n";
     // for( auto &v : vec )
     // {
@@ -311,7 +286,7 @@ int main(int argc, char **argv)
 	
 
     // The enemy attacks
-#ifndef NDEBUG
+#if defined DEBUG
     cout << "@@@@ Enemy's turn @@@@" << "\n";
 #endif
     std::fill( aimed_units.begin(), aimed_units.end(), -1 );
@@ -324,13 +299,13 @@ int main(int argc, char **argv)
 	
 		    if( !in_range.empty() )
 			    // RANDOM SHOT
-			    // aimedUnits[ i ] = inRange[ random.getRandNum( inRange.size() ) ];
+			    // aimedUnits[ i ] = rng.pick( inRange );
 	  
 			    // LOW-HP SHOT
-			    // aimedUnits[ i ] = inRange[ getLowestHPUnit( inRange, vec, random ) ];
+			    // aimedUnits[ i ] = inRange[ getLowestHPUnit( inRange, vec, rng ) ];
 
 			    // LOW-HP RATIO SHOT
-			    aimed_units[ i ] = in_range[ get_lowest_HP_ratio_unit( in_range, my_army, random ) ];
+			    aimed_units[ i ] = in_range[ get_lowest_HP_ratio_unit( in_range, my_army, rng ) ];
 	    }
 
     // print stuff AND decrement cooldown (yes, it's bad to do it within the same loop, but whatever) 
@@ -340,20 +315,22 @@ int main(int argc, char **argv)
 
 	    if( var_data.is_alive() )
 	    {
-#ifndef NDEBUG
+#if defined DEBUG
 		    int cooldown = var_data.can_shoot_in;
 #endif
 		    if( var_data.can_shoot() && aimed_units[ i ] != -1 )
 		    {
-			    auto vec_damages = compute_damage( var_data, aimed_units[ i ], my_army ); //compute_enemy_shoot_damage( i, aimed_units[ i ] );
+			    auto vec_damages = compute_damage( var_data, aimed_units[ i ], my_army );
 	  
+#if defined DEBUG
 			    double hit = 0.;
 			    for( auto value: vec_damages )
 				    hit += value;
 	  
 			    total_damages_enemy += hit;
-			    for( int i = 0 ; i < num_units ; ++i )
-				    my_army[ aimed_units[ i ] ].hp -= vec_damages[ i ];
+#endif
+			    for( int j = 0 ; j < num_units ; ++j )
+				    my_army[ j ].hp -= vec_damages[ j ];
 	  
 			    var_data.just_shot();
 		    }
@@ -363,7 +340,7 @@ int main(int argc, char **argv)
 			    if( !var_data.can_shoot() )
 				    var_data.one_step();
 		    }
-#ifndef NDEBUG
+#if defined DEBUG
 		    string dead_or_alive = var_data.is_alive() ? "alive" : "DEAD";
 		    cout << var_data.name << "@" << i
 		         << " HP=" << var_data.hp
@@ -379,9 +356,9 @@ int main(int argc, char **argv)
     
     dead_units = count_if( begin(my_army), end(my_army), [](UnitData &u){ return u.is_dead(); } );
     dead_enemy = count_if( begin(enemies), end(enemies), [](UnitData &u){ return u.is_dead(); } );
-#ifndef NDEBUG
+#if defined DEBUG
     // if( tour == 2 )
-    //   print_setup( my_army, variables, enemies );
+    //   print_setup( my_army, enemies, solution );
 
     cout << "XXXX Turns over XXXX" << "\n"
          << "Total damages from you: " << total_damages << "\n" 
@@ -393,39 +370,39 @@ int main(int argc, char **argv)
   } while( dead_units < num_units && dead_enemy < num_enemy );
 
   double total_hp = 0.;
-  
-  if( dead_units < num_units )
-  {
-    for( const auto &v : my_army )
-      if( v.is_alive() )
-	total_hp += v.hp;
-    
-    cout << "Winner: You!" << "\n"
-	 << "Diff: " << dead_enemy - dead_units << "\n"
-	 << "HP: " << total_hp << "\n";
-    
-#ifndef NDEBUG
-    for( int i = 0; i < num_units; ++i )
-      cout << my_army[ i ].name << ":" << variables[ i ].get_id() << " " << my_army[ i ].hp << " HP left" << "\n";
-#endif
-  }
-  else if( dead_enemy < num_enemy )
-  {
-    for( const auto &e : enemies )
-      if( e.is_alive() )
-	total_hp += e.hp;
 
-    cout << "Winner: The enemy..." << "\n"
-      	 << "Diff: " << dead_enemy - dead_units << "\n"
-      	 << "HP: " << total_hp << "\n";
+  if( draw )
+  {
+	  cout << "Draw!" << "\n";
+  }
+  else if( dead_units < num_units )
+  {
+	  for( const auto &v : my_army )
+		  if( v.is_alive() )
+			  total_hp += v.hp;
     
-#ifndef NDEBUG
-    for( int i = 0; i < num_enemy; ++i )
-      cout << enemies[ i ].name << "@" << i << " " << enemies[ i ].hp << " HP left" << "\n";
+	  cout << "Winner: You!" << "\n"
+	       << "Diff: " << dead_enemy - dead_units << "\n"
+	       << "HP: " << total_hp << "\n";
+    
+#if defined DEBUG
+	  for( int i = 0; i < num_units; ++i )
+		  cout << my_army[ i ].name << ":" << i << " " << my_army[ i ].hp << " HP left" << "\n";
 #endif
   }
-  else
+  else // then necessary, we have dead_enemy < num_enemy
   {
-    cout << "Draw!" << "\n";
+	  for( const auto &e : enemies )
+		  if( e.is_alive() )
+			  total_hp += e.hp;
+
+	  cout << "Winner: The enemy..." << "\n"
+	       << "Diff: " << dead_enemy - dead_units << "\n"
+	       << "HP: " << total_hp << "\n";
+    
+#if defined DEBUG
+	  for( int i = 0; i < num_enemy; ++i )
+		  cout << enemies[ i ].name << "@" << i << " " << enemies[ i ].hp << " HP left" << "\n";
+#endif
   }
 }

@@ -11,15 +11,14 @@ using namespace ghost;
 class BuilderTarget : public ModelBuilder
 {
 	std::vector<UnitType> _my_units;
-	int _number_enemies;
 	std::vector<UnitData> _my_army;
 	std::vector<UnitData> _enemies;
+	size_t _number_enemies;
 	
-	void create_variable( UnitType type );
+	void create_variable_from_type( UnitType type );
 
 public:
 	BuilderTarget( const std::vector<UnitType>& my_units,
-	               int number_enemies,
 	               const std::vector<UnitData>& my_army,
 	               const std::vector<UnitData>& enemies );
 

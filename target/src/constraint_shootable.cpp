@@ -11,9 +11,9 @@ Shootable::Shootable( const std::vector< ghost::Variable >& variables,
 { }
 
 
-double Shootable::required_cost( const std::vector<ghost::Variable*>& variables ) const
+double Shootable::required_error( const std::vector<ghost::Variable*>& variables ) const
 {
-	double cost = 0.;
+	double error = 0.;
 
 	for( int i = 0; i < variables.size(); ++i )
 	{
@@ -27,31 +27,31 @@ double Shootable::required_cost( const std::vector<ghost::Variable*>& variables 
 			if( variable_value == -1 )
 			{
 				// if some enemies are alive and within range while having no target assigned,
-				// increase the cost by the number of such enemies.
+				// increase the error by the number of such enemies.
 				int count = std::count_if( _enemies.cbegin(),
 				                           _enemies.cend(),
 				                           [&](auto& enemy){ return my_unit.is_in_range_and_alive( enemy ); } );
-				cost += count;
+				error += count;
 
 				// if( i == 13 )
 				// {
 				//   for( int j = 0; j < _enemies.size(); ++j )
 				//     if( my_unit.is_in_range_and_alive( _enemies[ j ] ) ) 
 				//       cout << "==> " << my_unit.name << ":" << variables[ i ].get().get_id() << " could shoot " << _enemies[ j ].name << "@" << j << "\n";
-				//   cout << "count=" << count << ", cost=" << cost << "\n";
+				//   cout << "count=" << count << ", error=" << error << "\n";
 				// }
 			}
 			else
 			{
 				auto& target = _enemies[ variable_value ];
 	
-				// If our target is dead or not in range, increment the cost;
+				// If our target is dead or not in range, increment the error;
 				if( !my_unit.is_in_range_and_alive( target ) )
-					++cost;
+					++error;
 			}
 		}
 	}
 
-	return cost;
+	return error;
 }
 
