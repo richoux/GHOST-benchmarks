@@ -21,12 +21,12 @@ double MaxDamage::required_cost( const std::vector< ghost::Variable* >& variable
 
 	for( int i = 0; i < variables.size(); ++i )
 	{
-		auto vec_costs = compute_damage( _my_army[ i ], variables[ i ]->get_value(), _enemies ); //compute_my_shoot_damage( i, variables );
+		auto vec_costs = compute_damage( _my_army[ i ], variables[ i ]->get_value(), _enemies );
 		for( auto& c : vec_costs )
 			cost += c;
 	}
 
-	return -cost;
+	return cost;
 }
 
 //////////////////////
@@ -46,12 +46,12 @@ double MaxDamageMaxKill::required_cost( const std::vector< ghost::Variable* >& v
 
 	for( int i = 0; i < variables.size(); ++i )
 	{
-		auto vec_costs = compute_damage( _my_army[ i ], variables[ i ]->get_value(), _enemies ); //compute_my_shoot_damage( i, variables );
+		auto vec_costs = compute_damage( _my_army[ i ], variables[ i ]->get_value(), _enemies );
 		for( auto& c : vec_costs )
 			cost += c;
 	}
 
-	return -cost;
+	return cost;
 }
 
 int MaxDamageMaxKill::expert_heuristic_value( const std::vector< ghost::Variable* >& variables,
@@ -108,7 +108,7 @@ double MaxKill::required_cost( const std::vector< ghost::Variable* >& variables 
   
 	for( int i = 0; i < variables.size(); ++i )
 	{
-		auto vec_costs = compute_damage( _my_army[ i ], variables[ i ]->get_value(), _enemies ); //compute_my_shoot_damage( i, variables );
+		auto vec_costs = compute_damage( _my_army[ i ], variables[ i ]->get_value(), _enemies );
 		for( int i = 0; i < vec_costs.size(); ++i )
 			total_damage[ i ] += vec_costs[ i ];
 	}
@@ -120,7 +120,7 @@ double MaxKill::required_cost( const std::vector< ghost::Variable* >& variables 
 			++count;
 	}
     
-	return -count;
+	return count;
 }
 
 /////////////////
@@ -142,20 +142,14 @@ double MinOverkill::required_cost( const std::vector< ghost::Variable* >& variab
   
 	for( int i = 0; i < variables.size(); ++i )
 	{
-		auto vec_costs = compute_damage( _my_army[ i ], variables[ i ]->get_value(), _enemies ); //compute_my_shoot_damage( i, variables );
+		auto vec_costs = compute_damage( _my_army[ i ], variables[ i ]->get_value(), _enemies );
 		for( int i = 0; i < vec_costs.size(); ++i )
 			total_damage[ i ] += vec_costs[ i ];
 	}
 
-	int count = 0;
 	for( int i = 0; i < _enemies.size(); ++i )
-	{
 		if( total_damage[ i ] >= _enemies[ i ].hp )
-			++count;
+			cost += total_damage[ i ] - _enemies[ i ].hp;
 
-		cost += ( total_damage[ i ] - ( std::max( 0., total_damage[ i ] - _enemies[ i ].hp ) ) );
-	}
-
-	// (MaxDamage without overkill) * (number of kills + 1)
-	return -cost * ( count + 1 );
+	return cost;
 }

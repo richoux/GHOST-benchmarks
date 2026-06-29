@@ -57,7 +57,7 @@ void make_my_terran( std::vector<UnitType>& vec_type, std::vector<UnitData>& vec
   vec_data.push_back( make_data( UnitType::Goliath, {130, 65} ) );
 
   vec_type.push_back( UnitType::SiegeTankTankMode ); // 9
-  vec_data.push_back( make_data( UnitType::SiegeTankTankMode, {10, 102} ) );
+  vec_data.push_back( make_data( UnitType::SiegeTankTankMode, {30, 80} ) ); // change coordinates to make reach the SiegeTankSiegeMode. Before: (10, 102)
 
   vec_type.push_back( UnitType::Ghost ); // 10
   vec_data.push_back( make_data( UnitType::Ghost, {65, 102} ) );
@@ -66,7 +66,7 @@ void make_my_terran( std::vector<UnitType>& vec_type, std::vector<UnitData>& vec
   vec_data.push_back( make_data( UnitType::Ghost, {75, 102} ) );
 
   vec_type.push_back( UnitType::SiegeTankTankMode ); // 12
-  vec_data.push_back( make_data( UnitType::SiegeTankTankMode, {130, 102} ) );
+  vec_data.push_back( make_data( UnitType::SiegeTankTankMode, {110, 80} ) ); // change coordinates to make reach the SiegeTankSiegeMode. Before: (130, 102)
 
   vec_type.push_back( UnitType::SiegeTankSiegeMode ); // 13
   vec_data.push_back( make_data( UnitType::SiegeTankSiegeMode, {70, 139} ) );
@@ -85,9 +85,9 @@ void make_enemy_terran( std::vector<UnitData>& vec_data )
   vec_data.push_back( make_data( UnitType::Vulture, {50, -65} ) );
   vec_data.push_back( make_data( UnitType::Vulture, {90, -65} ) );
   vec_data.push_back( make_data( UnitType::Goliath, {130, -65} ) );
-  vec_data.push_back( make_data( UnitType::SiegeTankTankMode, {10, -102} ) );
+  vec_data.push_back( make_data( UnitType::SiegeTankTankMode, {30, -80} ) );
   vec_data.push_back( make_data( UnitType::Ghost, {65, -102} ) );
   vec_data.push_back( make_data( UnitType::Ghost, {75, -102} ) );
-  vec_data.push_back( make_data( UnitType::SiegeTankTankMode, {130, -102} ) );
+  vec_data.push_back( make_data( UnitType::SiegeTankTankMode, {110, -80} ) );
   vec_data.push_back( make_data( UnitType::SiegeTankSiegeMode, {70, -139} ) );
 }

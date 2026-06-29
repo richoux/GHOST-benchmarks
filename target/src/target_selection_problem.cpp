@@ -148,7 +148,7 @@ int main(int argc, char **argv)
   // Define enemies, mirror to our units
   std::vector< UnitData > enemies;
   make_enemy_terran( enemies );
-
+  
   std::vector<int> in_range;
 
   int num_units = static_cast<int>( my_army.size() );
@@ -159,7 +159,7 @@ int main(int argc, char **argv)
   int dead_units = 0;
   int dead_enemy = 0;
 
-#if defined DEBUG
+#if defined TRACE
   double total_damages;
   double total_damages_enemy;
 #endif
@@ -167,7 +167,7 @@ int main(int argc, char **argv)
   double error;
   std::vector<int> solution;
 
-#if defined DEBUG
+#if defined TRACE
   int tour = 1;
   // print_setup( my_army, enemies, solution );
 #endif
@@ -200,9 +200,9 @@ int main(int argc, char **argv)
 		  break;
 	  }
 	  
-    solver.fast_search( error, solution, 100ms, options );
+    solver.fast_search( error, solution, 5ms, options );
 
-#if defined DEBUG
+#if defined TRACE
     total_damages = 0.;
     total_damages_enemy = 0.;
 
@@ -224,14 +224,14 @@ int main(int argc, char **argv)
 
 	    if( var_data.is_alive() )
 	    {
-#if defined DEBUG
+#if defined TRACE
 		    int cooldown = var_data.can_shoot_in;
 #endif
 		    if( var_data.can_shoot() && solution[ i ] != -1 )
 		    {
 			    auto vec_damages = compute_damage( var_data, solution[ i ], copy_enemies );
 
-#if defined DEBUG
+#if defined TRACE
 			    double hit = 0.;
 			    for( auto& value: vec_damages )
 				    hit += value;
@@ -246,7 +246,7 @@ int main(int argc, char **argv)
 		    else
 			    if( !var_data.can_shoot() )
 				    var_data.one_step();
-#if defined DEBUG
+#if defined TRACE
 		    string dead_or_alive = var_data.is_alive() ? "alive" : "DEAD";
 		    cout << var_data.name << ":" << i
 		         << " HP=" << var_data.hp
@@ -254,39 +254,16 @@ int main(int argc, char **argv)
 		         << ", wait=" << cooldown
 		         << " value="<< solution[ i ] << "(" << copy_enemies[ solution[ i ] ].hp << " HP left)\n";
 
-		    // if( solution[ i ] == -1 && cooldown == 0 )
-		    //   for( int j = 0; j < copy_enemies.size(); ++j )
-		    //     if( var_data.is_in_range_and_alive( copy_enemies[ j ] ) ) 
-		    //       cout << "==> " << var_data.name << ":" << i << " could shoot " << copy_enemies[ j ].name << "@" << j << "\n";
+		    if( solution[ i ] == -1 && cooldown == 0 )
+			    for( int j = 0; j < copy_enemies.size(); ++j )
+		        if( var_data.is_in_range_and_alive( copy_enemies[ j ] ) ) 
+		          cout << "==> " << var_data.name << ":" << i << " could shoot " << copy_enemies[ j ].name << "@" << j << "\n";
 #endif
 	    }
     }
     
-#if defined DEBUG
-    // cout << "\n" << "\n" << "Simulation" << "\n";
-    // for( auto &v : vec )
-    // {
-    //   if( !v.isDead() && v.canShootIn() == v.getCooldown() )
-    //   {
-    // 	int backup = v.getValue();
-	
-    // 	for( int j = 0 ; j < copyEnemies.size() ; ++j )
-    // 	{
-    // 	  v.setValue( j );
-    // 	  auto hits = v.computeDamage( &copyEnemies );
-    // 	  if( hits.at( j ) != 0. )
-    // 	    cout << v.getFullName() << ":" << v.getId() << " can hit " << copyEnemies.at(j).data.name << "@" << j << " with " << hits.at( j ) << " (dist=" << v.distanceFrom(copyEnemies.at(j)) << ")" << "\n";
-    // 	}
-	
-    // 	v.setValue( backup );
-    //   }
-    // }
-    // cout << "\n" << "\n";
-#endif
-	
-
     // The enemy attacks
-#if defined DEBUG
+#if defined TRACE
     cout << "@@@@ Enemy's turn @@@@" << "\n";
 #endif
     std::fill( aimed_units.begin(), aimed_units.end(), -1 );
@@ -315,14 +292,14 @@ int main(int argc, char **argv)
 
 	    if( var_data.is_alive() )
 	    {
-#if defined DEBUG
+#if defined TRACE
 		    int cooldown = var_data.can_shoot_in;
 #endif
 		    if( var_data.can_shoot() && aimed_units[ i ] != -1 )
 		    {
 			    auto vec_damages = compute_damage( var_data, aimed_units[ i ], my_army );
 	  
-#if defined DEBUG
+#if defined TRACE
 			    double hit = 0.;
 			    for( auto value: vec_damages )
 				    hit += value;
@@ -340,7 +317,7 @@ int main(int argc, char **argv)
 			    if( !var_data.can_shoot() )
 				    var_data.one_step();
 		    }
-#if defined DEBUG
+#if defined TRACE
 		    string dead_or_alive = var_data.is_alive() ? "alive" : "DEAD";
 		    cout << var_data.name << "@" << i
 		         << " HP=" << var_data.hp
@@ -356,7 +333,7 @@ int main(int argc, char **argv)
     
     dead_units = count_if( begin(my_army), end(my_army), [](UnitData &u){ return u.is_dead(); } );
     dead_enemy = count_if( begin(enemies), end(enemies), [](UnitData &u){ return u.is_dead(); } );
-#if defined DEBUG
+#if defined TRACE
     // if( tour == 2 )
     //   print_setup( my_army, enemies, solution );
 
@@ -385,7 +362,7 @@ int main(int argc, char **argv)
 	       << "Diff: " << dead_enemy - dead_units << "\n"
 	       << "HP: " << total_hp << "\n";
     
-#if defined DEBUG
+#if defined TRACE
 	  for( int i = 0; i < num_units; ++i )
 		  cout << my_army[ i ].name << ":" << i << " " << my_army[ i ].hp << " HP left" << "\n";
 #endif
@@ -400,7 +377,7 @@ int main(int argc, char **argv)
 	       << "Diff: " << dead_enemy - dead_units << "\n"
 	       << "HP: " << total_hp << "\n";
     
-#if defined DEBUG
+#if defined TRACE
 	  for( int i = 0; i < num_enemy; ++i )
 		  cout << enemies[ i ].name << "@" << i << " " << enemies[ i ].hp << " HP left" << "\n";
 #endif

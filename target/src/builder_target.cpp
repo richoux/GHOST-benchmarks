@@ -28,8 +28,8 @@ void BuilderTarget::declare_constraints()
 
 void BuilderTarget::declare_objective()
 {
-	objective = make_shared<MaxDamageMaxKill>( variables, _my_army, _enemies );
-	// objective = make_shared<MaxDamage>( variables, _my_army, _enemies );
+	//objective = make_shared<MaxDamageMaxKill>( variables, _my_army, _enemies );
+	 objective = make_shared<MaxDamage>( variables, _my_army, _enemies );
 	// objective = make_shared<MaxKill>( variables, _my_army, _enemies );
 	// objective = make_shared<MinOverkill>( variables, _my_army, _enemies );
 }
@@ -40,25 +40,25 @@ void BuilderTarget::create_variable_from_type( UnitType type )
   {
     // Terran
   case UnitType::Marine:
-	  create_variable( -1, _number_enemies, std::string("Marine") );
+	  create_variable( -1, _number_enemies+1, std::string("Marine") );
 	  break;
   case UnitType::Firebat:
-	  create_variable( -1, _number_enemies, std::string("Firebat") );
+	  create_variable( -1, _number_enemies+1, std::string("Firebat") );
 	  break;
   case UnitType::Ghost:
-	  create_variable( -1, _number_enemies, std::string("Ghost") );
+	  create_variable( -1, _number_enemies+1, std::string("Ghost") );
 	  break;
   case UnitType::Vulture:
-	  create_variable( -1, _number_enemies, std::string("Vulture") );
+	  create_variable( -1, _number_enemies+1, std::string("Vulture") );
 	  break;
   case UnitType::Goliath:
-	  create_variable( -1, _number_enemies, std::string("Goliath") );
+	  create_variable( -1, _number_enemies+1, std::string("Goliath") );
 	  break;
   case UnitType::SiegeTankTankMode:
-	  create_variable( -1, _number_enemies, std::string("SiegeTankTankMode") );
+	  create_variable( -1, _number_enemies+1, std::string("SiegeTankTankMode") );
 	  break;
   case UnitType::SiegeTankSiegeMode:
-	  create_variable( -1, _number_enemies, std::string("SiegeTankSiegeMode") );
+	  create_variable( -1, _number_enemies+1, std::string("SiegeTankSiegeMode") );
 	  break;
   default:
     throw 0;
