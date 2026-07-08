@@ -7,10 +7,11 @@
 
 BuilderBO::BuilderBO( const std::vector< std::pair<std::string, int> >& inputs, bool exhaustive_inputs )
 	: ModelBuilder( true ),
-	  _domain_size(0)
+	  _domain_size(0),
+	  _exhaustive_inputs(exhaustive_inputs)
 {
-	for( const auto& input : _inputs )
-		makeGoals( input, exhaustive_inputs );
+	for( const std::pair<std::string, int>& input : inputs )
+		makeGoals( input.first, input.second );
 
 	for( const auto& goal : _goals )
 		_domain_size += goal.second.first;
@@ -34,22 +35,22 @@ void BuilderBO::declare_constraints()
 
 void BuilderBO::declare_objective()
 {
-	objective = make_shared<MinSpan>( variables, _goals );
-	// objective = make_shared<MakeSpanMinCost>( variables, _goals );
-	// objective = make_shared<MakeSpanMaxProd>( variables, _goals );
+	objective = make_shared<MinSpan>( variables, _exhaustive_inputs );
+	// objective = make_shared<MakeSpanMinCost>( variables, _goals, _exhaustive_inputs );
+	// objective = make_shared<MakeSpanMaxProd>( variables, _goals, _exhaustive_inputs );
 }
 
-void BuilderBO::makeGoals( std::pair<std::string, int> &input, bool exhaustive_inputs )
+void BuilderBO::makeGoals( std::string name, int number )
 {
-	Action action = action_of[input.first];
-	for( int i = 1; i < input.second; ++i )
-		_goals.emplace( action.name, std::make_pair<int, int>( input.second, 0 ) );
+	ActionData action = action_of[name];
+	for( int i = 1; i < number; ++i )
+		_goals.emplace( action.name, std::make_pair<int, int>( std::move( number ), 0 ) ); // I don't understand why make_pair is waiting for &&int here
 
-	if( !exhaustive_inputs )
-		rec_makeGoals( action, input.second );	
+	if( !_exhaustive_inputs )
+		rec_makeGoals( action, number );	
 }
 
-void BuilderBO::rec_makeGoals( const Action &action, int count )
+void BuilderBO::rec_makeGoals( const ActionData &action, int count )
 {
 	if( count > 0 )
 	{

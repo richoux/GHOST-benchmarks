@@ -1,6 +1,7 @@
 #pragma once
 
 #include <vector>
+#include <string>
 
 #include "races.hpp"
 #include "actionType.hpp"
@@ -12,15 +13,15 @@ struct ActionData
 	int cost_gas;
 	int cost_supply;
 	ActionType actionType;
-	std::vector<string> dependencies;
+	std::vector<std::string> dependencies;
 	std::string creator; 
 	Race race;
 	std::string name;
 
-	ActionData();
+	ActionData() = default;
 	ActionData( int, int, int, int, ActionType, std::vector<std::string>, std::string, Race, std::string );
-	ActionData( const ActionData& );
-	ActionData& operator=( ActionData );
+	ActionData( const ActionData& ) = default;
+	ActionData& operator=( const ActionData& ) = default;
 
 	inline std::string get_type_string() const	
 	{ 
@@ -49,5 +50,5 @@ struct ActionData
 
 	void swap( ActionData& );
 
-	friend std::ostream& operator<<( std::ostream&, const ActionData& );
+	// friend std::ostream& operator<<( std::ostream&, const ActionData& );
 };

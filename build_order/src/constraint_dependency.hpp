@@ -8,7 +8,7 @@
 
 class Dependency : public ghost::Constraint
 {
-	std::set<std::string> _already_built;
+	mutable std::set<std::string> _already_built;
 	
   double required_error( const std::vector<ghost::Variable*>& variables ) const override;
 

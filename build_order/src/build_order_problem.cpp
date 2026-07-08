@@ -12,6 +12,10 @@
 #include <ghost/objective.hpp>
 #include <ghost/solver.hpp>
 
+#include "builder_bo.hpp"
+
+using namespace std::literals::chrono_literals;
+
 int main(int argc, char **argv)
 {
 	bool parallel = false;
@@ -48,8 +52,10 @@ int main(int argc, char **argv)
 	int count = 0;
 
 	std::string action;
-	int target_time;
+	int target_time = 0;
 
+	std::vector<std::string> variables_name;
+	
 	inputFile.open( argv[1], std::ifstream::in );
 	if( inputFile.is_open() && inputFile.peek() != std::ifstream::traits_type::eof() )
 	{
@@ -76,26 +82,24 @@ int main(int argc, char **argv)
 		}
 	}
 
+	for( const auto& action: input )
+		for( int i = 0 ; i < action.second ; ++i )
+			variables_name.push_back( action.first );
+	
 	BuilderBO builder( input );
 	ghost::Solver solver( builder );
-	double error;
+	double cost;
 	std::vector<int> solution;
 
-	solver.fast_search( error, solution, 30ms, options );
+	solver.fast_search( cost, solution, 30ms, options );
 
-
+	std::vector<std::string> bo( solution.size() );
+	for( size_t i = 0 ; i < solution.size() ; ++i )
+		bo[ solution[ i ] ] = variables_name[i];
 	
-	// Define objective
-	shared_ptr<BuildOrderObjective> objective = make_shared<MakeSpanMaxProd>( input, vec );
-
-	// Define domain
-	BuildOrderDomain domain( vec.size(), &vec );
-  
-	// Define constraints
-	vector< shared_ptr<BuildOrderConstraint> > vecConstraints { make_shared<BuildOrderConstraint>( &vec, &domain ) };
-
-	Solver<Action, BuildOrderDomain, BuildOrderConstraint> solver(&vec, &domain, vecConstraints, objective );
-
-	solver.fast_search( sat, opt );
-	cout << "Target_Time reference: " << static_cast<double>(target_time)/23.81 << endl;
+	std::cout << "BO:\n";
+	for( size_t i = 0 ; i < bo.size() ; ++i )
+		std::cout << std::setw(2) << i+1 << ". " << bo[i] << "\n";
+	std::cout << "\nSolution Time: " << static_cast<double>(cost)/23.81 << std::endl
+	          << "Target_Time reference: " << static_cast<double>(target_time)/23.81 << std::endl;
 }

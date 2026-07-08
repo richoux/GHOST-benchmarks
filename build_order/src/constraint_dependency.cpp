@@ -4,7 +4,8 @@
 #include "actionMap.hpp"
 
 Dependency::Dependency( const std::vector< ghost::Variable >& variables )
-	: Constraint(variables)
+	: Constraint(variables),
+	  _already_built()
 { }
 
 double Dependency::required_error( const std::vector<ghost::Variable*>& variables ) const
@@ -18,14 +19,14 @@ double Dependency::required_error( const std::vector<ghost::Variable*>& variable
 		auto& action = action_of[ variables[i]->get_name() ];
 		
 		if( action.actionType == special
-		    || action.depedencies.empty()
-		    || ( action.depedencies.size() == 1 && action.depedencies.at(0).compare("Protoss_Nexus") == 0 ) )
+		    || action.dependencies.empty()
+		    || ( action.dependencies.size() == 1 && action.dependencies.at(0).compare("Protoss_Nexus") == 0 ) )
 			continue;
 		
 		no_conflicts = true;
 
-		for( auto& depedency: action.depedencies )
-			if( !_already_built.contains( depedency ) )
+		for( auto& dependency: action.dependencies )
+			if( !_already_built.contains( dependency ) )
 			{
 				++conflicts;
 				no_conflicts = false;

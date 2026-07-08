@@ -4,4 +4,4 @@
 
 #include "actionData.hpp"
 
-extern map<string, const ActionData> action_of;
+extern std::map<std::string, const ActionData> action_of;
