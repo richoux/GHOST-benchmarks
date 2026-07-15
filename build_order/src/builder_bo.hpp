@@ -8,7 +8,8 @@
 class BuilderBO : public ghost::ModelBuilder
 {
 	//std::vector< std::pair<std::string, int> > _inputs;
-	std::map< std::string, std::pair<int, int> > _goals;
+	//std::map< std::string, std::pair<int, int> > _goals;
+	std::vector< ActionData > _actions;
 	int _domain_size;
 	bool _exhaustive_inputs;
 	

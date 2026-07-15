@@ -85,7 +85,7 @@ int main(int argc, char **argv)
 	for( const auto& action: input )
 		for( int i = 0 ; i < action.second ; ++i )
 			variables_name.push_back( action.first );
-	
+
 	BuilderBO builder( input );
 	ghost::Solver solver( builder );
 	double cost;
@@ -100,6 +100,6 @@ int main(int argc, char **argv)
 	std::cout << "BO:\n";
 	for( size_t i = 0 ; i < bo.size() ; ++i )
 		std::cout << std::setw(2) << i+1 << ". " << bo[i] << "\n";
-	std::cout << "\nSolution Time: " << static_cast<double>(cost)/23.81 << std::endl
+	std::cout << "\nSolution Time: " << cost << std::endl
 	          << "Target_Time reference: " << static_cast<double>(target_time)/23.81 << std::endl;
 }

@@ -10,7 +10,8 @@ BINDIR=bin
 
 
 # Compiler flags
-CXXFIRSTFLAGS= -Ofast -DNDEBUG -W -Wall -Wextra -pedantic -Wno-sign-compare -Wno-unused-parameter
+MYFLAGS=
+CXXFIRSTFLAGS= -O3 -DNDEBUG -W -Wall -Wextra -pedantic -Wno-sign-compare -Wno-unused-parameter
 CXXFIRSTFLAGSDEBUG= -g -O0 -W -Wall -Wextra -pedantic -Wno-sign-compare -Wno-unused-parameter 
 
 # Linker flags
@@ -18,12 +19,12 @@ LDFLAGS=-pthread -lghost
 
 # Compiler
 ifneq (,$(findstring clang,$(CXX)))
-	CXXFLAGS= -std=c++20  -stdlib=libc++ $(CXXFIRSTFLAGS)
-	CXXFLAGSDEBUG= -std=c++20  -stdlib=libc++ $(CXXFIRSTFLAGSDEBUG)
+	CXXFLAGS= -std=c++20  -stdlib=libc++ $(CXXFIRSTFLAGS) $(MYFLAGS)
+	CXXFLAGSDEBUG= -std=c++20  -stdlib=libc++ $(CXXFIRSTFLAGSDEBUG) $(MYFLAGS)
 	LDFLAGS=-pthread -lghost -lc++ -lc++abi
 else
-	CXXFLAGS= -std=c++20 $(CXXFIRSTFLAGS)
-	CXXFLAGSDEBUG= -std=c++20 $(CXXFIRSTFLAGSDEBUG)
+	CXXFLAGS= -std=c++20 $(CXXFIRSTFLAGS) $(MYFLAGS)
+	CXXFLAGSDEBUG= -std=c++20 $(CXXFIRSTFLAGSDEBUG) $(MYFLAGS)
 endif
 
 # Files
