@@ -35,8 +35,6 @@ void BuilderBO::declare_variables()
 
 void BuilderBO::declare_constraints()
 {
-	// need a constraint for archon merging
-
 	std::vector<int> index;
 	
 	for( int i = 0 ; i < _actions.size() ; ++i )
