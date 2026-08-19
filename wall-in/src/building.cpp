@@ -1,6 +1,6 @@
 #include "building.hpp"
 
-Building::Building( int width, int height, int top, int right, int bottom, int left, Race race, int tree_depth, string name )
+Building::Building( int width, int height, int top, int right, int bottom, int left, Race race, int tree_depth, std::string name )
 	: _width( width ),
 	  _height( height ),
 	  _gap_top( top ), 
@@ -12,7 +12,7 @@ Building::Building( int width, int height, int top, int right, int bottom, int l
 	  _name( name )
 { }
 
-ostream& operator<<( ostream& os, const Building& b )
+std::ostream& operator<<( std::ostream& os, const Building& b )
 {
 	return os
 		<< "Race: " <<  b.get_race_string() << endl

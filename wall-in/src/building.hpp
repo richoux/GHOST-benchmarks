@@ -3,8 +3,6 @@
 #include <string>
 #include "races.hpp"
 
-using namespace std;
-
 class Building
 {
 	int _width;
@@ -18,10 +16,10 @@ class Building
 	Race _race;
 	int _tree_depth;
 
-	string _name;
+	std::string _name;
 
 public:
-	Building( int width, int height, int top, int right, int bottom, int left, Race race, int tree_depth, string name );
+	Building( int width, int height, int top, int right, int bottom, int left, Race race, int tree_depth, std::string name );
     
 	inline int get_width()	const	{ return _width; }
 	inline int get_height()	const	{ return _height; }
@@ -32,7 +30,7 @@ public:
 	inline int get_gap_left()	  const	{ return _gap_left; }
 
 	inline Race get_race() const { return race; }
-	inline string get_race_string()	const	
+	inline std::string get_race_string()	const	
 	{ 
 		switch( race ) 
 		{
@@ -44,7 +42,7 @@ public:
 	}
     
 	inline int get_tree_depth()	const	{ return _tree_depth; }
-	inline string get_name()    const { return _name; }
+	inline std::string get_name()    const { return _name; }
     
-	friend ostream& operator<<( ostream&, const Building& );
+	friend std::ostream& operator<<( std::ostream&, const Building& );
 };

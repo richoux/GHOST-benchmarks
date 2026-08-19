@@ -11,10 +11,10 @@
 /***********/  
 class Overlap : public ghost::Constraint
 {
-	double required_error( const std::vector<Variable*>& variables ) const override;
-
+	double required_error( const std::vector<ghost::Variable*>& variables ) const override;
+	
 public:
-	Overlap( const vector< Building >*, const WallinDomain* );
+	Overlap( const std::vector<ghost::Variable*>& variables, std::vector<int> line );
 };
 
   
@@ -23,10 +23,10 @@ public:
 /*************/  
 class Buildable : public ghost::Constraint
 {
-	double required_error( const std::vector<Variable*>& variables ) const override;
-
+	double required_error( const std::vector<ghost::Variable*>& variables ) const override;
+	
 public:
-	Buildable( const vector< Building >*, const WallinDomain* );
+	Buildable( const std::vector<ghost::Variable*>& variables, std::vector<int> line );
 };
 
   
@@ -35,12 +35,12 @@ public:
 /**********/  
 class NoHoles : public ghost::Constraint
 {
-	double required_error( const std::vector<Variable*>& variables ) const override;
+	double required_error( const std::vector<ghost::Variable*>& variables ) const override;
 
 public:
-	NoHoles( const vector< Building >*, const WallinDomain* );
+	NoHoles( const std::vector<ghost::Variable*>& variables, std::vector<int> line );
 
-	double postprocess_simulateCost( Building&, const int, vector<double>& );
+	//double postprocess_simulateCost( Building&, const int, vector<double>& );
 };
 
   
@@ -49,8 +49,8 @@ public:
 /***********************/  
 class StartingTargetTiles : public ghost::Constraint
 {
-	double required_error( const std::vector<Variable*>& variables ) const override;
+	double required_error( const std::vector<ghost::Variable*>& variables ) const override;
 
 public:
-	StartingTargetTiles( const vector< Building >*, const WallinDomain* );
+	StartingTargetTiles( const std::vector<ghost::Variable*>& variables, std::vector<int> line, int starting_tile, int target_tile );
 };

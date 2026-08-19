@@ -3,46 +3,20 @@
 #include <vector>
 #include <memory>
 
-#include "../../src/objective.hpp"
+#include <ghost/variable>
+#include <ghost/objective>
 #include "building.hpp"
-#include "wallinDomain.hpp"
 
-using namespace std;
-
-/*******************/
-/* WallinObjective */
-/*******************/
-class WallinObjective : public Objective<Building, WallinDomain>
-{
-public:
-	WallinObjective( const string & );
-
-protected:
-	virtual void v_setHelper( const Building &b, const vector< Building > *vecVariables, const WallinDomain *domain );
-
-	virtual double v_postprocessSatisfaction( vector< Building > *vecVariables,
-	                                          WallinDomain *domain,
-	                                          double &bestCost,
-	                                          vector< Building > &bestSolution,
-	                                          double sat_timeout) const;
-    
-	virtual double v_postprocessOptimization( vector< Building > *vecBuildings,
-	                                          WallinDomain *domain,
-	                                          double &bestCost,
-	                                          double opt_timeout);
-
-    
-	static int sizeWall;
-};
-  
 /**********/
 /* GapObj */
 /**********/
-class GapObj : public WallinObjective
+class GapObj : public ghost::Objective
 {
 public:
 	GapObj();
 
+	double required_cost( const std::vector<ghost::Variable*>& variables ) const override;
+	
 private:
 	double v_cost( vector< Building > *vecVariables, WallinDomain *domain ) const;
 	int v_heuristicVariable( const vector< int > &vecId, const vector< Building > *vecVariables, WallinDomain *domain );
@@ -53,10 +27,12 @@ private:
 /***************/
 /* BuildingObj */
 /***************/
-class BuildingObj : public WallinObjective
+class BuildingObj : public ghost::Objective
 {
 public:
 	BuildingObj();
+
+	double required_cost( const std::vector<ghost::Variable*>& variables ) const override;
 
 private:
 	double v_cost( vector< Building > *vecVariables, WallinDomain *domain ) const;
@@ -67,10 +43,12 @@ private:
 /***************/
 /* TreeTechObj */
 /***************/
-class TechTreeObj : public WallinObjective
+class TechTreeObj : public ghost::Objective
 {
 public:
 	TechTreeObj();
+
+	double required_cost( const std::vector<ghost::Variable*>& variables ) const override;
 
 private:
 	double v_cost( vector< Building > *vecVariables, WallinDomain *domain ) const;

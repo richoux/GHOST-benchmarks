@@ -1,12 +1,13 @@
 #include <numeric>
 #include <memory>
+#include <algorithm>
 
 #include "builder_wallin.hpp"
 #include "wallinConstraint.hpp"
 #include "wallinObjective.hpp"
 #include "convert.hpp"
 
-BuilderWallin::BuilderWallin( std::vector<bool>& line,
+BuilderWallin::BuilderWallin( std::vector<int>& line,
                               int width,
                               int starting_tile,
                               int target_tile,
@@ -20,14 +21,12 @@ BuilderWallin::BuilderWallin( std::vector<bool>& line,
 {
 	// -1 means unselected building, i.e., not composing the wall.
 	_buildables.push_back( -1 );
-	
-	for( int i = 0 ; i < static_cast<int>( _line.size() ) ; ++i )
-		if( _line[i] )
-			_buildables.push_back( i );
+	std::copy_if( _line.begin(), _line.end(), std::back_inserter( _buildables ), [](int x) { return x == 0; });
 }
 
 void BuilderWallin::declare_variables()
 {
+	// we could also filter out all values that would imply recovering an unbuildable tile.
 	create_variables( _buildings.size(), _buildables );
 }
 
