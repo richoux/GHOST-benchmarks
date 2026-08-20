@@ -6,15 +6,23 @@
 #include <ghost/variable.hpp>
 #include "building.hpp"
 
-/***********/
-/* Overlap */
-/***********/  
-class Overlap : public ghost::Constraint
+/**************/
+/* NoOverlaps */
+/**************/  
+class NoOverlaps : public ghost::Constraint
 {
-	double required_error( const std::vector<ghost::Variable*>& variables ) const override;
-	
+	int _width;
+	int _height;
+	std::vector<Building> _buildings;
+	// grid where buildings are placed. -1 for unbuildable, 0 for free, n and -(n+1) for n buildings on the given (unbuildable if negative) tile
+	std::vector<int> _line;
+
 public:
-	Overlap( const std::vector<ghost::Variable*>& variables, std::vector<int> line );
+	NoOverlaps( const std::vector<ghost::Variable*>& variables,
+	            int width,
+	            int height,
+	            const std::vector<Building>& buildings );
+	double required_error( const std::vector<ghost::Variable*>& variables ) const override;
 };
 
   
@@ -23,10 +31,18 @@ public:
 /*************/  
 class Buildable : public ghost::Constraint
 {
-	double required_error( const std::vector<ghost::Variable*>& variables ) const override;
+	std::vector<std::vector<bool>> _grid;
+	int _width;
+	int _height;
+	std::vector<Building> _buildings;
 	
 public:
-	Buildable( const std::vector<ghost::Variable*>& variables, std::vector<int> line );
+	Buildable( const std::vector<ghost::Variable*>& variables,
+	           const std::vector<std::vector<bool>>& _grid,
+	           int width,
+	           int height,
+	           const std::vector<Building>& buildings );
+	double required_error( const std::vector<ghost::Variable*>& variables ) const override;
 };
 
   
@@ -35,12 +51,19 @@ public:
 /**********/  
 class NoHoles : public ghost::Constraint
 {
-	double required_error( const std::vector<ghost::Variable*>& variables ) const override;
+	int _width;
+	int _height;
+	std::vector<Building> _buildings;
+	std::vector<int> _line;
+	std::deque<int> _queue_all;
+	std::deque<int> _queue_cc;
 
 public:
-	NoHoles( const std::vector<ghost::Variable*>& variables, std::vector<int> line );
-
-	//double postprocess_simulateCost( Building&, const int, vector<double>& );
+	NoHoles( const std::vector<ghost::Variable*>& variables,
+	         int width,
+	         int height,
+	         const std::vector<Building>& buildings );
+	double required_error( const std::vector<ghost::Variable*>& variables ) const override;
 };
 
   
@@ -49,8 +72,14 @@ public:
 /***********************/  
 class StartingTargetTiles : public ghost::Constraint
 {
-	double required_error( const std::vector<ghost::Variable*>& variables ) const override;
+	int _starting_tile;
+	int _target_tile;
+	std::vector<Building> _buildings;
 
 public:
-	StartingTargetTiles( const std::vector<ghost::Variable*>& variables, std::vector<int> line, int starting_tile, int target_tile );
+	StartingTargetTiles( const std::vector<ghost::Variable*>& variables,
+	                     int starting_tile,
+	                     int target_tile,
+	                     const std::vector<Building>& buildings );
+	double required_error( const std::vector<ghost::Variable*>& variables ) const override;
 };

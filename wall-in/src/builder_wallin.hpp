@@ -5,19 +5,19 @@
 
 class BuilderWallin : public ghost::ModelBuilder
 {
-	std::vector<int> _line; // grid where buildings are placed. -1 for unbuildable, 0 for free, n and -(n+1) for n buildings on the given (unbuildable if negative) tile
-	std::vector<int> _buildables; // domain: vector of indices (to convert to coordinates)
+	std::vector<std::vector<bool>> _grid;
 	int _width;
+	int _height;
 	int _starting_tile;
 	int _target_tile;
+	std::vector<int> _buildables; // domain: vector of indices (to convert to coordinates)
 	std::vector<Building> _buildings;
 
 public:
-	BuilderWallin( std::vector<int>& line,
-	               int width,
+	BuilderWallin( const std::vector<std::vector<bool>>& grid,
 	               int starting_tile,
 	               int target_tile,
-	               std::vector<Building>& buildings );
+	               const std::vector<Building>& buildings );
 
 	void declare_variables() override;
 	void declare_constraints() override;

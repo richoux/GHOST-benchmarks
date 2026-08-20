@@ -7,21 +7,25 @@
 #include "wallinObjective.hpp"
 #include "convert.hpp"
 
-BuilderWallin::BuilderWallin( std::vector<int>& line,
-                              int width,
+BuilderWallin::BuilderWallin( const std::vector<std::vector<bool>>& grid,                              
                               int starting_tile,
                               int target_tile,
-                              std::vector<Building>& buildings )
-	: ModelBuilder( true ),
-	  _line(line),
-	  _width(width),
+                              const std::vector<Building>& buildings )
+	: ModelBuilder(),
+	  _grid(grid),
+	  _width(grid[0].size()),
+	  _height(grid.size()),
 	  _starting_tile(starting_tile),
 	  _target_tile(target_tile),
 	  _buildings(buildings)
 {
 	// -1 means unselected building, i.e., not composing the wall.
 	_buildables.push_back( -1 );
-	std::copy_if( _line.begin(), _line.end(), std::back_inserter( _buildables ), [](int x) { return x == 0; });
+
+	for( int r = 0; r < _height; ++r )
+		for( int c = 0; c < _width; ++c )
+			if( grid[r][c] )
+				_buildables.push_back( coord_to_index( r, c, _width ) );
 }
 
 void BuilderWallin::declare_variables()

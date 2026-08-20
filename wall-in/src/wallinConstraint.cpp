@@ -1,532 +1,245 @@
+#include <algorithm>
+#include <vector>
+#include <deque>
+
 #include "wallinConstraint.hpp"
+#include "convert.hpp"
 
-WallinConstraint::WallinConstraint( const vector< Building > *variables, const WallinDomain *domain )
-	: Constraint<Building, WallinDomain>(variables, domain) { }
-    
-bool WallinConstraint::isWall() const
+/**************/
+/* NoOverlaps */
+/**************/  
+NoOverlaps::NoOverlaps( const std::vector<ghost::Variable*>& variables,
+                        int width,
+                        int height,
+                        const std::vector<Building>& buildings )
+	: Constraint( variables ),
+	  _width(width),
+	  _height(height),
+	  _buildings(buildings),
+	  _line(std::vector<bool>(_width*_height))
+{}
+
+double NoOverlaps::required_error( const std::vector<ghost::Variable*>& variables ) const
 {
-	auto startingBuildings = domain->buildingsAt( domain->getStartingTile() );
-	if( startingBuildings.size() != 1)
-		return false;
+	double error = 0.;
 
-	auto targetBuildings = domain->buildingsAt( domain->getTargetTile() );
-	if( targetBuildings.size() != 1)
-		return false;
-
-	// if same building on both the starting and target tile
-	if( *startingBuildings.begin() == *targetBuildings.begin() )
-		return true;
-
-	int nberTarget = *( targetBuildings.begin() );
-
-	int nberCurrent = *( startingBuildings.begin() );
-	Building current = variables->at( nberCurrent );
-	set< Building > toVisit = domain->getBuildingsAround( current, variables );
-	set< Building > visited;
-	set< Building > neighbors;
-    
-	visited.insert( current );
-
-	if( toVisit.find( variables->at( nberTarget ) ) != toVisit.end() )
-		return true;
-    
-	while( !toVisit.empty() )
+	std::fill( _line.begin(), _line.end(), true ); // true = free tile
+	for( int i = 0 ; i < variables.size() ; ++i )
 	{
-		auto first = *( toVisit.begin() );
-		current = first;
-		toVisit.erase( first );
-		neighbors = domain->getBuildingsAround( current, variables );
-      
-		for( const auto &n : neighbors )
-		{
-			if( n.getId() == nberTarget )
-				return true;
-			if( visited.find( n ) == visited.end() )
-				toVisit.insert( n );
-		}
-
-		visited.insert( current );
+		int start_r = index_to_row( variables[i]->get_value(), _width );
+		int start_c = index_to_column( variables[i]->get_value(), _width );
+		
+		for( int r = start_r ; r < start_r + _buildings[i].get_width() && r < _width ; ++r ) // don't check outside the width x height frame, that is not the purpose of this constraint
+			for( int c = start_c ; c < start_c + _buildings[i].get_height() && c < _height ; ++c )
+				if( _line[coord_to_index(r,c,_width)] )
+					_line[coord_to_index(r,c,_width)] = false;
+				else
+					++error;
 	}
 
-	return false;
+	return error;
 }
-
-
-/***********/
-/* Overlap */
-/***********/  
-Overlap::Overlap(const vector< Building > *variables, const WallinDomain *domain) 
-	: WallinConstraint(variables, domain) { }
-
-double Overlap::v_cost( vector<double> &varCost ) const
-{
-	// version 1: 1 failure = 1 cost
-	// return double( domain->failures().size() );
-
-	// version 2: 1 conflict = 1 cost (may have several conflicts into one failure)
-	double conflicts = 0.;
-
-	for( const auto &failures : domain->failures() )
-	{
-		int nbConflict = failures.second.size() - 1;
-		if( nbConflict > 0 && failures.second.find( "###" ) == string::npos )
-		{
-			conflicts += nbConflict;
-			set<int> setBuildings = domain->buildingsAt( failures.first );
-			for( const auto &id : setBuildings )
-				varCost[ id ] += nbConflict;
-		}
-	}
-
-	return conflicts;    
-}
-
-// v2, less efficient with the gap objective
-// double Overlap::v_cost( vector<double> &varCost ) const
-// {
-//   // version 1: 1 failure = 1 cost
-//   // return double( domain->failures().size() );
-
-//   // version 2: 1 conflict = 1 cost (may have several conflicts into one failure)
-//   double conflicts = 0.;
-
-//   for( const auto &failures : domain->failures() )
-//   {
-//     int nbConflict = failures.second.size() - 1;
-//     if( nbConflict > 0 && failures.second.find( "###" ) == string::npos )
-//     {
-// 	conflicts += (nbConflict * 2);
-// 	set<int> setBuildings = domain->buildingsAt( failures.first );
-// 	for( const auto &id : setBuildings )
-// 	  varCost[ id ] += (nbConflict * 2);
-//     }
-//   }
-
-//   return conflicts;    
-// }
-
-vector<double> Overlap::v_simulateCost( Building &oldBuilding,
-                                        const vector<int> &newPosition,
-                                        vector< vector<double> > &vecVarSimCosts,
-                                        shared_ptr< Objective< Building, WallinDomain > > objective )
-{
-	vector<double> simCosts( domain->getSize(), -1. );
-	int backup = oldBuilding.getValue();
-	int previousPos = 0;
-	int diff;
-
-	if( objective )
-		objective->resetHelper();
-        
-	for( const auto &pos : newPosition )
-	{
-		if( pos >= 1 && pos == previousPos + 1 )
-		{
-			vecVarSimCosts[pos + 1] = vecVarSimCosts[pos];
-	
-			diff = domain->shift( oldBuilding ).first;
-			if( diff != 0 )
-			{
-				set<int> setBuildings = domain->buildingsAt( pos + 1 );
-				for( const auto &id : setBuildings )
-					vecVarSimCosts[pos + 1][ id ] += diff;
-			}
-
-			simCosts[pos + 1] = simCosts[pos] + diff;
-		}
-		else
-		{ 
-			domain->clear( oldBuilding );
-			oldBuilding.setValue( pos );
-			domain->add( oldBuilding );
-
-			simCosts[pos + 1] = v_cost( vecVarSimCosts[pos + 1] );
-		}
-
-		if( objective )
-			objective->setHelper( oldBuilding, variables, domain );
-      
-		previousPos = pos;
-	}
-
-	domain->clear( oldBuilding );
-	oldBuilding.setValue( backup );
-	domain->add( oldBuilding );
-    
-	return simCosts;
-}
-
 
 /*************/
 /* Buildable */
 /*************/  
-Buildable::Buildable(const vector< Building > *variables, const WallinDomain *domain) 
-	: WallinConstraint(variables, domain) { }
+Buildable::Buildable( const std::vector<ghost::Variable*>& variables,
+                      const std::vector<std::vector<bool>>& _grid,
+                      int width,
+                      int height,
+                      const std::vector<Building>& buildings )
+	: Constraint( variables ),
+	  _grid(grid),
+	  _width(width),
+	  _height(height),
+	  _buildings(buildings)
+{}
 
-double Buildable::v_cost( vector<double> &varCost ) const
+double Buildable::required_error( const std::vector<ghost::Variable*>& variables ) const
 {
-	// count number of buildings misplaced on unbuildable tiles (denoted by ###)
-	double conflicts = 0.;
-	int nbConflict;
+	double error = 0.;
 
-	for( const auto &failures : domain->failures() )
+	for( int i = 0 ; i < variables.size() ; ++i )
 	{
-		if( failures.second.find( "###" ) != string::npos )
-		{
-			nbConflict = failures.second.size() - 3;
-			conflicts += nbConflict;
-			set<int> setBuildings = domain->buildingsAt( failures.first );
-			for( const auto &id : setBuildings )
-				varCost[ id ] += nbConflict;
-		}
+		int start_r = index_to_row( variables[i]->get_value(), _width );
+		int start_c = index_to_column( variables[i]->get_value(), _width );
+		
+		for( int r = start_r ; r < start_r + _buildings[i].get_width() ; ++r )
+			for( int c = start_c ; c < start_c + _buildings[i].get_height() ; ++c )
+				if( r >= _width || c >= _height || !_grid[r][c] )
+					++error;
 	}
 
-	return conflicts;    
+	return error;
 }
-
-// v2, less efficient with the gap objective
-// double Buildable::v_cost( vector<double> &varCost ) const
-// {
-//   // count number of buildings misplaced on unbuildable tiles (denoted by ###)
-//   double conflicts = 0.;
-//   int nbConflict;
-
-//   for( const auto &failures : domain->failures() )
-//   {
-//     if( failures.second.find( "###" ) != string::npos )
-//     {
-// 	nbConflict = failures.second.size() - 3;
-// 	conflicts += (nbConflict * 2);
-// 	set<int> setBuildings = domain->buildingsAt( failures.first );
-// 	for( const auto &id : setBuildings )
-// 	  varCost[ id ] += (nbConflict * 2);
-//     }
-//   }
-
-//   return conflicts;    
-// }
-
-vector<double> Buildable::v_simulateCost( Building &oldBuilding,
-                                          const vector<int> &newPosition,
-                                          vector< vector<double> > &vecVarSimCosts,
-                                          shared_ptr< Objective< Building, WallinDomain > > objective )
-{
-	vector<double> simCosts( domain->getSize(), -1. );
-	int backup = oldBuilding.getValue();
-	int previousPos = 0;
-	int diff;
-
-	if( objective )
-		objective->resetHelper();
-
-	for( const auto &pos : newPosition )
-	{
-		if( pos >= 1 && pos == previousPos + 1 )
-		{
-			vecVarSimCosts[pos + 1] = vecVarSimCosts[pos];
-	
-			diff = domain->shift( oldBuilding ).second;
-			if( diff != 0 )
-			{
-				set<int> setBuildings = domain->buildingsAt( pos + 1 );
-				for( const auto &id : setBuildings )
-					vecVarSimCosts[pos + 1][ id ] += diff;
-			}
-
-			simCosts[pos + 1] = simCosts[pos] + diff;
-		}
-		else
-		{ 
-			domain->clear( oldBuilding );
-			oldBuilding.setValue( pos );
-			domain->add( oldBuilding );
-
-			simCosts[pos + 1] = v_cost( vecVarSimCosts[pos + 1] );
-		}
-
-		if( objective )
-			objective->setHelper( oldBuilding, variables, domain );
-            
-		previousPos = pos;
-	}
-
-	domain->clear( oldBuilding );
-	oldBuilding.setValue( backup );
-	domain->add( oldBuilding );
-
-	return simCosts;
-}
-
 
 /**********/
 /* NoHoles */
 /**********/  
-NoHoles::NoHoles(const vector< Building > *variables, const WallinDomain *domain) 
-	: WallinConstraint(variables, domain) { }
+NoHoles::NoHoles(const std::vector<ghost::Variable*>& variables,
+                 int width,
+                 int height,
+                 const std::vector<Building>& buildings )
+	: Constraint( variables ),
+	  _width(width),
+	  _height(height),
+	  _buildings(buildings),
+	  _line(std::vector<int>(_width*_height))
+{}
 
-double NoHoles::v_cost( vector<double> &varCost ) const
+double NoHoles::required_error( const std::vector<ghost::Variable*>& variables ) const
 {
-	// cost = |buildings with one neighbor| - 1 + |buildings with no neighbors|
-	double conflicts = 0.;
-
-	if( !isWall() )
+	int connected_components = 0;
+	
+	std::fill( _line.begin(), _line.end(), -1 );
+	_queue_all.clear();
+	for( int i = 0 ; i < variables.size() ; ++i )
 	{
-		int nberNeighbors;
-		std::vector<int> oneNeighborBuildings;
-
-		for( const auto &building : *variables )
-		{
-			if( building.isSelected() )
+		int start_r = index_to_row( variables[i]->get_value(), _width );
+		int start_c = index_to_column( variables[i]->get_value(), _width );
+		
+		for( int r = start_r ; r < start_r + _buildings[i].get_width() && r < _width ; ++r ) // don't check outside the width x height frame, that is not the purpose of this constraint
+			for( int c = start_c ; c < start_c + _buildings[i].get_height() && c < _height ; ++c )
 			{
-				// if we don't have a wall, penalise all buildings on the domain.
-				++conflicts;
-				++varCost[ building.getId() ];
-	  
-				nberNeighbors = domain->countAround( building, variables );
+				_line[coord_to_index(r,c,_width)] = 0;
+				_queue_all.push_front( coord_to_index(r,c,_width) );
+			}
+	}
 
-				if( nberNeighbors == 0 || nberNeighbors > 2 ) // to change with Protoss and pylons
+	_queue_cc.clear();
+	int current_tile;
+	
+	while( !_queue_all.empty() )
+	{
+		do
+		{
+			current_tile = _queue_all.pop_back();
+		}
+		while( _line[ current_tile ] != 0 && !_queue_all.empty() );
+
+		if( _queue_all.empty() )
+			break;
+		
+		_queue_cc.push_front( current_tile );
+		++connected_components;
+
+		do
+		{
+			current_tile = _queue_cc.pop_back();
+			_line[ current_tile ] = connected_components;
+				
+			int row = index_to_row( current_tile, _width );
+			int column = index_to_column( current_tile, _width );
+
+			if( row - 1 >= 0 )
+			{
+				if( column - 1 >= 0 && _line[ coord_to_index( row-1, column-1, _width ) ] == 0 )
 				{
-					++conflicts;
-					++varCost[ building.getId() ];
+					_queue_cc.push_front( coord_to_index( row-1, column-1, _width ) );
+					_line[ coord_to_index( row-1, column-1, _width ) ] = -2; //in process
 				}
-				else
+
+				if( _line[ coord_to_index( row-1, column, _width ) ] == 0 )
 				{
-					if( nberNeighbors == 1 )
-						oneNeighborBuildings.push_back( building.getId() );
+					_queue_cc.push_front( coord_to_index( row-1, column, _width ) );
+					_line[ coord_to_index( row-1, column, _width ) ] = -2; //in process
+				}
+
+				if( column + 1 < _width && _line[ coord_to_index( row-1, column+1, _width ) ] == 0 )
+				{
+					_queue_cc.push_front( coord_to_index( row-1, column+1, _width ) );
+					_line[ coord_to_index( row-1, column+1, _width ) ] = -2; //in process
+				}
+			}
+
+			if( column - 1 >= 0 && _line[ coord_to_index( row, column-1, _width ) ] == 0 )
+			{
+				_queue_cc.push_front( coord_to_index( row, column-1, _width ) );
+				_line[ coord_to_index( row, column-1, _width ) ] = -2; //in process
+			}
+			
+			if( column + 1 < _width && _line[ coord_to_index( row, column+1, _width ) ] == 0 )
+			{
+				_queue_cc.push_front( coord_to_index( row, column+1, _width ) );
+				_line[ coord_to_index( row, column+1, _width ) ] = -2; //in process
+			}
+			
+			if( row + 1 < _height )
+			{
+				if( column - 1 >= 0 && _line[ coord_to_index( row+1, column-1, _width ) ] == 0 )
+				{
+					_queue_cc.push_front( coord_to_index( row+1, column-1, _width ) );
+					_line[ coord_to_index( row+1, column-1, _width ) ] = -2; //in process
+				}
+
+				if( _line[ coord_to_index( row+1, column, _width ) ] == 0 )
+				{
+					_queue_cc.push_front( coord_to_index( row+1, column, _width ) );
+					_line[ coord_to_index( row+1, column, _width ) ] = -2; //in process
+				}
+
+				if( column + 1 < _width && _line[ coord_to_index( row+1, column+1, _width ) ] == 0 )
+				{
+					_queue_cc.push_front( coord_to_index( row+1, column+1, _width ) );
+					_line[ coord_to_index( row+1, column+1, _width ) ] = -2; //in process
 				}
 			}
 		}
-
-		if( oneNeighborBuildings.size() > 2 ) // for latter: pylons can be alone, or have 1 neighbor only
-		{
-			for( const auto &b : oneNeighborBuildings )
-				if( ! domain->isStartingOrTargetTile( b ) )
-				{
-					++conflicts;
-					++varCost[ b ];
-				}
-		}
+		while( !_queue_cc.empty() );
 	}
-    
-	return conflicts;    
-}
-
-// v2, less efficient with the gap objective
-// double NoHoles::v_cost( vector<double> &varCost ) const
-// {
-//   // cost = |buildings with one neighbor| - 1 + |buildings with no neighbors|
-//   double conflicts = 0.;
-    
-//   if( !isWall() )
-//   {
-//     int nberNeighbors;
-
-//     for( const auto &building : *variables )
-//     {
-// 	if( building.isSelected() )
-// 	{
-// 	  // if we don't have a wall, penalise all buildings on the domain->
-// 	  ++conflicts;
-// 	  ++varCost[ building.getId() ];
-	  
-// 	  if( !domain->isStartingOrTargetTile( building.getId() ) )
-// 	  {
-// 	    nberNeighbors = domain->countAround( building, variables );
-	    
-// 	    if( nberNeighbors == 0 || nberNeighbors > 2 ) // to change with Protoss and pylons
-// 	    {
-// 	      conflicts += 2;
-// 	      varCost[ building.getId() ] += 2;
-// 	    }
-// 	  }
-// 	}
-// 	// to penalyse buildings not on the domain
-// 	else
-// 	{
-// 	  conflicts += 2;
-// 	  varCost[ building.getId() ] += 2;
-// 	}
-//     }
-//   }
-    
-//   return conflicts;    
-// }
-
-double NoHoles::postprocess_simulateCost( Building &oldBuilding, const int newPosition, vector<double> &varSimCost )
-{
-	int backup = oldBuilding.getValue();
-
-	domain->clear( oldBuilding );
-
-	oldBuilding.setValue( newPosition );
-	domain->add( oldBuilding );
-
-	double simCost = v_cost( varSimCost );
-
-	domain->clear( oldBuilding );
-
-	oldBuilding.setValue( backup );
-	domain->add( oldBuilding );
-
-	return simCost;
+	
+	return static_cast<double>(connected_components - 1);
 }
 
   
 /***********************/
 /* StartingTargetTiles */
 /***********************/  
-StartingTargetTiles::StartingTargetTiles( const vector< Building > *variables, const WallinDomain *domain ) 
-	: WallinConstraint(variables, domain)
+StartingTargetTiles::StartingTargetTiles(const std::vector<ghost::Variable*>& variables,
+                                         int starting_tile,
+                                         int target_tile,
+                                         const std::vector<Building>& buildings )
+	: Constraint( variables ),
+	  _starting_tile(starting_tile),
+	  _target_tile(target_tile),
+	  _buildings(buildings)
+{}
+
+double StartingTargetTiles::required_error( const std::vector<ghost::Variable*>& variables ) const
 {
-	for( const auto &b : *variables )
-		mapBuildings[b.getId()] = const_cast<Building*>(&b);
+	double error = 2.;
+	bool starting_tile_covered = false;
+	bool target_tile_covered = false;
+
+	int starting_tile_r = index_to_row( _starting_tile, _width );
+	int starting_tile_c = index_to_column( _starting_tile, _width );
+
+	int target_tile_r = index_to_row( _target_tile, _width );
+	int target_tile_c = index_to_column( _target_tile, _width );
+
+	for( int i = 0 ; i < variables.size() ; ++i )
+	{
+		int start_r = index_to_row( variables[i]->get_value(), _width );
+		int start_c = index_to_column( variables[i]->get_value(), _width );
+		int end_r = start_r + _buildings[i].get_width();
+		int end_c = start_c + _buildings[i].get_height();
+
+		if( !starting_tile_covered
+		    && start_r <= starting_tile_r && starting_tile_r <= end_r
+		    && start_c <= starting_tile_c && starting_tile_c <= end_c	)
+			starting_tile_covered = true;
+		
+		if( !target_tile_covered
+		    && start_r <= target_tile_r && target_tile_r <= end_r
+		    && start_c <= target_tile_c && target_tile_c <= end_c	)
+			target_tile_covered = true;
+	}
+
+	if( starting_tile_covered )
+		--error;
+
+	if( target_tile_covered )
+		--error;
+
+	return error;
 }
-
-double StartingTargetTiles::v_cost( vector<double> &varCost ) const
-{
-	// no building on one of these two tiles: cost of the tile = 6
-	// a building with no or with 2 or more neighbors: cost of the tile = 3
-	// two or more buildings on one of these tile: increasing penalties.
-	double conflicts = 0.;
-
-	set<int> startingBuildings = domain->buildingsAt( domain->getStartingTile() );
-	set<int> targetBuildings = domain->buildingsAt( domain->getTargetTile() );
-
-	Building *b;
-	int neighbors;
-
-	// if same building on both the starting and target tile
-	if( startingBuildings.size() == 1 && targetBuildings.size() == 1 && *startingBuildings.begin() == *targetBuildings.begin() )
-		return 0.;
-
-	if( startingBuildings.empty() )
-	{
-		// penalize buildings not placed on the domain
-		for( const auto &v : *variables )
-			if( !v.isSelected() )
-			{
-				varCost[ v.getId() ] += 2;
-				conflicts += 2;
-			}
-	}
-	else
-	{
-		for( const int &bId : startingBuildings )
-		{
-			b = mapBuildings.at(bId);
-			neighbors = domain->countAround( *b, variables );
-
-			if( neighbors != 1 )
-			{
-				conflicts += 2;
-				varCost[ bId ] += 2;
-			}
-		}
-	}
-
-	if( targetBuildings.empty() )
-	{      
-		// penalize buildings not placed on the domain
-		for( const auto &v : *variables )
-			if( !v.isSelected() )
-			{
-				varCost[ v.getId() ] += 2;
-				conflicts += 2;
-			}
-	}
-	else
-	{
-		for( const int &bId : targetBuildings )
-		{
-			b = mapBuildings.at(bId);
-			neighbors = domain->countAround( *b, variables );
-
-			if( neighbors != 1 )
-			{
-				conflicts += 2;
-				varCost[ bId ] += 2;
-			}
-
-		}
-	}
-      
-	return conflicts;    
-}
-
-// v2, less efficient with the gap objective
-// double StartingTargetTiles::v_cost( vector<double> &varCost ) const
-// {
-//   // no building on one of these two tiles: cost of the tile = 6
-//   // a building with no or with 2 or more neighbors: cost of the tile = 3
-//   // two or more buildings on one of these tile: increasing penalties.
-//   double conflicts = 0.;
-
-//   set<int> startingBuildings = domain->buildingsAt( domain->getStartingTile() );
-//   set<int> targetBuildings = domain->buildingsAt( domain->getTargetTile() );
-
-//   Building *b;
-//   int neighbors;
-
-//   // if same building on both the starting and target tile
-//   if( startingBuildings.size() == 1 && targetBuildings.size() == 1 && *startingBuildings.begin() == *targetBuildings.begin() )
-//     return 0.;
-
-//   bool penalty = false;
-    
-//   if( startingBuildings.empty() )
-//   {
-//     // penalize buildings not placed on the domain
-//     for( const auto &v : *variables )
-// 	if( !v.isSelected() )
-// 	{
-// 	  varCost[ v.getId() ] += 5;
-// 	  conflicts += 5;
-// 	}
-//   }
-//   else
-//   {
-//     for( const int &bId : startingBuildings )
-//     {
-// 	b = mapBuildings.at(bId);
-// 	neighbors = domain->countAround( *b, variables );
-
-// 	if( neighbors != 1 )
-// 	  penalty = true;
-//     }
-//   }
-
-//   if( targetBuildings.empty() )
-//   {      
-//     // penalize buildings not placed on the domain
-//     for( const auto &v : *variables )
-// 	if( !v.isSelected() )
-// 	{
-// 	  varCost[ v.getId() ] += 5;
-// 	  conflicts += 5;
-// 	}
-//   }
-//   else
-//   {
-//     for( const int &bId : targetBuildings )
-//     {
-// 	b = mapBuildings.at(bId);
-// 	neighbors = domain->countAround( *b, variables );
-
-// 	if( neighbors != 1 )
-// 	  penalty = true;
-//     }
-//   }
-
-//   if( penalty )
-//   {
-//     for( const auto &v : *variables )
-// 	if( v.isSelected()
-// 	    && ( !domain->isStartingOrTargetTile( v.getId() ) || !domain->isNeightborOfSTTBuildings( v, *variables ) ) )
-// 	{
-// 	  varCost[ v.getId() ] += 2;
-// 	  conflicts += 2;
-// 	}
-//   }
-      
-//   return conflicts;    
-// }

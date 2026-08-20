@@ -1,4 +1,6 @@
-#include <vector>
+#include <pair>
 
-std::vector<int> make_line_from_grid( const std::vector< std::vector<bool> >& grid );
-int coord_to_index( int row, int column, int width );
+inline int coord_to_index( int row, int column, int width ) { return row * width + column; }
+inline std::pair<int,int> index_to_coord( int index, int width ) { return make_pair<int,int>( index / width, index % width ); }
+inline int index_to_row( int index, int width ) { return index / width; }
+inline int index_to_column( int index, int width ) { return index % width; }
