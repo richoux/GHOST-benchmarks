@@ -31,15 +31,20 @@ BuilderWallin::BuilderWallin( const std::vector<std::vector<bool>>& grid,
 void BuilderWallin::declare_variables()
 {
 	// we could also filter out all values that would imply recovering an unbuildable tile.
-	create_variables( _buildings.size(), _buildables );
+	create_n_variables( _buildings.size(), _buildables );
 }
 
 void BuilderWallin::declare_constraints()
 {
-	constraints.emplace_back( std::make_shared<NoRepeat>( pair ) );
+	constraints.emplace_back( std::make_shared<NoOverlaps>( variables, _width, _height, _buildings ) );
+	constraints.emplace_back( std::make_shared<Buildable>( variables, _grid, _width, _height, _buildings ) );
+	constraints.emplace_back( std::make_shared<NoHoles>( variables, _width, _height, _buildings ) );
+	constraints.emplace_back( std::make_shared<StartingTargetTiles>( variables, _width, _height, _starting_tile, _target_tile, _buildings ) );
 }
 
 void BuilderWallin::declare_objective()
 {
-	objective = make_shared<MinSpan>( variables, _exhaustive_inputs );
+	objective = make_shared<MinNumberGaps>( variables, _grid, _width, _height, _buildings );
+	// objective = make_shared<MinBuildings>( variables );
+	// objective = make_shared<MinTechTree>( variables, _buildings );
 }

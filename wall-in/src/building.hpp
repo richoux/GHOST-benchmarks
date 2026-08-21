@@ -3,6 +3,19 @@
 #include <string>
 #include "races.hpp"
 
+enum BuildingType{ Academy,
+                   Armory,
+                   Barracks,
+                   Bunker,
+                   CommandCenter,
+                   EngineeringBay,
+                   Factory,
+                   MissileTurret,
+                   ScienceFacility,
+                   Starport,
+                   SupplyDepot };
+
+
 class Building
 {
 	int _width;
@@ -29,10 +42,10 @@ public:
 	inline int get_gap_bottom()	const	{ return _gap_bottom; }
 	inline int get_gap_left()	  const	{ return _gap_left; }
 
-	inline Race get_race() const { return race; }
+	inline Race get_race() const { return _race; }
 	inline std::string get_race_string()	const	
 	{ 
-		switch( race ) 
+		switch( _race ) 
 		{
 		case Terran: return "Terran";
 		case Protoss: return "Protoss";
@@ -42,7 +55,10 @@ public:
 	}
     
 	inline int get_tree_depth()	const	{ return _tree_depth; }
-	inline std::string get_name()    const { return _name; }
+	inline std::string get_name() const { return _name; }
     
-	friend std::ostream& operator<<( std::ostream&, const Building& );
+	// friend std::ostream& operator<<( std::ostream&, const Building& );
 };
+
+
+Building make_building( BuildingType type );

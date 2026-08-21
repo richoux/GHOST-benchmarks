@@ -3,6 +3,8 @@
 #include <vector>
 #include <ghost/model_builder.hpp>
 
+#include "building.hpp"
+
 class BuilderWallin : public ghost::ModelBuilder
 {
 	std::vector<std::vector<bool>> _grid;

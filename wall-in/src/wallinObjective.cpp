@@ -1,362 +1,266 @@
 #include <vector>
-#include <map>
-#include <memory>
 #include <algorithm>
-#include <limits>
-#include <cmath>
-#include <chrono>
-#include <ctime>
-#include <numeric>
 
 #include "wallinObjective.hpp"
 #include "building.hpp"
-#include "wallinConstraint.hpp"
+#include "convert.hpp"
 
-using namespace std;
+// double WallinObjective::v_postprocessSatisfaction( vector< Building > *vecVariables,
+//                                                    WallinDomain *domain,
+//                                                    double &bestCost,
+//                                                    vector< Building > &bestSolution,
+//                                                    double sat_timeout ) const 
+// {
+// 	chrono::time_point<chrono::high_resolution_clock> startPostprocess = chrono::high_resolution_clock::now(); 
 
-int WallinObjective::sizeWall = numeric_limits<int>::max();
-  
-/*******************/
-/* WallinObjective */
-/*******************/
-WallinObjective::WallinObjective( const string &name ) : Objective<Building, WallinDomain>( name ) { }
+// 	bool change;
+// 	double cost;
+// 	NoHoles nh( vecVariables, domain );
 
-void WallinObjective::v_setHelper( const Building &b, const vector< Building > *vecVariables, const WallinDomain *domain )
-{
-	if( b.isSelected() )
-	{
-		int pos = b.getValue();
-		heuristicValueHelper.at( pos ) = domain->distanceToTarget( pos );
-	}
-}
-
-double WallinObjective::v_postprocessSatisfaction( vector< Building > *vecVariables,
-                                                   WallinDomain *domain,
-                                                   double &bestCost,
-                                                   vector< Building > &bestSolution,
-                                                   double sat_timeout ) const 
-{
-	chrono::time_point<chrono::high_resolution_clock> startPostprocess = chrono::high_resolution_clock::now(); 
-
-	bool change;
-	double cost;
-	NoHoles nh( vecVariables, domain );
-
-	// find all buildings accessible from the starting building and remove all others
-	int nberCurrent = *( domain->buildingsAt( domain->getStartingTile() ).begin() );
-	Building current = vecVariables->at( nberCurrent );
-	set< Building > toVisit = domain->getBuildingsAround( current, vecVariables );
-	set< Building > visited;
-	set< Building > neighbors;
+// 	// find all buildings accessible from the starting building and remove all others
+// 	int nberCurrent = *( domain->buildingsAt( domain->getStartingTile() ).begin() );
+// 	Building current = vecVariables->at( nberCurrent );
+// 	set< Building > toVisit = domain->getBuildingsAround( current, vecVariables );
+// 	set< Building > visited;
+// 	set< Building > neighbors;
     
-	visited.insert( current );
+// 	visited.insert( current );
     
-	while( !toVisit.empty() )
-	{
-		auto first = *( toVisit.begin() );
-		current = first;
-		toVisit.erase( first );
-		neighbors = domain->getBuildingsAround( current, vecVariables );
+// 	while( !toVisit.empty() )
+// 	{
+// 		auto first = *( toVisit.begin() );
+// 		current = first;
+// 		toVisit.erase( first );
+// 		neighbors = domain->getBuildingsAround( current, vecVariables );
       
-		visited.insert( current );
+// 		visited.insert( current );
       
-		for( const auto &n : neighbors )
-			if( visited.find( n ) == visited.end() )
-				toVisit.insert( n );
-	}
+// 		for( const auto &n : neighbors )
+// 			if( visited.find( n ) == visited.end() )
+// 				toVisit.insert( n );
+// 	}
     
-	// remove all unreachable buildings from the starting building out of the domain
-	for( auto &b : *vecVariables )
-		if( visited.find( b ) == visited.end() )
-		{
-			domain->clear( b );
-			b.setValue( -1 );
-		}
+// 	// remove all unreachable buildings from the starting building out of the domain
+// 	for( auto &b : *vecVariables )
+// 		if( visited.find( b ) == visited.end() )
+// 		{
+// 			domain->clear( b );
+// 			b.setValue( -1 );
+// 		}
 
-	vector<double> varSimCost( vecVariables->size() );
+// 	vector<double> varSimCost( vecVariables->size() );
 
-	// clean wall from unnecessary buildings.
-	do
-	{
-		for( auto &b : *vecVariables )
-			if( ! domain->isStartingOrTargetTile( b.getId() ) )
-			{
-				change = false;
-				if( b.isSelected() )
-				{
-					cost = 0.;
-					fill( varSimCost.begin(), varSimCost.end(), 0. );
+// 	// clean wall from unnecessary buildings.
+// 	do
+// 	{
+// 		for( auto &b : *vecVariables )
+// 			if( ! domain->isStartingOrTargetTile( b.getId() ) )
+// 			{
+// 				change = false;
+// 				if( b.isSelected() )
+// 				{
+// 					cost = 0.;
+// 					fill( varSimCost.begin(), varSimCost.end(), 0. );
 	      
-					cost = nh.postprocess_simulateCost( b, -1, varSimCost );
+// 					cost = nh.postprocess_simulateCost( b, -1, varSimCost );
 	      
-					if( cost == 0. )
-					{
-						domain->clear( b );
-						b.setValue( -1 );
-						change = true;
-					}	  
-				}
-			}
-	} while( change );
+// 					if( cost == 0. )
+// 					{
+// 						domain->clear( b );
+// 						b.setValue( -1 );
+// 						change = true;
+// 					}	  
+// 				}
+// 			}
+// 	} while( change );
 
-	double objectiveCost = this->cost( vecVariables, domain );
-	int currentSizeWall = std::count_if( vecVariables->begin(), vecVariables->end(), []( const Building &b ){ return b.isSelected(); });
+// 	double objectiveCost = this->cost( vecVariables, domain );
+// 	int currentSizeWall = std::count_if( vecVariables->begin(), vecVariables->end(), []( const Building &b ){ return b.isSelected(); });
 
-	if( objectiveCost < bestCost || ( objectiveCost == bestCost && currentSizeWall < sizeWall ) )
-	{
-		sizeWall = currentSizeWall;
-		bestCost = objectiveCost;
-		for( int i = 0; i < vecVariables->size(); ++i )
-			bestSolution[i] = vecVariables->at(i);
-	}
+// 	if( objectiveCost < bestCost || ( objectiveCost == bestCost && currentSizeWall < sizeWall ) )
+// 	{
+// 		sizeWall = currentSizeWall;
+// 		bestCost = objectiveCost;
+// 		for( int i = 0; i < vecVariables->size(); ++i )
+// 			bestSolution[i] = vecVariables->at(i);
+// 	}
 
-	return (chrono::high_resolution_clock::now() - startPostprocess).count();
-}
+// 	return (chrono::high_resolution_clock::now() - startPostprocess).count();
+// }
 
-double WallinObjective::v_postprocessOptimization( vector< Building > *vecVariables,
-                                                   WallinDomain *domain,
-                                                   double &bestCost,
-                                                   double opt_timeout ) 
-{
-	chrono::time_point<chrono::high_resolution_clock> startPostprocess = chrono::high_resolution_clock::now(); 
-	chrono::duration<double,micro> postprocesstimer(0);
+// double WallinObjective::v_postprocessOptimization( vector< Building > *vecVariables,
+//                                                    WallinDomain *domain,
+//                                                    double &bestCost,
+//                                                    double opt_timeout ) 
+// {
+// 	chrono::time_point<chrono::high_resolution_clock> startPostprocess = chrono::high_resolution_clock::now(); 
+// 	chrono::duration<double,micro> postprocesstimer(0);
 
-	vector<int> tabuList( vecVariables->size() );
-	std::fill( tabuList.begin(), tabuList.end(), 0 );
+// 	vector<int> tabuList( vecVariables->size() );
+// 	std::fill( tabuList.begin(), tabuList.end(), 0 );
 
-	multimap<int, Building> buildingSameSize;
+// 	multimap<int, Building> buildingSameSize;
     
-	for( const auto &v : *vecVariables )
-		buildingSameSize.insert( make_pair( v.getSurface(), v ) );
+// 	for( const auto &v : *vecVariables )
+// 		buildingSameSize.insert( make_pair( v.getSurface(), v ) );
 
-	Building *oldVariable;
-	vector<int> goodVar;
-	Building *toSwap;
-	bool mustSwap;
+// 	Building *oldVariable;
+// 	vector<int> goodVar;
+// 	Building *toSwap;
+// 	bool mustSwap;
     
-	bestCost = v_cost( vecVariables, domain );
-	double currentCost = bestCost;
+// 	bestCost = v_cost( vecVariables, domain );
+// 	double currentCost = bestCost;
 
-	int postprocessTimeLimit = std::max( 1, static_cast<int>( ceil( static_cast<double>(opt_timeout) / 100) ) );
+// 	int postprocessTimeLimit = std::max( 1, static_cast<int>( ceil( static_cast<double>(opt_timeout) / 100) ) );
 
-	while( (postprocesstimer = chrono::high_resolution_clock::now() - startPostprocess).count() < postprocessTimeLimit && bestCost > 0 )
-	{
-		goodVar.clear();
+// 	while( (postprocesstimer = chrono::high_resolution_clock::now() - startPostprocess).count() < postprocessTimeLimit && bestCost > 0 )
+// 	{
+// 		goodVar.clear();
 
-		for( int i = 0; i < tabuList.size(); ++i )
-		{
-			if( tabuList[i] <= 1 )
-				tabuList[i] = 0;
-			else
-				--tabuList[i];
-		}
+// 		for( int i = 0; i < tabuList.size(); ++i )
+// 		{
+// 			if( tabuList[i] <= 1 )
+// 				tabuList[i] = 0;
+// 			else
+// 				--tabuList[i];
+// 		}
 
-		for( int i = 0; i < vecVariables->size(); ++i )
-		{
-			if( tabuList[i] == 0 )
-				goodVar.push_back( i );
-		}
+// 		for( int i = 0; i < vecVariables->size(); ++i )
+// 		{
+// 			if( tabuList[i] == 0 )
+// 				goodVar.push_back( i );
+// 		}
 
-		if( goodVar.empty() )
-			for( int i = 0; i < vecVariables->size(); ++i )
-				goodVar.push_back( i );	
+// 		if( goodVar.empty() )
+// 			for( int i = 0; i < vecVariables->size(); ++i )
+// 				goodVar.push_back( i );	
 
-		int index = v_heuristicVariable( goodVar, vecVariables, domain );
-		oldVariable = &vecVariables->at( index );
-		auto surface = buildingSameSize.equal_range( oldVariable->getSurface() );
+// 		int index = v_heuristicVariable( goodVar, vecVariables, domain );
+// 		oldVariable = &vecVariables->at( index );
+// 		auto surface = buildingSameSize.equal_range( oldVariable->getSurface() );
 	
-		for( auto &it = surface.first; it != surface.second && bestCost != 0; ++it )
-		{
-			mustSwap = false;
-			if( it->second.getId() != oldVariable->getId() )
-			{
-				domain->swap( vecVariables->at(it->second.getId()), *oldVariable );
-				currentCost = v_cost( vecVariables, domain );
-				if( currentCost < bestCost )
-				{
-					bestCost = currentCost;
-					toSwap = &( vecVariables->at( it->second.getId() ) );
-					mustSwap = true;
-				}
+// 		for( auto &it = surface.first; it != surface.second && bestCost != 0; ++it )
+// 		{
+// 			mustSwap = false;
+// 			if( it->second.getId() != oldVariable->getId() )
+// 			{
+// 				domain->swap( vecVariables->at(it->second.getId()), *oldVariable );
+// 				currentCost = v_cost( vecVariables, domain );
+// 				if( currentCost < bestCost )
+// 				{
+// 					bestCost = currentCost;
+// 					toSwap = &( vecVariables->at( it->second.getId() ) );
+// 					mustSwap = true;
+// 				}
 
-				domain->swap( vecVariables->at( it->second.getId() ), *oldVariable );
-			}
+// 				domain->swap( vecVariables->at( it->second.getId() ), *oldVariable );
+// 			}
 	  
-			if( mustSwap )
-				domain->swap( *toSwap, *oldVariable );
-		}
+// 			if( mustSwap )
+// 				domain->swap( *toSwap, *oldVariable );
+// 		}
 
-		tabuList[ index ] = 2;
-	}
+// 		tabuList[ index ] = 2;
+// 	}
 
-	return postprocesstimer.count();
-}
+// 	return postprocesstimer.count();
+// }
 
   
-/**********/
-/* GapObj */
-/**********/
-GapObj::GapObj() : WallinObjective( "wallinGap" ) { }
+/*****************/
+/* MinNumberGaps */
+/*****************/
+MinNumberGaps::MinNumberGaps( const std::vector<ghost::Variable>& variables,
+                              const std::vector<std::vector<bool>>& grid,
+                              int width,
+                              int height,
+                              const std::vector<Building>& buildings )
+	: Minimize( variables ),
+	  _grid(grid),
+	  _width(width),
+	  _height(height),
+	  _buildings(buildings)
+{ }
 
-double GapObj::v_cost( vector< Building > *vecVariables, WallinDomain *domain ) const
+double MinNumberGaps::required_cost( const std::vector<ghost::Variable*>& variables ) const
 {
-	int gaps = 0;
-    
-	vector< Building > toVisit = *vecVariables;
+	double cost = 0.;
 
-	while( !toVisit.empty() )
+	for( int i = 0 ; i < variables.size() ; ++i )
 	{
-		auto b = *(toVisit.begin());
-		gaps += gapSize( b, &toVisit, domain );
-		toVisit.erase( toVisit.begin() );
+		int var_i_row = index_to_row( i, _width );
+		int var_i_col = index_to_column( i, _width );
+		for( int j = i+1 ; j < variables.size() ; ++j )
+		{
+			int var_j_row = index_to_row( j, _width );
+			int var_j_col = index_to_column( j, _width );
+			
+			// when j is above i
+			if( var_i_row == var_j_row + _buildings[j].get_height()
+			    && var_j_col + _buildings[j].get_width() >= var_i_col && var_j_col <= var_i_col + _buildings[i].get_width() )
+			{
+				if( _buildings[i].get_gap_top() + _buildings[j].get_gap_bottom() >= 16 ) // 16 pixels is a gap large enough to let a zergling go through.
+					++cost;
+			}
+
+			// when j is below i
+			if( var_i_row + _buildings[i].get_height() == var_j_row
+			    && var_j_col + _buildings[j].get_width() >= var_i_col && var_j_col <= var_i_col + _buildings[i].get_width() )
+			{
+				if( _buildings[i].get_gap_bottom() + _buildings[j].get_gap_top() >= 16 )
+					++cost;
+			}
+
+			// when j is on the left of i
+			if( var_i_col == var_j_col + _buildings[j].get_width()
+			    && var_j_row + _buildings[j].get_height() >= var_i_row && var_j_row <= var_i_row + _buildings[i].get_height() )
+			{
+				if( _buildings[i].get_gap_left() + _buildings[j].get_gap_right() >= 16 )
+					++cost;
+			}
+
+			// when j is on the right of i
+			if( var_i_col + _buildings[i].get_width() == var_j_col 
+			    && var_j_row + _buildings[j].get_height() >= var_i_row && var_j_row <= var_i_row + _buildings[i].get_height() )
+			{
+				if( _buildings[i].get_gap_right() + _buildings[j].get_gap_left() >= 16 )
+					++cost;
+			}
+		}
 	}
 
-	return gaps;
+	return cost;
 }
 
-int GapObj::v_heuristicVariable( const vector< int > &vecId, const vector< Building > *vecVariables, WallinDomain *domain )
+/****************/
+/* MinBuildings */
+/****************/
+MinBuildings::MinBuildings( const std::vector<ghost::Variable>& variables )
+	: Minimize( variables )
+{ }
+
+double MinBuildings::required_cost( const std::vector<ghost::Variable*>& variables ) const
 {
-	vector<int> worstVec;
-    
-	auto worst =  max_element(vecId.begin(),
-	                          vecId.end(),
-	                          [&](int v1, int v2)
-	                          {return gapSize( vecVariables->at(v1), vecVariables, domain ) < gapSize( vecVariables->at(v2), vecVariables, domain );} );
-    
-	int worstGap = gapSize( vecVariables->at(*worst), vecVariables, domain );
-    
-	for( const auto v : vecId )
-		if( gapSize( vecVariables->at(v), vecVariables, domain ) == worstGap )
-			worstVec.push_back(v);
-    
-	int index;
-    
-	if( worstVec.size() > 1 )
-		index = worstVec[ randomVar.getRandNum( worstVec.size() ) ];
-	else
-		index = *(worst);
-    
-	return index; 
-}
-
-void GapObj::v_setHelper( const Building &b, const vector< Building > *vecVariables, const WallinDomain *domain )
-{
-	if( b.isSelected() )
-		heuristicValueHelper.at( b.getValue() ) = gapSize( b, vecVariables, domain );
-}
-
-int GapObj::gapSize( const Building &b, const vector< Building > *vecVariables, const WallinDomain *domain ) const
-{
-	if( !b.isSelected() )
-		return 0;
-
-	int gaps = 0;
-	set< Building > neighbors = domain->getBuildingsAbove( b, vecVariables );
-
-	gaps += count_if( neighbors.begin(), 
-	                  neighbors.end(), 
-	                  [&](const Building &n){return b.getGapTop() + n.getGapBottom() >= 16;});
-    
-	neighbors = domain->getBuildingsOnRight( b, vecVariables );
-	gaps += count_if( neighbors.begin(), 
-	                  neighbors.end(), 
-	                  [&](const Building &n){return b.getGapRight() + n.getGapLeft() >= 16;});
-    
-	neighbors = domain->getBuildingsBelow( b, vecVariables );
-	gaps += count_if( neighbors.begin(), 
-	                  neighbors.end(), 
-	                  [&](const Building &n){return b.getGapBottom() + n.getGapTop() >= 16;});
-    
-	neighbors = domain->getBuildingsOnLeft( b, vecVariables );
-	gaps += count_if( neighbors.begin(), 
-	                  neighbors.end(), 
-	                  [&](const Building &n){return b.getGapLeft() + n.getGapRight() >= 16;});
-
-    
-	return gaps;
+	return static_cast<double>( std::count_if( variables.begin(), variables.end(), [](auto var){ return var->get_value() != 1; }) );
 }
 
 /***************/
-/* BuildingObj */
+/* MinTechTree */
 /***************/
-BuildingObj::BuildingObj() : WallinObjective( "wallinBuilding" ) { }
+MinTechTree::MinTechTree( const std::vector<ghost::Variable>& variables,
+                          const std::vector<Building>& buildings ) 
+	: Minimize( variables ),
+	  _buildings(buildings)
+{ }
 
-double BuildingObj::v_cost( vector< Building > *vecVariables, WallinDomain *domain ) const
+double MinTechTree::required_cost( const std::vector<ghost::Variable*>& variables ) const
 {
-	return count_if( vecVariables->begin(), 
-	                 vecVariables->end(), 
-	                 []( const Building &b ){ return b.isSelected(); });
-}
+	int max_tree_depth = 0;
 
-int BuildingObj::v_heuristicVariable( const vector< int > &vecId, const vector< Building > *vecVariables, WallinDomain *domain ) 
-{
-	vector< int > varOnDomain( vecId.size() );
-    
-	auto it = copy_if( vecId.begin(),
-	                   vecId.end(),
-	                   varOnDomain.begin(),
-	                   [&](int b){return vecVariables->at(b).isSelected();} );
+	for( int i = 0 ; i < variables.size() ; ++i )
+		if( variables[i]->get_value() != -1 )
+			max_tree_depth = std::max( max_tree_depth, _buildings[i].get_tree_depth() );
 
-	int size = distance( varOnDomain.begin(), it );
-
-	if( it == varOnDomain.begin() )
-	{
-		varOnDomain = vecId;
-		size = vecId.size();
-	}
-
-	return varOnDomain[ randomVar.getRandNum( size ) ];    
-}
-
-double BuildingObj::v_postprocessOptimization( vector< Building > *vecVariables,
-                                               WallinDomain *domain,
-                                               double &bestCost,
-                                               double opt_timeout ) { return 0.; }
-
-/***************/
-/* TechTreeObj */
-/***************/
-TechTreeObj::TechTreeObj() : WallinObjective( "wallinTechtree" ) { }
-
-double TechTreeObj::v_cost( vector< Building > *vecVariables, WallinDomain *domain ) const
-{
-	vector< Building > onDomain( vecVariables->size() );
-    
-	auto it = copy_if( vecVariables->begin(),
-	                   vecVariables->end(), 
-	                   onDomain.begin(),
-	                   [](const Building &b){ return b.isSelected(); } );
-	onDomain.resize( distance( onDomain.begin(), it ) );
-
-	auto max =  max_element( onDomain.begin(), 
-	                         onDomain.end(), 
-	                         [](const Building &b1, const Building &b2)
-	                         {return b1.getTreedepth() < b2.getTreedepth();} );
-
-	return max->getTreedepth();
-}
-
-int TechTreeObj::v_heuristicVariable( const vector< int > &vecId, const vector< Building > *vecVariables, WallinDomain *domain )
-{
-	auto min =  min_element( vecId.begin(), 
-	                         vecId.end(), 
-	                         [&](int b1, int b2)
-	                         { return vecVariables->at(b1).getTreedepth() < vecVariables->at(b2).getTreedepth(); } );
-
-	vector< int > varMinTech( vecId.size() );
-    
-	auto it = copy_if( vecId.begin(),
-	                   vecId.end(),
-	                   varMinTech.begin(),
-	                   [&](int b){return vecVariables->at(b).getTreedepth() == *min;} );
-    
-	int size = distance( varMinTech.begin(), it );
-
-	if( it == varMinTech.begin() )
-	{
-		varMinTech = vecId;
-		size = vecId.size();
-	}
-    
-	return varMinTech[ randomVar.getRandNum( size ) ];    
+	return static_cast<double>( max_tree_depth );
 }

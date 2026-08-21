@@ -3,54 +3,51 @@
 #include <vector>
 #include <memory>
 
-#include <ghost/variable>
-#include <ghost/objective>
+#include <ghost/variable.hpp>
+#include <ghost/objective.hpp>
 #include "building.hpp"
 
-/**********/
-/* GapObj */
-/**********/
-class GapObj : public ghost::Objective
+/*****************/
+/* MinNumberGaps */
+/*****************/
+class MinNumberGaps : public ghost::Minimize
 {
+	std::vector<std::vector<bool>> _grid;
+	int _width;
+	int _height;
+	std::vector<Building> _buildings;
+
 public:
-	GapObj();
+	MinNumberGaps( const std::vector<ghost::Variable>& variables,
+	               const std::vector<std::vector<bool>>& _grid,
+	               int width,
+	               int height,
+	               const std::vector<Building>& buildings );
 
 	double required_cost( const std::vector<ghost::Variable*>& variables ) const override;
-	
-private:
-	double v_cost( vector< Building > *vecVariables, WallinDomain *domain ) const;
-	int v_heuristicVariable( const vector< int > &vecId, const vector< Building > *vecVariables, WallinDomain *domain );
-	void v_setHelper( const Building &b, const vector< Building > *vecVariables, const WallinDomain *domain );
-	int gapSize( const Building &b, const vector< Building > *vecVariables, const WallinDomain *domain ) const;
+};
+
+/****************/
+/* MinBuildings */
+/****************/
+class MinBuildings : public ghost::Minimize
+{
+public:
+	MinBuildings( const std::vector<ghost::Variable>& variables );
+
+	double required_cost( const std::vector<ghost::Variable*>& variables ) const override;
 };
 
 /***************/
-/* BuildingObj */
+/* MinTreeTech */
 /***************/
-class BuildingObj : public ghost::Objective
+class MinTechTree : public ghost::Minimize
 {
+	std::vector<Building> _buildings;
+
 public:
-	BuildingObj();
+	MinTechTree( const std::vector<ghost::Variable>& variables,
+	             const std::vector<Building>& buildings );
 
 	double required_cost( const std::vector<ghost::Variable*>& variables ) const override;
-
-private:
-	double v_cost( vector< Building > *vecVariables, WallinDomain *domain ) const;
-	int v_heuristicVariable( const vector< int > &vecId, const vector< Building > *vecVariables, WallinDomain *domain );
-	double v_postprocessOptimization( vector< Building > *vecVariables, WallinDomain *domain, double &bestCost, double opt_timeout );
-};
-
-/***************/
-/* TreeTechObj */
-/***************/
-class TechTreeObj : public ghost::Objective
-{
-public:
-	TechTreeObj();
-
-	double required_cost( const std::vector<ghost::Variable*>& variables ) const override;
-
-private:
-	double v_cost( vector< Building > *vecVariables, WallinDomain *domain ) const;
-	int v_heuristicVariable( const vector< int > &vecId, const vector< Building > *vecVariables, WallinDomain *domain );
 };
