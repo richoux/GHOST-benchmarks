@@ -45,6 +45,6 @@ void BuilderWallin::declare_constraints()
 void BuilderWallin::declare_objective()
 {
 	objective = make_shared<MinNumberGaps>( variables, _grid, _width, _height, _buildings );
-	// objective = make_shared<MinBuildings>( variables );
-	// objective = make_shared<MinTechTree>( variables, _buildings );
+	//objective = make_shared<MinBuildings>( variables );
+	//objective = make_shared<MinTechTree>( variables, _buildings );
 }

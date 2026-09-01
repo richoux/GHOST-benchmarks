@@ -202,7 +202,7 @@ double NoHoles::required_error( const std::vector<ghost::Variable*>& variables )
 		while( !_queue_cc.empty() );
 	}
 	
-	return static_cast<double>(connected_components - 1);
+	return std::max( 0., static_cast<double>( connected_components - 1 ) );
 }
 
   
