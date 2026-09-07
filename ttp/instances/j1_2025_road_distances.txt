@@ -22,7 +22,7 @@
 
 # Taking the shortest route between stadiums from google maps (stadium coordinates are in the j1_2025.txt file).
 # FC Tokyo and Tokyo Verdy are sharing the same stadium, the Ajinomoto Stadium
-# Cerezo Osaka has 2 stadiums: Yanmar Stadium Nagai and Yodoko Sakura Stadium. Yanmar Stadium Nagai is consider here because it has a larger capacity (almost twice as big as Yodoko Sakura Stadium).
+# Cerezo Osaka has 2 stadiums: The Yanmar Stadium Nagai and the Yodoko Sakura Stadium. The Yanmar Stadium Nagai is considered here because it has a larger capacity (almost twice as big as the Yodoko Sakura Stadium).
 
 1,Albirex Niigata
 2,Avispa Fukuoka
