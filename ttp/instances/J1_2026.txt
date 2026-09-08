@@ -20,26 +20,26 @@
 1275 149 1074 585 426 929 764 748 763 695 1328 1267 1253 1241 1241 1198 1215 1340 0 1203
 70 1067 151 638 789 292 482 468 466 506 131 72 66 25 25 22 17 140 1203 0
 
-# Taking the shortest route between stadiums from google maps (stadium coordinates are in the j1_2026.txt file).
-# FC Tokyo and Tokyo Verdy are sharing the same stadium, the Ajinomoto Stadium
-# number,club name,stadium name (may change over years with sponsors),latitude,longitude
-1,JEF United Chiba,Fukuda Denshi Arena,35.577739,140.122883
-2,Avispa Fukuoka,Best Denki Stadium,33.585803,130.461066
-3,Shimizu S-Pulse,IAI Stadium Nihondaira,34.984506,138.481352
-4,Fagiano Okayama,JFE Harenokuni Stadium,34.680658,133.919631
-5,Sanfrecce Hiroshima,Edion Peace Wing Hiroshima,34.406357,132.455131
-6,Nagoya Grampus,Toyota Stadium,35.084471,137.170891
-7,Cerezo Osaka,Yodoko Sakura Stadium,34.615613,135.516921
-8,Gamba Osaka,Panasonic Stadium Suita,34.802808,135.538228
-9,Kyoto Sanga FC,Sanga Stadium,35.017405,135.585375
-10,Vissel Kobe,Noevir Stadium Kobe,34.656667,135.168889
-11,Kashima Antlers,Kashima Soccer Stadium,35.991744,140.640525
-12,Kashiwa Reysol,Sankyo Frontier Kashiwa Stadium,35.8485,139.975149
-13,Urawa Red Diamonds,Saitama Stadium 2002,35.903142,139.717492
-14,FC Tokyo,Ajinomoto Stadium,35.664278,139.527139
-15,Tokyo Verdy,Ajinomoto Stadium,35.664278,139.527139
-16,Machida Zelvia,Machida GION Stadium,35.5925,139.438889
-17,Kawasaki Frontale,Uvance Todoroki Stadium,35.585895,139.652731
-18,Mito HollyHock,K's denki Stadium Mito,36.345497,140.412482
-19,V-Varen Nagasaki,Peace Stadium Connected,32.759274,129.864962
-20,Yokohama F. Marinos,Nissan Stadium,35.510044,139.606247
+% Taking the shortest route between stadiums from google maps (stadium coordinates are in the j1_2026.txt file).
+% FC Tokyo and Tokyo Verdy are sharing the same stadium, the Ajinomoto Stadium
+% number,club name,stadium name (may change over years with sponsors),latitude,longitude
+#1,JEF United Chiba,Fukuda Denshi Arena,35.577739,140.122883
+#2,Avispa Fukuoka,Best Denki Stadium,33.585803,130.461066
+#3,Shimizu S-Pulse,IAI Stadium Nihondaira,34.984506,138.481352
+#4,Fagiano Okayama,JFE Harenokuni Stadium,34.680658,133.919631
+#5,Sanfrecce Hiroshima,Edion Peace Wing Hiroshima,34.406357,132.455131
+#6,Nagoya Grampus,Toyota Stadium,35.084471,137.170891
+#7,Cerezo Osaka,Yodoko Sakura Stadium,34.615613,135.516921
+#8,Gamba Osaka,Panasonic Stadium Suita,34.802808,135.538228
+#9,Kyoto Sanga FC,Sanga Stadium,35.017405,135.585375
+#10,Vissel Kobe,Noevir Stadium Kobe,34.656667,135.168889
+#11,Kashima Antlers,Kashima Soccer Stadium,35.991744,140.640525
+#12,Kashiwa Reysol,Sankyo Frontier Kashiwa Stadium,35.8485,139.975149
+#13,Urawa Red Diamonds,Saitama Stadium 2002,35.903142,139.717492
+#14,FC Tokyo,Ajinomoto Stadium,35.664278,139.527139
+#15,Tokyo Verdy,Ajinomoto Stadium,35.664278,139.527139
+#16,Machida Zelvia,Machida GION Stadium,35.5925,139.438889
+#17,Kawasaki Frontale,Uvance Todoroki Stadium,35.585895,139.652731
+#18,Mito HollyHock,K's denki Stadium Mito,36.345497,140.412482
+#19,V-Varen Nagasaki,Peace Stadium Connected,32.759274,129.864962
+#20,Yokohama F. Marinos,Nissan Stadium,35.510044,139.606247
