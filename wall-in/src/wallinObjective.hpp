@@ -14,14 +14,16 @@ protected:
 	int starting_tile;
 	int target_tile;
 	int width;
+	int height;
 
 public:
 	WallinObjectives( const std::vector<ghost::Variable>& variables,
 	                  const std::vector<Building>& buildings,
 	                  int starting_tile,
 	                  int target_tile,
-	                  int width );
-	double expert_postprocess( const std::vector<ghost::Variable*>& variables, double best_cost ) const override;
+	                  int width,
+	                  int height );
+	// double expert_postprocess( const std::vector<ghost::Variable*>& variables, double best_cost ) const override;
 };
 
 
@@ -31,7 +33,6 @@ public:
 class MinNumberGaps : public WallinObjectives
 {
 	std::vector<std::vector<bool>> _grid;
-	int _height;
 
 public:
 	MinNumberGaps( const std::vector<ghost::Variable>& variables,
@@ -55,7 +56,8 @@ public:
 	              const std::vector<Building>& buildings,
 	              int starting_tile,
 	              int target_tile,
-	              int width );
+	              int width,
+	              int height );
 
 	double required_cost( const std::vector<ghost::Variable*>& variables ) const override;
 };
@@ -72,7 +74,8 @@ public:
 	             const std::vector<Building>& buildings,
 	             int starting_tile,
 	             int target_tile,
-	             int width );
+	             int width,
+	             int height );
 
 	double required_cost( const std::vector<ghost::Variable*>& variables ) const override;
 };
