@@ -31,25 +31,25 @@ double MinTravelDistance::required_cost( const std::vector<ghost::Variable*>& va
 	std::iota( previously_at.begin(), previously_at.end(), 0 );
 
 	for( int round = 0 ; round < number_rounds ; ++round )
-	{
 		for( auto& match: rounds[round] )
 		{		
 			convert( match, number_teams, home, away );
 			--home; // because team numbers start at 1, and we want indices
 			--away;
 
+			// home team returns home, if they were away
+			total_distance += matrix_distances[ previously_at[ home ] ][ home ];
+			previously_at[ home ] = home;
+
+			// away team goes to home team's city
 			total_distance += matrix_distances[ previously_at[ away ] ][ home ];
-			if( previously_at[ home ] != home )
-			{
-				total_distance += matrix_distances[ previously_at[ home ] ][ home ];
-				previously_at[ home ] = home;
-			}
-			if( round == number_rounds - 1 )
-				total_distance += matrix_distances[ home ][ away ]; // away returns home
-			else
-				previously_at[ away ] = home;
+			// away team remains at home team's city
+			previously_at[ away ] = home;
 		}
-	}
 	
+	// Everybody returns home
+	for( int team = 0 ; team < number_teams ; ++team )
+		total_distance += previously_at[ team ] ][ team ];
+
 	return total_distance;
 }
