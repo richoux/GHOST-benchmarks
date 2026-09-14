@@ -1,121 +1,223 @@
 #include <iostream>
 #include <vector>
-#include <memory>
-#include <algorithm>
-#include <type_traits>
 #include <string>
 
-// Wall-in
-
+#include "builder_wallin.hpp"
 #include "building.hpp"
-#include "wallinDomain.hpp"
-#include "wallinConstraint.hpp"
-#include "wallinObjective.hpp"
-#include "wallinTerran.hpp"
+#include "convert.hpp"
+
+#include <ghost/solver.hpp>
+
+using namespace std::literals::chrono_literals;
+
+void print_cost( const std::vector<int>& sol, const std::vector<Building>& buildings )
+{
+	for( int i = 0 ; i < sol.size() ; ++i )
+	{
+		if( sol[i] > -1 )
+		{
+			int var_i_row = index_to_row( sol[i], 12 );
+			int var_i_col = index_to_column( sol[i], 12 );
+			for( int j = i+1 ; j < sol.size() ; ++j )
+			{
+				if( sol[j] > -1 )
+				{
+					int var_j_row = index_to_row( sol[j], 12 );
+					int var_j_col = index_to_column( sol[j], 12 );
+			
+					// when j is above i
+					if( var_i_row == var_j_row + buildings[j].get_height()
+					    && var_j_col + buildings[j].get_width() >= var_i_col && var_j_col <= var_i_col + buildings[i].get_width() )
+					{
+						if( buildings[i].get_gap_top() + buildings[j].get_gap_bottom() >= 16 ) // 16 pixels is a gap large enough to let a zergling go through.
+						{
+							std::cout << "Building " << i << " (top " << buildings[i].get_gap_top() << ") and Building " << j << " (bottom " << buildings[j].get_gap_bottom() << ")\n";
+						}
+					}
+
+					// when j is below i
+					if( var_i_row + buildings[i].get_height() == var_j_row
+					    && var_j_col + buildings[j].get_width() >= var_i_col && var_j_col <= var_i_col + buildings[i].get_width() )
+					{
+						if( buildings[i].get_gap_bottom() + buildings[j].get_gap_top() >= 16 )
+						{
+							std::cout << "Building " << i << " (bottom " << buildings[i].get_gap_bottom() << ") and Building " << j << " (top " << buildings[j].get_gap_top() << ")\n";
+						}
+					}
+
+					// when j is on the left of i
+					if( var_i_col == var_j_col + buildings[j].get_width()
+					    && var_j_row + buildings[j].get_height() >= var_i_row && var_j_row <= var_i_row + buildings[i].get_height() )
+					{
+						if( buildings[i].get_gap_left() + buildings[j].get_gap_right() >= 16 )
+						{
+							std::cout << "Building " << i << " (left " << buildings[i].get_gap_left() << ") and Building " << j << " (right " << buildings[j].get_gap_right() << ")\n";
+						}
+					}
+
+					// when j is on the right of i
+					if( var_i_col + buildings[i].get_width() == var_j_col 
+					    && var_j_row + buildings[j].get_height() >= var_i_row && var_j_row <= var_i_row + buildings[i].get_height() )
+					{
+						if( buildings[i].get_gap_right() + buildings[j].get_gap_left() >= 16 )
+						{
+							std::cout << "Building " << i << " (right " << buildings[i].get_gap_right() << ") and Building " << j << " (left " << buildings[j].get_gap_left() << ")\n";
+						}
+					}
+				}
+			}
+		}
+	}
+}
 
 
-// BO
+std::string building_to_char( std::string name )
+{
+	if( name.compare("Terran_Academy") == 0 )
+		return "A";
+	if( name.compare("Terran_Armory") == 0 )
+		return "R";
+	if( name.compare("Terran_Barracks") == 0 )
+		return "B";
+	if( name.compare("Terran_Bunker") == 0 )
+		return "U";
+	if( name.compare("Terran_Engineering_Bay") == 0 )
+		return "E";
+	if( name.compare("Terran_Factory") == 0 )
+		return "F";
+	if( name.compare("Terran_Supply_Depot") == 0 )
+		return "S";
 
-// #include "action.hpp"
-// #include "buildorderDomain.hpp"
-// #include "buildorderConstraint.hpp"
-// #include "buildorderObjective.hpp"
-// #include "misc/actionMap.hpp"
-
-
-#include "../../src/solver.hpp"
-
-using namespace ghost;
-using namespace std;
+	return " ";
+}
 
 int main(int argc, char **argv)
 {
-  // Wall-in
+	std::vector< std::vector<bool> > grid; // 8 rows, 12 columns
+	grid.push_back(std::vector<bool>{true,true,true,true,true,true,true,true,true,true,true,true});
+	grid.push_back(std::vector<bool>{true,true,true,true,true,true,true,true,true,true,true,true});
+	grid.push_back(std::vector<bool>{true,true,true,true,true,true,true,true,true,true,true,true});
+	grid.push_back(std::vector<bool>{true,true,true,true,true,true,true,true,false,false,false,false});
+	grid.push_back(std::vector<bool>{true,true,true,true,true,true,false,false,false,false,false,false});
+	grid.push_back(std::vector<bool>{true,true,true,true,true,true,false,false,false,false,false,false});
+	grid.push_back(std::vector<bool>{true,true,true,true,false,false,false,false,false,false,false,false});
+	grid.push_back(std::vector<bool>{true,true,true,true,false,false,false,false,false,false,false,false});
+	
+	std::vector< Building > buildings;
+	buildings.push_back( make_building( BuildingType::Academy ) );
+	buildings.push_back( make_building( BuildingType::Academy ) );
+	buildings.push_back( make_building( BuildingType::Armory ) );
+	buildings.push_back( make_building( BuildingType::Armory ) );
+	buildings.push_back( make_building( BuildingType::Barracks ) );
+	buildings.push_back( make_building( BuildingType::Barracks ) );
+	buildings.push_back( make_building( BuildingType::Bunker ) );
+	buildings.push_back( make_building( BuildingType::Bunker ) );
+	buildings.push_back( make_building( BuildingType::EngineeringBay ) );
+	buildings.push_back( make_building( BuildingType::EngineeringBay ) );
+	buildings.push_back( make_building( BuildingType::Factory ) );
+	buildings.push_back( make_building( BuildingType::Factory ) );
+	buildings.push_back( make_building( BuildingType::SupplyDepot ) );
+	buildings.push_back( make_building( BuildingType::SupplyDepot ) );
+	
 
-  vector< pair<int, int> > unbuildables 
-  { 
-    make_pair(7, 12), 
-      make_pair(7, 13), 
-      make_pair(7, 14), 
-      make_pair(7, 15), 
-      make_pair(8, 10), 
-      make_pair(8, 11), 
-      make_pair(8, 12), 
-      make_pair(8, 13), 
-      make_pair(8, 14), 
-      make_pair(8, 15), 
-      make_pair(9, 10), 
-      make_pair(9, 11), 
-      make_pair(9, 12), 
-      make_pair(9, 13), 
-      make_pair(9, 14), 
-      make_pair(9, 15), 
-      make_pair(10, 8), 
-      make_pair(10, 9), 
-      make_pair(10, 10), 
-      make_pair(10, 11), 
-      make_pair(10, 12), 
-      make_pair(10, 13), 
-      make_pair(10, 14), 
-      make_pair(10, 15), 
-      make_pair(11, 8), 
-      make_pair(11, 9), 
-      make_pair(11, 10), 
-      make_pair(11, 11), 
-      make_pair(11, 12), 
-      make_pair(11, 13), 
-      make_pair(11, 14), 
-      make_pair(11, 15) 
-      };
-  
-  // Define variables
-  vector< Building > vec = makeTerranBuildings();
+	BuilderWallin builder( grid,
+	                       coord_to_index(7, 3, 12),
+	                       coord_to_index(2, 11, 12),
+	                       buildings );
+	ghost::Solver solver( builder );
 
-  // Define domain
-  WallinDomain domain( 16, 12, unbuildables, &vec, 11, 7, 6, 15 );
+	double cost;
+	std::vector<int> solution;
+	
+	solver.fast_search( cost, solution, 150ms );
 
-  // Define constraints
-  vector< shared_ptr<WallinConstraint> > vecConstraints = makeTerranConstraints( &vec, &domain );
+	std::cout << "Cost: " << cost << "\n";
 
-  // Define objective
-  shared_ptr<WallinObjective> objective = make_shared<GapObj>();
-  
-  Solver<Building, WallinDomain, WallinConstraint> solver(&vec, &domain, vecConstraints, objective );
-  
-#ifndef NDEBUG
-  cout << boolalpha << "Building movable: " << is_nothrow_move_constructible<Building>::value << endl;
-  cout << boolalpha << "Domain movable: " << is_nothrow_move_constructible<WallinDomain>::value << endl;
-  cout << boolalpha << "Solver movable: " << is_nothrow_move_constructible<Solver<Building, WallinDomain, WallinConstraint> >::value << endl;
-  cout << boolalpha << "Random movable: " << is_nothrow_move_constructible<Random>::value << endl;
-  cout << boolalpha << "Constraint movable: " << is_nothrow_move_constructible<WallinConstraint>::value << endl;
-  cout << boolalpha << "Overlap movable: " << is_nothrow_move_constructible<Overlap>::value << endl;
-  cout << boolalpha << "Objective movable: " << is_nothrow_move_constructible<WallinObjective>::value << endl;
-  cout << boolalpha << "GapObj movable: " << is_nothrow_move_constructible<GapObj>::value << endl;
-#endif
-  
-  solver.fast_search( 20, 150 );    
+	// Building types
+	std::vector< std::vector<std::string> > grid_type;
+	grid_type.push_back(std::vector<std::string>{" "," "," "," "," "," "," "," "," "," "," "," "});
+	grid_type.push_back(std::vector<std::string>{" "," "," "," "," "," "," "," "," "," "," "," "});
+	grid_type.push_back(std::vector<std::string>{" "," "," "," "," "," "," "," "," "," "," "," "});
+	grid_type.push_back(std::vector<std::string>{" "," "," "," "," "," "," "," "," "," "," "," "});
+	grid_type.push_back(std::vector<std::string>{" "," "," "," "," "," "," "," "," "," "," "," "});
+	grid_type.push_back(std::vector<std::string>{" "," "," "," "," "," "," "," "," "," "," "," "});
+	grid_type.push_back(std::vector<std::string>{" "," "," "," "," "," "," "," "," "," "," "," "});
+	grid_type.push_back(std::vector<std::string>{" "," "," "," "," "," "," "," "," "," "," "," "});
 
-  
-  // BO
-  
-  // // Define variables
-  // vector< Action > vec;
+	for( int s = 0 ; s < solution.size() ; ++s )
+		if( solution[s] > -1 )
+		{
+			int row = index_to_row(solution[s], 12);
+			int col = index_to_column(solution[s], 12);
 
-  // // BO list
-  // vector< pair<string, int> > input { make_pair("Protoss_Zealot", 20), make_pair("Protoss_Dragoon", 5), make_pair("Protoss_Ground_Weapons_1", 1) };
-  // // vector< pair<string, int> > input { make_pair("Protoss_Zealot", 3), make_pair("Protoss_Arbiter_Tribunal", 1) };
-  // // vector< pair<string, int> > input { make_pair("Protoss_Zealot", 1) };
-  
-  // // Define objective
-  // shared_ptr<BuildOrderObjective> objective = make_shared<MakeSpanMaxProd>( input, vec );
+			for( int r = row ; r < row + buildings[s].get_height() ; ++r )
+				for( int c = col ; c < col + buildings[s].get_width() ; ++c )
+					grid_type[r][c] = building_to_char( buildings[s].get_name() );
+		}
 
-  // // Define domain
-  // BuildOrderDomain domain( vec.size(), &vec );
-  
-  // // Define constraints
-  // vector< shared_ptr<BuildOrderConstraint> > vecConstraints { make_shared<BuildOrderConstraint>( &vec, &domain ) };
+	grid_type[7][3] = std::string("s");
+	grid_type[2][11] = std::string("t");
 
-  // Solver<Action, BuildOrderDomain, BuildOrderConstraint> solver(&vec, &domain, vecConstraints, objective );
+	std::cout << "---";
+	for( int c = 0 ; c < 11 ; ++c )
+		std::cout << "--";
 
-  // solver.fast_search( 20, 30 );
+	for( int r = 0 ; r < 8 ; ++r )
+	{
+		std::cout << "\n|";
+		for( int c = 0 ; c < 12 ; ++c )
+			std::cout << grid_type[r][c] << "|";
+		std::cout << "\n";
+		
+	std::cout << "---";
+	for( int c = 0 ; c < 11 ; ++c )
+		std::cout << "--";
+	}
+	
+	std::cout << "\n\n";
+
+	// Building index
+	std::vector< std::vector<std::string> > grid_index;
+	grid_index.push_back(std::vector<std::string>{" "," "," "," "," "," "," "," "," "," "," "," "});
+	grid_index.push_back(std::vector<std::string>{" "," "," "," "," "," "," "," "," "," "," "," "});
+	grid_index.push_back(std::vector<std::string>{" "," "," "," "," "," "," "," "," "," "," "," "});
+	grid_index.push_back(std::vector<std::string>{" "," "," "," "," "," "," "," "," "," "," "," "});
+	grid_index.push_back(std::vector<std::string>{" "," "," "," "," "," "," "," "," "," "," "," "});
+	grid_index.push_back(std::vector<std::string>{" "," "," "," "," "," "," "," "," "," "," "," "});
+	grid_index.push_back(std::vector<std::string>{" "," "," "," "," "," "," "," "," "," "," "," "});
+	grid_index.push_back(std::vector<std::string>{" "," "," "," "," "," "," "," "," "," "," "," "});
+
+	for( int s = 0 ; s < solution.size() ; ++s )
+		if( solution[s] > -1 )
+		{
+			int row = index_to_row(solution[s], 12);
+			int col = index_to_column(solution[s], 12);
+
+			for( int r = row ; r < row + buildings[s].get_height() ; ++r )
+				for( int c = col ; c < col + buildings[s].get_width() ; ++c )
+					grid_index[r][c] = std::to_string(s);
+		}
+
+	grid_index[7][3] = std::string("s");
+	grid_index[2][11] = std::string("t");
+
+	std::cout << "---";
+	for( int c = 0 ; c < 11 ; ++c )
+		std::cout << "--";
+
+	for( int r = 0 ; r < 8 ; ++r )
+	{
+		std::cout << "\n|";
+		for( int c = 0 ; c < 12 ; ++c )
+			std::cout << grid_index[r][c] << "|";
+		std::cout << "\n";
+		
+	std::cout << "---";
+	for( int c = 0 ; c < 11 ; ++c )
+		std::cout << "--";
+	}
+	
+	std::cout << "\n";
+
+	print_cost(solution, buildings);
 }

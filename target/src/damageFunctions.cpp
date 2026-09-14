@@ -31,46 +31,46 @@ vector<double> compute_damage( const UnitData& shooter, int target_index, const 
           
   if( target_index != -1 && shooter.is_alive() && shooter.can_shoot() )
   {
-    if( shooter.distance_from( target ) >= shooter.range.min && shooter.distance_from( target ) <= shooter.range.max )
-    {
-      double hit;    
+	  if( shooter.distance_from( target ) >= shooter.range.min && shooter.distance_from( target ) <= shooter.range.max )
+	  {
+		  double hit;    
 	
-      if( !shooter.do_splash )
-      {
-	hit = ( shooter.damage - target.armor ) * coeff_damage_type( shooter.damage_type, target.size );
-	hits[ target_index ] = std::max( hit, 0.5 );
-      }
-      else
-      {
-	for( int i = 0 ; i < units.size() ; ++i )
-	{
-	  if( i == target_index )
-	  {
-	    hit = ( shooter.damage - target.armor ) * coeff_damage_type( shooter.damage_type, target.size );
-	    hits[ target_index ] = std::max( hit, 0.5 );
+		  if( !shooter.do_splash )
+		  {
+			  hit = ( shooter.damage - target.armor ) * coeff_damage_type( shooter.damage_type, target.size );
+			  hits[ target_index ] = std::max( hit, 0.5 );
+		  }
+		  else
+		  {
+			  for( int i = 0 ; i < units.size() ; ++i )
+			  {
+				  if( i == target_index )
+				  {
+					  hit = ( shooter.damage - target.armor ) * coeff_damage_type( shooter.damage_type, target.size );
+					  hits[ target_index ] = std::max( hit, 0.5 );
+				  }
+				  else if( units[ i ].is_alive() )
+				  {
+					  double dist = target.distance_from( units[ i ] );
+					  if( dist <= shooter.splash_radius.ray1 )
+					  {
+						  hit = ( shooter.damage - units[ i ].armor ) * coeff_damage_type( shooter.damage_type, units[ i ].size );
+						  hits[ i ] = std::max( hit, 0.5 );	    
+					  }
+					  else if( dist <= shooter.splash_radius.ray2 )
+					  {
+						  hit = ( ( shooter.damage * 0.5 ) - units[ i ].armor ) * coeff_damage_type( shooter.damage_type, units[ i ].size );
+						  hits[ i ] = std::max( hit, 0.5 );	    
+					  }
+					  else if( dist <= shooter.splash_radius.ray3 )
+					  {
+						  hit = ( ( shooter.damage * 0.25 ) - units[ i ].armor ) * coeff_damage_type( shooter.damage_type, units[ i ].size );
+						  hits[ i ] = std::max( hit, 0.5 );	    
+					  }
+				  }
+			  }
+		  }
 	  }
-	  else if( units[ i ].is_alive() )
-	  {
-	    double dist = target.distance_from( units[ i ] );
-	    if( dist <= shooter.splash_radius.ray1 )
-	    {
-	      hit = ( shooter.damage - units[ i ].armor ) * coeff_damage_type( shooter.damage_type, units[ i ].size );
-	      hits[ i ] = std::max( hit, 0.5 );	    
-	    }
-	    else if( dist <= shooter.splash_radius.ray2 )
-	    {
-	      hit = ( ( shooter.damage * 0.5 ) - units[ i ].armor ) * coeff_damage_type( shooter.damage_type, units[ i ].size );
-	      hits[ i ] = std::max( hit, 0.5 );	    
-	    }
-	    else if( dist <= shooter.splash_radius.ray3 )
-	    {
-	      hit = ( ( shooter.damage * 0.25 ) - units[ i ].armor ) * coeff_damage_type( shooter.damage_type, units[ i ].size );
-	      hits[ i ] = std::max( hit, 0.5 );	    
-	    }
-	  }
-	}
-      }
-    }
   }
  
   return hits;
