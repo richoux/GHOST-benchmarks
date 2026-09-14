@@ -9,11 +9,11 @@ Tested with GHOST v3
 - AllDiff Knapsack (optimization, non-permutation, constraints: All-Different and Linear-Less-Than-or-Equals-To)
 - 0-1 Multidimensional Knapsack (satisfaction or optimization, non-permutation, constraints: Linear-Less-Than-or-Equals-To and Linear-Greater-Than-or-Equals-To)
 
-- Magic Square (satisfaction, permutation, constraints: Linear-Equation-Equals-To)
-- Min Magic Square (optimization, permutation, constraints: Linear-Equation-Equals-To)
-
 - Magic Hexagon (satisfaction, permutation, constraints: Linear-Equation-Equals-To)
 - Min Magic Hexagon (optimization, permutation, constraints: Linear-Equation-Equals-To)
+
+- Magic Square (satisfaction, permutation, constraints: Linear-Equation-Equals-To)
+- Min Magic Square (optimization, permutation, constraints: Linear-Equation-Equals-To)
 
 - Quadratic Assignment Problem (optimization, permutation, no constraints).
 - AllDiff Quadratic Assignment Problem (optimization, non-permutation, constraints: All-Different)
@@ -33,7 +33,10 @@ Tested with GHOST v3
 - Vertex Cover (satisfaction, non-permutation, constraints: Linear-Less-Than-or-Equals-To and Linear-Greater-Than-or-Equals-To)
 
 ### StarCraft-related benchmarks
-Work in progress: Build Order, Resource, Target Selection, Wall-in.
+- Build Order (optimization, permutation, problem-specific constraints)
+- Resource allocation (optimization, non-permutation, problem-specific constraints)
+- Target Selection (optimization, non-permutation, problem-specific constraints)
+- Wall-in (optimization, non-permutation, problem-specific constraints)
 
 ## Commands
 

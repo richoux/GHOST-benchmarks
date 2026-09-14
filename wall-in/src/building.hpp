@@ -3,7 +3,18 @@
 #include <string>
 #include "races.hpp"
 
-using namespace std;
+enum BuildingType{ Academy,
+                   Armory,
+                   Barracks,
+                   Bunker,
+                   CommandCenter,
+                   EngineeringBay,
+                   Factory,
+                   MissileTurret,
+                   ScienceFacility,
+                   Starport,
+                   SupplyDepot };
+
 
 class Building
 {
@@ -18,10 +29,10 @@ class Building
 	Race _race;
 	int _tree_depth;
 
-	string _name;
+	std::string _name;
 
 public:
-	Building( int width, int height, int top, int right, int bottom, int left, Race race, int tree_depth, string name );
+	Building( int width, int height, int top, int right, int bottom, int left, Race race, int tree_depth, std::string name );
     
 	inline int get_width()	const	{ return _width; }
 	inline int get_height()	const	{ return _height; }
@@ -31,10 +42,10 @@ public:
 	inline int get_gap_bottom()	const	{ return _gap_bottom; }
 	inline int get_gap_left()	  const	{ return _gap_left; }
 
-	inline Race get_race() const { return race; }
-	inline string get_race_string()	const	
+	inline Race get_race() const { return _race; }
+	inline std::string get_race_string()	const	
 	{ 
-		switch( race ) 
+		switch( _race ) 
 		{
 		case Terran: return "Terran";
 		case Protoss: return "Protoss";
@@ -44,7 +55,10 @@ public:
 	}
     
 	inline int get_tree_depth()	const	{ return _tree_depth; }
-	inline string get_name()    const { return _name; }
+	inline std::string get_name() const { return _name; }
     
-	friend ostream& operator<<( ostream&, const Building& );
+	// friend std::ostream& operator<<( std::ostream&, const Building& );
 };
+
+
+Building make_building( BuildingType type );

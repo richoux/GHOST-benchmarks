@@ -116,8 +116,7 @@ int main(int argc, char **argv)
 
   /////////////
   // Protoss //
-  /////////////
-  
+  /////////////  
   if( race == "protoss" )
   {
     BuilderProtoss builder_p( SUPPLY );
@@ -126,14 +125,14 @@ int main(int argc, char **argv)
     double cost_p;
     vector<int> solution_p;
   
-    int count = 0;
-    double total = 0.;
+    // int count = 0;
+    // double total = 0.;
 
-    for(int i = 0 ; i < runs ; ++i )
-	    if( solver_p.solve( cost_p, solution_p, timeout, options ) )
+    for( int i = 0 ; i < runs ; ++i )
+	    if( solver_p.fast_search( cost_p, solution_p, timeout, options ) )
       {
-	      ++count;
-	      total += cost_p;
+	    //   ++count;
+	    //   total += cost_p;
       }
 
     // process_mem_usage(vm, rss);
@@ -164,14 +163,14 @@ int main(int argc, char **argv)
     double cost_t;
     vector<int> solution_t;
     
-    int count = 0;
-    double total = 0.;
+    // int count = 0;
+    // double total = 0.;
     
-    for(int i = 0 ; i < runs ; ++i )
-	    if( solver_t.solve( cost_t, solution_t, timeout, options ) )
+    for( int i = 0 ; i < runs ; ++i )
+	    if( solver_t.fast_search( cost_t, solution_t, timeout, options ) )
       {
-	      ++count;
-	      total += cost_t;
+	      // ++count;
+	      // total += cost_t;
       }
     
     // process_mem_usage(vm, rss);
@@ -194,7 +193,6 @@ int main(int argc, char **argv)
   //////////
   // Zerg //
   //////////
-
   if( race == "zerg" )
   {
     BuilderZerg builder_z( SUPPLY );
@@ -203,14 +201,14 @@ int main(int argc, char **argv)
     double cost_z;
     vector<int> solution_z;
   
-    int count = 0;
-    double total = 0.;
+    // int count = 0;
+    // double total = 0.;
   
-    for(int i = 0 ; i < runs ; ++i )
-	    if( solver_z.solve( cost_z, solution_z, timeout, options ) )
+    for( int i = 0 ; i < runs ; ++i )
+	    if( solver_z.fast_search( cost_z, solution_z, timeout, options ) )
       {
-	      ++count;
-	      total += cost_z;
+	      // ++count;
+	      // total += cost_z;
       }
 
     // process_mem_usage(vm, rss);

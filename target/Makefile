@@ -1,29 +1,29 @@
 EXEC=target
 
-#CXX=clang++
-CXX=g++
-
 # Directories
 SRCDIR=src
 OBJDIR=obj
 BINDIR=bin
 
-
 # Compiler flags
+MYFLAGS=
 CXXFIRSTFLAGS= -Ofast -W -Wall -Wextra -pedantic -Wno-sign-compare -Wno-unused-parameter
-CXXFIRSTFLAGSDEBUG= -g -O0 -W -Wall -Wextra -pedantic -Wno-sign-compare -Wno-unused-parameter 
+CXXFIRSTFLAGSDEBUG= -g -O0 -W -Wall -Wextra -pedantic -Wno-sign-compare -Wno-unused-parameter -DDEBUG
 
-# Linker flags
-LDFLAGS=-pthread -lghost
-
-# Compiler
-ifneq (,$(findstring clang,$(CXX)))
-	CXXFLAGSSTD= -std=c++20  -stdlib=libc++ $(CXXFIRSTFLAGS)
-	CXXFLAGSDEBUG= -std=c++20  -stdlib=libc++ $(CXXFIRSTFLAGSDEBUG)
-	LDFLAGS=-pthread -lghost -lc++ -lc++abi
-else
-	CXXFLAGSSTD= -std=c++20 $(CXXFIRSTFLAGS)
-	CXXFLAGSDEBUG= -std=c++20 $(CXXFIRSTFLAGSDEBUG)
+UNAME_S := $(shell uname -s)
+ifeq ($(UNAME_S),Linux)
+	CXX=g++
+	CXXFLAGSSTD= -std=c++20 $(CXXFIRSTFLAGS) $(MYFLAGS)
+	CXXFLAGSDEBUG= -std=c++20 $(CXXFIRSTFLAGSDEBUG) $(MYFLAGS)
+	LDFLAGS=-pthread -lghost_static
+	LDFLAGSDEBUG=-pthread -lghostd
+endif
+ifeq ($(UNAME_S),Darwin)
+	CXX=clang++
+	CXXFLAGSSTD= -std=c++20  -stdlib=libc++ $(CXXFIRSTFLAGS) $(MYFLAGS)
+	CXXFLAGSDEBUG= -std=c++20  -stdlib=libc++ $(CXXFIRSTFLAGSDEBUG) $(MYFLAGS)
+	LDFLAGS=-pthread -lghost_static -lc++ -lc++abi
+	LDFLAGSDEBUG=-pthread -lghostd -lc++ -lc++abi
 endif
 
 # Files
@@ -41,13 +41,14 @@ vpath %.cpp $(SRCDIR)
 # $< is the first item in the dependencies list
 
 # Rules
-all: CXXFLAGS=-DNDEBUG $(CXXFLAGSSTD)
+all: CXXFLAGS=$(CXXFLAGSSTD)
 all: $(BINDIR)/$(EXEC)
 
 bench: CXXFLAGS=$(CXXFLAGSSTD)
 bench: $(BINDIR)/$(EXEC)
 
 debug: CXXFLAGS=$(CXXFLAGSDEBUG)
+debug: LDFLAGS=$(LDFLAGSDEBUG)
 debug: $(BINDIR)/$(EXEC)
 
 $(BINDIR)/$(EXEC): $(OBJECTS)

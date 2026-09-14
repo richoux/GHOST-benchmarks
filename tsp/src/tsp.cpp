@@ -17,7 +17,7 @@ using namespace std::literals::chrono_literals;
 
 void usage( char* name )
 {
-	std::cout << "Usage: " << name << " INSTANCE_FILE [parallel=1] [NUMBER_CORES]\n";
+	std::cout << "Usage: " << name << " INSTANCE_FILE.tsp [parallel=1] [NUMBER_CORES]\n";
 }
 
 ///////////////////////

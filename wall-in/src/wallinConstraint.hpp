@@ -1,126 +1,92 @@
 #pragma once
 
 #include <vector>
-#include <iostream>
-#include <memory>
-#include <map>
+#include <deque>
 
-#include "../../src/constraint.hpp"
-#include "../../src/objective.hpp"
+#include <ghost/constraint.hpp>
+#include <ghost/variable.hpp>
 #include "building.hpp"
-#include "wallinDomain.hpp"
 
-using namespace std;
-
-class WallinConstraint : public Constraint<Building, WallinDomain>
+/**************/
+/* NoOverlaps */
+/**************/  
+class NoOverlaps : public ghost::Constraint
 {
+	int _width;
+	int _height;
+	std::vector<Building> _buildings;
+	
+	// Grid where buildings are placed. -1 for unbuildable, 0 for free, n and -(n+1) for n buildings on the given (unbuildable if negative) tile
+	// Coordinates (0,0) is the upper-left tile.
+	mutable std::vector<int> _line;
+
 public:
-	WallinConstraint( const vector< Building >*, const WallinDomain* );
-
-protected:
-	virtual vector<double> v_simulateCost( Building &oldBuilding,
-	                                       const vector<int> &newPosition,
-	                                       vector< vector<double> > &vecVarSimCosts,
-	                                       shared_ptr< Objective< Building, WallinDomain > > objective )
-	{
-		vector<double> simCosts( domain->getSize(), -1. );
-		int backup = oldBuilding.getValue();
-		int previousPos = 0;
-
-		if( objective )
-			objective->resetHelper();
-      
-		for( const auto &pos : newPosition )
-		{
-			if( pos >= 1 && pos == previousPos + 1 )
-			{
-				domain->quickShift( oldBuilding );
-			}
-			else
-			{ 
-				domain->clear( oldBuilding );
-				oldBuilding.setValue( pos );
-				domain->add( oldBuilding );
-			}
-
-			simCosts[pos+1] = cost( vecVarSimCosts[pos+1] );
-
-			if( objective )
-				objective->setHelper( oldBuilding, variables, domain );
-
-			previousPos = pos;
-		}
-
-		domain->clear( oldBuilding );
-		oldBuilding.setValue( backup );
-		domain->add( oldBuilding );
-
-		return simCosts;
-	}
-
-	bool isWall() const;
-};  
-
-
-/***********/
-/* Overlap */
-/***********/  
-class Overlap : public WallinConstraint
-{
-public:
-	Overlap( const vector< Building >*, const WallinDomain* );
-
-private:
-	double v_cost( vector<double>& ) const;
-	vector<double> v_simulateCost( Building&,
-	                               const vector<int>&,
-	                               vector< vector<double> >&,
-	                               shared_ptr< Objective< Building, WallinDomain > > );
+	NoOverlaps( const std::vector<ghost::Variable>& variables,
+	            int width,
+	            int height,
+	            const std::vector<Building>& buildings );
+	double required_error( const std::vector<ghost::Variable*>& variables ) const override;
 };
 
   
 /*************/
 /* Buildable */
 /*************/  
-class Buildable : public WallinConstraint
+class Buildable : public ghost::Constraint
 {
+	std::vector<std::vector<bool>> _grid;
+	int _width;
+	int _height;
+	std::vector<Building> _buildings;
+	
 public:
-	Buildable( const vector< Building >*, const WallinDomain* );
-
-private:
-	double v_cost( vector<double>& ) const;
-	vector<double> v_simulateCost( Building&,
-	                               const vector<int>&,
-	                               vector< vector<double> >&,
-	                               shared_ptr< Objective< Building, WallinDomain > > );
+	Buildable( const std::vector<ghost::Variable>& variables,
+	           const std::vector<std::vector<bool>>& _grid,
+	           int width,
+	           int height,
+	           const std::vector<Building>& buildings );
+	double required_error( const std::vector<ghost::Variable*>& variables ) const override;
 };
 
   
 /**********/
 /* NoHoles */
 /**********/  
-class NoHoles : public WallinConstraint
+class NoHoles : public ghost::Constraint
 {
-public:
-	NoHoles( const vector< Building >*, const WallinDomain* );
+	int _width;
+	int _height;
+	std::vector<Building> _buildings;
+	mutable std::vector<int> _line;
+	mutable std::deque<int> _queue_all;
+	mutable std::deque<int> _queue_cc;
 
-	double postprocess_simulateCost( Building&, const int, vector<double>& );
-    
-private:
-	double v_cost( vector<double>& ) const;
+public:
+	NoHoles( const std::vector<ghost::Variable>& variables,
+	         int width,
+	         int height,
+	         const std::vector<Building>& buildings );
+	double required_error( const std::vector<ghost::Variable*>& variables ) const override;
 };
 
   
 /***********************/
 /* StartingTargetTiles */
 /***********************/  
-class StartingTargetTiles : public WallinConstraint
+class StartingTargetTiles : public ghost::Constraint
 {
+	int _width;
+	int _height;
+	int _starting_tile;
+	int _target_tile;
+	std::vector<Building> _buildings;
+
 public:
-	StartingTargetTiles( const vector< Building >*, const WallinDomain* );
-
-private:
-	double v_cost( vector<double>& ) const;
-
-	map<int, Building*> mapBuildings;
+	StartingTargetTiles( const std::vector<ghost::Variable>& variables,
+	                     int width,
+	                     int height,
+	                     int starting_tile,
+	                     int target_tile,
+	                     const std::vector<Building>& buildings );
+	double required_error( const std::vector<ghost::Variable*>& variables ) const override;
 };
