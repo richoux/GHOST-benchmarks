@@ -53,9 +53,8 @@ To display the trace of each benchmark run and have a lot of details on GHOST's 
 $> make trace
 ```
 
-Important: GHOST v3 or above must be installed.
-
 Run all classic benchmarks (except 0-1 multidimensional knapsack, which is a bit long to run) with
 ```shell
 $> ./test_all.sh
 ```
+Note that some difficult benchmarks, such as Killer Sudoku, have a short, hardcoded timeout, and are expected to fail finding a solution. The purpose of this test script is to check that each benchmark can compile and run, rather than testing GHOST performances.
