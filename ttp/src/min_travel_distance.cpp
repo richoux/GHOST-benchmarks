@@ -49,7 +49,7 @@ double MinTravelDistance::required_cost( const std::vector<ghost::Variable*>& va
 	
 	// Everybody returns home
 	for( int team = 0 ; team < number_teams ; ++team )
-		total_distance += previously_at[ team ] ][ team ];
+		total_distance += matrix_distances[ previously_at[ team ] ][ team ];
 
 	return total_distance;
 }
