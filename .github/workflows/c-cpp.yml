@@ -13,9 +13,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-		- name: Install GHOST
+    - name: Install GHOST
       run: git clone https://github.com/richoux/GHOST.git && cd GHOST && ./build.sh
-		- name: make
+    - name: make
       run: make
     - name: test
       run: ./test_all.sh
