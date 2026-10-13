@@ -40,13 +40,22 @@ Tested with GHOST v3
 
 ## Commands
 
-Compile with
+We recommand compiling the benchmarks with 
 ```shell
-$> ./make
+$> make bench
 ```
+This will display more information on the benchmark runs. If you just want to check that everything is compiling and running, you can simply use the command
+```shell
+$> make
+```
+To display the trace of each benchmark run and have a lot of details on GHOST's solver computation, you can compile with
+```shell
+$> make trace
+```
+
 Important: GHOST v3 or above must be installed.
 
-Run all classic benchmarks (except 0-1 multidimensional knapsack) with
+Run all classic benchmarks (except 0-1 multidimensional knapsack, which is a bit long to run) with
 ```shell
 $> ./test_all.sh
 ```
