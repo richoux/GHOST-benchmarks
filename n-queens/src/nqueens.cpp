@@ -81,6 +81,10 @@ int main( int argc, char **argv )
   double error;
   std::vector<int> solution;
 
+#if defined SEEDED
+  options.seed = 42;
+#endif
+  
    bool success = solver.fast_search( error, solution, 1s, options );
 
   if( success )
